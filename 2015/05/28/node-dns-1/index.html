@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="go," />
+  <meta name="keywords" content="NodeJS," />
 
 
 
@@ -37,22 +37,27 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
-方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
+<meta name="description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
+
+Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
+V8引擎执行Javascript的速度非常快，性能非常好">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac下安装Go和配置相应环境">
-<meta property="og:url" content="http://blog.helloarron.com/2015/05/29/mac-install-go/index.html">
+<meta property="og:url" content="http://blog.helloarron.com/2015/05/28/node-dns-1/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
-方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
-<meta property="og:updated_time" content="2015-09-05T11:10:10.000Z">
+<meta property="og:description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
+
+Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
+V8引擎执行Javascript的速度非常快，性能非常好">
+<meta property="og:image" content="http://segmentfault.com/img/bVlVhO">
+<meta property="og:image" content="http://segmentfault.com/img/bVlVhW">
+<meta property="og:updated_time" content="2015-09-05T13:33:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac下安装Go和配置相应环境">
-<meta name="twitter:description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
-方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
+<meta name="twitter:description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
+
+Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
+V8引擎执行Javascript的速度非常快，性能非常好">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -197,8 +202,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-05-29T07:56:29+08:00" content="2015-05-29">
-            2015-05-29
+          <time itemprop="dateCreated" datetime="2015-05-28T07:56:29+08:00" content="2015-05-28">
+            2015-05-28
           </time>
         </span>
 
@@ -207,8 +212,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/blog/" itemprop="url" rel="index">
-                  <span itemprop="name">blog</span>
+                <a href="/categories/NodeJS/" itemprop="url" rel="index">
+                  <span itemprop="name">NodeJS</span>
                 </a>
               </span>
 
@@ -223,8 +228,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/05/29/mac-install-go/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/29/mac-install-go/" itemprop="commentsCount"></span>
+              <a href="/2015/05/28/node-dns-1/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/28/node-dns-1/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -238,27 +243,60 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Mac下安装Go和配置相应环境">Mac下安装Go和配置相应环境</h2><p>网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：</p>
-<h3 id="方法一：homebrew">方法一：homebrew</h3><p><code>homebrew</code>是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 <code>git</code> <code>mercurial</code> 也安装上：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew <span class="operator"><span class="keyword">update</span> &amp;&amp; brew <span class="keyword">upgrade</span></span><br><span class="line">brew <span class="keyword">install</span> git</span><br><span class="line">brew <span class="keyword">install</span> mercurial</span><br><span class="line">brew <span class="keyword">install</span> <span class="keyword">go</span></span></span><br></pre></td></tr></table></figure>
-<p>这样安装之后通过命令行输入<code>go</code>就可以看到相关的信息。输入<code>go env</code>查看环境信息：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">GOARCH=<span class="value"><span class="string">"amd64"</span></span></span></span><br><span class="line"><span class="setting">GOBIN=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GOCHAR=<span class="value"><span class="string">"6"</span></span></span></span><br><span class="line"><span class="setting">GOEXE=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GOHOSTARCH=<span class="value"><span class="string">"amd64"</span></span></span></span><br><span class="line"><span class="setting">GOHOSTOS=<span class="value"><span class="string">"darwin"</span></span></span></span><br><span class="line"><span class="setting">GOOS=<span class="value"><span class="string">"darwin"</span></span></span></span><br><span class="line"><span class="setting">GOPATH=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GORACE=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GOROOT=<span class="value"><span class="string">"/usr/local/go"</span></span></span></span><br><span class="line"><span class="setting">GOTOOLDIR=<span class="value"><span class="string">"/usr/local/go/pkg/tool/darwin_amd64"</span></span></span></span><br><span class="line"><span class="setting">CC=<span class="value"><span class="string">"clang"</span></span></span></span><br><span class="line"><span class="setting">GOGCCFLAGS=<span class="value"><span class="string">"-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fno-common"</span></span></span></span><br><span class="line"><span class="setting">CXX=<span class="value"><span class="string">"clang++"</span></span></span></span><br><span class="line"><span class="setting">CGO_ENABLED=<span class="value"><span class="string">"1"</span></span></span></span><br></pre></td></tr></table></figure>
-<h3 id="方法二：pkg包安装">方法二：pkg包安装</h3><p>直接去官方下载<a href="http://golang.org/dl/" target="_blank" rel="external">安装包</a>，然后双击安装,之后同样地输入<code>go</code>、<code>go env</code>、<code>go version</code>等查看是否安装。</p>
-<p>–</p>
-<h3 id="环境变量配置">环境变量配置</h3><p>1.0 查看是否存在bash_profile</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>2.0 如果不存在则创建bash_profile Mac环境配置文件</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">vim</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>3.0 添加go 环境变量<br>如果是第一种安装方法，只需要指定一下<code>GOPATH</code>即可。为了让自己的程序编译之后在命令行任何地方能直接执行，再加入<code>GOPATH</code>下的<code>bin</code>即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#This is my personal bash_profile,when loaded at login.</span></span><br><span class="line"><span class="comment">#===2015-08-15===</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH</span></span><br><span class="line"><span class="built_in">export</span> GOPATH=<span class="variable">$HOME</span>/Documents/go_workspace</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH bin</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOPATH</span>/bin</span><br></pre></td></tr></table></figure>
-<p>但是第二种方法安装之后输入<code>go</code>会显示<code>ommand not found: go</code>，所以需要在<code>.bash_profile</code>中指定<code>GOROOT</code>下的<code>bin</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#This is my personal bash_profile,when loaded at login.</span></span><br><span class="line"><span class="comment">#===2015-08-15===</span></span><br><span class="line"><span class="comment">#GOROOT</span></span><br><span class="line"><span class="built_in">export</span> GOROOT=/usr/<span class="built_in">local</span>/go</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH</span></span><br><span class="line"><span class="built_in">export</span> GOPATH=<span class="variable">$HOME</span>/Documents/go_workspace</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOROOT bin</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOROOT</span>/bin</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH bin</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOPATH</span>/bin</span><br></pre></td></tr></table></figure>
-<p>一般环境变量更改后，重启后生效。在重启终端的时候就会自动执行<code>.bash_profile</code>文件。</p>
-<p>如果想立刻生效，则可执行下面的语句：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> .bash_profile</span><br></pre></td></tr></table></figure>
-<h3 id="问题：">问题：</h3><p>如果打开终端没有生效，就把上面的追加到<code>~/.zshrc</code>中：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> -<span class="keyword">e</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-<p>复制粘贴保存即可。</p>
+        <span itemprop="articleBody"><h2 id="【Node-js学习小案例】DNS域名解析_&lt;一&gt;">【Node.js学习小案例】DNS域名解析 &lt;一&gt;</h2><p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 百度百科：</p>
+<blockquote>
+<p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 是一个基于<code>Chrome</code> <code>JavaScript</code> 运行时建立的一个平台， 用来方便地搭建快速的<br>易于扩展的网络应用· <a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 借助事件驱动， 非阻塞<code>I/O</code> 模型变得轻量和高效， 非常适合 运行在分布式设备 的<br>数据密集型 的实时应用。</p>
+<p><code>V8</code>引擎执行<code>Javascript</code>的速度非常快，性能非常好。<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>对一些特殊用例进行了优化，提供了替代的<code>API</code>，使得<code>V8</code>在非浏览器环境下运行得更好。</p>
+<p><code>Node</code>是一个<code>Javascript</code>运行环境(<code>runtime</code>)。实际上它是对<code>Google V8</code>引擎进行了封装。<code>V8</code>引<br>擎执行<code>Javascript的速度非常快，性能非常好。</code>Node<code>对一些特殊用例进行了优化，提供了替代的</code>API<code>，使得</code>V8`在非浏览器环境下运行得更好。</p>
+</blockquote>
+<p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>官方介绍：</p>
+<blockquote>
+<p>Node.js® is a platform built on Chrome’s JavaScript runtime for easily<br>building fast, scalable network applications. Node.js uses an<br>event-driven, non-blocking I/O model that makes it lightweight and<br>efficient, perfect for data-intensive real-time applications that run<br>across distributed devices.</p>
+</blockquote>
+<p>我已经断断续续学习了<code>node.js</code> 半年多了，在这期间也穿插着<code>php</code>、<code>AngularJS</code>、<code>CSS3</code>等其他的学习。在这些语言中，我最喜欢的就是<code>JavaScript</code>和<code>php</code>，也很想让自己在这两个语言上有所精进。目前的我对<code>Node.js</code>的学习不是很懂，但一些基础的东西还算理解吧。下面我就把我看的一些资料中的案例搬过来，加入一些其他的功能，让它更像一个完整的应用。</p>
+<p>安装<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>：（<a href="https://nodejs.org/download/" target="_blank" rel="external">下载地址</a>）</p>
+<p><img src="http://segmentfault.com/img/bVlVhO" alt="77eb99ef6f5e683ccec9093e9e65360a20150310160532174548837.jpg"></p>
+<p><code>Windows</code>下安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>：</p>
+<blockquote>
+<p><code>windows</code>下的安装很简单，直接去<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>官方网站下载对应版本的<code>.msi</code>文件即可（也有<code>.exe</code>文件，但是建议还是下载<code>.msi</code>文件安装，因为<code>.exe</code>文件安装之后里面缺少一些模块和<code>npm</code>，还需自己配置<code>path</code>，否则在<code>windows</code>的命令行里没法执行<code>node</code>命令）</p>
+</blockquote>
+<p>安装之后就可以在命令行里执行：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v       <span class="comment">// 查看 node.js 版本</span></span><br><span class="line">npm -v        <span class="comment">// 查看 npm 的版本</span></span><br></pre></td></tr></table></figure></p>
+<p>如果提示不是内部命令，则需要将<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>的安装路径添加到环境变量</p>
+<p><code>Linux</code>下安装<code>NodeJS</code>：</p>
+<blockquote>
+<p><code>Linux</code>有很的版本，本人只在<code>CentOS</code>下安装过<code>node.js</code> （<a href="http://blog.helloarron.com/linux/27.html">参考</a>）</p>
+<p>其他的版本请移步这里（<a href="http://www.cnblogs.com/LonelyShadow/p/4310100.html" target="_blank" rel="external">参考</a>）</p>
+</blockquote>
+<p><code>Mac</code>下安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>：</p>
+<blockquote>
+<p>本人是个穷屌丝，没钱买<code>Mac</code>。没有在<code>Mac</code>上安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>的经验，也就不在这里写什么了。</p>
+<p>有需要的童鞋请移步这里（<a href="http://www.cnblogs.com/LonelyShadow/p/4310100.html" target="_blank" rel="external">参考</a>），这里有各个系统下的安装方法。</p>
+</blockquote>
+<p>在开始我们的小案例之前我们需要了解一下<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>中的模块。</p>
+<p>模块分为两类：<code>原生模块</code>和<code>文件模块</code>。原生模块即<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a> <code>API</code> 提供的原生模块，原生模块在启动时已经被加载。文件模块为动态加载模块，加载文件模块的工作主要是由原生模块 <code>module</code> 来实现和完成。</p>
+<ol>
+<li>原生模块的调用</li>
+</ol>
+<blockquote>
+<p>应用<code>NodeJS</code>提供的<code>API require</code> 来加载相应的<code>NodeJS</code> 模块，<code>require</code> 成功后会返回一个<code>NodeJS</code><br>模块的对象，该对象拥有该模块的所有属性和方法，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);            <span class="comment">// require http 模块</span></span><br><span class="line">&gt; http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123; 	res.writeHead(<span class="number">200</span>, &#123;</span><br><span class="line">&gt; <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span> &#125;); 	res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">&gt; &#125;).listen(<span class="number">1337</span>, <span class="string">"127.0.0.1"</span>);         <span class="comment">// 调用 http 对象的 createServer 和 listen</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
+<p>方法来创建简单的 <code>HTTP</code> 服务器 直接在浏览器地址栏输入<a href="http://127.0.0.1:3000" target="_blank" rel="external">http://127.0.0.1:3000</a> 即可看到经典的<code>“Hello
+World” ~_~</code></p>
+</blockquote>
+<ol>
+<li>文件模块的调用方法：</li>
+</ol>
+<blockquote>
+<p>文件模块的调用和原生模块的方法基本一致，但是需要注意的是其两者的加载方法存在一定的区别，原生模块不需要 指定模块路径，而文件模块加载时必须指定文件路径，否则会出错提示<code>&quot;can not find xxx module&quot;</code>。如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">var</span> obj = <span class="built_in">require</span>(<span class="string">'./exports.js'</span>);</span><br><span class="line">&gt; <span class="keyword">var</span> obj = <span class="built_in">require</span>(<span class="string">'/path/.../exports.js'</span>);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在调用文件模块时要确保文件存在，路径一定不要错了 ^_^</p>
+</blockquote>
+<p>更多的信息请参考网址 <a href="http://nodejs.org/api/" target="_blank" rel="external">http://nodejs.org/api/</a></p>
+<p>说了这些之后我们来看看我们的小案例，我们先确定我们要做什么：</p>
+<ul>
+<li>在浏览器地址栏输入网址，打开一个页面</li>
+<li>在页面的输入框里输入网址，点击提交</li>
+<li>在页面中输出输入该域名对应的<code>ip</code>地址<br><img src="http://segmentfault.com/img/bVlVhW" alt="799bad5a3b514f096e69bbc4a7896cd920150311110625247391499.jpg"></li>
+</ul>
+<p>下一节我们就正式开始我们的小案例。</p>
 </span>
       
     </div>
@@ -267,11 +305,23 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/go/" rel="tag">#go</a>
+            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
           
         </div>
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/08/29/mac-install-go/" rel="prev">Mac下安装Go和配置相应环境</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -316,8 +366,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/05/29/mac-install-go/"
-                   data-title="Mac下安装Go和配置相应环境" data-url="http://blog.helloarron.com/2015/05/29/mac-install-go/">
+              <div class="ds-thread" data-thread-key="2015/05/28/node-dns-1/"
+                   data-title="Mac下安装Go和配置相应环境" data-url="http://blog.helloarron.com/2015/05/28/node-dns-1/">
               </div>
             
           </div>
@@ -357,21 +407,21 @@ var _hmt = _hmt || [];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -420,7 +470,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac下安装Go和配置相应环境"><span class="nav-number">1.</span> <span class="nav-text">Mac下安装Go和配置相应环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：homebrew"><span class="nav-number">1.1.</span> <span class="nav-text">方法一：homebrew</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：pkg包安装"><span class="nav-number">1.2.</span> <span class="nav-text">方法二：pkg包安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量配置"><span class="nav-number">1.3.</span> <span class="nav-text">环境变量配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题："><span class="nav-number">1.4.</span> <span class="nav-text">问题：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#【Node-js学习小案例】DNS域名解析_<一>"><span class="nav-number">1.</span> <span class="nav-text">【Node.js学习小案例】DNS域名解析 <一></span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
