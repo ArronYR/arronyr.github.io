@@ -1,0 +1,731 @@
+<!doctype html>
+<html class="theme-next use-motion ">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="志向和热爱是伟大行为的双翼，learning ..." />
+
+
+
+  <meta name="keywords" content="NodeJS," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="##【Node.js学习小案例】DNS域名解析 &amp;lt;四&amp;gt;
+在上一节中我们在浏览器打开了我们的案例，并输入网址点击查询得到对应的 IP ：
+但是当我们点击重置时我们会发现只是输入框中的数据清空了，但是下面的 IP 地址并没有消失，所以我们要进行一些修改。打开 index.html ，在提交表单的JavaScript代码下面添加：123$(&apos;button[type=reset]&apos;).clic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Node.js学习小案例】DNS域名解析 <四>">
+<meta property="og:url" content="http://blog.helloarron.com/2015/05/28/node-dns-4/index.html">
+<meta property="og:site_name" content="Arron.y's blog">
+<meta property="og:description" content="##【Node.js学习小案例】DNS域名解析 &amp;lt;四&amp;gt;
+在上一节中我们在浏览器打开了我们的案例，并输入网址点击查询得到对应的 IP ：
+但是当我们点击重置时我们会发现只是输入框中的数据清空了，但是下面的 IP 地址并没有消失，所以我们要进行一些修改。打开 index.html ，在提交表单的JavaScript代码下面添加：123$(&apos;button[type=reset]&apos;).clic">
+<meta property="og:image" content="http://segmentfault.com/img/bVlVhW">
+<meta property="og:updated_time" content="2015-09-05T13:45:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【Node.js学习小案例】DNS域名解析 <四>">
+<meta name="twitter:description" content="##【Node.js学习小案例】DNS域名解析 &amp;lt;四&amp;gt;
+在上一节中我们在浏览器打开了我们的案例，并输入网址点击查询得到对应的 IP ：
+但是当我们点击重置时我们会发现只是输入框中的数据清空了，但是下面的 IP 地址并没有消失，所以我们要进行一些修改。打开 index.html ，在提交表单的JavaScript代码下面添加：123$(&apos;button[type=reset]&apos;).clic">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post'
+  };
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  <title> 【Node.js学习小案例】DNS域名解析 <四> | Arron.y's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Arron.y's blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              【Node.js学习小案例】DNS域名解析 <四>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-05-28T16:51:30+08:00" content="2015-05-28">
+            2015-05-28
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/NodeJS/" itemprop="url" rel="index">
+                  <span itemprop="name">NodeJS</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/05/28/node-dns-4/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/28/node-dns-4/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>##【Node.js学习小案例】DNS域名解析 &lt;四&gt;</p>
+<p>在上一节中我们在浏览器打开了我们的案例，并输入网址点击查询得到对应的 <code>IP</code> ：<br><img src="http://segmentfault.com/img/bVlVhW" alt="799bad5a3b514f096e69bbc4a7896cd920150311110625247391499.jpg"></p>
+<p>但是当我们点击重置时我们会发现只是输入框中的数据清空了，但是下面的 <code>IP</code> 地址并没有消失，所以我们要进行一些修改。打开 <code>index.html</code> ，在提交表单的<code>JavaScript</code>代码下面添加：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'button[type=reset]'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	$(<span class="string">'#check_result'</span>).html(<span class="string">''</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这段代码就是当我们点击重置按钮时将下面的 <code>id</code> 属性为 <code>check_result</code> 的<code>div</code> 内容设置为空。</p>
+<p>整个 <code>index.html</code> 的完整的代码如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">title</span>&gt;</span>DNS查询<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">style</span> <span class="attribute">type</span>=<span class="value">"text/css"</span>&gt;</span><span class="css"></span><br><span class="line">			<span class="class">.container</span><span class="rules">&#123;</span><br><span class="line">				<span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">5em</span></span></span>;</span><br><span class="line">			&#125;</span></span><br><span class="line">			<span class="id">#check_result</span><span class="rules">&#123;</span><br><span class="line">				<span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#CD46A2</span></span></span>;</span><br><span class="line">			&#125;</span></span><br><span class="line">		</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"row"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-md-6 col-md-offset-3"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"panel panel-default"</span>&gt;</span></span><br><span class="line">					  	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"panel-heading"</span>&gt;</span></span><br><span class="line">					    	<span class="tag">&lt;<span class="title">h1</span>&gt;</span>DNS查询工具<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line">					  	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">					  	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"panel-body"</span>&gt;</span></span><br><span class="line">					    	<span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"form-horizontal"</span> <span class="attribute">action</span>=<span class="value">"/parse"</span> <span class="attribute">method</span>=<span class="value">"post"</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"form-group"</span>&gt;</span></span><br><span class="line">								    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"search_dns"</span> <span class="attribute">class</span>=<span class="value">"col-sm-3 control-label"</span>&gt;</span>查询DNS: <span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line">								    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-sm-8"</span>&gt;</span></span><br><span class="line">								    	<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">class</span>=<span class="value">"form-control"</span> <span class="attribute">id</span>=<span class="value">"search_dns"</span> <span class="attribute">name</span>=<span class="value">"search_dns"</span>&gt;</span></span><br><span class="line">								    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">								<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"form-group"</span>&gt;</span></span><br><span class="line">							    	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-sm-offset-3 col-sm-8"</span>&gt;</span></span><br><span class="line">							      		<span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"btn btn-primary"</span>&gt;</span>查询<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">							      		<span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"reset"</span> <span class="attribute">class</span>=<span class="value">"btn btn-default"</span>&gt;</span>重置<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">							    	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">							  	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br><span class="line">					  	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"panel-footer"</span>&gt;</span>							</span><br><span class="line">							<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'check_result'</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">		<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">			$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">				$(<span class="string">'form'</span>).submit(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">					<span class="keyword">var</span> $<span class="keyword">this</span> = $(<span class="keyword">this</span>),</span><br><span class="line">						search_dns = $(<span class="string">'#search_dns'</span>).val(),</span><br><span class="line">						url = $<span class="keyword">this</span>.attr(<span class="string">'action'</span>);</span><br><span class="line">					<span class="keyword">if</span> ( search_dns ) &#123;</span><br><span class="line">						$.get(url,&#123;search_dns: search_dns&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">							<span class="keyword">var</span> res = <span class="built_in">JSON</span>.parse(res);</span><br><span class="line">							$(<span class="string">'#check_result'</span>).html(<span class="string">'IP 地址: '</span> + res.addresses);</span><br><span class="line">						&#125;)</span><br><span class="line">					&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">						alert(<span class="string">'请输入域名!'</span>);</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">				&#125;);</span><br><span class="line">				$(<span class="string">'button[type=reset]'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">					$(<span class="string">'#check_result'</span>).html(<span class="string">''</span>);</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br><span class="line">		</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>大家可能还会遇到一个问题，当输入的是如 <code>blog.helloarron.com</code>、<code>www.helloarron.com</code> 这样的网址时才会查询到 <code>IP</code> ，如果输入的是如 <code>http://blog.helloarron.com/</code>、<code>http://blog.helloarron.com/node/46.html</code> 就没法查询到了，所以我们还要修改我们服务器端的代码，主要的问题就是要对提交的网址进行解析。</p>
+<p>修改 <code>parse_dns.js</code> 中的 <code>getDns()</code> 方法如下:<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDns</span><span class="params">(postData,callback)</span></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> domain = <span class="string">''</span>,</span><br><span class="line">		url_get = url.parse(postData.search_dns);</span><br><span class="line">	<span class="keyword">if</span> ( url_get.host ) &#123;</span><br><span class="line">		domain = url_get.host;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		url_get = url.parse( <span class="string">'http://'</span> + postData.search_dns);</span><br><span class="line">		domain = url_get.host;</span><br><span class="line">	&#125;</span><br><span class="line">	dns.resolve(domain, <span class="function"><span class="keyword">function</span><span class="params">(err, addresses)</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!addresses)&#123;</span><br><span class="line">			addresses=[<span class="string">'Not Exist !'</span>]</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">callback</span>(domain, addresses);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>到这里我们的案例就算完成了。</p>
+<p>我已经将案例代码共享到了 <code>GitHub</code> 上（<a href="https://github.com/ArronYR/node_dns" target="_blank" rel="external">地址</a>）。也可直接到 <a href="http://dns.helloarron.com/" target="_blank" rel="external">http://dns.helloarron.com/</a> 演示。</p>
+<p>希望大家多多评论，我还在学习中，有什么错误的地方请大家一定要指正。<br>谢谢大家的支持。</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/08/29/mac-install-go/" rel="prev">Mac下安装Go和配置相应环境</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/05/28/node-dns-3/" rel="next">【Node.js学习小案例】DNS域名解析 <三></a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/05/28/node-dns-4/"
+                   data-title="【Node.js学习小案例】DNS域名解析 <四>" data-url="http://blog.helloarron.com/2015/05/28/node-dns-4/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460" alt="Arron.y" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Arron.y</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">志向和热爱是伟大行为的双翼，learning ...</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ArronYR" target="_blank">Github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/arron0718" target="_blank">新浪微博</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.suosikeji.com/" target="_blank">索思科技协会</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://lvwenhan.com/" target="_blank">岁寒</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Arron.y</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+-->
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"arronblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = 0
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
