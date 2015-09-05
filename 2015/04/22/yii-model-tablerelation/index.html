@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="NodeJS," />
+  <meta name="keywords" content="PHP,Yii," />
 
 
 
@@ -37,27 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
-
-Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
-V8引擎执行Javascript的速度非常快，性能非常好">
+<meta name="description" content="Yii 多表关联在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
+下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:123456public function re">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Node.js学习小案例】DNS域名解析 <一>">
-<meta property="og:url" content="http://blog.helloarron.com/2015/05/28/node-dns-1/index.html">
+<meta property="og:title" content="Yii 多表关联">
+<meta property="og:url" content="http://blog.helloarron.com/2015/04/22/yii-model-tablerelation/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
-
-Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
-V8引擎执行Javascript的速度非常快，性能非常好">
-<meta property="og:image" content="http://segmentfault.com/img/bVlVhO">
-<meta property="og:image" content="http://segmentfault.com/img/bVlVhW">
-<meta property="og:updated_time" content="2015-09-05T13:34:46.000Z">
+<meta property="og:description" content="Yii 多表关联在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
+下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:123456public function re">
+<meta property="og:updated_time" content="2015-09-05T14:01:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Node.js学习小案例】DNS域名解析 <一>">
-<meta name="twitter:description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
-
-Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
-V8引擎执行Javascript的速度非常快，性能非常好">
+<meta name="twitter:title" content="Yii 多表关联">
+<meta name="twitter:description" content="Yii 多表关联在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
+下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:123456public function re">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -77,7 +69,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> 【Node.js学习小案例】DNS域名解析 <一> | Arron.y's blog </title>
+  <title> Yii 多表关联 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -193,7 +185,7 @@ var _hmt = _hmt || [];
           
           
             
-              【Node.js学习小案例】DNS域名解析 <一>
+              Yii 多表关联
             
           
         </h1>
@@ -202,8 +194,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-05-28T07:56:29+08:00" content="2015-05-28">
-            2015-05-28
+          <time itemprop="dateCreated" datetime="2015-04-22T20:06:20+08:00" content="2015-04-22">
+            2015-04-22
           </time>
         </span>
 
@@ -212,8 +204,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/NodeJS/" itemprop="url" rel="index">
-                  <span itemprop="name">NodeJS</span>
+                <a href="/categories/PHP/" itemprop="url" rel="index">
+                  <span itemprop="name">PHP</span>
                 </a>
               </span>
 
@@ -228,8 +220,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/05/28/node-dns-1/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/28/node-dns-1/" itemprop="commentsCount"></span>
+              <a href="/2015/04/22/yii-model-tablerelation/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/22/yii-model-tablerelation/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -243,60 +235,20 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="【Node-js学习小案例】DNS域名解析_&lt;一&gt;">【Node.js学习小案例】DNS域名解析 &lt;一&gt;</h2><p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 百度百科：</p>
-<blockquote>
-<p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 是一个基于<code>Chrome</code> <code>JavaScript</code> 运行时建立的一个平台， 用来方便地搭建快速的<br>易于扩展的网络应用· <a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 借助事件驱动， 非阻塞<code>I/O</code> 模型变得轻量和高效， 非常适合 运行在分布式设备 的<br>数据密集型 的实时应用。</p>
-<p><code>V8</code>引擎执行<code>Javascript</code>的速度非常快，性能非常好。<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>对一些特殊用例进行了优化，提供了替代的<code>API</code>，使得<code>V8</code>在非浏览器环境下运行得更好。</p>
-<p><code>Node</code>是一个<code>Javascript</code>运行环境(<code>runtime</code>)。实际上它是对<code>Google V8</code>引擎进行了封装。<code>V8</code>引<br>擎执行<code>Javascript的速度非常快，性能非常好。</code>Node<code>对一些特殊用例进行了优化，提供了替代的</code>API<code>，使得</code>V8`在非浏览器环境下运行得更好。</p>
-</blockquote>
-<p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>官方介绍：</p>
-<blockquote>
-<p>Node.js® is a platform built on Chrome’s JavaScript runtime for easily<br>building fast, scalable network applications. Node.js uses an<br>event-driven, non-blocking I/O model that makes it lightweight and<br>efficient, perfect for data-intensive real-time applications that run<br>across distributed devices.</p>
-</blockquote>
-<p>我已经断断续续学习了<code>node.js</code> 半年多了，在这期间也穿插着<code>php</code>、<code>AngularJS</code>、<code>CSS3</code>等其他的学习。在这些语言中，我最喜欢的就是<code>JavaScript</code>和<code>php</code>，也很想让自己在这两个语言上有所精进。目前的我对<code>Node.js</code>的学习不是很懂，但一些基础的东西还算理解吧。下面我就把我看的一些资料中的案例搬过来，加入一些其他的功能，让它更像一个完整的应用。</p>
-<p>安装<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>：（<a href="https://nodejs.org/download/" target="_blank" rel="external">下载地址</a>）</p>
-<p><img src="http://segmentfault.com/img/bVlVhO" alt="77eb99ef6f5e683ccec9093e9e65360a20150310160532174548837.jpg"></p>
-<p><code>Windows</code>下安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>：</p>
-<blockquote>
-<p><code>windows</code>下的安装很简单，直接去<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>官方网站下载对应版本的<code>.msi</code>文件即可（也有<code>.exe</code>文件，但是建议还是下载<code>.msi</code>文件安装，因为<code>.exe</code>文件安装之后里面缺少一些模块和<code>npm</code>，还需自己配置<code>path</code>，否则在<code>windows</code>的命令行里没法执行<code>node</code>命令）</p>
-</blockquote>
-<p>安装之后就可以在命令行里执行：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v       <span class="comment">// 查看 node.js 版本</span></span><br><span class="line">npm -v        <span class="comment">// 查看 npm 的版本</span></span><br></pre></td></tr></table></figure></p>
-<p>如果提示不是内部命令，则需要将<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>的安装路径添加到环境变量</p>
-<p><code>Linux</code>下安装<code>NodeJS</code>：</p>
-<blockquote>
-<p><code>Linux</code>有很的版本，本人只在<code>CentOS</code>下安装过<code>node.js</code> （<a href="http://blog.helloarron.com/linux/27.html">参考</a>）</p>
-<p>其他的版本请移步这里（<a href="http://www.cnblogs.com/LonelyShadow/p/4310100.html" target="_blank" rel="external">参考</a>）</p>
-</blockquote>
-<p><code>Mac</code>下安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>：</p>
-<blockquote>
-<p>本人是个穷屌丝，没钱买<code>Mac</code>。没有在<code>Mac</code>上安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>的经验，也就不在这里写什么了。</p>
-<p>有需要的童鞋请移步这里（<a href="http://www.cnblogs.com/LonelyShadow/p/4310100.html" target="_blank" rel="external">参考</a>），这里有各个系统下的安装方法。</p>
-</blockquote>
-<p>在开始我们的小案例之前我们需要了解一下<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>中的模块。</p>
-<p>模块分为两类：<code>原生模块</code>和<code>文件模块</code>。原生模块即<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a> <code>API</code> 提供的原生模块，原生模块在启动时已经被加载。文件模块为动态加载模块，加载文件模块的工作主要是由原生模块 <code>module</code> 来实现和完成。</p>
-<ol>
-<li>原生模块的调用</li>
-</ol>
-<blockquote>
-<p>应用<code>NodeJS</code>提供的<code>API require</code> 来加载相应的<code>NodeJS</code> 模块，<code>require</code> 成功后会返回一个<code>NodeJS</code><br>模块的对象，该对象拥有该模块的所有属性和方法，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);            <span class="comment">// require http 模块</span></span><br><span class="line">&gt; http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123; 	res.writeHead(<span class="number">200</span>, &#123;</span><br><span class="line">&gt; <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span> &#125;); 	res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">&gt; &#125;).listen(<span class="number">1337</span>, <span class="string">"127.0.0.1"</span>);         <span class="comment">// 调用 http 对象的 createServer 和 listen</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-<p>方法来创建简单的 <code>HTTP</code> 服务器 直接在浏览器地址栏输入<a href="http://127.0.0.1:3000" target="_blank" rel="external">http://127.0.0.1:3000</a> 即可看到经典的<code>“Hello
-World” ~_~</code></p>
-</blockquote>
-<ol>
-<li>文件模块的调用方法：</li>
-</ol>
-<blockquote>
-<p>文件模块的调用和原生模块的方法基本一致，但是需要注意的是其两者的加载方法存在一定的区别，原生模块不需要 指定模块路径，而文件模块加载时必须指定文件路径，否则会出错提示<code>&quot;can not find xxx module&quot;</code>。如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">var</span> obj = <span class="built_in">require</span>(<span class="string">'./exports.js'</span>);</span><br><span class="line">&gt; <span class="keyword">var</span> obj = <span class="built_in">require</span>(<span class="string">'/path/.../exports.js'</span>);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-<p>在调用文件模块时要确保文件存在，路径一定不要错了 ^_^</p>
-</blockquote>
-<p>更多的信息请参考网址 <a href="http://nodejs.org/api/" target="_blank" rel="external">http://nodejs.org/api/</a></p>
-<p>说了这些之后我们来看看我们的小案例，我们先确定我们要做什么：</p>
-<ul>
-<li>在浏览器地址栏输入网址，打开一个页面</li>
-<li>在页面的输入框里输入网址，点击提交</li>
-<li>在页面中输出输入该域名对应的<code>ip</code>地址<br><img src="http://segmentfault.com/img/bVlVhW" alt="799bad5a3b514f096e69bbc4a7896cd920150311110625247391499.jpg"></li>
-</ul>
-<p>下一节我们就正式开始我们的小案例。</p>
+        <span itemprop="articleBody"><h2 id="Yii_多表关联">Yii 多表关联</h2><p>在 <a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> 里面对数据库操作有一个很方便的功能就是多表关联，通过在 <code>model</code> 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 <code>sql</code> 语句。</p>
+<p>下面我们拿 <code>user</code> 表和 <code>news</code> 表举例。（一个用户发表了多篇文章）<br>首先，我们需要在我们需要的 <code>model</code> 里面的配置 <code>relation</code> ：<br><code>User Model</code>:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">relations</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">array</span>(</span><br><span class="line">     <span class="string">'news'</span> =&gt; <span class="keyword">array</span>(<span class="keyword">self</span>::HAS_MANY, <span class="string">'News'</span>, <span class="string">'uid'</span>, <span class="string">'order'</span>=&gt;<span class="string">'nid DESC'</span>),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在 <code>news</code> 表中我们有一个 <code>uid</code> 字段对应着 <code>user</code> 表的 <code>primary key</code> （<code>uid</code>），因为 <code>uid</code> 是 <code>user</code> 表的索引，所以这里只用指定 <code>news</code> 表中的字段即可。</p>
+<p>当我们需要指定其他的字段时可以这样写：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'news'</span> =&gt; <span class="keyword">array</span>(<span class="keyword">self</span>::HAS_MANY, <span class="string">'News'</span>, <span class="keyword">array</span>(<span class="string">'uid'</span>=&gt;<span class="string">'user_id'</span>) ),</span><br><span class="line"><span class="comment">//这样就是news 表中字段uid与user表中user_id对应</span></span><br></pre></td></tr></table></figure></p>
+<p>我们执行如下的代码看效果：<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$user</span> = User::app()-&gt;model()-&gt;fingByPk( <span class="variable">$uid</span> );</span><br><span class="line">printr( <span class="variable">$user</span> );</span><br></pre></td></tr></table></figure></p>
+<p>在我们取出的 <code>$user</code> 中就会存在 <code>news</code> 的信息：<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$allnews</span>  = <span class="variable">$user-</span>&gt;news;</span><br><span class="line">foreach( <span class="variable">$allnews</span> <span class="keyword">as</span> <span class="variable">$new</span> ) &#123;</span><br><span class="line">    printr( <span class="variable">$new</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样我们就完成了简单的两个表之间的关联。在上面的例子中我们会看到 <code>self::HAS_MANY</code> 这个东西，在 <a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> 里面还有其他的几种关系：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HAS_ONE            <span class="comment">// 一对一</span></span><br><span class="line">HAS_MANY           <span class="comment">// 一对多</span></span><br><span class="line">BELONGS_TO         <span class="comment">// 多对一</span></span><br><span class="line">MANY_TO_MANY       <span class="comment">// 多对多</span></span><br></pre></td></tr></table></figure></p>
+<p>在 <code>News Model</code> 中我们也可以指定那样一个 <code>relation</code>:<br><code>News Model</code>：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">relations</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">array</span>(</span><br><span class="line">     <span class="string">'user'</span> =&gt; <span class="keyword">array</span>(<span class="keyword">self</span>::BELONGS_TO, <span class="string">'User'</span>, <span class="string">'uid'</span>),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在我们取出的 <code>news</code> 中每一条都会附带上 <code>User</code> 的数据，方便操作。<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$allnews</span>  = News::app()-&gt;model()-&gt;findAll();</span><br><span class="line">foreach( <span class="variable">$allnews</span> <span class="keyword">as</span> <span class="variable">$new</span> ) &#123;</span><br><span class="line">    printr( <span class="variable">$new-</span>&gt;user );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其他的两种情况就不演示了，同样的道理。<br>在上面的例子中我们会看到前一个有一个 <code>order</code> 参数，而第二个没有。这个很好理解，就相当于我们 <code>sql</code> 语句中的条件。常见的条件有：</p>
+<p><code>condition</code> <code>order</code> <code>with</code> <code>joinType</code> <code>select</code> <code>params</code> <code>on</code> <code>alias</code> <code>together</code> <code>group</code> <code>having</code> <code>index</code></p>
+<p>还有用于<code>lazy loading</code> 的:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">limit       <span class="comment"> // 只取5个或10个</span></span><br><span class="line"><span class="built_in">offset</span></span><br><span class="line">through</span><br></pre></td></tr></table></figure></p>
+<p>官方手册:<br><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quoted">'posts</span><span class="quoted">'=&gt;array</span><span class="list">(<span class="keyword">self</span>:<span class="keyword">:HAS_MANY</span>, <span class="quoted">'post</span>', <span class="quoted">'author_id</span>', <span class="quoted">'order</span><span class="quoted">'=&gt;</span><span class="quoted">'posts</span>.create_time DESC', <span class="quoted">'with</span><span class="quoted">'=&gt;</span><span class="quoted">'categories</span>')</span></span><br></pre></td></tr></table></figure></p>
+<p>详细的语法可以去看<a href="http://www.yiichina.com/doc" target="_blank" rel="external">官方文档</a>。</p>
 </span>
       
     </div>
@@ -305,7 +257,9 @@ World” ~_~</code></p>
       
         <div class="post-tags">
           
-            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
+            <a href="/tags/PHP/" rel="tag">#PHP</a>
+          
+            <a href="/tags/Yii/" rel="tag">#Yii</a>
           
         </div>
       
@@ -314,13 +268,13 @@ World” ~_~</code></p>
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/28/node-dns-2/" rel="prev">【Node.js学习小案例】DNS域名解析 <二></a>
+              <a href="/2015/04/28/yii-sql/" rel="prev">Yii 里面直接执行sql语句</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/04/28/yii-sql/" rel="next">Yii 里面直接执行sql语句</a>
+              <a href="/2015/04/18/yii-ar/" rel="next">【Laravel学习篇 · 一】Windows下起步就遇麻烦</a>
             
           </div>
         </div>
@@ -368,8 +322,8 @@ World” ~_~</code></p>
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/05/28/node-dns-1/"
-                   data-title="【Node.js学习小案例】DNS域名解析 <一>" data-url="http://blog.helloarron.com/2015/05/28/node-dns-1/">
+              <div class="ds-thread" data-thread-key="2015/04/22/yii-model-tablerelation/"
+                   data-title="Yii 多表关联" data-url="http://blog.helloarron.com/2015/04/22/yii-model-tablerelation/">
               </div>
             
           </div>
@@ -472,7 +426,7 @@ World” ~_~</code></p>
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#【Node-js学习小案例】DNS域名解析_<一>"><span class="nav-number">1.</span> <span class="nav-text">【Node.js学习小案例】DNS域名解析 <一></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Yii_多表关联"><span class="nav-number">1.</span> <span class="nav-text">Yii 多表关联</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
