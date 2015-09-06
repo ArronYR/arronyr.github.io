@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="PHP,Yii," />
+  <meta name="keywords" content="File,NodeJS," />
 
 
 
@@ -37,16 +37,27 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Yii 常用路径获取Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;">
+<meta name="description" content="使用Node监视文件或目录变化Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
+下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。
+在当前目录下新建一些文件：
+我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Yii 常用路径获取">
-<meta property="og:url" content="http://blog.helloarron.com/2015/03/09/yii-router-method/index.html">
+<meta property="og:title" content="使用Node监视文件或目录变化">
+<meta property="og:url" content="http://blog.helloarron.com/2015/03/03/javascript/node-watch-filechange/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Yii 常用路径获取Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;">
-<meta property="og:updated_time" content="2015-09-05T14:43:42.000Z">
+<meta property="og:description" content="使用Node监视文件或目录变化Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
+下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。
+在当前目录下新建一些文件：
+我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs">
+<meta property="og:image" content="http://images.helloarron.com/node-watch-file-1.png">
+<meta property="og:image" content="http://images.helloarron.com/node-watch-file-2.png">
+<meta property="og:updated_time" content="2015-09-06T16:12:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yii 常用路径获取">
-<meta name="twitter:description" content="Yii 常用路径获取Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;">
+<meta name="twitter:title" content="使用Node监视文件或目录变化">
+<meta name="twitter:description" content="使用Node监视文件或目录变化Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
+下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。
+在当前目录下新建一些文件：
+我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -66,7 +77,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> Yii 常用路径获取 | Arron.y's blog </title>
+  <title> 使用Node监视文件或目录变化 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -182,7 +193,7 @@ var _hmt = _hmt || [];
           
           
             
-              Yii 常用路径获取
+              使用Node监视文件或目录变化
             
           
         </h1>
@@ -191,8 +202,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-03-09T15:29:22+08:00" content="2015-03-09">
-            2015-03-09
+          <time itemprop="dateCreated" datetime="2015-03-03T10:01:07+08:00" content="2015-03-03">
+            2015-03-03
           </time>
         </span>
 
@@ -201,8 +212,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/PHP/" itemprop="url" rel="index">
-                  <span itemprop="name">PHP</span>
+                <a href="/categories/NodeJS/" itemprop="url" rel="index">
+                  <span itemprop="name">NodeJS</span>
                 </a>
               </span>
 
@@ -217,8 +228,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/03/09/yii-router-method/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/09/yii-router-method/" itemprop="commentsCount"></span>
+              <a href="/2015/03/03/javascript/node-watch-filechange/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/03/javascript/node-watch-filechange/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -232,22 +243,17 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Yii_常用路径获取">Yii 常用路径获取</h2><p><code>Yii</code> 内置了很多获取路径、访问者<code>IP</code>等方法，如下：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;request-&gt;userHostAddress;        <span class="comment">// Yii获取ip地址</span></span><br><span class="line">Yii::app()-&gt;request-&gt;isPostRequest;          <span class="comment">// Yii判断提交方式</span></span><br><span class="line">Yii::app()-&gt;request-&gt;hostInfo;               <span class="comment">// 得到当前域名</span></span><br><span class="line">Yii::app()-&gt;basePath;                        <span class="comment">// 得到proteced目录的物理路径</span></span><br><span class="line">Yii::app()-&gt;request-&gt;urlReferrer;            <span class="comment">// 获得上一页的url以返回</span></span><br><span class="line">Yii::app()-&gt;request-&gt;url;                    <span class="comment">// 得到当前url</span></span><br><span class="line">Yii::app()-&gt;homeUrl;                         <span class="comment">// 得到当前home url</span></span><br><span class="line">Yii::app()-&gt;user-&gt;returnUrl;                 <span class="comment">// 得到当前return url</span></span><br><span class="line">dirname(Yii::app()-&gt;BasePath);               <span class="comment">// 项目路径</span></span><br><span class="line">Yii::getFrameworkPath();                     <span class="comment">// 取得当前的完整路径</span></span><br></pre></td></tr></table></figure></p>
-<p>Yii framework 已经定义的命名空间常量：</p>
+        <span itemprop="articleBody"><h2 id="使用Node监视文件或目录变化">使用Node监视文件或目录变化</h2><p>Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。</p>
+<p>下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。</p>
+<p>在当前目录下新建一些文件：<br><img src="http://images.helloarron.com/node-watch-file-1.png" alt="image"></p>
+<p>我们主要逻辑写在 <code>watch.js</code> 里面，一旦某文件发送更改，就将该文件名输出到控制台：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取当前工作目录的所有文件</span></span><br><span class="line"><span class="keyword">var</span> files = fs.readdirSync(process.cwd());</span><br><span class="line">files.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">file</span>) </span>&#123;</span><br><span class="line">	<span class="comment">// 监听 ".js .json" 等后缀含有js两个字母的文件</span></span><br><span class="line">	<span class="keyword">if</span> ( <span class="regexp">/\.js/</span>.test(file) ) &#123;</span><br><span class="line">		fs.watchFile(process.cwd() + <span class="string">'/'</span> + file, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">' - '</span> + file + <span class="string">'  changed!'</span>);</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="http://images.helloarron.com/node-watch-file-2.png" alt="image"></p>
+<p>除了<code>fs.watchFile</code>之外，还可以使用<code>fs.watch</code>监视这个目录。</p>
 <blockquote>
-<p><code>system</code>: 指向<code>Yii</code>框架目录;  <code>Yii\framework</code></p>
-<p><code>zii</code>: 指向<code>zii library</code> 目录;  <code>Yii\framework\zii</code></p>
-<p><code>application</code> : 指向应用程序基本目录;  <code>protected\</code></p>
-<p><code>webroot</code>: 指向包含里入口脚本文件的目录;  <code>.\</code></p>
-<p><code>ext</code> : 指向包含所有第三方扩展的目录;  <code>\protected\extensions</code></p>
+<p>require(‘fs’) 引入fs模块，fs模块暴露了一系列对文件处理的API</p>
+<p>process.cwd() 获取当前工作目录</p>
+<p>fs.readdirSync( dirname ) 同步读取到目录的文件列表</p>
 </blockquote>
-<ul>
-<li>用法：<code>Yii::getPathOfAlias(&#39;webroot&#39;);</code></li>
-</ul>
-<p>插入<code>meta</code>信息：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;clientScript-&gt;registerMetaTag(<span class="string">'keywords'</span>,<span class="string">'关键字'</span>);</span><br><span class="line">Yii::app()-&gt;clientScript-&gt;registerMetaTag(<span class="string">'description'</span>,<span class="string">'一些描述'</span>);</span><br><span class="line">Yii::app()-&gt;clientScript-&gt;registerMetaTag(<span class="string">'author'</span>,<span class="string">'作者'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>在控制器添加<code>CSS</code>文件或<code>JavaScript</code>文件：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;clientScript-&gt;registerCssFile(Yii::app()-&gt;baseUrl.<span class="string">'/css/my.css'</span>);</span><br><span class="line">Yii::app()-&gt;clientScript-&gt;registerScriptFile(Yii::app()-&gt;baseUrl.<span class="string">'/css/my.js'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>在<code>view</code>中得到当前<code>controller</code>的<code>ID</code>方法：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;getController()-&gt;id;</span><br></pre></td></tr></table></figure></p>
-<p>在<code>view</code>中得到当前<code>action</code>的<code>ID</code>方法：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;getController()-&gt;getAction()-&gt;id;</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -256,9 +262,9 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/PHP/" rel="tag">#PHP</a>
+            <a href="/tags/File/" rel="tag">#File</a>
           
-            <a href="/tags/Yii/" rel="tag">#Yii</a>
+            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
           
         </div>
       
@@ -267,13 +273,13 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/03/20/node-jsfile-mysql/" rel="prev">使用 NodeJS 从js文件中导入数组数据到 MySQL 数据库</a>
+              <a href="/2015/03/06/javascript/node-module-exports/" rel="prev">NodeJS模块中的exports和module.exports</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/03/06/javascript/javascript-setTimeout-function/" rel="next">实现与 setTimeout 功能类似的函数</a>
+              <a href="/2015/02/02/javascript/node-async/" rel="next">初识Async</a>
             
           </div>
         </div>
@@ -321,8 +327,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/03/09/yii-router-method/"
-                   data-title="Yii 常用路径获取" data-url="http://blog.helloarron.com/2015/03/09/yii-router-method/">
+              <div class="ds-thread" data-thread-key="2015/03/03/javascript/node-watch-filechange/"
+                   data-title="使用Node监视文件或目录变化" data-url="http://blog.helloarron.com/2015/03/03/javascript/node-watch-filechange/">
               </div>
             
           </div>
@@ -425,7 +431,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Yii_常用路径获取"><span class="nav-number">1.</span> <span class="nav-text">Yii 常用路径获取</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Node监视文件或目录变化"><span class="nav-number">1.</span> <span class="nav-text">使用Node监视文件或目录变化</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,NodeJS," />
+  <meta name="keywords" content="Laravel,PHP," />
 
 
 
@@ -37,27 +37,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
-
-Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
-V8引擎执行Javascript的速度非常快，性能非常好">
+<meta name="description" content="【Laravel学习篇 · 一】Windows下起步就遇麻烦很早前 phphub 出来的时候我就去注册了一个账号，而且它的源码是放在 github 上开源的，当时就想自己搭建着玩，它是基于 laravel 的，但是我以前都接触的是 CI 和 Yii ，不会 laravel，于是在 http://laravel-china.org/docs/5.0 开始学着配置环境，当时安装 composer 就将">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Node.js学习小案例】DNS域名解析 <一>">
-<meta property="og:url" content="http://blog.helloarron.com/2015/05/28/node-dns-1/index.html">
+<meta property="og:title" content="【Laravel学习篇 · 一】Windows下起步就遇麻烦">
+<meta property="og:url" content="http://blog.helloarron.com/2015/06/18/php/laravel-learn-page-1/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
-
-Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
-V8引擎执行Javascript的速度非常快，性能非常好">
-<meta property="og:image" content="http://segmentfault.com/img/bVlVhO">
-<meta property="og:image" content="http://segmentfault.com/img/bVlVhW">
-<meta property="og:updated_time" content="2015-09-06T15:54:19.000Z">
+<meta property="og:description" content="【Laravel学习篇 · 一】Windows下起步就遇麻烦很早前 phphub 出来的时候我就去注册了一个账号，而且它的源码是放在 github 上开源的，当时就想自己搭建着玩，它是基于 laravel 的，但是我以前都接触的是 CI 和 Yii ，不会 laravel，于是在 http://laravel-china.org/docs/5.0 开始学着配置环境，当时安装 composer 就将">
+<meta property="og:updated_time" content="2015-09-05T14:52:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Node.js学习小案例】DNS域名解析 <一>">
-<meta name="twitter:description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
-
-Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
-V8引擎执行Javascript的速度非常快，性能非常好">
+<meta name="twitter:title" content="【Laravel学习篇 · 一】Windows下起步就遇麻烦">
+<meta name="twitter:description" content="【Laravel学习篇 · 一】Windows下起步就遇麻烦很早前 phphub 出来的时候我就去注册了一个账号，而且它的源码是放在 github 上开源的，当时就想自己搭建着玩，它是基于 laravel 的，但是我以前都接触的是 CI 和 Yii ，不会 laravel，于是在 http://laravel-china.org/docs/5.0 开始学着配置环境，当时安装 composer 就将">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -77,7 +66,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> 【Node.js学习小案例】DNS域名解析 <一> | Arron.y's blog </title>
+  <title> 【Laravel学习篇 · 一】Windows下起步就遇麻烦 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -193,7 +182,7 @@ var _hmt = _hmt || [];
           
           
             
-              【Node.js学习小案例】DNS域名解析 <一>
+              【Laravel学习篇 · 一】Windows下起步就遇麻烦
             
           
         </h1>
@@ -202,8 +191,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-05-28T07:56:29+08:00" content="2015-05-28">
-            2015-05-28
+          <time itemprop="dateCreated" datetime="2015-06-18T17:36:20+08:00" content="2015-06-18">
+            2015-06-18
           </time>
         </span>
 
@@ -212,8 +201,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/NodeJS/" itemprop="url" rel="index">
-                  <span itemprop="name">NodeJS</span>
+                <a href="/categories/PHP/" itemprop="url" rel="index">
+                  <span itemprop="name">PHP</span>
                 </a>
               </span>
 
@@ -228,8 +217,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/05/28/node-dns-1/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/28/node-dns-1/" itemprop="commentsCount"></span>
+              <a href="/2015/06/18/php/laravel-learn-page-1/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/18/php/laravel-learn-page-1/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -243,60 +232,26 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="【Node-js学习小案例】DNS域名解析_&lt;一&gt;">【Node.js学习小案例】DNS域名解析 &lt;一&gt;</h2><p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 百度百科：</p>
-<blockquote>
-<p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 是一个基于<code>Chrome</code> <code>JavaScript</code> 运行时建立的一个平台， 用来方便地搭建快速的<br>易于扩展的网络应用· <a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 借助事件驱动， 非阻塞<code>I/O</code> 模型变得轻量和高效， 非常适合 运行在分布式设备 的<br>数据密集型 的实时应用。</p>
-<p><code>V8</code>引擎执行<code>Javascript</code>的速度非常快，性能非常好。<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>对一些特殊用例进行了优化，提供了替代的<code>API</code>，使得<code>V8</code>在非浏览器环境下运行得更好。</p>
-<p><code>Node</code>是一个<code>Javascript</code>运行环境(<code>runtime</code>)。实际上它是对<code>Google V8</code>引擎进行了封装。<code>V8</code>引<br>擎执行<code>Javascript的速度非常快，性能非常好。</code>Node<code>对一些特殊用例进行了优化，提供了替代的</code>API<code>，使得</code>V8`在非浏览器环境下运行得更好。</p>
-</blockquote>
-<p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>官方介绍：</p>
-<blockquote>
-<p>Node.js® is a platform built on Chrome’s JavaScript runtime for easily<br>building fast, scalable network applications. Node.js uses an<br>event-driven, non-blocking I/O model that makes it lightweight and<br>efficient, perfect for data-intensive real-time applications that run<br>across distributed devices.</p>
-</blockquote>
-<p>我已经断断续续学习了<code>node.js</code> 半年多了，在这期间也穿插着<code>php</code>、<code>AngularJS</code>、<code>CSS3</code>等其他的学习。在这些语言中，我最喜欢的就是<code>JavaScript</code>和<code>php</code>，也很想让自己在这两个语言上有所精进。目前的我对<code>Node.js</code>的学习不是很懂，但一些基础的东西还算理解吧。下面我就把我看的一些资料中的案例搬过来，加入一些其他的功能，让它更像一个完整的应用。</p>
-<p>安装<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>：（<a href="https://nodejs.org/download/" target="_blank" rel="external">下载地址</a>）</p>
-<p><img src="http://segmentfault.com/img/bVlVhO" alt="77eb99ef6f5e683ccec9093e9e65360a20150310160532174548837.jpg"></p>
-<p><code>Windows</code>下安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>：</p>
-<blockquote>
-<p><code>windows</code>下的安装很简单，直接去<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>官方网站下载对应版本的<code>.msi</code>文件即可（也有<code>.exe</code>文件，但是建议还是下载<code>.msi</code>文件安装，因为<code>.exe</code>文件安装之后里面缺少一些模块和<code>npm</code>，还需自己配置<code>path</code>，否则在<code>windows</code>的命令行里没法执行<code>node</code>命令）</p>
-</blockquote>
-<p>安装之后就可以在命令行里执行：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v       <span class="comment">// 查看 node.js 版本</span></span><br><span class="line">npm -v        <span class="comment">// 查看 npm 的版本</span></span><br></pre></td></tr></table></figure></p>
-<p>如果提示不是内部命令，则需要将<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>的安装路径添加到环境变量</p>
-<p><code>Linux</code>下安装<code>NodeJS</code>：</p>
-<blockquote>
-<p><code>Linux</code>有很的版本，本人只在<code>CentOS</code>下安装过<code>node.js</code> （<a href="http://blog.helloarron.com/linux/27.html">参考</a>）</p>
-<p>其他的版本请移步这里（<a href="http://www.cnblogs.com/LonelyShadow/p/4310100.html" target="_blank" rel="external">参考</a>）</p>
-</blockquote>
-<p><code>Mac</code>下安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>：</p>
-<blockquote>
-<p>本人是个穷屌丝，没钱买<code>Mac</code>。没有在<code>Mac</code>上安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>的经验，也就不在这里写什么了。</p>
-<p>有需要的童鞋请移步这里（<a href="http://www.cnblogs.com/LonelyShadow/p/4310100.html" target="_blank" rel="external">参考</a>），这里有各个系统下的安装方法。</p>
-</blockquote>
-<p>在开始我们的小案例之前我们需要了解一下<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>中的模块。</p>
-<p>模块分为两类：<code>原生模块</code>和<code>文件模块</code>。原生模块即<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a> <code>API</code> 提供的原生模块，原生模块在启动时已经被加载。文件模块为动态加载模块，加载文件模块的工作主要是由原生模块 <code>module</code> 来实现和完成。</p>
-<ol>
-<li>原生模块的调用</li>
-</ol>
-<blockquote>
-<p>应用<code>NodeJS</code>提供的<code>API require</code> 来加载相应的<code>NodeJS</code> 模块，<code>require</code> 成功后会返回一个<code>NodeJS</code><br>模块的对象，该对象拥有该模块的所有属性和方法，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);            <span class="comment">// require http 模块</span></span><br><span class="line">&gt; http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123; 	res.writeHead(<span class="number">200</span>, &#123;</span><br><span class="line">&gt; <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span> &#125;); 	res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">&gt; &#125;).listen(<span class="number">1337</span>, <span class="string">"127.0.0.1"</span>);         <span class="comment">// 调用 http 对象的 createServer 和 listen</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-<p>方法来创建简单的 <code>HTTP</code> 服务器 直接在浏览器地址栏输入<a href="http://127.0.0.1:3000" target="_blank" rel="external">http://127.0.0.1:3000</a> 即可看到经典的<code>“Hello
-World” ~_~</code></p>
-</blockquote>
-<ol>
-<li>文件模块的调用方法：</li>
-</ol>
-<blockquote>
-<p>文件模块的调用和原生模块的方法基本一致，但是需要注意的是其两者的加载方法存在一定的区别，原生模块不需要 指定模块路径，而文件模块加载时必须指定文件路径，否则会出错提示<code>&quot;can not find xxx module&quot;</code>。如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">var</span> obj = <span class="built_in">require</span>(<span class="string">'./exports.js'</span>);</span><br><span class="line">&gt; <span class="keyword">var</span> obj = <span class="built_in">require</span>(<span class="string">'/path/.../exports.js'</span>);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-<p>在调用文件模块时要确保文件存在，路径一定不要错了 ^_^</p>
-</blockquote>
-<p>更多的信息请参考网址 <a href="http://nodejs.org/api/" target="_blank" rel="external">http://nodejs.org/api/</a></p>
-<p>说了这些之后我们来看看我们的小案例，我们先确定我们要做什么：</p>
-<ul>
-<li>在浏览器地址栏输入网址，打开一个页面</li>
-<li>在页面的输入框里输入网址，点击提交</li>
-<li>在页面中输出输入该域名对应的<code>ip</code>地址<br><img src="http://segmentfault.com/img/bVlVhW" alt="799bad5a3b514f096e69bbc4a7896cd920150311110625247391499.jpg"></li>
-</ul>
-<p>下一节我们就正式开始我们的小案例。</p>
+        <span itemprop="articleBody"><h2 id="【Laravel学习篇_·_一】Windows下起步就遇麻烦">【Laravel学习篇 · 一】Windows下起步就遇麻烦</h2><p>很早前 <a href="https://phphub.org/" target="_blank" rel="external">phphub</a> 出来的时候我就去注册了一个账号，而且它的源码是放在 <a href="https://github.com/summerblue/phphub" target="_blank" rel="external">github</a> 上开源的，当时就想自己搭建着玩，它是基于 <a href="http://laravel-china.org/" target="_blank" rel="external">laravel</a> 的，但是我以前都接触的是 <a href="http://codeigniter.org.cn/" target="_blank" rel="external">CI</a> 和 <a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> ，不会 <a href="http://laravel-china.org/" target="_blank" rel="external">laravel</a>，于是在 <code>http://laravel-china.org/docs/5.0</code> 开始学着配置环境，当时安装 <a href="https://getcomposer.org/" target="_blank" rel="external">composer</a> 就将我困住了（<code>Windows</code>），然后就继续我的Yii了。在看了 <a href="http://www.discoursecn.org/" target="_blank" rel="external">discourse</a> 之后，在<code>Linux（Ubuntu）</code>下自己也搭建晚了一下，突然想到自己搭建 <a href="https://phphub.org/" target="_blank" rel="external">phphub</a> 这事还没完成呢。于是又开始了环境安装配置。</p>
+<p><a href="https://getcomposer.org/" target="_blank" rel="external">Composer</a> 官网 <code>https://getcomposer.org/</code> 。刚开始的时候使用 <code>curl</code><br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sS <span class="string">https:</span><span class="comment">//getcomposer.org/installer | php</span></span><br></pre></td></tr></table></figure></p>
+<p>但是没成功，然后就在页面下面下载了安装包，安装的时候始终安装不了，后台搜索才知道是 php.ini 里面的 <code>openssl</code> 需要开启<br><figure class="highlight fix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">extension</span>=<span class="string">php_openssl.dll</span></span><br></pre></td></tr></table></figure></p>
+<p>然后用重试了一下安装，然后打开 <code>cmd</code> 输入<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">composer</span> -v</span><br></pre></td></tr></table></figure></p>
+<p>显示相关信息成功。</p>
+<p>后面就是按照官方的方法安装 <code>laravel</code><br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">composer</span> <span class="preprocessor">global</span> <span class="preprocessor">require</span> <span class="string">"laravel/installer=~1.1"</span></span><br></pre></td></tr></table></figure></p>
+<p>但是由于网速什么的【你懂的】总是安装失败，没办法搜了一下解决办法。打开 <code>cmd</code> 输入<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -<span class="keyword">l</span> -<span class="keyword">g</span></span><br></pre></td></tr></table></figure></p>
+<p>在输出的结果中，其中的 【home】 配置项内容就是了我们的composer主目录，然后编辑 <code>cmposer</code> 主目录下的 <code>config.json</code> 文件为：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">config</span>": <span class="value">&#123;&#125;</span>,</span><br><span class="line">    "<span class="attribute">repositories</span>": <span class="value">[</span><br><span class="line">      	&#123;</span><br><span class="line">      		"<span class="attribute">type</span>": <span class="value"><span class="string">"composer"</span></span>,</span><br><span class="line">      		"<span class="attribute">url</span>": <span class="value"><span class="string">"http://comproxy.cn/repo/packagist"</span></span><br><span class="line">      	</span>&#125;,</span><br><span class="line">      	&#123;</span><br><span class="line">      		"<span class="attribute">packagist</span>": <span class="value"><span class="literal">false</span></span><br><span class="line">      	</span>&#125;</span><br><span class="line">    ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>保存之后在执行安装 <code>laravel</code> 的命令即可。</p>
+<p>接下来就是按照官方的方法创捷一个项目<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">laravel <span class="keyword">new</span> laravel-blog</span><br></pre></td></tr></table></figure></p>
+<p>我使用的 <code>Apache</code> ，在 <code>www</code> 目录下创建完成之后在浏览器输入 <code>127.0.0.1/laravel-blog</code> 就访问到了我们的项目，但在浏览器中显示的确是整个项目的目录结构，输入<code>127.0.0.1/laravel-blog/public</code> 访问到 <code>public</code> 目录下的 <code>index.php</code> ，这根本就不算是安装完成。。。</p>
+<p>打开 <code>app/Http/Controllers</code> 我们可以看到 <code>HomeController.php</code> 文件：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span> <span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Http</span>\<span class="title">Controllers</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HomeController</span> <span class="keyword">extends</span> <span class="title">Controller</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	|--------------------------------------------------------------------------</span><br><span class="line">	| Home Controller</span><br><span class="line">	|--------------------------------------------------------------------------</span><br><span class="line">	|</span><br><span class="line">	| This controller renders your application's "dashboard" for users that</span><br><span class="line">	| are authenticated. Of course, you are free to change or remove the</span><br><span class="line">	| controller as you wish. It is just here to get your app started!</span><br><span class="line">	|</span><br><span class="line">	*/</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span><br><span class="line">	 * Create a new controller instance.</span><br><span class="line">	 *</span><br><span class="line">	 * <span class="doctag">@return</span> void</span><br><span class="line">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="variable">$this</span>-&gt;middleware(<span class="string">'auth'</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span><br><span class="line">	 * Show the application dashboard to the user.</span><br><span class="line">	 *</span><br><span class="line">	 * <span class="doctag">@return</span> Response</span><br><span class="line">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">()</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> view(<span class="string">'home'</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在浏览器输入 <code>127.0.0.1/laravel-blog/home</code> 这时候就是我们最不想看到的</p>
+<p>###Not Found</p>
+<p>The requested URL /laravel-blog/home was not found on this server.</p>
+<p><br></p>
+<p>在 <a href="http://laravel-china.org/" target="_blank" rel="external">laravel</a> 的教程网站上我没找到这方面的解决办法，在根目录下只有一个 <code>server.php</code> ，也没有我们常见的 入口文件 <code>index.php</code> ，我试着在根目录加上 <code>.htaccess</code> 文件，并将其中的 <code>index.php</code> 改为 <code>server.php</code> ，但是还是没有效果。<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;IfModule mod_rewrite.c&gt;</span></span><br><span class="line">    <span class="tag">&lt;IfModule mod_negotiation.c&gt;</span></span><br><span class="line">        <span class="keyword"><span class="common">Options</span></span> -MultiViews</span><br><span class="line">    <span class="tag">&lt;/IfModule&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword"><span class="common">RewriteEngine</span></span> <span class="literal">On</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Redirect Trailing Slashes...</span></span><br><span class="line">    <span class="keyword"><span class="common">RewriteRule</span></span> ^(.*)/$ /<span class="number">$1</span><span class="sqbracket"> [L,R=301]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Handle Front Controller...</span></span><br><span class="line">    <span class="keyword"><span class="common">RewriteCond</span></span> <span class="cbracket">%&#123;REQUEST_FILENAME&#125;</span> !-d</span><br><span class="line">    <span class="keyword"><span class="common">RewriteCond</span></span> <span class="cbracket">%&#123;REQUEST_FILENAME&#125;</span> !-f</span><br><span class="line">    <span class="keyword"><span class="common">RewriteRule</span></span> ^ server.php<span class="sqbracket"> [L]</span></span><br><span class="line"><span class="tag">&lt;/IfModule&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>于是问了一下 <a href="http://lvwenhan.com/" target="_blank" rel="external">@JohnLui</a>, 原来是 <a href="http://laravel-china.org/" target="_blank" rel="external">laravel</a> 不同我们常接触的 <a href="http://codeigniter.org.cn/" target="_blank" rel="external">CI</a>、<a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> 等是将项目根目录下的<code>index.php</code> 作为入口，于是在浏览器地址输入 <code>127.0.0.1/laravel-blog/public/home</code> 发现确实如此。<br>所以我们在学习 <a href="http://laravel-china.org/" target="_blank" rel="external">laravel</a> 的时候最好还是不用这样子目录的形式去访问，而是通过端口访问，所以我们打开 <code>Apache</code> 的配置文件，在底部通过端口的方式直接将该端口指向 <code>public</code> 文件夹。（当然你需要在配置文件里加上相应的 <code>Listen 8010</code> ）<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;VirtualHost *:8010&gt;</span></span><br><span class="line">    <span class="keyword">ServerAdmin</span> yangyun4814@gmail.com</span><br><span class="line">    <span class="keyword"><span class="common">DocumentRoot</span></span> <span class="string">"E:\phpEnv\www\laravel-blog\public"</span></span><br><span class="line"><span class="tag">&lt;/VirtualHost&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>然后重启 <code>Apache</code> ，通过浏览器输入<code>127.0.0.1:8010</code> 即可访问。</p>
+<p>最后又可以继续愉快学习 <a href="http://laravel-china.org/" target="_blank" rel="external">laravel</a> 了。</p>
 </span>
       
     </div>
@@ -305,9 +260,9 @@ World” ~_~</code></p>
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+            <a href="/tags/Laravel/" rel="tag">#Laravel</a>
           
-            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
+            <a href="/tags/PHP/" rel="tag">#PHP</a>
           
         </div>
       
@@ -316,13 +271,13 @@ World” ~_~</code></p>
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/28/node-dns-2/" rel="prev">【Node.js学习小案例】DNS域名解析 <二></a>
+              <a href="/2015/08/29/mac-install-go/" rel="prev">Mac下安装Go和配置相应环境</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/05/19/Monacan-Angular-WebApp/" rel="next">AngularJS 初体验之过滤器</a>
+              <a href="/2015/05/28/javascript/node-dns-4/" rel="next">【Node.js学习小案例】DNS域名解析 <四></a>
             
           </div>
         </div>
@@ -370,8 +325,8 @@ World” ~_~</code></p>
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/05/28/node-dns-1/"
-                   data-title="【Node.js学习小案例】DNS域名解析 <一>" data-url="http://blog.helloarron.com/2015/05/28/node-dns-1/">
+              <div class="ds-thread" data-thread-key="2015/06/18/php/laravel-learn-page-1/"
+                   data-title="【Laravel学习篇 · 一】Windows下起步就遇麻烦" data-url="http://blog.helloarron.com/2015/06/18/php/laravel-learn-page-1/">
               </div>
             
           </div>
@@ -474,7 +429,7 @@ World” ~_~</code></p>
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#【Node-js学习小案例】DNS域名解析_<一>"><span class="nav-number">1.</span> <span class="nav-text">【Node.js学习小案例】DNS域名解析 <一></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#【Laravel学习篇_·_一】Windows下起步就遇麻烦"><span class="nav-number">1.</span> <span class="nav-text">【Laravel学习篇 · 一】Windows下起步就遇麻烦</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

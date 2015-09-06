@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="File,NodeJS," />
+  <meta name="keywords" content="JavaScript,NodeJS," />
 
 
 
@@ -37,27 +37,32 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="使用Node监视文件或目录变化Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
-下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。
-在当前目录下新建一些文件：
-我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs">
+<meta name="description" content="##【Node.js学习小案例】DNS域名解析 &amp;lt;三&amp;gt;
+上一节我们已经完成了静态页面 index.html 的布局，这节我们开始服务器的编写。
+如同 php 那样脚本文件以 .php 为文件扩展名，NodeJS的脚本文件扩展名为 .js 。
+在这个例子中我们需要以下原生模块：
+
+http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当前 DNS 域名，返回 DNS 服务器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Node监视文件或目录变化">
-<meta property="og:url" content="http://blog.helloarron.com/2015/03/03/node-watch-filechange/index.html">
+<meta property="og:title" content="【Node.js学习小案例】DNS域名解析 <三>">
+<meta property="og:url" content="http://blog.helloarron.com/2015/05/28/javascript/node-dns-3/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="使用Node监视文件或目录变化Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
-下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。
-在当前目录下新建一些文件：
-我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs">
-<meta property="og:image" content="http://images.helloarron.com/node-watch-file-1.png">
-<meta property="og:image" content="http://images.helloarron.com/node-watch-file-2.png">
-<meta property="og:updated_time" content="2015-09-06T16:12:01.000Z">
+<meta property="og:description" content="##【Node.js学习小案例】DNS域名解析 &amp;lt;三&amp;gt;
+上一节我们已经完成了静态页面 index.html 的布局，这节我们开始服务器的编写。
+如同 php 那样脚本文件以 .php 为文件扩展名，NodeJS的脚本文件扩展名为 .js 。
+在这个例子中我们需要以下原生模块：
+
+http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当前 DNS 域名，返回 DNS 服务器">
+<meta property="og:image" content="http://segmentfault.com/img/bVlVhW">
+<meta property="og:updated_time" content="2015-09-06T15:54:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Node监视文件或目录变化">
-<meta name="twitter:description" content="使用Node监视文件或目录变化Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
-下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。
-在当前目录下新建一些文件：
-我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs">
+<meta name="twitter:title" content="【Node.js学习小案例】DNS域名解析 <三>">
+<meta name="twitter:description" content="##【Node.js学习小案例】DNS域名解析 &amp;lt;三&amp;gt;
+上一节我们已经完成了静态页面 index.html 的布局，这节我们开始服务器的编写。
+如同 php 那样脚本文件以 .php 为文件扩展名，NodeJS的脚本文件扩展名为 .js 。
+在这个例子中我们需要以下原生模块：
+
+http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当前 DNS 域名，返回 DNS 服务器">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -77,7 +82,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> 使用Node监视文件或目录变化 | Arron.y's blog </title>
+  <title> 【Node.js学习小案例】DNS域名解析 <三> | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -193,7 +198,7 @@ var _hmt = _hmt || [];
           
           
             
-              使用Node监视文件或目录变化
+              【Node.js学习小案例】DNS域名解析 <三>
             
           
         </h1>
@@ -202,8 +207,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-03-03T10:01:07+08:00" content="2015-03-03">
-            2015-03-03
+          <time itemprop="dateCreated" datetime="2015-05-28T14:06:20+08:00" content="2015-05-28">
+            2015-05-28
           </time>
         </span>
 
@@ -228,8 +233,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/03/03/node-watch-filechange/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/03/node-watch-filechange/" itemprop="commentsCount"></span>
+              <a href="/2015/05/28/javascript/node-dns-3/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/28/javascript/node-dns-3/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -243,17 +248,32 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="使用Node监视文件或目录变化">使用Node监视文件或目录变化</h2><p>Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。</p>
-<p>下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。</p>
-<p>在当前目录下新建一些文件：<br><img src="http://images.helloarron.com/node-watch-file-1.png" alt="image"></p>
-<p>我们主要逻辑写在 <code>watch.js</code> 里面，一旦某文件发送更改，就将该文件名输出到控制台：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取当前工作目录的所有文件</span></span><br><span class="line"><span class="keyword">var</span> files = fs.readdirSync(process.cwd());</span><br><span class="line">files.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">file</span>) </span>&#123;</span><br><span class="line">	<span class="comment">// 监听 ".js .json" 等后缀含有js两个字母的文件</span></span><br><span class="line">	<span class="keyword">if</span> ( <span class="regexp">/\.js/</span>.test(file) ) &#123;</span><br><span class="line">		fs.watchFile(process.cwd() + <span class="string">'/'</span> + file, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">' - '</span> + file + <span class="string">'  changed!'</span>);</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>效果如下：<br><img src="http://images.helloarron.com/node-watch-file-2.png" alt="image"></p>
-<p>除了<code>fs.watchFile</code>之外，还可以使用<code>fs.watch</code>监视这个目录。</p>
+        <span itemprop="articleBody"><p>##【Node.js学习小案例】DNS域名解析 &lt;三&gt;</p>
+<p>上一节我们已经完成了静态页面 <code>index.html</code> 的布局，这节我们开始服务器的编写。</p>
+<p>如同 <code>php</code> 那样脚本文件以 <code>.php</code> 为文件扩展名，<code>NodeJS</code>的脚本文件扩展名为 <code>.js</code> 。</p>
+<p>在这个例子中我们需要以下原生模块：</p>
 <blockquote>
-<p>require(‘fs’) 引入fs模块，fs模块暴露了一系列对文件处理的API</p>
-<p>process.cwd() 获取当前工作目录</p>
-<p>fs.readdirSync( dirname ) 同步读取到目录的文件列表</p>
+<p><code>http</code> 模块负责 <code>HTTP</code> 服务器的创建<br><code>dns</code> 模块主要负责解析当前 <code>DNS</code> 域名，返回 <code>DNS</code> 服务器 <code>IP</code> 地址<br><code>fs</code> 模块负责对文件的操作<br><code>url</code> 模块处理 <code>url</code><br><code>querystring</code> 模块处理当前前端传来的字符串并解析</p>
 </blockquote>
+<p>进入我们的项目所在目录 <code>E:\node_workspace\code</code> ，新建 <code>index.js</code> 文件，在这个入口问价中我们需要创建服务器并设置路由，添加如下内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 首先require 加载两个模块 */</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>),</span><br><span class="line">	url  = <span class="built_in">require</span>(<span class="string">'url'</span>) ;</span><br><span class="line"><span class="comment">/* 查看官网API我们可以看到http模块提供创建http的方法，dns提供解析dns的方法 */</span></span><br><span class="line"><span class="comment">/* 加载文件模块 */</span></span><br><span class="line"><span class="keyword">var</span> Router   = <span class="built_in">require</span>(<span class="string">'./router.js'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 创建http服务器 */</span></span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">	<span class="comment">/* 写http head 返回html，因此Content-Type为html*/</span></span><br><span class="line">	<span class="keyword">var</span> pathname = url.parse(req.url).pathname;</span><br><span class="line">	req.setEncoding(<span class="string">"utf8"</span>);</span><br><span class="line">	res.writeHead(<span class="number">200</span>);</span><br><span class="line">	Router.router(res, req, pathname);</span><br><span class="line">&#125;).listen(<span class="number">3000</span>, <span class="string">"127.0.0.1"</span>);</span><br><span class="line"><span class="comment">/* 打印运行log */</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Server running at http://127.0.0.1:3000/'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>在第一节我们就说了<code>NodeJS</code> 的模块，其中除了原生模块之外还有文件模块，关于模块中的 <code>exports</code> 和<code>module.exports</code> 请移步（<a href="http://blog.helloarron.com/node/34.html">参考</a>）。</p>
+<p>这里使用了 <code>router.js</code> 文件，这个文件是对网站前端发来的各个路由的处理，添加如下内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 路由模块处理 */</span></span><br><span class="line"><span class="keyword">var</span> ParseDns = <span class="built_in">require</span>(<span class="string">'./parse_dns.js'</span>),</span><br><span class="line">	MainIndex = <span class="built_in">require</span>(<span class="string">'./main_index.js'</span>);</span><br><span class="line">exports.router = <span class="function"><span class="keyword">function</span>(<span class="params">res, req, pathname</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">switch</span> (pathname)&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"/parse"</span>:</span><br><span class="line">			ParseDns.parseDns(res, req)</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			MainIndex.goIndex(res, req)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在这个文件中我们主要有两个路由：<code>&#39;/&#39;</code> 和 <code>&#39;/parse&#39;</code> ，对应着不同的处理方式，所以这里对这两个路由又引入了另外两个文件模块来处理：<code>parse_dns.js</code> 和 <code>main_index.js</code> 。</p>
+<p>新建 <code>parse_dns.js</code> ，添加如下内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* dns解析模块 */</span></span><br><span class="line"><span class="keyword">var</span> querystring = <span class="built_in">require</span>(<span class="string">"querystring"</span>),</span><br><span class="line">	url = <span class="built_in">require</span>(<span class="string">"url"</span>),</span><br><span class="line">	dns = <span class="built_in">require</span>(<span class="string">'dns'</span>);</span><br><span class="line">exports.parseDns = <span class="function"><span class="keyword">function</span>(<span class="params">res, req</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> postData = <span class="string">""</span>;</span><br><span class="line">    postData = querystring.parse(url.parse(req.url).query);</span><br><span class="line">	getDns(postData,<span class="function"><span class="keyword">function</span>(<span class="params">domain,addresses</span>)</span>&#123;</span><br><span class="line">		res.writeHead(<span class="number">200</span>, &#123; <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span> &#125;);</span><br><span class="line">		res.end(<span class="built_in">JSON</span>.stringify(&#123;  </span><br><span class="line">	        domain: domain,</span><br><span class="line">	        addresses: addresses.join(<span class="string">','</span>)</span><br><span class="line">	    &#125;));</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDns</span>(<span class="params">postData,callback</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> domain = postData.search_dns;</span><br><span class="line">	dns.resolve(domain, <span class="function"><span class="keyword">function</span>(<span class="params">err, addresses</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!addresses)&#123;</span><br><span class="line">			addresses=[<span class="string">'Not Exist !'</span>]</span><br><span class="line">		&#125;</span><br><span class="line">		callback(domain, addresses);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里引入了 <code>querystring</code> 、<code>url</code> 、<code>dns</code> 三个原生模块，</p>
+<blockquote>
+<p><code>url.parse(req.url).query</code> 获取到请求的路由中的 <code>query</code> 值，由 <code>‘=’</code> 连接的字符串<br><code>querystring.parse()</code> 将 <code>query</code> 值转换为对象<br><code>JSON.stringify({domain:domain,addresses: addresses.join(&#39;,&#39;)})</code> 从一个对象解析出字符串</p>
+</blockquote>
+<p>新建 <code>main_index.js</code> ，添加如下内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 处理首页逻辑信息 */</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>),</span><br><span class="line">	url = <span class="built_in">require</span>(<span class="string">'url'</span>);</span><br><span class="line">exports.goIndex = <span class="function"><span class="keyword">function</span>(<span class="params">res, req</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> readPath = __dirname + <span class="string">'/'</span> +url.parse(<span class="string">'index.html'</span>).pathname;</span><br><span class="line">	<span class="keyword">var</span> indexPage = fs.readFileSync(readPath);</span><br><span class="line">	<span class="comment">/* 返回 */</span></span><br><span class="line">	res.end(indexPage);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><code>__dirname + &#39;/&#39; +url.parse(&#39;index.html&#39;).pathname</code> 获取 <code>index.html</code> 文件<br><code>fs.readFileSync(readPath)</code> 读取文件内容<br><code>res.end(indexPage)</code> 通过 <code>response.end()</code> 输出内容</p>
+</blockquote>
+<p>到这里我们的项目就差不多完成了。</p>
+<p>打开 <code>cmd</code> ，切换到 <code>E:\node_workspace\code</code> 项目目录，执行以下命令：<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node <span class="keyword">index</span>.js</span><br></pre></td></tr></table></figure></p>
+<p>我们会看到在下面会输出日志：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Server running at <span class="string">http:</span><span class="comment">//127.0.0.1:3000/</span></span><br></pre></td></tr></table></figure></p>
+<p>打开浏览器，在地址栏输入 <code>http://127.0.0.1:3000</code> 即可看到如下界面：<br><img src="http://segmentfault.com/img/bVlVhW" alt="799bad5a3b514f096e69bbc4a7896cd920150311110625247391499.jpg"></p>
+<p>输入一个网址，点击查询即可在下面看到对应的 <code>IP</code> 地址。</p>
+<p>下一节我们就一些体验进行改善。</p>
 </span>
       
     </div>
@@ -262,7 +282,7 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/File/" rel="tag">#File</a>
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
             <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
           
@@ -273,13 +293,13 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/03/06/node-module-exports/" rel="prev">NodeJS模块中的exports和module.exports</a>
+              <a href="/2015/05/28/javascript/node-dns-4/" rel="prev">【Node.js学习小案例】DNS域名解析 <四></a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/02/02/node-async/" rel="next">初识Async</a>
+              <a href="/2015/05/28/javascript/node-dns-2/" rel="next">【Node.js学习小案例】DNS域名解析 <二></a>
             
           </div>
         </div>
@@ -327,8 +347,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/03/03/node-watch-filechange/"
-                   data-title="使用Node监视文件或目录变化" data-url="http://blog.helloarron.com/2015/03/03/node-watch-filechange/">
+              <div class="ds-thread" data-thread-key="2015/05/28/javascript/node-dns-3/"
+                   data-title="【Node.js学习小案例】DNS域名解析 <三>" data-url="http://blog.helloarron.com/2015/05/28/javascript/node-dns-3/">
               </div>
             
           </div>
@@ -431,7 +451,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Node监视文件或目录变化"><span class="nav-number">1.</span> <span class="nav-text">使用Node监视文件或目录变化</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
