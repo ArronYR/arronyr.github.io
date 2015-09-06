@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="PHP,Yii," />
+  <meta name="keywords" content="Async,NodeJS," />
 
 
 
@@ -37,16 +37,28 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Yii 常用路径获取Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;">
+<meta name="description" content="初识 AsyncAsync 是一个流行的异步编程内裤，提供了直接而强大的JavaScript异步功能。虽然是为node.js设计的，但是也可以直接在浏览器中使用。
+Async 提供了大约20个函数，包括常用的map, reduce, filter, forEach 等等，也有常用的异步流程控制函数，包括parallel, series, waterfall 等等。所有这些函数都是假设你遵循node">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Yii 常用路径获取">
-<meta property="og:url" content="http://blog.helloarron.com/2015/03/09/yii-router-method/index.html">
+<meta property="og:title" content="初识Async">
+<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/node-async/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Yii 常用路径获取Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;">
-<meta property="og:updated_time" content="2015-09-05T14:43:42.000Z">
+<meta property="og:description" content="初识 AsyncAsync 是一个流行的异步编程内裤，提供了直接而强大的JavaScript异步功能。虽然是为node.js设计的，但是也可以直接在浏览器中使用。
+Async 提供了大约20个函数，包括常用的map, reduce, filter, forEach 等等，也有常用的异步流程控制函数，包括parallel, series, waterfall 等等。所有这些函数都是假设你遵循node">
+<meta property="og:image" content="http://images.helloarron.com/node-async-1.png">
+<meta property="og:image" content="http://images.helloarron.com/node-async-2.png">
+<meta property="og:image" content="http://images.helloarron.com/node-async-3.png">
+<meta property="og:image" content="http://images.helloarron.com/node-async-4.png">
+<meta property="og:image" content="http://images.helloarron.com/node-async-5.png">
+<meta property="og:image" content="http://images.helloarron.com/node-async-6.png">
+<meta property="og:image" content="http://images.helloarron.com/node-async-7.png">
+<meta property="og:image" content="http://images.helloarron.com/node-async-8.png">
+<meta property="og:image" content="http://images.helloarron.com/node-async-9.png">
+<meta property="og:updated_time" content="2015-09-06T16:25:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yii 常用路径获取">
-<meta name="twitter:description" content="Yii 常用路径获取Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;">
+<meta name="twitter:title" content="初识Async">
+<meta name="twitter:description" content="初识 AsyncAsync 是一个流行的异步编程内裤，提供了直接而强大的JavaScript异步功能。虽然是为node.js设计的，但是也可以直接在浏览器中使用。
+Async 提供了大约20个函数，包括常用的map, reduce, filter, forEach 等等，也有常用的异步流程控制函数，包括parallel, series, waterfall 等等。所有这些函数都是假设你遵循node">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -66,7 +78,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> Yii 常用路径获取 | Arron.y's blog </title>
+  <title> 初识Async | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -182,7 +194,7 @@ var _hmt = _hmt || [];
           
           
             
-              Yii 常用路径获取
+              初识Async
             
           
         </h1>
@@ -191,8 +203,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-03-09T15:29:22+08:00" content="2015-03-09">
-            2015-03-09
+          <time itemprop="dateCreated" datetime="2015-02-02T11:10:02+08:00" content="2015-02-02">
+            2015-02-02
           </time>
         </span>
 
@@ -201,8 +213,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/PHP/" itemprop="url" rel="index">
-                  <span itemprop="name">PHP</span>
+                <a href="/categories/NodeJS/" itemprop="url" rel="index">
+                  <span itemprop="name">NodeJS</span>
                 </a>
               </span>
 
@@ -217,8 +229,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/03/09/yii-router-method/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/09/yii-router-method/" itemprop="commentsCount"></span>
+              <a href="/2015/02/02/node-async/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/node-async/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -232,22 +244,40 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Yii_常用路径获取">Yii 常用路径获取</h2><p><code>Yii</code> 内置了很多获取路径、访问者<code>IP</code>等方法，如下：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;request-&gt;userHostAddress;        <span class="comment">// Yii获取ip地址</span></span><br><span class="line">Yii::app()-&gt;request-&gt;isPostRequest;          <span class="comment">// Yii判断提交方式</span></span><br><span class="line">Yii::app()-&gt;request-&gt;hostInfo;               <span class="comment">// 得到当前域名</span></span><br><span class="line">Yii::app()-&gt;basePath;                        <span class="comment">// 得到proteced目录的物理路径</span></span><br><span class="line">Yii::app()-&gt;request-&gt;urlReferrer;            <span class="comment">// 获得上一页的url以返回</span></span><br><span class="line">Yii::app()-&gt;request-&gt;url;                    <span class="comment">// 得到当前url</span></span><br><span class="line">Yii::app()-&gt;homeUrl;                         <span class="comment">// 得到当前home url</span></span><br><span class="line">Yii::app()-&gt;user-&gt;returnUrl;                 <span class="comment">// 得到当前return url</span></span><br><span class="line">dirname(Yii::app()-&gt;BasePath);               <span class="comment">// 项目路径</span></span><br><span class="line">Yii::getFrameworkPath();                     <span class="comment">// 取得当前的完整路径</span></span><br></pre></td></tr></table></figure></p>
-<p>Yii framework 已经定义的命名空间常量：</p>
-<blockquote>
-<p><code>system</code>: 指向<code>Yii</code>框架目录;  <code>Yii\framework</code></p>
-<p><code>zii</code>: 指向<code>zii library</code> 目录;  <code>Yii\framework\zii</code></p>
-<p><code>application</code> : 指向应用程序基本目录;  <code>protected\</code></p>
-<p><code>webroot</code>: 指向包含里入口脚本文件的目录;  <code>.\</code></p>
-<p><code>ext</code> : 指向包含所有第三方扩展的目录;  <code>\protected\extensions</code></p>
-</blockquote>
+        <span itemprop="articleBody"><h2 id="初识_Async">初识 Async</h2><p><code>Async</code> 是一个流行的异步编程内裤，提供了直接而强大的<code>JavaScript</code>异步功能。虽然是为<code>node.js</code>设计的，但是也可以直接在浏览器中使用。</p>
+<p><code>Async</code> 提供了大约<code>20</code>个函数，包括常用的<code>map</code>, <code>reduce</code>, <code>filter</code>, <code>forEach</code> 等等，也有常用的异步流程控制函数，包括<code>parallel</code>, <code>series</code>, <code>waterfall</code> 等等。所有这些函数都是假设你遵循<code>node.js</code>的约定：在一步函数的最后提供一个回调函数作为参数。</p>
+<p><code>Async</code> 包括三部分：</p>
 <ul>
-<li>用法：<code>Yii::getPathOfAlias(&#39;webroot&#39;);</code></li>
+<li>流程控制：简化始终常见流程的控制</li>
+<li>集合处理：如何使用异步操作处理集合中的数据</li>
+<li>工具类：几个常用的工具类</li>
 </ul>
-<p>插入<code>meta</code>信息：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;clientScript-&gt;registerMetaTag(<span class="string">'keywords'</span>,<span class="string">'关键字'</span>);</span><br><span class="line">Yii::app()-&gt;clientScript-&gt;registerMetaTag(<span class="string">'description'</span>,<span class="string">'一些描述'</span>);</span><br><span class="line">Yii::app()-&gt;clientScript-&gt;registerMetaTag(<span class="string">'author'</span>,<span class="string">'作者'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>在控制器添加<code>CSS</code>文件或<code>JavaScript</code>文件：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;clientScript-&gt;registerCssFile(Yii::app()-&gt;baseUrl.<span class="string">'/css/my.css'</span>);</span><br><span class="line">Yii::app()-&gt;clientScript-&gt;registerScriptFile(Yii::app()-&gt;baseUrl.<span class="string">'/css/my.js'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>在<code>view</code>中得到当前<code>controller</code>的<code>ID</code>方法：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;getController()-&gt;id;</span><br></pre></td></tr></table></figure></p>
-<p>在<code>view</code>中得到当前<code>action</code>的<code>ID</code>方法：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;getController()-&gt;getAction()-&gt;id;</span><br></pre></td></tr></table></figure></p>
+<p>下面我们使用 <code>async.waterfall</code> 作为例子：</p>
+<ol>
+<li>新建一个目录作为测试目录，新建脚本文件 <code>async.js</code> （文件名随意）</li>
+<li>进入命令行，切换到项目目录，执 <code>npm init</code></li>
+</ol>
+<p><img src="http://images.helloarron.com/node-async-1.png" alt="image"></p>
+<p>按照提示步骤完成初始化</p>
+<p>执行完成之后会在项目目录下多出 <code>package.json</code> 文件，打开文件，在里面添加对 <code>Async</code> 的依赖：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"async"</span> :  <span class="string">"*"</span></span><br></pre></td></tr></table></figure></p>
+<p>整个 <code>package.json</code>  如下：</p>
+<p><img src="http://images.helloarron.com/node-async-2.png" alt="image"></p>
+<p>在命令行执行 <code>npm install</code> 安装 <code>Async</code> 模块：</p>
+<p><img src="http://images.helloarron.com/node-async-3.png" alt="image"></p>
+<p>此时我们会发现并没有安装成功，打开 <code>package.json</code> 并添加<code>author</code>，然后再执行 <code>npm install</code></p>
+<p><img src="http://images.helloarron.com/node-async-4.png" alt="image"></p>
+<p>已成功安装 <code>Async</code> ，在项目目录下会出现 <code>node_modules</code> 文件夹</p>
+<p><img src="http://images.helloarron.com/node-async-5.png" alt="image"></p>
+<p><code>node_modules</code> 下就是我们安装的 <code>Async</code> 模块。</p>
+<p><img src="http://images.helloarron.com/node-async-6.png" alt="image"></p>
+<p>打开 <code>async.js</code> 文件添加如下测试代码：</p>
+<p><img src="http://images.helloarron.com/node-async-7.png" alt="image"></p>
+<p>打开命令行，切换到项目目录，执行 <code>node async.js</code></p>
+<p><img src="http://images.helloarron.com/node-async-8.png" alt="image"></p>
+<p>将 <code>callback( null, &#39;three&#39; )</code>; 修改为：<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">callback</span>( <span class="string">'error occurred !'</span>, <span class="string">'three'</span> );</span><br></pre></td></tr></table></figure></p>
+<p>再运行，运行结果如下：<br><img src="http://images.helloarron.com/node-async-9.png" alt="image"></p>
+<p>由此我们可以看出 <code>async.waterfall</code> 的基本用法。</p>
+<p><code>waterfall( tasks, [callback] )</code>：多个函数依次执行，且前一个的输出为后一个的输入，即每一个函数产生的值，都将传给下一个函数。如果中途出错，后面的函数将不会被执行。错误信息以及之前产生的结果，将传给 <code>waterfall</code> 最终的 <code>callback</code>，一个简单的例子。</p>
 </span>
       
     </div>
@@ -256,9 +286,9 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/PHP/" rel="tag">#PHP</a>
+            <a href="/tags/Async/" rel="tag">#Async</a>
           
-            <a href="/tags/Yii/" rel="tag">#Yii</a>
+            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
           
         </div>
       
@@ -267,13 +297,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/03/20/node-jsfile-mysql/" rel="prev">使用 NodeJS 从js文件中导入数组数据到 MySQL 数据库</a>
+              <a href="/2015/03/03/node-watch-filechange/" rel="prev">使用Node监视文件或目录变化</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/03/06/javascript-setTimeout-function/" rel="next">实现与 setTimeout 功能类似的函数</a>
             
           </div>
         </div>
@@ -321,8 +349,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/03/09/yii-router-method/"
-                   data-title="Yii 常用路径获取" data-url="http://blog.helloarron.com/2015/03/09/yii-router-method/">
+              <div class="ds-thread" data-thread-key="2015/02/02/node-async/"
+                   data-title="初识Async" data-url="http://blog.helloarron.com/2015/02/02/node-async/">
               </div>
             
           </div>
@@ -425,7 +453,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Yii_常用路径获取"><span class="nav-number">1.</span> <span class="nav-text">Yii 常用路径获取</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初识_Async"><span class="nav-number">1.</span> <span class="nav-text">初识 Async</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
