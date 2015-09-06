@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Go,Mac," />
+  <meta name="keywords" content="JavaScript,NodeJS," />
 
 
 
@@ -37,22 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
-方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
+<meta name="description" content="NodeJS模块中的exports和module.exportsexports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
+但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理解为包含关系。
+所有的 exports">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac下安装Go和配置相应环境">
-<meta property="og:url" content="http://blog.helloarron.com/2015/08/29/mac-install-go/index.html">
+<meta property="og:title" content="NodeJS模块中的exports和module.exports">
+<meta property="og:url" content="http://blog.helloarron.com/2015/03/06/node-module-exports/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
-方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
-<meta property="og:updated_time" content="2015-09-05T15:01:28.000Z">
+<meta property="og:description" content="NodeJS模块中的exports和module.exportsexports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
+但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理解为包含关系。
+所有的 exports">
+<meta property="og:updated_time" content="2015-09-06T15:59:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac下安装Go和配置相应环境">
-<meta name="twitter:description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
-方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
+<meta name="twitter:title" content="NodeJS模块中的exports和module.exports">
+<meta name="twitter:description" content="NodeJS模块中的exports和module.exportsexports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
+但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理解为包含关系。
+所有的 exports">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -72,7 +72,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> Mac下安装Go和配置相应环境 | Arron.y's blog </title>
+  <title> NodeJS模块中的exports和module.exports | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -188,7 +188,7 @@ var _hmt = _hmt || [];
           
           
             
-              Mac下安装Go和配置相应环境
+              NodeJS模块中的exports和module.exports
             
           
         </h1>
@@ -197,8 +197,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-08-29T07:56:29+08:00" content="2015-08-29">
-            2015-08-29
+          <time itemprop="dateCreated" datetime="2015-03-06T11:34:35+08:00" content="2015-03-06">
+            2015-03-06
           </time>
         </span>
 
@@ -207,8 +207,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Go/" itemprop="url" rel="index">
-                  <span itemprop="name">Go</span>
+                <a href="/categories/NodeJS/" itemprop="url" rel="index">
+                  <span itemprop="name">NodeJS</span>
                 </a>
               </span>
 
@@ -223,8 +223,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/29/mac-install-go/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/29/mac-install-go/" itemprop="commentsCount"></span>
+              <a href="/2015/03/06/node-module-exports/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/06/node-module-exports/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -238,27 +238,14 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Mac下安装Go和配置相应环境">Mac下安装Go和配置相应环境</h2><p>网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：</p>
-<h3 id="方法一：homebrew">方法一：homebrew</h3><p><code>homebrew</code>是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 <code>git</code> <code>mercurial</code> 也安装上：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew <span class="operator"><span class="keyword">update</span> &amp;&amp; brew <span class="keyword">upgrade</span></span><br><span class="line">brew <span class="keyword">install</span> git</span><br><span class="line">brew <span class="keyword">install</span> mercurial</span><br><span class="line">brew <span class="keyword">install</span> <span class="keyword">go</span></span></span><br></pre></td></tr></table></figure>
-<p>这样安装之后通过命令行输入<code>go</code>就可以看到相关的信息。输入<code>go env</code>查看环境信息：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">GOARCH=<span class="value"><span class="string">"amd64"</span></span></span></span><br><span class="line"><span class="setting">GOBIN=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GOCHAR=<span class="value"><span class="string">"6"</span></span></span></span><br><span class="line"><span class="setting">GOEXE=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GOHOSTARCH=<span class="value"><span class="string">"amd64"</span></span></span></span><br><span class="line"><span class="setting">GOHOSTOS=<span class="value"><span class="string">"darwin"</span></span></span></span><br><span class="line"><span class="setting">GOOS=<span class="value"><span class="string">"darwin"</span></span></span></span><br><span class="line"><span class="setting">GOPATH=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GORACE=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GOROOT=<span class="value"><span class="string">"/usr/local/go"</span></span></span></span><br><span class="line"><span class="setting">GOTOOLDIR=<span class="value"><span class="string">"/usr/local/go/pkg/tool/darwin_amd64"</span></span></span></span><br><span class="line"><span class="setting">CC=<span class="value"><span class="string">"clang"</span></span></span></span><br><span class="line"><span class="setting">GOGCCFLAGS=<span class="value"><span class="string">"-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fno-common"</span></span></span></span><br><span class="line"><span class="setting">CXX=<span class="value"><span class="string">"clang++"</span></span></span></span><br><span class="line"><span class="setting">CGO_ENABLED=<span class="value"><span class="string">"1"</span></span></span></span><br></pre></td></tr></table></figure>
-<h3 id="方法二：pkg包安装">方法二：pkg包安装</h3><p>直接去官方下载<a href="http://golang.org/dl/" target="_blank" rel="external">安装包</a>，然后双击安装,之后同样地输入<code>go</code>、<code>go env</code>、<code>go version</code>等查看是否安装。</p>
-<p>–</p>
-<h3 id="环境变量配置">环境变量配置</h3><p>1.0 查看是否存在bash_profile</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>2.0 如果不存在则创建bash_profile Mac环境配置文件</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">vim</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>3.0 添加go 环境变量<br>如果是第一种安装方法，只需要指定一下<code>GOPATH</code>即可。为了让自己的程序编译之后在命令行任何地方能直接执行，再加入<code>GOPATH</code>下的<code>bin</code>即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#This is my personal bash_profile,when loaded at login.</span></span><br><span class="line"><span class="comment">#===2015-08-15===</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH</span></span><br><span class="line"><span class="built_in">export</span> GOPATH=<span class="variable">$HOME</span>/Documents/go_workspace</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH bin</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOPATH</span>/bin</span><br></pre></td></tr></table></figure>
-<p>但是第二种方法安装之后输入<code>go</code>会显示<code>ommand not found: go</code>，所以需要在<code>.bash_profile</code>中指定<code>GOROOT</code>下的<code>bin</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#This is my personal bash_profile,when loaded at login.</span></span><br><span class="line"><span class="comment">#===2015-08-15===</span></span><br><span class="line"><span class="comment">#GOROOT</span></span><br><span class="line"><span class="built_in">export</span> GOROOT=/usr/<span class="built_in">local</span>/go</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH</span></span><br><span class="line"><span class="built_in">export</span> GOPATH=<span class="variable">$HOME</span>/Documents/go_workspace</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOROOT bin</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOROOT</span>/bin</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH bin</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOPATH</span>/bin</span><br></pre></td></tr></table></figure>
-<p>一般环境变量更改后，重启后生效。在重启终端的时候就会自动执行<code>.bash_profile</code>文件。</p>
-<p>如果想立刻生效，则可执行下面的语句：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> .bash_profile</span><br></pre></td></tr></table></figure>
-<h3 id="问题：">问题：</h3><p>如果打开终端没有生效，就把上面的追加到<code>~/.zshrc</code>中：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> -<span class="keyword">e</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-<p>复制粘贴保存即可。</p>
+        <span itemprop="articleBody"><h2 id="NodeJS模块中的exports和module-exports">NodeJS模块中的<code>exports</code>和<code>module.exports</code></h2><p><code>exports</code> 和 <code>module.exports</code> 的作用都是讲文件模块的方法和属性暴露给 <code>require</code> 返回的对象进行调用。</p>
+<p>但是二者之间存在本质的区别，<code>exports</code>的属性和方法都可以被<code>module.exports</code> 替代，但是<code>exports</code> 不能替代<code>module.exports</code> 方法，可以理解为包含关系。</p>
+<p>所有的 <code>exports</code> 对象最终都可以通过<code>module.exports</code> 传递执行，可以准确地说，<code>exports</code> 是给<code>module.exports</code>添加属性和方法。</p>
+<p><code>module.exports</code> 方法可以单独返回一个数据类型，而exports 只能返回一个 object 对象。当我们需要返回一个数组、字符串、数字等类型时，就必须使用 module.exports。如：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">module</span>.<span class="title">exports</span> =</span> [<span class="string">"Arron.y"</span>, <span class="string">"is"</span>, <span class="string">"my"</span>, <span class="string">"name"</span>];</span><br></pre></td></tr></table></figure></p>
+<p>当使用了<code>module.exports</code> 关键词以后，该模块中所有 <code>exports</code> 对象执行的属性和方法都将被忽略。如：</p>
+<p><code>test_ignore.js</code>：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">module</span>.<span class="title">exports</span> =</span> 'test <span class="keyword">for</span> <span class="function"><span class="keyword">module</span>.<span class="title">exorts</span> <span class="title">ignore</span>!';  </span><br><span class="line"><span class="title">exports</span>.<span class="title">name</span> =</span> 'Arron.y';</span><br><span class="line">exports.showName = <span class="function"><span class="keyword">function</span><span class="params">()</span> &#123;</span>  </span><br><span class="line">    console.<span class="built_in">log</span><span class="params">('My name is Arron.y')</span>;  </span><br><span class="line">&#125;;</span><br><span class="line">console.<span class="built_in">log</span><span class="params">(module.exports )</span>;</span><br></pre></td></tr></table></figure></p>
+<p><code>index.js</code>：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var Test = require<span class="params">('./ignore_exports.js')</span>;</span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Test )</span>;</span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Test .name)</span>;</span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Test .showName<span class="params">()</span>)</span>;</span><br></pre></td></tr></table></figure></p>
+<p>执行结果将是 :<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Test</span>.name --&gt; undefined，</span><br><span class="line"><span class="type">Test</span>.showName() --&gt; <span class="type">Object</span> test <span class="keyword">for</span> module.exorts ignore! has no <span class="keyword">method</span> 'showName'</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -267,9 +254,9 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/Go/" rel="tag">#Go</a>
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
-            <a href="/tags/Mac/" rel="tag">#Mac</a>
+            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
           
         </div>
       
@@ -278,11 +265,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2015/03/06/javascript-setTimeout-function/" rel="prev">实现与 setTimeout 功能类似的函数</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/06/18/laravel-learn-page-1/" rel="next">【Laravel学习篇 · 一】Windows下起步就遇麻烦</a>
             
           </div>
         </div>
@@ -330,8 +317,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/08/29/mac-install-go/"
-                   data-title="Mac下安装Go和配置相应环境" data-url="http://blog.helloarron.com/2015/08/29/mac-install-go/">
+              <div class="ds-thread" data-thread-key="2015/03/06/node-module-exports/"
+                   data-title="NodeJS模块中的exports和module.exports" data-url="http://blog.helloarron.com/2015/03/06/node-module-exports/">
               </div>
             
           </div>
@@ -434,7 +421,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac下安装Go和配置相应环境"><span class="nav-number">1.</span> <span class="nav-text">Mac下安装Go和配置相应环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：homebrew"><span class="nav-number">1.1.</span> <span class="nav-text">方法一：homebrew</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：pkg包安装"><span class="nav-number">1.2.</span> <span class="nav-text">方法二：pkg包安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量配置"><span class="nav-number">1.3.</span> <span class="nav-text">环境变量配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题："><span class="nav-number">1.4.</span> <span class="nav-text">问题：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJS模块中的exports和module-exports"><span class="nav-number">1.</span> <span class="nav-text">NodeJS模块中的exports和module.exports</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
