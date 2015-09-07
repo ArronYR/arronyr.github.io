@@ -37,31 +37,37 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="MongoDB增删查改介绍在数据库中，数据插入是最基本的操作，在MongoDB使用db.collection.insert(document)语句来插入文档，如下图：
-document是文档数据，collection是存放文档数据的集合。
-例如：所有用户的信息存放在users集合中，每个用户的信息为一个user文档，插入数据:1db.users.insert(user);
-如果collection">
+<meta name="description" content="MongoDB 游标与结果集
+
+什么是游标(cursor)？
+
+find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
+
+想要获取数据，我们可以使用next方法来遍历游标，如下：
+1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB 增删查改介绍">
-<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/mongodb-cdsu/index.html">
+<meta property="og:title" content="MongoDB 游标与结果集">
+<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/mongodb-cursor/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="MongoDB增删查改介绍在数据库中，数据插入是最基本的操作，在MongoDB使用db.collection.insert(document)语句来插入文档，如下图：
-document是文档数据，collection是存放文档数据的集合。
-例如：所有用户的信息存放在users集合中，每个用户的信息为一个user文档，插入数据:1db.users.insert(user);
-如果collection">
-<meta property="og:image" content="http://images.helloarron.com/mongodb-cdsu-1.png">
-<meta property="og:image" content="http://images.helloarron.com/mongodb-cdsu-2.jpeg">
-<meta property="og:image" content="http://images.helloarron.com/mongodb-cdsu-3.jpeg">
-<meta property="og:image" content="http://images.helloarron.com/mongodb-cdsu-4.jpeg">
-<meta property="og:image" content="http://images.helloarron.com/mongodb-cdsu-5.jpeg">
-<meta property="og:image" content="http://images.helloarron.com/mongodb-cdsu-6.jpeg">
-<meta property="og:updated_time" content="2015-09-07T14:06:09.000Z">
+<meta property="og:description" content="MongoDB 游标与结果集
+
+什么是游标(cursor)？
+
+find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
+
+想要获取数据，我们可以使用next方法来遍历游标，如下：
+1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
+<meta property="og:updated_time" content="2015-09-07T14:18:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MongoDB 增删查改介绍">
-<meta name="twitter:description" content="MongoDB增删查改介绍在数据库中，数据插入是最基本的操作，在MongoDB使用db.collection.insert(document)语句来插入文档，如下图：
-document是文档数据，collection是存放文档数据的集合。
-例如：所有用户的信息存放在users集合中，每个用户的信息为一个user文档，插入数据:1db.users.insert(user);
-如果collection">
+<meta name="twitter:title" content="MongoDB 游标与结果集">
+<meta name="twitter:description" content="MongoDB 游标与结果集
+
+什么是游标(cursor)？
+
+find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
+
+想要获取数据，我们可以使用next方法来遍历游标，如下：
+1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -81,7 +87,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> MongoDB 增删查改介绍 | Arron.y's blog </title>
+  <title> MongoDB 游标与结果集 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -197,7 +203,7 @@ var _hmt = _hmt || [];
           
           
             
-              MongoDB 增删查改介绍
+              MongoDB 游标与结果集
             
           
         </h1>
@@ -206,7 +212,7 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-02-02T11:02:15+08:00" content="2015-02-02">
+          <time itemprop="dateCreated" datetime="2015-02-02T10:55:00+08:00" content="2015-02-02">
             2015-02-02
           </time>
         </span>
@@ -232,8 +238,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/02/02/mongodb-cdsu/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/mongodb-cdsu/" itemprop="commentsCount"></span>
+              <a href="/2015/02/02/mongodb-cursor/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/mongodb-cursor/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -247,45 +253,35 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="MongoDB增删查改介绍">MongoDB增删查改介绍</h2><p>在数据库中，数据插入是最基本的操作，在MongoDB使用db.collection.insert(document)语句来插入文档，如下图：<br><img src="http://images.helloarron.com/mongodb-cdsu-1.png" alt="image"></p>
-<p><code>document</code>是文档数据，<code>collection</code>是存放文档数据的集合。</p>
-<p>例如：所有用户的信息存放在<code>users</code>集合中，每个用户的信息为一个<code>user</code>文档，插入数据:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.users.insert(user);</span><br></pre></td></tr></table></figure></p>
-<p>如果<code>collection</code>存在，document会添加到<code>collection</code>目录下， 如果<code>collection</code>不存在，数据库会先创建<code>collection</code>，然后再保存<code>document</code>。</p>
-<p><code>insert</code>语句不但可以插入单个文档，还可以一次性插入多个文档。</p>
-<p>插入多个文档时，<code>insert</code>命令的参数为一个数组，数组元素为<code>BSON</code>格式的文档。</p>
-<p>多个文档可以放在一个数组内，一次插入多条数据，例如：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.users.insert([&#123;name:&#34;tommy&#34;&#125;,&#123;name:&#34;xiaoming&#34;&#125;])</span><br></pre></td></tr></table></figure></p>
-<p>文档批量插入非常方便，但是使用批量插入时也有一些问题需要注意，因为<code>BSON</code>格式的限制，一次插入的数据量不能超过<code>16M</code>，在一个<code>insert</code>命令中插入多条数据时，<code>MongoDB</code>不保证完全成功或完全失败。</p>
-<p>在<code>MongoDB</code>中，查询指向特定的文档集合，查询设定条件，指明<code>MongoDB</code>需要返回的文档；查询也可以包含一个投影，指定返回的字段。</p>
-<p>如下图，在查询过程指定了一个查询条件和一个排序修饰。<br><img src="http://images.helloarron.com/mongodb-cdsu-2.jpeg" alt="image"></p>
-<p>在关系型数据库中，投影指的是对列的筛选，类似的，在<code>MongoDB</code>中，投影指的是对出现在结果集中的对象属性的筛选。</p>
-<p><code>MongoDB</code>中查询检索数据时使用<code>find</code>命令，使用方法如下：</p>
-<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find(criteria,projection);</span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><p>MongoDB 游标与结果集</p>
+<ol>
+<li>什么是游标(<code>cursor</code>)？</li>
+</ol>
+<p><code>find</code>命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。</p>
+<ol>
+<li><p>想要获取数据，我们可以使用<code>next</code>方法来遍历游标，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myCursor = db.inventory.find( &#123; type: <span class="string">"food"</span> &#125; );</span><br><span class="line"><span class="keyword">var</span> myDocument = myCursor.hasNext() ? myCursor.next() : <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (myDocument) &#123;</span><br><span class="line">    <span class="keyword">var</span> myItem = myDocument.item;</span><br><span class="line">    print(tojson(myItem));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用<code>forEach</code>方法也能实现游标的遍历，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myCursor =  db.inventory.find( &#123; type: <span class="string">"food"</span> &#125; );</span><br><span class="line">myCursor.forEach(printjson);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>很多时候查询返回的结果集并不完全是你想要的，或许你只需要它们中间的一部分，这个时候我们可以通过条件来限制结果集返回的内容。</p>
+<p><code>limit</code>方法：设定返回结果集中的最大文档数量。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find().limit(Num)</span><br></pre></td></tr></table></figure></p>
 <p>参数：</p>
 <blockquote>
-<p><code>criteria</code> – 查询条件，文档类型，可选。<br><code>projection</code> – 返回的字段，文档类型，可选,若需返回所有字段，则忽略此参数。</p>
+<p><code>Num:Number</code>类型，大于<code>0</code>。</p>
 </blockquote>
-<p><code>find</code>命令两个可选参数，<code>criteria</code>为查询条件，<code>projection</code>为返回的字段，如果不传入条件数据库会返回该集合的所有文档。</p>
-<p>如下图简单示例：<br><img src="http://images.helloarron.com/mongodb-cdsu-3.jpeg" alt="image"></p>
-<p><code>update</code>命令可以更新指定文档的特定字段值，也可以替换整个文档，如果更新操作会增加文档大小，<code>MongoDB</code>将重新分配空间并重新定位。</p>
-<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.update(query,update,&#123;upsert:boolean,multi:boolean&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>示例：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.testData.find().limit(3)</span><br></pre></td></tr></table></figure></p>
+<p>返回如下结果：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; "<span class="attribute">_id</span>" : <span class="value">ObjectId(<span class="string">"51a7dc7b2cacf40b79990be6"</span>)</span>, "<span class="attribute">x</span>" : <span class="value"><span class="number">1</span> </span>&#125;</span><br><span class="line">&#123; "<span class="attribute">_id</span>" : <span class="value">ObjectId(<span class="string">"51a7dc7b2cacf40b79990be7"</span>)</span>, "<span class="attribute">x</span>" : <span class="value"><span class="number">2</span> </span>&#125;</span><br><span class="line">&#123; "<span class="attribute">_id</span>" : <span class="value">ObjectId(<span class="string">"51a7dc7b2cacf40b79990be8"</span>)</span>, "<span class="attribute">x</span>" : <span class="value"><span class="number">3</span> </span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>有的时候只需要返回结果集中的部分字段，这个时候我们可以通过传入字段条件的方式来实现。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find( &#26597;&#35810;&#26465;&#20214;,&#23383;&#20307;&#26465;&#20214; )</span><br></pre></td></tr></table></figure></p>
 <p>参数：</p>
 <blockquote>
-<p><code>query</code>：查询条件，文档，和<code>find</code>中的查询条件写法一致。<br><code>update</code>：修改内容，文档。<br><code>upsert</code>(可选)：如果值为<code>true</code>，那么当集合中没有匹配文档时，创建文档。默认<code>false</code>。<br><code>multi</code>(可选)：如果值为<code>true</code>，那么将更新全部符合条件的文档，否则仅更新一个文档，默认<code>false</code>。</p>
+<p>字段条件：<code>JSON</code>对象，格式=&gt;{字段：值},值等于<code>1</code>时表示需要返回,<code>0</code>时表示不需要返回。</p>
 </blockquote>
-<p>如下示例：将<code>users</code>集合中所有符合条件<code>&quot;age&gt;18&quot;</code>文档的<code>status</code>字段更新为<code>&quot;A&quot;</code>。<br><img src="http://images.helloarron.com/mongodb-cdsu-4.jpeg" alt="image"></p>
-<p><code>save</code>命令可以更新或插入一个新文档，与<code>update</code>命令不同的是，<code>save</code>只能对一个文档进行操作。</p>
-<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.save();</span><br></pre></td></tr></table></figure></p>
-<p>参数：<br><code>document</code>：新的文档；</p>
-<p>需要删除文档时使用<code>remove</code>命令，删除文档可以清理掉不需要的数据，释放存储空间，提升检索效率，但是错误的删除会是一场灾难，因此在执行数据删除操作时需要非常的谨慎！</p>
-<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.remove(&#10;    query,&#10;    justOne&#10; )</span><br></pre></td></tr></table></figure></p>
-<p>参数：</p>
-<blockquote>
-<p><code>query</code>：<code>BSON</code>类型，删除文档的条件。<br><code>justOne</code>：布尔类型，<code>true</code>：只删除一个文档，<code>false</code>：默认值，删除所有符合条件的文档。</p>
-</blockquote>
-<p>下面是一个是将<code>users</code>集合中所有<code>status=&quot;D&quot;</code>的文档删除操作，对比一下<code>MongoDB</code>和传统<code>SQL</code>数据库删除的操作，看看有哪些不同之处。</p>
-<p>与传统<code>SQL</code>比较 - 删除文档</p>
-<p><code>MongoDB</code><br><img src="http://images.helloarron.com/mongodb-cdsu-5.jpeg" alt="image"></p>
-<p>传统SQL<br><img src="http://images.helloarron.com/mongodb-cdsu-6.jpeg" alt="image"></p>
+<p>示例：返回<code>person</code>的<code>&quot;status&quot;</code>和<code>&quot;age&quot;</code>字段。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.person.find(&#123;&#125;, &#123;status:1,age:1&#125;)</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -303,13 +299,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/02/02/javascript/node-async/" rel="prev">初识Async</a>
+              <a href="/2015/02/02/mongodb-find/" rel="prev">MongoDB 条件查询</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/02/02/mongodb-find/" rel="next">MongoDB 条件查询</a>
             
           </div>
         </div>
@@ -357,8 +351,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/02/02/mongodb-cdsu/"
-                   data-title="MongoDB 增删查改介绍" data-url="http://blog.helloarron.com/2015/02/02/mongodb-cdsu/">
+              <div class="ds-thread" data-thread-key="2015/02/02/mongodb-cursor/"
+                   data-title="MongoDB 游标与结果集" data-url="http://blog.helloarron.com/2015/02/02/mongodb-cursor/">
               </div>
             
           </div>
@@ -461,7 +455,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB增删查改介绍"><span class="nav-number">1.</span> <span class="nav-text">MongoDB增删查改介绍</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
