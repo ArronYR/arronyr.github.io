@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,NodeJS," />
+  <meta name="keywords" content="MongoDB," />
 
 
 
@@ -37,27 +37,26 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
-
-Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
-V8引擎执行Javascript的速度非常快，性能非常好">
+<meta name="description" content="MongoDB条件查询相等条件是最简单常用的的查询操作，查询条件是{ field:value }格式的BSON对象。
+语法：1&amp;#123; field: value &amp;#125;
+示例：查询”inventory集合中所有type字段为snacks的文档”;1db.inventory.find(&amp;#123; type: &amp;#34;snacks&amp;#34; &amp;#125;)
+比较条件也是最基本的查询条件之">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Node.js学习小案例】DNS域名解析 <一>">
-<meta property="og:url" content="http://blog.helloarron.com/2015/05/28/javascript/node-dns-1/index.html">
+<meta property="og:title" content="MongoDB 条件查询">
+<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/mongodb-find/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
-
-Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
-V8引擎执行Javascript的速度非常快，性能非常好">
-<meta property="og:image" content="http://segmentfault.com/img/bVlVhO">
-<meta property="og:image" content="http://segmentfault.com/img/bVlVhW">
-<meta property="og:updated_time" content="2015-09-06T15:54:19.000Z">
+<meta property="og:description" content="MongoDB条件查询相等条件是最简单常用的的查询操作，查询条件是{ field:value }格式的BSON对象。
+语法：1&amp;#123; field: value &amp;#125;
+示例：查询”inventory集合中所有type字段为snacks的文档”;1db.inventory.find(&amp;#123; type: &amp;#34;snacks&amp;#34; &amp;#125;)
+比较条件也是最基本的查询条件之">
+<meta property="og:image" content="http://images.helloarron.com/mongodb-find-1.jpeg">
+<meta property="og:updated_time" content="2015-09-07T14:14:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Node.js学习小案例】DNS域名解析 <一>">
-<meta name="twitter:description" content="【Node.js学习小案例】DNS域名解析 &amp;lt;一&amp;gt;Node.js 百度百科：
-
-Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
-V8引擎执行Javascript的速度非常快，性能非常好">
+<meta name="twitter:title" content="MongoDB 条件查询">
+<meta name="twitter:description" content="MongoDB条件查询相等条件是最简单常用的的查询操作，查询条件是{ field:value }格式的BSON对象。
+语法：1&amp;#123; field: value &amp;#125;
+示例：查询”inventory集合中所有type字段为snacks的文档”;1db.inventory.find(&amp;#123; type: &amp;#34;snacks&amp;#34; &amp;#125;)
+比较条件也是最基本的查询条件之">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -77,7 +76,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> 【Node.js学习小案例】DNS域名解析 <一> | Arron.y's blog </title>
+  <title> MongoDB 条件查询 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -193,7 +192,7 @@ var _hmt = _hmt || [];
           
           
             
-              【Node.js学习小案例】DNS域名解析 <一>
+              MongoDB 条件查询
             
           
         </h1>
@@ -202,8 +201,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-05-28T07:56:29+08:00" content="2015-05-28">
-            2015-05-28
+          <time itemprop="dateCreated" datetime="2015-02-02T11:02:15+08:00" content="2015-02-02">
+            2015-02-02
           </time>
         </span>
 
@@ -212,8 +211,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/NodeJS/" itemprop="url" rel="index">
-                  <span itemprop="name">NodeJS</span>
+                <a href="/categories/MongoDB/" itemprop="url" rel="index">
+                  <span itemprop="name">MongoDB</span>
                 </a>
               </span>
 
@@ -228,8 +227,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/05/28/javascript/node-dns-1/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/28/javascript/node-dns-1/" itemprop="commentsCount"></span>
+              <a href="/2015/02/02/mongodb-find/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/mongodb-find/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -243,60 +242,22 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="【Node-js学习小案例】DNS域名解析_&lt;一&gt;">【Node.js学习小案例】DNS域名解析 &lt;一&gt;</h2><p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 百度百科：</p>
-<blockquote>
-<p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 是一个基于<code>Chrome</code> <code>JavaScript</code> 运行时建立的一个平台， 用来方便地搭建快速的<br>易于扩展的网络应用· <a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> 借助事件驱动， 非阻塞<code>I/O</code> 模型变得轻量和高效， 非常适合 运行在分布式设备 的<br>数据密集型 的实时应用。</p>
-<p><code>V8</code>引擎执行<code>Javascript</code>的速度非常快，性能非常好。<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>对一些特殊用例进行了优化，提供了替代的<code>API</code>，使得<code>V8</code>在非浏览器环境下运行得更好。</p>
-<p><code>Node</code>是一个<code>Javascript</code>运行环境(<code>runtime</code>)。实际上它是对<code>Google V8</code>引擎进行了封装。<code>V8</code>引<br>擎执行<code>Javascript的速度非常快，性能非常好。</code>Node<code>对一些特殊用例进行了优化，提供了替代的</code>API<code>，使得</code>V8`在非浏览器环境下运行得更好。</p>
-</blockquote>
-<p><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>官方介绍：</p>
-<blockquote>
-<p>Node.js® is a platform built on Chrome’s JavaScript runtime for easily<br>building fast, scalable network applications. Node.js uses an<br>event-driven, non-blocking I/O model that makes it lightweight and<br>efficient, perfect for data-intensive real-time applications that run<br>across distributed devices.</p>
-</blockquote>
-<p>我已经断断续续学习了<code>node.js</code> 半年多了，在这期间也穿插着<code>php</code>、<code>AngularJS</code>、<code>CSS3</code>等其他的学习。在这些语言中，我最喜欢的就是<code>JavaScript</code>和<code>php</code>，也很想让自己在这两个语言上有所精进。目前的我对<code>Node.js</code>的学习不是很懂，但一些基础的东西还算理解吧。下面我就把我看的一些资料中的案例搬过来，加入一些其他的功能，让它更像一个完整的应用。</p>
-<p>安装<a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>：（<a href="https://nodejs.org/download/" target="_blank" rel="external">下载地址</a>）</p>
-<p><img src="http://segmentfault.com/img/bVlVhO" alt="77eb99ef6f5e683ccec9093e9e65360a20150310160532174548837.jpg"></p>
-<p><code>Windows</code>下安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>：</p>
-<blockquote>
-<p><code>windows</code>下的安装很简单，直接去<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>官方网站下载对应版本的<code>.msi</code>文件即可（也有<code>.exe</code>文件，但是建议还是下载<code>.msi</code>文件安装，因为<code>.exe</code>文件安装之后里面缺少一些模块和<code>npm</code>，还需自己配置<code>path</code>，否则在<code>windows</code>的命令行里没法执行<code>node</code>命令）</p>
-</blockquote>
-<p>安装之后就可以在命令行里执行：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v       <span class="comment">// 查看 node.js 版本</span></span><br><span class="line">npm -v        <span class="comment">// 查看 npm 的版本</span></span><br></pre></td></tr></table></figure></p>
-<p>如果提示不是内部命令，则需要将<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>的安装路径添加到环境变量</p>
-<p><code>Linux</code>下安装<code>NodeJS</code>：</p>
-<blockquote>
-<p><code>Linux</code>有很的版本，本人只在<code>CentOS</code>下安装过<code>node.js</code> （<a href="http://blog.helloarron.com/linux/27.html">参考</a>）</p>
-<p>其他的版本请移步这里（<a href="http://www.cnblogs.com/LonelyShadow/p/4310100.html" target="_blank" rel="external">参考</a>）</p>
-</blockquote>
-<p><code>Mac</code>下安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>：</p>
-<blockquote>
-<p>本人是个穷屌丝，没钱买<code>Mac</code>。没有在<code>Mac</code>上安装<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>的经验，也就不在这里写什么了。</p>
-<p>有需要的童鞋请移步这里（<a href="http://www.cnblogs.com/LonelyShadow/p/4310100.html" target="_blank" rel="external">参考</a>），这里有各个系统下的安装方法。</p>
-</blockquote>
-<p>在开始我们的小案例之前我们需要了解一下<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a>中的模块。</p>
-<p>模块分为两类：<code>原生模块</code>和<code>文件模块</code>。原生模块即<a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a> <code>API</code> 提供的原生模块，原生模块在启动时已经被加载。文件模块为动态加载模块，加载文件模块的工作主要是由原生模块 <code>module</code> 来实现和完成。</p>
-<ol>
-<li>原生模块的调用</li>
-</ol>
-<blockquote>
-<p>应用<code>NodeJS</code>提供的<code>API require</code> 来加载相应的<code>NodeJS</code> 模块，<code>require</code> 成功后会返回一个<code>NodeJS</code><br>模块的对象，该对象拥有该模块的所有属性和方法，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);            <span class="comment">// require http 模块</span></span><br><span class="line">&gt; http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123; 	res.writeHead(<span class="number">200</span>, &#123;</span><br><span class="line">&gt; <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span> &#125;); 	res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">&gt; &#125;).listen(<span class="number">1337</span>, <span class="string">"127.0.0.1"</span>);         <span class="comment">// 调用 http 对象的 createServer 和 listen</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-<p>方法来创建简单的 <code>HTTP</code> 服务器 直接在浏览器地址栏输入<a href="http://127.0.0.1:3000" target="_blank" rel="external">http://127.0.0.1:3000</a> 即可看到经典的<code>“Hello
-World” ~_~</code></p>
-</blockquote>
-<ol>
-<li>文件模块的调用方法：</li>
-</ol>
-<blockquote>
-<p>文件模块的调用和原生模块的方法基本一致，但是需要注意的是其两者的加载方法存在一定的区别，原生模块不需要 指定模块路径，而文件模块加载时必须指定文件路径，否则会出错提示<code>&quot;can not find xxx module&quot;</code>。如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">var</span> obj = <span class="built_in">require</span>(<span class="string">'./exports.js'</span>);</span><br><span class="line">&gt; <span class="keyword">var</span> obj = <span class="built_in">require</span>(<span class="string">'/path/.../exports.js'</span>);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
-<p>在调用文件模块时要确保文件存在，路径一定不要错了 ^_^</p>
-</blockquote>
-<p>更多的信息请参考网址 <a href="http://nodejs.org/api/" target="_blank" rel="external">http://nodejs.org/api/</a></p>
-<p>说了这些之后我们来看看我们的小案例，我们先确定我们要做什么：</p>
-<ul>
-<li>在浏览器地址栏输入网址，打开一个页面</li>
-<li>在页面的输入框里输入网址，点击提交</li>
-<li>在页面中输出输入该域名对应的<code>ip</code>地址<br><img src="http://segmentfault.com/img/bVlVhW" alt="799bad5a3b514f096e69bbc4a7896cd920150311110625247391499.jpg"></li>
-</ul>
-<p>下一节我们就正式开始我们的小案例。</p>
+        <span itemprop="articleBody"><h2 id="MongoDB条件查询">MongoDB条件查询</h2><p>相等条件是最简单常用的的查询操作，查询条件是<code>{ field:value }</code>格式的<code>BSON</code>对象。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; field: value &#125;</span><br></pre></td></tr></table></figure></p>
+<p>示例：查询”<code>inventory</code>集合中所有<code>type</code>字段为<code>snacks</code>的文档”;<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.inventory.find(&#123; type: &#34;snacks&#34; &#125;)</span><br></pre></td></tr></table></figure></p>
+<p>比较条件也是最基本的查询条件之一，通过运算符的比较运算来筛选或排除文档，从而获取到我们想要的文档数据。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; field: &#123; op: value &#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>示例：查询”<code>inventory</code>集合中包含<code>quantity</code>字段并且值大于<code>1000</code>的文档”。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.inventory.find(&#123; quantity: &#123; $gt: 1000&#125;&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>相信你已经发现了示例中的<code>$gt</code>是我们之前没有遇见过的字段。</p>
+<p>没错！如你所想，<code>$gt</code>就是比较运算符的一种，代表<code>&quot;大于&quot;</code>，下面我们一起来介绍<code>MongoDB</code>中常见的一些运算符：大于(<code>$gt</code>)、大于等于(<code>$gte</code>)、小于(<code>$lt</code>)、小于等于(<code>$lte</code>)、不等于(<code>$ne</code>)、包含于(<code>$in</code>)、不包含于(<code>$nin</code>)。</p>
+<p>通过<code>MongoDB</code>中提供的丰富运算符，可以帮助你精确的来检索数据，比如数值型的字段可以使用<code>$gt、$gte、$lt、$ne</code>等运算符来比较，数组条件的可以使用<code>$in</code>、<code>$nin</code>来实现。</p>
+<p>当字段包含数组，可以进行数组完全匹配或匹配特定的值。</p>
+<p>单个元素匹配只需要传入元素的值即可，完全匹配需要传入一个数组，特定元素匹配需要<code>&quot;字段.索引&quot;</code>形式传入参数。</p>
+<p>数组完全匹配：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.inventory.find( &#123; tags: [ &#39;fruit&#39;, &#39;food&#39;, &#39;citrus&#39; ] &#125; );</span><br></pre></td></tr></table></figure></p>
+<p>单个元素匹配：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.inventory.find( &#123; tags: &#39;fruit&#39; &#125; );</span><br></pre></td></tr></table></figure></p>
+<p>特定元素匹配:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.inventory.find( &#123; &#39;tags.0&#39; : &#39;fruit&#39; &#125; );</span><br></pre></td></tr></table></figure></p>
+<p>查询数据时，我们可能会遇到包含嵌入的子文档数据，如：<br><img src="http://images.helloarron.com/mongodb-find-1.jpeg" alt="image"></p>
+<p>如果文档中包含嵌入的子文档，可以使用<code>&quot;.key&quot;</code>的方式访问子文档节点，例如：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.mycol.find(&#123;<span class="string">"access.level"</span>:<span class="number">5</span>&#125;);</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -305,9 +266,7 @@ World” ~_~</code></p>
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
-          
-            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
+            <a href="/tags/MongoDB/" rel="tag">#MongoDB</a>
           
         </div>
       
@@ -316,13 +275,11 @@ World” ~_~</code></p>
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/28/javascript/node-dns-2/" rel="prev">【Node.js学习小案例】DNS域名解析 <二></a>
+              <a href="/2015/02/02/mongodb-cdsu/" rel="prev">MongoDB 增删查改介绍</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/05/19/Monacan-Angular-WebApp/" rel="next">AngularJS 初体验之过滤器</a>
             
           </div>
         </div>
@@ -370,8 +327,8 @@ World” ~_~</code></p>
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/05/28/javascript/node-dns-1/"
-                   data-title="【Node.js学习小案例】DNS域名解析 <一>" data-url="http://blog.helloarron.com/2015/05/28/javascript/node-dns-1/">
+              <div class="ds-thread" data-thread-key="2015/02/02/mongodb-find/"
+                   data-title="MongoDB 条件查询" data-url="http://blog.helloarron.com/2015/02/02/mongodb-find/">
               </div>
             
           </div>
@@ -474,7 +431,7 @@ World” ~_~</code></p>
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#【Node-js学习小案例】DNS域名解析_<一>"><span class="nav-number">1.</span> <span class="nav-text">【Node.js学习小案例】DNS域名解析 <一></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB条件查询"><span class="nav-number">1.</span> <span class="nav-text">MongoDB条件查询</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
