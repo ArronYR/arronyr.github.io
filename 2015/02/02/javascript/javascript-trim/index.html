@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="PHP,Yii," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -37,22 +37,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Yii 里面直接执行sql语句Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
-Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，但有些时候还需要自己写一些 sql 语句去查询等。在 Yii 里面可以通过以下方式直接执行 sql 语句:
-在此之前需要">
+<meta name="description" content="JavaScript 实现trim ltrim rtrim在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Yii 里面直接执行sql语句">
-<meta property="og:url" content="http://blog.helloarron.com/2015/04/28/php/yii-sql/index.html">
+<meta property="og:title" content="JavaScript 实现trim ltrim rtrim">
+<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/javascript/javascript-trim/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Yii 里面直接执行sql语句Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
-Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，但有些时候还需要自己写一些 sql 语句去查询等。在 Yii 里面可以通过以下方式直接执行 sql 语句:
-在此之前需要">
-<meta property="og:updated_time" content="2015-09-05T14:44:25.000Z">
+<meta property="og:description" content="JavaScript 实现trim ltrim rtrim在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数">
+<meta property="og:updated_time" content="2015-09-08T14:26:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yii 里面直接执行sql语句">
-<meta name="twitter:description" content="Yii 里面直接执行sql语句Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
-Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，但有些时候还需要自己写一些 sql 语句去查询等。在 Yii 里面可以通过以下方式直接执行 sql 语句:
-在此之前需要">
+<meta name="twitter:title" content="JavaScript 实现trim ltrim rtrim">
+<meta name="twitter:description" content="JavaScript 实现trim ltrim rtrim在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -72,7 +66,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> Yii 里面直接执行sql语句 | Arron.y's blog </title>
+  <title> JavaScript 实现trim ltrim rtrim | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -188,7 +182,7 @@ var _hmt = _hmt || [];
           
           
             
-              Yii 里面直接执行sql语句
+              JavaScript 实现trim ltrim rtrim
             
           
         </h1>
@@ -197,8 +191,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-04-28T21:02:50+08:00" content="2015-04-28">
-            2015-04-28
+          <time itemprop="dateCreated" datetime="2015-02-02T10:41:13+08:00" content="2015-02-02">
+            2015-02-02
           </time>
         </span>
 
@@ -207,8 +201,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/PHP/" itemprop="url" rel="index">
-                  <span itemprop="name">PHP</span>
+                <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                  <span itemprop="name">JavaScript</span>
                 </a>
               </span>
 
@@ -223,8 +217,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/04/28/php/yii-sql/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/28/php/yii-sql/" itemprop="commentsCount"></span>
+              <a href="/2015/02/02/javascript/javascript-trim/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/javascript/javascript-trim/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -238,15 +232,21 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Yii_里面直接执行sql语句">Yii 里面直接执行sql语句</h2><p><a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> 自带了丰富的功能 ，包括 <code>MVC</code>，<code>DAO/ActiveRecord</code>，<code>I18N/L10N</code>，<code>缓存</code>，<code>身份验证</code>和<code>基于角色的访问控制</code>，<code>脚手架</code>，<code>测试</code>等，可显著缩短开发时间。</p>
-<p><a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a>里面的 <code>DAO/ActiveRecord</code> 已经很方便我们进行数据库的操作，但有些时候还需要自己写一些 <code>sql</code> 语句去查询等。在 <a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> 里面可以通过以下方式直接执行 <code>sql</code> 语句:</p>
-<p>在此之前需要在 <code>config/main.php</code> 里面配置数据相关信息:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'db'</span>=&gt;<span class="keyword">array</span>(</span><br><span class="line">   <span class="string">'class'</span> =&gt; <span class="string">'CDbConnection'</span>,</span><br><span class="line">   <span class="string">'connectionString'</span> =&gt; <span class="string">'mysql:host=127.0.0.1;port=3607;dbname=dbname'</span>,</span><br><span class="line">   <span class="string">'emulatePrepare'</span> =&gt; <span class="keyword">true</span>,</span><br><span class="line">   <span class="string">'username'</span> =&gt; <span class="string">'root'</span>,</span><br><span class="line">   <span class="string">'password'</span> =&gt; <span class="string">'mysql'</span>,</span><br><span class="line">   <span class="string">'charset'</span> =&gt; <span class="string">'utf8'</span>,</span><br><span class="line">   <span class="string">'tablePrefix'</span>=&gt;<span class="string">'pf_'</span>,</span><br><span class="line">  ),</span><br></pre></td></tr></table></figure></p>
-<p>然后再通过 <code>Yii::app()-&gt;db</code> 进行调用。</p>
-<p><strong>方式一:</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$db</span> = Yii::app()-&gt;db;</span><br><span class="line"><span class="variable">$sql</span> = <span class="string">"SELECT * FROM `news` ORDER BY id DESC"</span>;</span><br><span class="line"><span class="variable">$command</span> = <span class="variable">$db</span>-&gt;createCommand(<span class="variable">$sql</span>);</span><br><span class="line"><span class="variable">$result</span> = <span class="variable">$command</span>-&gt;queryAll();</span><br><span class="line">print_r(<span class="variable">$result</span>);</span><br></pre></td></tr></table></figure></p>
-<p><strong>方式二:</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$db</span> = Yii::app()-&gt;db;</span><br><span class="line"><span class="variable">$sql</span> = <span class="string">"select sum(if(starttime&gt;'09:00:00',1,0)) as late,sum(if(endtime&lt;'18:00:00',1,0)) as early from present where userid=:userid and date between :date_start and :date_end"</span>;</span><br><span class="line"><span class="variable">$results</span> = <span class="variable">$db</span>-&gt;createCommand(<span class="variable">$sql</span>)-&gt;query(<span class="keyword">array</span>(</span><br><span class="line">  <span class="string">':userid'</span> =&gt; <span class="number">115</span>,<span class="string">':date_start'</span>=&gt;<span class="string">'2009-12-1'</span>,<span class="string">':date_end'</span>=&gt;<span class="string">'2009-12-31'</span>,</span><br><span class="line">));</span><br><span class="line"><span class="keyword">foreach</span>(<span class="variable">$results</span> <span class="keyword">as</span> <span class="variable">$result</span>)&#123;</span><br><span class="line">  <span class="keyword">echo</span> <span class="variable">$result</span>[<span class="string">'late'</span>],<span class="string">" and "</span>,<span class="variable">$result</span>[<span class="string">'early'</span>],<span class="string">" /n"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>方式三:</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sql</span> = <span class="string">"select sum(if(starttime&gt;'09:00:00',1,0)) as late,sum(if(endtime&lt;'18:00:00',1,0)) as early from present where userid=115 and date between '2009-12-1' and '2009-12-31'"</span>;</span><br><span class="line"><span class="variable">$results</span> = <span class="variable">$db</span>-&gt;createCommand(<span class="variable">$sql</span>)-&gt;query();</span><br><span class="line"><span class="keyword">foreach</span>(<span class="variable">$results</span> <span class="keyword">as</span> <span class="variable">$result</span>)&#123;</span><br><span class="line">  <span class="keyword">echo</span> <span class="variable">$result</span>[<span class="string">'late'</span>],<span class="string">" and "</span>,<span class="variable">$result</span>[<span class="string">'early'</span>],<span class="string">" /n"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>方式四:</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$db</span> = Yii::app()-&gt;db;</span><br><span class="line"><span class="variable">$oCommand</span> = <span class="variable">$db</span>-&gt;createCommand(<span class="string">'SELECT * FROM news WHERE title = :title'</span>);</span><br><span class="line"><span class="variable">$oCommand</span>-&gt;bindParam(<span class="string">':title'</span>, <span class="variable">$title</span>, PDO::PARAM_STR);</span><br><span class="line"><span class="variable">$result</span> = <span class="variable">$oCommand</span>-&gt;queryAll();</span><br><span class="line">print_r(<span class="variable">$result</span>);</span><br></pre></td></tr></table></figure></p>
-<p><strong>说明</strong>：把查询条件作为参数（如方式二），比较安全，可直接避免注入。要是直接用在 <code>SQL</code> 语句中，最好要经过防注入处理。</p>
+        <span itemprop="articleBody"><h2 id="JavaScript_实现trim_ltrim_rtrim">JavaScript 实现trim ltrim rtrim</h2><p>在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用<code>php</code>的，使用一般遇到这种情况都是直接使用<code>trim ltrim rtrim</code> 函数即可，但是查了一下<code>JavaScript</code>的<code>string</code>处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数式的方法；</p>
+<ol>
+<li>类的形式：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* trim 函数 */</span></span><br><span class="line"><span class="built_in">String</span>.prototype.trim = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>,<span class="string">""</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ltrim 函数 */</span></span><br><span class="line"><span class="built_in">String</span>.prototype.ltrim = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/(^\s*)/g</span>,<span class="string">""</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* rtrim 函数 */</span></span><br><span class="line"><span class="built_in">String</span>.prototype.rtrim = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/(\s*$)/g</span>,<span class="string">""</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>调用方式：str.trim();</li>
+</ul>
+<ol>
+<li>函数形式：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* trim 函数 */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params"> str </span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> str.replace( <span class="regexp">/(^\s*)|(\s*$)/g</span>,<span class="string">""</span> );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ltrim 函数 */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ltrim</span>(<span class="params"> str </span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> str.replace( <span class="regexp">/(^\s*)/g</span>,<span class="string">""</span> );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* rtrim 函数 */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rtrim</span>(<span class="params"> str </span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> str.replace( <span class="regexp">/(\s*$)/g</span>,<span class="string">""</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>调用方式：trim( str );</li>
+</ul>
 </span>
       
     </div>
@@ -255,9 +255,7 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/PHP/" rel="tag">#PHP</a>
-          
-            <a href="/tags/Yii/" rel="tag">#Yii</a>
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
         </div>
       
@@ -266,13 +264,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/19/cordova-webapp-touchevent/" rel="prev">Cordova WebApp 应用中的手机按键事件</a>
+              <a href="/2015/02/02/linux-node-setup/" rel="prev">Linux 下安装 NodeJS</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/04/22/php/yii-model-tablerelation/" rel="next">Yii 多表关联</a>
             
           </div>
         </div>
@@ -320,8 +316,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/04/28/php/yii-sql/"
-                   data-title="Yii 里面直接执行sql语句" data-url="http://blog.helloarron.com/2015/04/28/php/yii-sql/">
+              <div class="ds-thread" data-thread-key="2015/02/02/javascript/javascript-trim/"
+                   data-title="JavaScript 实现trim ltrim rtrim" data-url="http://blog.helloarron.com/2015/02/02/javascript/javascript-trim/">
               </div>
             
           </div>
@@ -424,7 +420,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Yii_里面直接执行sql语句"><span class="nav-number">1.</span> <span class="nav-text">Yii 里面直接执行sql语句</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript_实现trim_ltrim_rtrim"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 实现trim ltrim rtrim</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
