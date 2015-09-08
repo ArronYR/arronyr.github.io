@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Go,Mac," />
+  <meta name="keywords" content="Linux,SVN," />
 
 
 
@@ -37,22 +37,39 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
-方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
+<meta name="description" content="Linux（centOS）下搭建 SVN 服务器昨天上午搭建完node环境之后本想把SVN服务器的也搭建好，结果客户端那边急需修改几个接口就拖到了晚上。SVN服务器的搭建方法很简单，下面是我的搭建步骤：
+
+在命令行输入 yum install subversion 安装软件包
+
+安装之后可以输入 svn --help 查看svn的使用方法
+
+创建svn版本库目录
+1# mkdir -p /var/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac下安装Go和配置相应环境">
-<meta property="og:url" content="http://blog.helloarron.com/2015/08/29/mac-install-go/index.html">
+<meta property="og:title" content="Linux 增删查改介绍">
+<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/linux-centos-svn/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
-方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
-<meta property="og:updated_time" content="2015-09-05T15:01:28.000Z">
+<meta property="og:description" content="Linux（centOS）下搭建 SVN 服务器昨天上午搭建完node环境之后本想把SVN服务器的也搭建好，结果客户端那边急需修改几个接口就拖到了晚上。SVN服务器的搭建方法很简单，下面是我的搭建步骤：
+
+在命令行输入 yum install subversion 安装软件包
+
+安装之后可以输入 svn --help 查看svn的使用方法
+
+创建svn版本库目录
+1# mkdir -p /var/">
+<meta property="og:image" content="http://images.helloarron.com/linux-svn-1.jpg">
+<meta property="og:image" content="http://images.helloarron.com/linux-svn-2.jpg">
+<meta property="og:updated_time" content="2015-09-08T14:16:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac下安装Go和配置相应环境">
-<meta name="twitter:description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
-方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
+<meta name="twitter:title" content="Linux 增删查改介绍">
+<meta name="twitter:description" content="Linux（centOS）下搭建 SVN 服务器昨天上午搭建完node环境之后本想把SVN服务器的也搭建好，结果客户端那边急需修改几个接口就拖到了晚上。SVN服务器的搭建方法很简单，下面是我的搭建步骤：
+
+在命令行输入 yum install subversion 安装软件包
+
+安装之后可以输入 svn --help 查看svn的使用方法
+
+创建svn版本库目录
+1# mkdir -p /var/">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -72,7 +89,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> Mac下安装Go和配置相应环境 | Arron.y's blog </title>
+  <title> Linux 增删查改介绍 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -188,7 +205,7 @@ var _hmt = _hmt || [];
           
           
             
-              Mac下安装Go和配置相应环境
+              Linux 增删查改介绍
             
           
         </h1>
@@ -197,8 +214,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-08-29T07:56:29+08:00" content="2015-08-29">
-            2015-08-29
+          <time itemprop="dateCreated" datetime="2015-02-02T10:52:13+08:00" content="2015-02-02">
+            2015-02-02
           </time>
         </span>
 
@@ -207,8 +224,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Go/" itemprop="url" rel="index">
-                  <span itemprop="name">Go</span>
+                <a href="/categories/Linux/" itemprop="url" rel="index">
+                  <span itemprop="name">Linux</span>
                 </a>
               </span>
 
@@ -223,8 +240,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/29/mac-install-go/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/29/mac-install-go/" itemprop="commentsCount"></span>
+              <a href="/2015/02/02/linux-centos-svn/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/linux-centos-svn/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -238,27 +255,65 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Mac下安装Go和配置相应环境">Mac下安装Go和配置相应环境</h2><p>网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：</p>
-<h3 id="方法一：homebrew">方法一：homebrew</h3><p><code>homebrew</code>是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 <code>git</code> <code>mercurial</code> 也安装上：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew <span class="operator"><span class="keyword">update</span> &amp;&amp; brew <span class="keyword">upgrade</span></span><br><span class="line">brew <span class="keyword">install</span> git</span><br><span class="line">brew <span class="keyword">install</span> mercurial</span><br><span class="line">brew <span class="keyword">install</span> <span class="keyword">go</span></span></span><br></pre></td></tr></table></figure>
-<p>这样安装之后通过命令行输入<code>go</code>就可以看到相关的信息。输入<code>go env</code>查看环境信息：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">GOARCH=<span class="value"><span class="string">"amd64"</span></span></span></span><br><span class="line"><span class="setting">GOBIN=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GOCHAR=<span class="value"><span class="string">"6"</span></span></span></span><br><span class="line"><span class="setting">GOEXE=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GOHOSTARCH=<span class="value"><span class="string">"amd64"</span></span></span></span><br><span class="line"><span class="setting">GOHOSTOS=<span class="value"><span class="string">"darwin"</span></span></span></span><br><span class="line"><span class="setting">GOOS=<span class="value"><span class="string">"darwin"</span></span></span></span><br><span class="line"><span class="setting">GOPATH=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GORACE=<span class="value"><span class="string">""</span></span></span></span><br><span class="line"><span class="setting">GOROOT=<span class="value"><span class="string">"/usr/local/go"</span></span></span></span><br><span class="line"><span class="setting">GOTOOLDIR=<span class="value"><span class="string">"/usr/local/go/pkg/tool/darwin_amd64"</span></span></span></span><br><span class="line"><span class="setting">CC=<span class="value"><span class="string">"clang"</span></span></span></span><br><span class="line"><span class="setting">GOGCCFLAGS=<span class="value"><span class="string">"-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fno-common"</span></span></span></span><br><span class="line"><span class="setting">CXX=<span class="value"><span class="string">"clang++"</span></span></span></span><br><span class="line"><span class="setting">CGO_ENABLED=<span class="value"><span class="string">"1"</span></span></span></span><br></pre></td></tr></table></figure>
-<h3 id="方法二：pkg包安装">方法二：pkg包安装</h3><p>直接去官方下载<a href="http://golang.org/dl/" target="_blank" rel="external">安装包</a>，然后双击安装,之后同样地输入<code>go</code>、<code>go env</code>、<code>go version</code>等查看是否安装。</p>
-<p>–</p>
-<h3 id="环境变量配置">环境变量配置</h3><p>1.0 查看是否存在bash_profile</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>2.0 如果不存在则创建bash_profile Mac环境配置文件</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">vim</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>3.0 添加go 环境变量<br>如果是第一种安装方法，只需要指定一下<code>GOPATH</code>即可。为了让自己的程序编译之后在命令行任何地方能直接执行，再加入<code>GOPATH</code>下的<code>bin</code>即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#This is my personal bash_profile,when loaded at login.</span></span><br><span class="line"><span class="comment">#===2015-08-15===</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH</span></span><br><span class="line"><span class="built_in">export</span> GOPATH=<span class="variable">$HOME</span>/Documents/go_workspace</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH bin</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOPATH</span>/bin</span><br></pre></td></tr></table></figure>
-<p>但是第二种方法安装之后输入<code>go</code>会显示<code>ommand not found: go</code>，所以需要在<code>.bash_profile</code>中指定<code>GOROOT</code>下的<code>bin</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#This is my personal bash_profile,when loaded at login.</span></span><br><span class="line"><span class="comment">#===2015-08-15===</span></span><br><span class="line"><span class="comment">#GOROOT</span></span><br><span class="line"><span class="built_in">export</span> GOROOT=/usr/<span class="built_in">local</span>/go</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH</span></span><br><span class="line"><span class="built_in">export</span> GOPATH=<span class="variable">$HOME</span>/Documents/go_workspace</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOROOT bin</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOROOT</span>/bin</span><br><span class="line"></span><br><span class="line"><span class="comment">#GOPATH bin</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOPATH</span>/bin</span><br></pre></td></tr></table></figure>
-<p>一般环境变量更改后，重启后生效。在重启终端的时候就会自动执行<code>.bash_profile</code>文件。</p>
-<p>如果想立刻生效，则可执行下面的语句：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> .bash_profile</span><br></pre></td></tr></table></figure>
-<h3 id="问题：">问题：</h3><p>如果打开终端没有生效，就把上面的追加到<code>~/.zshrc</code>中：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> -<span class="keyword">e</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-<p>复制粘贴保存即可。</p>
+        <span itemprop="articleBody"><h2 id="Linux（centOS）下搭建_SVN_服务器">Linux（centOS）下搭建 SVN 服务器</h2><p>昨天上午搭建完node环境之后本想把SVN服务器的也搭建好，结果客户端那边急需修改几个接口就拖到了晚上。SVN服务器的搭建方法很简单，下面是我的搭建步骤：</p>
+<ol>
+<li><p>在命令行输入 <code>yum install subversion</code> 安装软件包</p>
+</li>
+<li><p>安装之后可以输入 <code>svn --help</code> 查看svn的使用方法</p>
+</li>
+<li><p>创建<code>svn</code>版本库目录</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># <span class="keyword">mkdir</span> -p /<span class="keyword">var</span>/svn</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建版本库</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># svnadmin <span class="keyword">create</span> /<span class="keyword">var</span>/svn</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>执行这个命令之后会在 <code>/var/svn/</code> 目录下生成一些文件<br><img src="http://images.helloarron.com/linux-svn-1.jpg" alt="image"></p>
+<ol>
+<li>进入 <code>conf</code> 目录（该版本库的配置文件存放目录）<br><img src="http://images.helloarron.com/linux-svn-2.jpg" alt="image"></li>
+</ol>
+<blockquote>
+<p><code>authz</code> 文件是权限控制文件<br><code>passwd</code> 文件是密码文件<br><code>svnserve.conf</code> 文件是svn服务器配置文件</p>
+</blockquote>
+<ol>
+<li>设置账号密码<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># vi passwd</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在<code>[user]</code>块中添加用户和密码，格式：<code>账号=密码</code>，如<code>arron=123456</code></p>
+<ol>
+<li>设置权限，修改用户访问策略<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># vi authz</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在末尾添加如下代码：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[/]</span></span><br><span class="line"><span class="setting">arron = <span class="value">rw</span></span></span><br><span class="line"><span class="setting">w = <span class="value">r</span></span></span><br></pre></td></tr></table></figure></p>
+<p>意思是版本库的根目录对<code>arron</code>有读写权限，<code>w</code>只有读权限。当用户很多的时候可以利用<code>groups</code>。</p>
+<ol>
+<li>修改 <code>svnserve.conf</code> 文件，让用户和策略配置生效<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># vi svnserve.conf</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>将文件中的下面几行注释去掉：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">anon-access = <span class="value">read</span></span></span><br><span class="line"><span class="setting">auth-access = <span class="value">write</span></span></span><br><span class="line"><span class="setting">password-db = <span class="value">passwd</span></span></span><br><span class="line"><span class="setting">authz-db = <span class="value">authz</span></span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li><p>启动服务器</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># svnserve -<span class="keyword">d</span> -r /<span class="keyword">var</span>/svn</span><br></pre></td></tr></table></figure>
+<p>svn默认的是3690端口，可以通过 netstat -na 查看该端口是否启用或者占用。当然也可以在上面的命令后面再加 –listen-port 端口号 指定端口</p>
+</li>
+<li><p>测试<br>（服务器上测试）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># svn co svn:<span class="comment">//ip地址</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>（客户端）<br>下载svn客户端（<code>TortoiseSVN</code>），选择一个测试文件夹右键选择 <code>check out</code>，填写svn地址，输入密码OK即可。</p>
+<p>*如果在服务器上测试是可以的，但是在客户端这边很长时间都连接不上，提示红色的无法连接等东西，那可能就是你的服务器防火墙的问题了（我能说就是这个原因导致我昨天纠结了好久嘛→_→）</p>
+<p>下面是两种防火墙开启和关闭的方法：</p>
+<p>（1）重启后生效</p>
+<blockquote>
+<p>开启：# chkconfig iptables on<br>关闭：# chkconfig iptables off</p>
+</blockquote>
+<p>（2）即时生效，重启后失效</p>
+<blockquote>
+<p>开启：# service iptables start<br>关闭：# service iptables stop</p>
+</blockquote>
+<p><code>iptables</code>查看防火墙状态：<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># /etc/init.d/iptables status</span></span><br></pre></td></tr></table></figure></p>
+<p>暂时关闭防火墙：<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># /etc/init.d/iptables stop</span></span><br></pre></td></tr></table></figure></p>
+<p>重启<code>iptables</code>：<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># /etc/init.d/iptables restart</span></span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -267,9 +322,9 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/Go/" rel="tag">#Go</a>
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
           
-            <a href="/tags/Mac/" rel="tag">#Mac</a>
+            <a href="/tags/SVN/" rel="tag">#SVN</a>
           
         </div>
       
@@ -278,11 +333,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2015/02/02/mongodb-cursor/" rel="prev">MongoDB 游标与结果集</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/06/18/php/laravel-learn-page-1/" rel="next">【Laravel学习篇 · 一】Windows下起步就遇麻烦</a>
             
           </div>
         </div>
@@ -330,8 +385,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/08/29/mac-install-go/"
-                   data-title="Mac下安装Go和配置相应环境" data-url="http://blog.helloarron.com/2015/08/29/mac-install-go/">
+              <div class="ds-thread" data-thread-key="2015/02/02/linux-centos-svn/"
+                   data-title="Linux 增删查改介绍" data-url="http://blog.helloarron.com/2015/02/02/linux-centos-svn/">
               </div>
             
           </div>
@@ -434,7 +489,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac下安装Go和配置相应环境"><span class="nav-number">1.</span> <span class="nav-text">Mac下安装Go和配置相应环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：homebrew"><span class="nav-number">1.1.</span> <span class="nav-text">方法一：homebrew</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：pkg包安装"><span class="nav-number">1.2.</span> <span class="nav-text">方法二：pkg包安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量配置"><span class="nav-number">1.3.</span> <span class="nav-text">环境变量配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题："><span class="nav-number">1.4.</span> <span class="nav-text">问题：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux（centOS）下搭建_SVN_服务器"><span class="nav-number">1.</span> <span class="nav-text">Linux（centOS）下搭建 SVN 服务器</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
