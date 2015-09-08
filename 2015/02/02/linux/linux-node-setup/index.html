@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="AngularJS,Monacan,WebApp," />
+  <meta name="keywords" content="Linux,NodeJS," />
 
 
 
@@ -37,16 +37,23 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="AngularJS 初体验之过滤器前段时间使用Monacan开发web app时，前端使用的是AngularJS，那是我正式开始学习AngularJS，接触之后发现确实很强大，对于用惯了jQuery的我来说，有很地方都转不过来。AngularJS自带了一些过滤器，比如number、uppercase等，下面是自己在项目中用到的一个将时间戳转为普通时间格式的过滤器，服务器端接口返回的格式如下：123">
+<meta name="description" content="Linux 下安装 NodeJS以前都是在windows下使用，一般一个.exe 或.msi 文件就搞定了，这还是第一次自己远程Linux服务器配置NodeJS环境。首先干的第一件事就是百度，方法有很多，我最后参照了oschine和csdn上的两篇文章成功安装。下面就来说说我的安装过程。
+
+登录服务器看了一下当前系统信息（我的是 Linux version 2.6.32-220.el6.x86_6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AngularJS 初体验之过滤器">
-<meta property="og:url" content="http://blog.helloarron.com/2015/05/19/Monacan-Angular-WebApp/index.html">
+<meta property="og:title" content="Linux 下安装 NodeJS">
+<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/linux/linux-node-setup/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="AngularJS 初体验之过滤器前段时间使用Monacan开发web app时，前端使用的是AngularJS，那是我正式开始学习AngularJS，接触之后发现确实很强大，对于用惯了jQuery的我来说，有很地方都转不过来。AngularJS自带了一些过滤器，比如number、uppercase等，下面是自己在项目中用到的一个将时间戳转为普通时间格式的过滤器，服务器端接口返回的格式如下：123">
-<meta property="og:updated_time" content="2015-09-05T14:10:27.000Z">
+<meta property="og:description" content="Linux 下安装 NodeJS以前都是在windows下使用，一般一个.exe 或.msi 文件就搞定了，这还是第一次自己远程Linux服务器配置NodeJS环境。首先干的第一件事就是百度，方法有很多，我最后参照了oschine和csdn上的两篇文章成功安装。下面就来说说我的安装过程。
+
+登录服务器看了一下当前系统信息（我的是 Linux version 2.6.32-220.el6.x86_6">
+<meta property="og:image" content="http://images.helloarron.com/linux-node.jpg">
+<meta property="og:updated_time" content="2015-09-08T14:22:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AngularJS 初体验之过滤器">
-<meta name="twitter:description" content="AngularJS 初体验之过滤器前段时间使用Monacan开发web app时，前端使用的是AngularJS，那是我正式开始学习AngularJS，接触之后发现确实很强大，对于用惯了jQuery的我来说，有很地方都转不过来。AngularJS自带了一些过滤器，比如number、uppercase等，下面是自己在项目中用到的一个将时间戳转为普通时间格式的过滤器，服务器端接口返回的格式如下：123">
+<meta name="twitter:title" content="Linux 下安装 NodeJS">
+<meta name="twitter:description" content="Linux 下安装 NodeJS以前都是在windows下使用，一般一个.exe 或.msi 文件就搞定了，这还是第一次自己远程Linux服务器配置NodeJS环境。首先干的第一件事就是百度，方法有很多，我最后参照了oschine和csdn上的两篇文章成功安装。下面就来说说我的安装过程。
+
+登录服务器看了一下当前系统信息（我的是 Linux version 2.6.32-220.el6.x86_6">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -66,7 +73,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> AngularJS 初体验之过滤器 | Arron.y's blog </title>
+  <title> Linux 下安装 NodeJS | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -182,7 +189,7 @@ var _hmt = _hmt || [];
           
           
             
-              AngularJS 初体验之过滤器
+              Linux 下安装 NodeJS
             
           
         </h1>
@@ -191,8 +198,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-05-19T19:43:20+08:00" content="2015-05-19">
-            2015-05-19
+          <time itemprop="dateCreated" datetime="2015-02-02T10:49:47+08:00" content="2015-02-02">
+            2015-02-02
           </time>
         </span>
 
@@ -201,8 +208,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/WebApp/" itemprop="url" rel="index">
-                  <span itemprop="name">WebApp</span>
+                <a href="/categories/Linux/" itemprop="url" rel="index">
+                  <span itemprop="name">Linux</span>
                 </a>
               </span>
 
@@ -217,8 +224,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/05/19/Monacan-Angular-WebApp/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/19/Monacan-Angular-WebApp/" itemprop="commentsCount"></span>
+              <a href="/2015/02/02/linux/linux-node-setup/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/linux/linux-node-setup/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -232,12 +239,27 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="AngularJS_初体验之过滤器">AngularJS 初体验之过滤器</h2><p>前段时间使用<code>Monacan</code>开发<code>web app</code>时，前端使用的是<code>AngularJS</code>，那是我正式开始学习<code>AngularJS</code>，接触之后发现确实很强大，对于用惯了<code>jQuery</code>的我来说，有很地方都转不过来。<br><code>AngularJS</code>自带了一些过滤器，比如<code>number</code>、<code>uppercase</code>等，下面是自己在项目中用到的一个将时间戳转为普通时间格式的过滤器，服务器端接口返回的格式如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"retcode"</span>: <span class="string">"000000"</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"参数获取成功"</span>,</span><br><span class="line">    <span class="string">"token"</span>: <span class="string">"a2186aa7c086b46ad4e8bf81e2a3a19b"</span>,</span><br><span class="line">    <span class="string">"result"</span>: &#123;</span><br><span class="line">        <span class="string">"user"</span>: &#123;</span><br><span class="line">            <span class="string">"headimg"</span>: <span class="string">"http://xxx.jpg"</span>,</span><br><span class="line">            <span class="string">"money"</span>: <span class="string">"0.000"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"project"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"id"</span>: <span class="string">"1"</span>,</span><br><span class="line">                <span class="string">"begin_time"</span>: <span class="string">"1427428509"</span>,</span><br><span class="line">                <span class="string">"end_time"</span>: <span class="string">"1429428509"</span>,</span><br><span class="line">                <span class="string">"create_time"</span>: <span class="string">"1427428509"</span>,</span><br><span class="line">                <span class="string">"days"</span>: <span class="string">"100"</span>,</span><br><span class="line">                <span class="string">"type"</span>: <span class="string">"2"</span>,</span><br><span class="line">                <span class="string">"status"</span>: <span class="string">"0"</span>,</span><br><span class="line">                <span class="string">"img"</span>: <span class="string">"http://www.baidu.com/img/bd_logo1.png"</span>,</span><br><span class="line">                <span class="string">"project_id"</span>: <span class="string">"1"</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在我们的 <code>main.js</code> 中，我们通过<code>$http</code>拿到数据并给<code>$scope.projects</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = angular.module(<span class="string">'my-app'</span>, []);</span><br><span class="line"><span class="keyword">var</span> httpUrl = <span class="string">'xxxxx'</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.controller(<span class="string">'IndexController'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope, $http</span>)</span>&#123;</span><br><span class="line">    $scope.projects = [];</span><br><span class="line">    <span class="keyword">var</span> data = &#123;</span><br><span class="line">        <span class="string">"type"</span>: <span class="string">"Index"</span>,</span><br><span class="line">        <span class="string">"token"</span>: localStorage.getItem(<span class="string">'token'</span>)</span><br><span class="line">    &#125;;</span><br><span class="line">    $http.post(httpUrl, data)</span><br><span class="line">        .success(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> ( res.retcode == <span class="number">000000</span> ) &#123;</span><br><span class="line">                $scope.projects = res.result[<span class="string">'project'</span>];</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                alert(res.message);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        .error(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            alert(<span class="string">"网络连接失败"</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>下面是<code>html</code>代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">ng-controller</span>=<span class="value">"IndexController"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"list-item-container"</span> <span class="attribute">ng-repeat</span>=<span class="value">"project in projects"</span>&gt;</span></span><br><span class="line">      	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"list-item-left"</span>&gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"&#123;&#123; project.img &#125;&#125;"</span> <span class="attribute">class</span>=<span class="value">"avator"</span>&gt;</span></span><br><span class="line">      	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">      	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"list-item-center"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"list-item-content"</span>&gt;</span></span><br><span class="line">              	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"name"</span>&gt;</span></span><br><span class="line">              		&#123;&#123; project.name &#125;&#125;</span><br><span class="line">             	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">             	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"time-line"</span>&gt;</span></span><br><span class="line">             		剩余时间:</span><br><span class="line">	              	<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">""</span>&gt;</span></span><br><span class="line">			                &#123;&#123; project.end_time | leftTime &#125;&#125;</span><br><span class="line">	              	<span class="tag">&lt;/<span class="title">span</span>&gt;</span>	            	</span><br><span class="line">             	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">      	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>在剩余时间那个地方我们使用<code>leftTime</code>过滤器处理时间戳，<code>leftTime</code>的代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Filters</span></span><br><span class="line"><span class="built_in">module</span>.filter(<span class="string">"leftTime"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> filterfun = <span class="function"><span class="keyword">function</span>(<span class="params">lt</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        <span class="keyword">var</span> totleSeconds = lt - <span class="built_in">parseInt</span>(date.getTime()/<span class="number">1000</span>);</span><br><span class="line">        <span class="keyword">var</span> days = <span class="built_in">parseInt</span>(totleSeconds / <span class="number">3600</span> / <span class="number">24</span>);</span><br><span class="line">        <span class="keyword">var</span> hours = <span class="built_in">parseInt</span>((totleSeconds - days * <span class="number">24</span> * <span class="number">3600</span>) / <span class="number">3600</span>);</span><br><span class="line">        <span class="keyword">var</span> minutes = <span class="built_in">parseInt</span>((totleSeconds - days * <span class="number">24</span> * <span class="number">3600</span> - hours * <span class="number">3600</span>) / <span class="number">60</span>);</span><br><span class="line">        <span class="keyword">var</span> seconds = totleSeconds - days * <span class="number">24</span> * <span class="number">3600</span> - hours * <span class="number">3600</span> - minutes * <span class="number">60</span>;</span><br><span class="line">        <span class="keyword">return</span> days +<span class="string">"天"</span>+ hours +<span class="string">"时"</span>+ minutes + <span class="string">"分"</span> + seconds + <span class="string">"秒"</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> filterfun;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>通过<code>lt</code>拿到页面上要过滤的数据，然后下面就是一些处理逻辑了，很简单。</p>
-<p>嗯，继续学习ing…</p>
+        <span itemprop="articleBody"><h2 id="Linux_下安装_NodeJS">Linux 下安装 NodeJS</h2><p>以前都是在<code>windows</code>下使用，一般一个<code>.exe</code> 或<code>.msi</code> 文件就搞定了，这还是第一次自己远程<code>Linux</code>服务器配置<code>NodeJS</code>环境。首先干的第一件事就是百度，方法有很多，我最后参照了oschine和csdn上的两篇文章成功安装。下面就来说说我的安装过程。</p>
+<ol>
+<li><p>登录服务器看了一下当前系统信息（我的是 Linux version 2.6.32-220.el6.x86_64  gcc version 4.4.6 20110731）</p>
+</li>
+<li><p>在窗口中输入命令下载<code>node</code>安装包</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># wget http:<span class="comment">//nodejs.org/dist/v0.10.36/node-v0.10.36-linux-x64.tar.gz</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解压安装包</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># <span class="tag">tar</span> <span class="tag">zxvf</span> <span class="tag">node-v0</span><span class="class">.10</span><span class="class">.36-linux-x64</span><span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装之前看看<code>nodejs</code>的所需要的环境</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># cd node-v0<span class="number">.10</span><span class="number">.36</span>-linux-x64</span></span><br><span class="line"><span class="preprocessor"># vi README.md</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="http://images.helloarron.com/linux-node.jpg" alt="image"><br>从上面的截图中我们可以看出NodeJS需要的环境和linux下安装方法。</p>
+<ol>
+<li>因为上面下载的包是编译好的文件，里面并没有 <code>configure</code>这个东西，我们只需要将<code>bin</code>目录下的<code>node</code>和<code>npm</code>配置到全局即可<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># ln -s /nodejs解压文件所处的路径/bin/node  /usr/local/bin/node</span></span><br><span class="line"><span class="preprocessor"># ln -s /nodejs解压文件所处的路径/bin/npm  /usr/local/bin/npm</span></span><br><span class="line"><span class="preprocessor"># node -v        （查看版本）</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如果采用的是源码编译安装，就是使用图片中提供的安装方法。</p>
+<p>安装过程中 <code>./configure</code>  步骤如果出错，可能是<code>Python</code>版本过低的问题，我们需要提升版本至 <code>2.6</code>以上：<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># wget http://www.python.org/ftp/python/2.6.5/Python-2.6.5.tar.bz2</span></span><br><span class="line"><span class="preprocessor"># tar jxvf Python-2.6.5.tar.bz2</span></span><br><span class="line"><span class="preprocessor"># cd Python-2.6.5</span></span><br><span class="line"><span class="preprocessor"># ./configure</span></span><br><span class="line"><span class="preprocessor"># make &amp;&amp; make install</span></span><br><span class="line"><span class="preprocessor"># /usr/local/bin/python2.6 -V       （查看Python版本，V大写）</span></span><br><span class="line"><span class="preprocessor"># mv /usr/bin/python /usr/bin/python2.4</span></span><br><span class="line"><span class="preprocessor"># rm -f /usr/bin/python</span></span><br><span class="line"><span class="preprocessor"># ln -s /usr/local/bin/python2.6 /usr/bin/python</span></span><br><span class="line"><span class="preprocessor"># vi /usr/bin/yum    （将原来的/usr/bin/python 改为 /usr/bin/python2.4）</span></span><br><span class="line"><span class="preprocessor"># yum list    （可以使用这个命令看看yum是否可以使用）</span></span><br><span class="line"><span class="preprocessor"># python -V</span></span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -246,11 +268,9 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/AngularJS/" rel="tag">#AngularJS</a>
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
           
-            <a href="/tags/Monacan/" rel="tag">#Monacan</a>
-          
-            <a href="/tags/WebApp/" rel="tag">#WebApp</a>
+            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
           
         </div>
       
@@ -259,13 +279,13 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/28/javascript/node-dns-1/" rel="prev">【Node.js学习小案例】DNS域名解析 <一></a>
+              <a href="/2015/02/02/linux/linux-centos-svn/" rel="prev">Linux（centOS）下搭建 SVN 服务器</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/05/19/cordova-webapp-touchevent/" rel="next">Cordova WebApp 应用中的手机按键事件</a>
+              <a href="/2015/02/02/javascript/javascript-trim/" rel="next">JavaScript 实现trim ltrim rtrim</a>
             
           </div>
         </div>
@@ -313,8 +333,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/05/19/Monacan-Angular-WebApp/"
-                   data-title="AngularJS 初体验之过滤器" data-url="http://blog.helloarron.com/2015/05/19/Monacan-Angular-WebApp/">
+              <div class="ds-thread" data-thread-key="2015/02/02/linux/linux-node-setup/"
+                   data-title="Linux 下安装 NodeJS" data-url="http://blog.helloarron.com/2015/02/02/linux/linux-node-setup/">
               </div>
             
           </div>
@@ -417,7 +437,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AngularJS_初体验之过滤器"><span class="nav-number">1.</span> <span class="nav-text">AngularJS 初体验之过滤器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux_下安装_NodeJS"><span class="nav-number">1.</span> <span class="nav-text">Linux 下安装 NodeJS</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

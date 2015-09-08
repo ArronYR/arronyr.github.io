@@ -37,37 +37,26 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="MongoDB 游标与结果集
-
-什么是游标(cursor)？
-
-find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
-
-想要获取数据，我们可以使用next方法来遍历游标，如下：
-1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
+<meta name="description" content="MongoDB条件查询相等条件是最简单常用的的查询操作，查询条件是{ field:value }格式的BSON对象。
+语法：1&amp;#123; field: value &amp;#125;
+示例：查询”inventory集合中所有type字段为snacks的文档”;1db.inventory.find(&amp;#123; type: &amp;#34;snacks&amp;#34; &amp;#125;)
+比较条件也是最基本的查询条件之">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB 游标与结果集">
-<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/mongodb-cursor/index.html">
+<meta property="og:title" content="MongoDB 条件查询">
+<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/mongodb/mongodb-find/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="MongoDB 游标与结果集
-
-什么是游标(cursor)？
-
-find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
-
-想要获取数据，我们可以使用next方法来遍历游标，如下：
-1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
-<meta property="og:updated_time" content="2015-09-07T14:47:47.000Z">
+<meta property="og:description" content="MongoDB条件查询相等条件是最简单常用的的查询操作，查询条件是{ field:value }格式的BSON对象。
+语法：1&amp;#123; field: value &amp;#125;
+示例：查询”inventory集合中所有type字段为snacks的文档”;1db.inventory.find(&amp;#123; type: &amp;#34;snacks&amp;#34; &amp;#125;)
+比较条件也是最基本的查询条件之">
+<meta property="og:image" content="http://images.helloarron.com/mongodb-find-1.jpeg">
+<meta property="og:updated_time" content="2015-09-07T14:16:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MongoDB 游标与结果集">
-<meta name="twitter:description" content="MongoDB 游标与结果集
-
-什么是游标(cursor)？
-
-find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
-
-想要获取数据，我们可以使用next方法来遍历游标，如下：
-1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
+<meta name="twitter:title" content="MongoDB 条件查询">
+<meta name="twitter:description" content="MongoDB条件查询相等条件是最简单常用的的查询操作，查询条件是{ field:value }格式的BSON对象。
+语法：1&amp;#123; field: value &amp;#125;
+示例：查询”inventory集合中所有type字段为snacks的文档”;1db.inventory.find(&amp;#123; type: &amp;#34;snacks&amp;#34; &amp;#125;)
+比较条件也是最基本的查询条件之">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -87,7 +76,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> MongoDB 游标与结果集 | Arron.y's blog </title>
+  <title> MongoDB 条件查询 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -203,7 +192,7 @@ var _hmt = _hmt || [];
           
           
             
-              MongoDB 游标与结果集
+              MongoDB 条件查询
             
           
         </h1>
@@ -212,7 +201,7 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-02-02T10:55:00+08:00" content="2015-02-02">
+          <time itemprop="dateCreated" datetime="2015-02-02T10:57:14+08:00" content="2015-02-02">
             2015-02-02
           </time>
         </span>
@@ -238,8 +227,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/02/02/mongodb-cursor/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/mongodb-cursor/" itemprop="commentsCount"></span>
+              <a href="/2015/02/02/mongodb/mongodb-find/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/mongodb/mongodb-find/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -253,35 +242,22 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><p>MongoDB 游标与结果集</p>
-<ol>
-<li>什么是游标(<code>cursor</code>)？</li>
-</ol>
-<p><code>find</code>命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。</p>
-<ol>
-<li><p>想要获取数据，我们可以使用<code>next</code>方法来遍历游标，如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myCursor = db.inventory.find( &#123; type: <span class="string">"food"</span> &#125; );</span><br><span class="line"><span class="keyword">var</span> myDocument = myCursor.hasNext() ? myCursor.next() : <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (myDocument) &#123;</span><br><span class="line">    <span class="keyword">var</span> myItem = myDocument.item;</span><br><span class="line">    print(tojson(myItem));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用<code>forEach</code>方法也能实现游标的遍历，如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myCursor =  db.inventory.find( &#123; type: <span class="string">"food"</span> &#125; );</span><br><span class="line">myCursor.forEach(printjson);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>很多时候查询返回的结果集并不完全是你想要的，或许你只需要它们中间的一部分，这个时候我们可以通过条件来限制结果集返回的内容。</p>
-<p><code>limit</code>方法：设定返回结果集中的最大文档数量。</p>
-<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find().limit(Num)</span><br></pre></td></tr></table></figure></p>
-<p>参数：</p>
-<blockquote>
-<p><code>Num:Number</code>类型，大于<code>0</code>。</p>
-</blockquote>
-<p>示例：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.testData.find().limit(3)</span><br></pre></td></tr></table></figure></p>
-<p>返回如下结果：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; "<span class="attribute">_id</span>" : <span class="value">ObjectId(<span class="string">"51a7dc7b2cacf40b79990be6"</span>)</span>, "<span class="attribute">x</span>" : <span class="value"><span class="number">1</span> </span>&#125;</span><br><span class="line">&#123; "<span class="attribute">_id</span>" : <span class="value">ObjectId(<span class="string">"51a7dc7b2cacf40b79990be7"</span>)</span>, "<span class="attribute">x</span>" : <span class="value"><span class="number">2</span> </span>&#125;</span><br><span class="line">&#123; "<span class="attribute">_id</span>" : <span class="value">ObjectId(<span class="string">"51a7dc7b2cacf40b79990be8"</span>)</span>, "<span class="attribute">x</span>" : <span class="value"><span class="number">3</span> </span>&#125;</span><br></pre></td></tr></table></figure></p>
-<p>有的时候只需要返回结果集中的部分字段，这个时候我们可以通过传入字段条件的方式来实现。</p>
-<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find( &#26597;&#35810;&#26465;&#20214;,&#23383;&#20307;&#26465;&#20214; )</span><br></pre></td></tr></table></figure></p>
-<p>参数：</p>
-<blockquote>
-<p>字段条件：<code>JSON</code>对象，格式=&gt;{字段：值},值等于<code>1</code>时表示需要返回,<code>0</code>时表示不需要返回。</p>
-</blockquote>
-<p>示例：返回<code>person</code>的<code>&quot;status&quot;</code>和<code>&quot;age&quot;</code>字段。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.person.find(&#123;&#125;, &#123;status:1,age:1&#125;)</span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h2 id="MongoDB条件查询">MongoDB条件查询</h2><p>相等条件是最简单常用的的查询操作，查询条件是<code>{ field:value }</code>格式的<code>BSON</code>对象。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; field: value &#125;</span><br></pre></td></tr></table></figure></p>
+<p>示例：查询”<code>inventory</code>集合中所有<code>type</code>字段为<code>snacks</code>的文档”;<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.inventory.find(&#123; type: &#34;snacks&#34; &#125;)</span><br></pre></td></tr></table></figure></p>
+<p>比较条件也是最基本的查询条件之一，通过运算符的比较运算来筛选或排除文档，从而获取到我们想要的文档数据。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; field: &#123; op: value &#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>示例：查询”<code>inventory</code>集合中包含<code>quantity</code>字段并且值大于<code>1000</code>的文档”。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.inventory.find(&#123; quantity: &#123; $gt: 1000&#125;&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>相信你已经发现了示例中的<code>$gt</code>是我们之前没有遇见过的字段。</p>
+<p>没错！如你所想，<code>$gt</code>就是比较运算符的一种，代表<code>&quot;大于&quot;</code>，下面我们一起来介绍<code>MongoDB</code>中常见的一些运算符：大于(<code>$gt</code>)、大于等于(<code>$gte</code>)、小于(<code>$lt</code>)、小于等于(<code>$lte</code>)、不等于(<code>$ne</code>)、包含于(<code>$in</code>)、不包含于(<code>$nin</code>)。</p>
+<p>通过<code>MongoDB</code>中提供的丰富运算符，可以帮助你精确的来检索数据，比如数值型的字段可以使用<code>$gt、$gte、$lt、$ne</code>等运算符来比较，数组条件的可以使用<code>$in</code>、<code>$nin</code>来实现。</p>
+<p>当字段包含数组，可以进行数组完全匹配或匹配特定的值。</p>
+<p>单个元素匹配只需要传入元素的值即可，完全匹配需要传入一个数组，特定元素匹配需要<code>&quot;字段.索引&quot;</code>形式传入参数。</p>
+<p>数组完全匹配：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.inventory.find( &#123; tags: [ &#39;fruit&#39;, &#39;food&#39;, &#39;citrus&#39; ] &#125; );</span><br></pre></td></tr></table></figure></p>
+<p>单个元素匹配：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.inventory.find( &#123; tags: &#39;fruit&#39; &#125; );</span><br></pre></td></tr></table></figure></p>
+<p>特定元素匹配:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.inventory.find( &#123; &#39;tags.0&#39; : &#39;fruit&#39; &#125; );</span><br></pre></td></tr></table></figure></p>
+<p>查询数据时，我们可能会遇到包含嵌入的子文档数据，如：<br><img src="http://images.helloarron.com/mongodb-find-1.jpeg" alt="image"></p>
+<p>如果文档中包含嵌入的子文档，可以使用<code>&quot;.key&quot;</code>的方式访问子文档节点，例如：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.mycol.find(&#123;<span class="string">"access.level"</span>:<span class="number">5</span>&#125;);</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -299,13 +275,13 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/02/02/mongodb-find/" rel="prev">MongoDB 条件查询</a>
+              <a href="/2015/02/02/mongodb/mongodb-cdsu/" rel="prev">MongoDB 增删查改介绍</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/02/02/linux-centos-svn/" rel="next">Linux（centOS）下搭建 SVN 服务器</a>
+              <a href="/2015/02/02/mongodb/mongodb-cursor/" rel="next">MongoDB 游标与结果集</a>
             
           </div>
         </div>
@@ -353,8 +329,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/02/02/mongodb-cursor/"
-                   data-title="MongoDB 游标与结果集" data-url="http://blog.helloarron.com/2015/02/02/mongodb-cursor/">
+              <div class="ds-thread" data-thread-key="2015/02/02/mongodb/mongodb-find/"
+                   data-title="MongoDB 条件查询" data-url="http://blog.helloarron.com/2015/02/02/mongodb/mongodb-find/">
               </div>
             
           </div>
@@ -457,7 +433,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB条件查询"><span class="nav-number">1.</span> <span class="nav-text">MongoDB条件查询</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

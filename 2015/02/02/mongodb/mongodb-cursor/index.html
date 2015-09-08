@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Cordova,WebApp," />
+  <meta name="keywords" content="MongoDB," />
 
 
 
@@ -37,22 +37,37 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Cordova WebApp应用中的手机按键事件使用cordova开发的App应用可以使用cordova提供的接口监听手机的按键事件：
-返回键：1234document.addEventListener(&quot;backbutton&quot;, function (e) &amp;#123;    e.preventDefault();    alert(&quot;返回键&quot;);&amp;#125;, false);
-菜单键：1234d">
+<meta name="description" content="MongoDB 游标与结果集
+
+什么是游标(cursor)？
+
+find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
+
+想要获取数据，我们可以使用next方法来遍历游标，如下：
+1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cordova WebApp 应用中的手机按键事件">
-<meta property="og:url" content="http://blog.helloarron.com/2015/05/19/cordova-webapp-touchevent/index.html">
+<meta property="og:title" content="MongoDB 游标与结果集">
+<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/mongodb/mongodb-cursor/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Cordova WebApp应用中的手机按键事件使用cordova开发的App应用可以使用cordova提供的接口监听手机的按键事件：
-返回键：1234document.addEventListener(&quot;backbutton&quot;, function (e) &amp;#123;    e.preventDefault();    alert(&quot;返回键&quot;);&amp;#125;, false);
-菜单键：1234d">
-<meta property="og:updated_time" content="2015-09-06T15:44:22.000Z">
+<meta property="og:description" content="MongoDB 游标与结果集
+
+什么是游标(cursor)？
+
+find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
+
+想要获取数据，我们可以使用next方法来遍历游标，如下：
+1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
+<meta property="og:updated_time" content="2015-09-07T14:47:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cordova WebApp 应用中的手机按键事件">
-<meta name="twitter:description" content="Cordova WebApp应用中的手机按键事件使用cordova开发的App应用可以使用cordova提供的接口监听手机的按键事件：
-返回键：1234document.addEventListener(&quot;backbutton&quot;, function (e) &amp;#123;    e.preventDefault();    alert(&quot;返回键&quot;);&amp;#125;, false);
-菜单键：1234d">
+<meta name="twitter:title" content="MongoDB 游标与结果集">
+<meta name="twitter:description" content="MongoDB 游标与结果集
+
+什么是游标(cursor)？
+
+find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
+
+想要获取数据，我们可以使用next方法来遍历游标，如下：
+1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -72,7 +87,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> Cordova WebApp 应用中的手机按键事件 | Arron.y's blog </title>
+  <title> MongoDB 游标与结果集 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -188,7 +203,7 @@ var _hmt = _hmt || [];
           
           
             
-              Cordova WebApp 应用中的手机按键事件
+              MongoDB 游标与结果集
             
           
         </h1>
@@ -197,8 +212,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-05-19T11:36:20+08:00" content="2015-05-19">
-            2015-05-19
+          <time itemprop="dateCreated" datetime="2015-02-02T10:55:00+08:00" content="2015-02-02">
+            2015-02-02
           </time>
         </span>
 
@@ -207,8 +222,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/WebApp/" itemprop="url" rel="index">
-                  <span itemprop="name">WebApp</span>
+                <a href="/categories/MongoDB/" itemprop="url" rel="index">
+                  <span itemprop="name">MongoDB</span>
                 </a>
               </span>
 
@@ -223,8 +238,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/05/19/cordova-webapp-touchevent/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/19/cordova-webapp-touchevent/" itemprop="commentsCount"></span>
+              <a href="/2015/02/02/mongodb/mongodb-cursor/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/mongodb/mongodb-cursor/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -238,13 +253,35 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Cordova_WebApp应用中的手机按键事件">Cordova WebApp应用中的手机按键事件</h2><p>使用<code>cordova</code>开发的<code>App</code>应用可以使用<code>cordova</code>提供的接口监听手机的按键事件：</p>
-<p>返回键：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"backbutton"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">    alert(<span class="string">"返回键"</span>);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
-<p>菜单键：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"menubutton"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">    alert(<span class="string">"菜单键"</span>);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
-<p>搜索键：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"searchbutton"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">    alert(<span class="string">"搜索键"</span>);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
-<p>当然我们也可以通过<code>removeEventListener</code>取消注销上面的三个事件。</p>
-<p>上面的写法看着有些乱，可以把要执行的事件拿出来，实现一些复杂的处理。</p>
-<p>Going … 继续学习</p>
+        <span itemprop="articleBody"><p>MongoDB 游标与结果集</p>
+<ol>
+<li>什么是游标(<code>cursor</code>)？</li>
+</ol>
+<p><code>find</code>命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。</p>
+<ol>
+<li><p>想要获取数据，我们可以使用<code>next</code>方法来遍历游标，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myCursor = db.inventory.find( &#123; type: <span class="string">"food"</span> &#125; );</span><br><span class="line"><span class="keyword">var</span> myDocument = myCursor.hasNext() ? myCursor.next() : <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (myDocument) &#123;</span><br><span class="line">    <span class="keyword">var</span> myItem = myDocument.item;</span><br><span class="line">    print(tojson(myItem));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用<code>forEach</code>方法也能实现游标的遍历，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myCursor =  db.inventory.find( &#123; type: <span class="string">"food"</span> &#125; );</span><br><span class="line">myCursor.forEach(printjson);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>很多时候查询返回的结果集并不完全是你想要的，或许你只需要它们中间的一部分，这个时候我们可以通过条件来限制结果集返回的内容。</p>
+<p><code>limit</code>方法：设定返回结果集中的最大文档数量。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find().limit(Num)</span><br></pre></td></tr></table></figure></p>
+<p>参数：</p>
+<blockquote>
+<p><code>Num:Number</code>类型，大于<code>0</code>。</p>
+</blockquote>
+<p>示例：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.testData.find().limit(3)</span><br></pre></td></tr></table></figure></p>
+<p>返回如下结果：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; "<span class="attribute">_id</span>" : <span class="value">ObjectId(<span class="string">"51a7dc7b2cacf40b79990be6"</span>)</span>, "<span class="attribute">x</span>" : <span class="value"><span class="number">1</span> </span>&#125;</span><br><span class="line">&#123; "<span class="attribute">_id</span>" : <span class="value">ObjectId(<span class="string">"51a7dc7b2cacf40b79990be7"</span>)</span>, "<span class="attribute">x</span>" : <span class="value"><span class="number">2</span> </span>&#125;</span><br><span class="line">&#123; "<span class="attribute">_id</span>" : <span class="value">ObjectId(<span class="string">"51a7dc7b2cacf40b79990be8"</span>)</span>, "<span class="attribute">x</span>" : <span class="value"><span class="number">3</span> </span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>有的时候只需要返回结果集中的部分字段，这个时候我们可以通过传入字段条件的方式来实现。</p>
+<p>语法：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find( &#26597;&#35810;&#26465;&#20214;,&#23383;&#20307;&#26465;&#20214; )</span><br></pre></td></tr></table></figure></p>
+<p>参数：</p>
+<blockquote>
+<p>字段条件：<code>JSON</code>对象，格式=&gt;{字段：值},值等于<code>1</code>时表示需要返回,<code>0</code>时表示不需要返回。</p>
+</blockquote>
+<p>示例：返回<code>person</code>的<code>&quot;status&quot;</code>和<code>&quot;age&quot;</code>字段。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.person.find(&#123;&#125;, &#123;status:1,age:1&#125;)</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -253,9 +290,7 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/Cordova/" rel="tag">#Cordova</a>
-          
-            <a href="/tags/WebApp/" rel="tag">#WebApp</a>
+            <a href="/tags/MongoDB/" rel="tag">#MongoDB</a>
           
         </div>
       
@@ -264,13 +299,13 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/19/Monacan-Angular-WebApp/" rel="prev">AngularJS 初体验之过滤器</a>
+              <a href="/2015/02/02/mongodb/mongodb-find/" rel="prev">MongoDB 条件查询</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/04/28/php/yii-sql/" rel="next">Yii 里面直接执行sql语句</a>
+              <a href="/2015/02/02/linux/linux-centos-svn/" rel="next">Linux（centOS）下搭建 SVN 服务器</a>
             
           </div>
         </div>
@@ -318,8 +353,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/05/19/cordova-webapp-touchevent/"
-                   data-title="Cordova WebApp 应用中的手机按键事件" data-url="http://blog.helloarron.com/2015/05/19/cordova-webapp-touchevent/">
+              <div class="ds-thread" data-thread-key="2015/02/02/mongodb/mongodb-cursor/"
+                   data-title="MongoDB 游标与结果集" data-url="http://blog.helloarron.com/2015/02/02/mongodb/mongodb-cursor/">
               </div>
             
           </div>
@@ -422,7 +457,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cordova_WebApp应用中的手机按键事件"><span class="nav-number">1.</span> <span class="nav-text">Cordova WebApp应用中的手机按键事件</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
