@@ -51,7 +51,7 @@
 图标的链接地址或者HTML代码出错了
 
 这是个低级错误，但也不是不可能发生的，首先要看看图标的链接地址和HTML代码对不对。一般如果直接把favicon">
-<meta property="og:updated_time" content="2015-09-10T13:08:41.000Z">
+<meta property="og:updated_time" content="2015-09-10T13:09:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网站图标favicon.ico显示不了或无法刷新更新的原因">
 <meta name="twitter:description" content="网站图标favicon.ico显示不了或无法刷新更新的原因现在人们都喜欢在自己的网站上放上自己的favicon.ico，不仅可以标识网站的身份，自己看着也赏心悦目。但有很多原因会导致favicon.ico显示不出来，我总结了下，有以下几个原因：
@@ -245,21 +245,22 @@ var _hmt = _hmt || [];
 
       
         <span itemprop="articleBody"><h2 id="网站图标favicon-ico显示不了或无法刷新更新的原因">网站图标favicon.ico显示不了或无法刷新更新的原因</h2><p>现在人们都喜欢在自己的网站上放上自己的<code>favicon.ico</code>，不仅可以标识网站的身份，自己看着也赏心悦目。但有很多原因会导致<code>favicon.ico</code>显示不出来，我总结了下，有以下几个原因：</p>
-<ol>
+<ul>
 <li>图标的链接地址或者<code>HTML</code>代码出错了</li>
-</ol>
+</ul>
 <p>这是个低级错误，但也不是不可能发生的，首先要看看图标的链接地址和<code>HTML</code>代码对不对。一般如果直接把<code>favicon.ico</code>图标放在网站的根目录下，页面是可以自动寻址到这个图标文件的。正确的代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"shortcut icon"</span> <span class="attribute">href</span>=<span class="value">"favicon.ico"</span> <span class="attribute">type</span>=<span class="value">"image/x-icon"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>火狐还支持<code>GIF</code>动画格式的图标，代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"shortcut icon"</span> <span class="attribute">href</span>=<span class="value">"favicon.ico"</span> <span class="attribute">type</span>=<span class="value">"image/x-icon"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"shortcut icon"</span> <span class="attribute">href</span>=<span class="value">"favicon.gif"</span> <span class="attribute">type</span>=<span class="value">"image/gif"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
-<ol>
+<ul>
 <li>没有清空缓存</li>
-</ol>
+</ul>
 <p>要清空浏览器的缓存，在<code>IE</code>中不仅要清空<code>Internet</code>临时文件，也要把历史记录清空。对于<code>360</code>、<code>搜狗</code>、<code>傲游</code>这些浏览器清空缓存会稍微麻烦点，它们会将<code>favicon.ico</code>存储在自己<code>特定的文件夹</code>里，以加快页面的访问速度。</p>
 <p><code>360浏览器</code>要进入自己的<code>Application Data</code>中寻找<code>360浏览器</code>的数据，比如我的用户名为<code>Jon</code>。如果用的是<code>XP</code>，那么就找到<code>C:\Documents and Settings\Jon\Application Data\360se\data\ico</code>文件夹；如果是<code>Win7</code>，那么就找到<code>C:\Users\Jon\AppData\Roaming\360se\data\ico</code>文件夹。这里是<code>360浏览器</code>缓存网站<code>favicon.ico</code>的地方，把<code>ico文件夹</code>清空。</p>
 <p><code>搜狗浏览器</code>同样也要找<code>Application Data</code>，比如我的用户名为<code>Jon</code>。如果用的是<code>XP</code>，那么就找到<code>C:\Documents and Settings\Jon\Application Data\SogouExplorer\FavIcon</code>文件夹；如果是<code>Win7</code>，那么就找到<code>C:\Users\Jon\AppData\Roaming\SogouExplorer\FavIcon</code>文件夹。这里是搜狗浏览器缓存网站<code>favicon.ico</code>的地方，把<code>FavIcon</code>文件夹清空。</p>
 <p><code>傲游浏览器</code>我使用的是傲游浏览器<code>2</code>，把它安装到了<code>D:\Maxthon2</code>目录下，那么在这个目录下找到名为<code>Favicons</code>的文件夹，这里是傲游浏览器缓存网站<code>favicon.ico</code>的地方，把<code>Favicons</code>文件夹清空。</p>
-<ol>
-<li>favicon.ico格式不对<br>最好使用专业的<code>Icon制作软件</code>，可以在《免费的图标制作工具》一文中找一些使用。要想知道自己的图标文件格式是否正确，可以先下载其它网站的<code>Icon</code>来对比下。</li>
-</ol>
+<ul>
+<li>favicon.ico格式不对</li>
+</ul>
+<p>最好使用专业的<code>Icon制作软件</code>，可以在《免费的图标制作工具》一文中找一些使用。要想知道自己的图标文件格式是否正确，可以先下载其它网站的<code>Icon</code>来对比下。</p>
 </span>
       
     </div>
