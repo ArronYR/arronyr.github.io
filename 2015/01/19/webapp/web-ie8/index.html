@@ -1,0 +1,772 @@
+<!doctype html>
+<html class="theme-next use-motion ">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="志向和热爱是伟大行为的双翼，learning ..." />
+
+
+
+  <meta name="keywords" content="IE8,WebApp," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="IE8 自动设置 兼容性 代码前言为了帮助确保你的网页在所有未来的IE版本都有一致的外观，IE8引入了文件兼容性。在IE6中引入一个增设的兼容性模式，文件兼容性使你能够在IE呈现你的网页时选择特定编译模式。
+新的IE为了确保网页在未来的版本中都有一支的外观，IE8引入了文件兼容性。当你引入一个增设的兼容性模式，此文章说明文件兼容性的必要性，列出现有版本IE能使用的文件兼容性模式并示范如何选择特定的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IE8 自动设置 兼容性 代码">
+<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/webapp/web-ie8/index.html">
+<meta property="og:site_name" content="Arron.y's blog">
+<meta property="og:description" content="IE8 自动设置 兼容性 代码前言为了帮助确保你的网页在所有未来的IE版本都有一致的外观，IE8引入了文件兼容性。在IE6中引入一个增设的兼容性模式，文件兼容性使你能够在IE呈现你的网页时选择特定编译模式。
+新的IE为了确保网页在未来的版本中都有一支的外观，IE8引入了文件兼容性。当你引入一个增设的兼容性模式，此文章说明文件兼容性的必要性，列出现有版本IE能使用的文件兼容性模式并示范如何选择特定的">
+<meta property="og:image" content="http://images.helloarron.com/web-ie8-1.png">
+<meta property="og:image" content="http://images.helloarron.com/web-ie8-2.png">
+<meta property="og:updated_time" content="2015-09-10T12:35:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IE8 自动设置 兼容性 代码">
+<meta name="twitter:description" content="IE8 自动设置 兼容性 代码前言为了帮助确保你的网页在所有未来的IE版本都有一致的外观，IE8引入了文件兼容性。在IE6中引入一个增设的兼容性模式，文件兼容性使你能够在IE呈现你的网页时选择特定编译模式。
+新的IE为了确保网页在未来的版本中都有一支的外观，IE8引入了文件兼容性。当你引入一个增设的兼容性模式，此文章说明文件兼容性的必要性，列出现有版本IE能使用的文件兼容性模式并示范如何选择特定的">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post'
+  };
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  <title> IE8 自动设置 兼容性 代码 | Arron.y's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Arron.y's blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              IE8 自动设置 兼容性 代码
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-01-19T02:02:55+08:00" content="2015-01-19">
+            2015-01-19
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/WebApp/" itemprop="url" rel="index">
+                  <span itemprop="name">WebApp</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/01/19/webapp/web-ie8/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/19/webapp/web-ie8/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h2 id="IE8_自动设置_兼容性_代码">IE8 自动设置 兼容性 代码</h2><h3 id="前言">前言</h3><p>为了帮助确保你的网页在所有未来的IE版本都有一致的外观，<code>IE8</code>引入了文件兼容性。在<code>IE6</code>中引入一个增设的兼容性模式，文件兼容性使你能够在IE呈现你的网页时选择特定编译模式。</p>
+<p>新的<code>IE</code>为了确保网页在未来的版本中都有一支的外观，<code>IE8</code>引入了文件兼容性。当你引入一个增设的兼容性模式，<br>此文章说明文件兼容性的必要性，列出现有版本IE能使用的文件兼容性模式并示范如何选择特定的兼容性模式。</p>
+<p>了解文件兼容性的必要性：<br>每个主要版本IE新增的功能都是为了让浏览器更容易使用、增加安全性及更支持业界标准。以这些作为IE的特色，其中一个风险就是旧版本网站无法正确的显示。为了将这个风险降到最低，<code>IE6</code>允许网页开发人员选择IE编译和显示他们网页的方式。<code>&quot;Quirks mode&quot;</code>为预设，这会使页面以旧版本浏览器的视点显示，<code>&quot;Standards mode&quot;</code>(也称为<code>&quot;strict mode&quot;</code>)特点是支持业界标准最为完善。然而要利用这个增强的支持功能，网页必须包含恰当的<code>&lt;!DOCTYPE&gt;</code>指令。</p>
+<p>若一个网页没有包含<code>&lt;!DOCTYPE&gt;</code>指令，<code>IE6</code>会将它以<code>quirks mode</code>显示。若网页包含有效的<code>&lt;!DOCTYPE&gt;</code>指令但浏览器无法辨识，<code>IE6</code>会将它以<code>IE6 standards mode</code>显示。因为少数网站已经包含<code>&lt;!DOCTYPE&gt;</code>指令，兼容性模式的切换相当成功。这使网页开发人员能选择将他们的网页转移为<code>standards mode</code>的最佳时机。</p>
+<p>随著时间经过，更多网站开始使用<code>standards mode</code>。它们也开始使用<code>IE6</code>的特性和功能来检测<code>IE</code>。举例来说，<code>IE6</code>不支持<code>universal selector</code>(即<code>css</code>之全局选择器<code>* {}</code>)，一些网站便使用它来针对<code>IE</code>做特定的对应。</p>
+<p>当 <code>IE7</code>增加了对全域选择器的支持，那些依赖<code>IE6</code>特点的网站便无法侦测出这个新版本的浏览器。因此那些针对IE的特定对应无法应用于<code>IE7</code>，造成这些网站便无法如他们预期的显示。由于<code>&lt;!DOCTYPE&gt;</code>只支持两种兼容性模式，受到影响的网站拥有者被迫更新他们的网站使其能支持<code>IE7</code>。</p>
+<p><code>IE8</code> 比之前的任何版本浏览器都更支持业界标准，因此针对旧版本浏览器设计的网页可能无法如预期般呈现。为了帮助减轻所有问题，<code>IE8</code>引入文件兼容性的概念，使你能选择你的网页设计要对应的特定<code>IE</code>版本。文件兼容性在<code>IE8</code>增加了一些新的模式，这些模式能告诉浏览器如何解析和编译一个网页。若你的网页无法在 <code>ie8</code>正确的显示，你可以更新你的网站使它支持最新的网页标准(优先选项)或在你的页面上新增一个<code>meta</code>元素用于告诉<code>IE8</code>如何依照旧版本浏览器编译你的页面。<br>这能让你选择将你的网站更新支持<code>IE8</code>新特点的时机。</p>
+<p>认识文件兼容性模式:<br><code>IE8</code>支持几种文件兼容性模式，它们具有不同的特性并影响内容显示的方式。</p>
+<ul>
+<li><p><code>Emulate IE8 mode</code>指示<code>IE</code>使用<code>&lt;!DOCTYPE&gt;</code>指令来决定如何编译内容。<code>Standards mode</code>指令会显示成<code>IE8 Standards mode</code>而<code>quirks mode</code>会显示成<code>IE5 mode</code>。不同于<code>IE8 mode</code>，<code>Emulate IE8 mode</code>重视<code>&lt;!DOCTYPE&gt;</code>指令。</p>
+</li>
+<li><p><code>Emulate IE7 mode</code>指示<code>IE</code>使用<code>&lt;!DOCTYPE&gt;</code>指令来决定如何编译内容。<code>Standards mode</code>指令会显示成<code>IE7 Standards</code> mode而quirks mode会显示成IE5 mode。不同于IE7 mode，Emulate IE7 mode重视&lt;!DOCTYPE&gt;指令。对于许多网页来说这是最推荐的兼容性模式。</p>
+</li>
+<li><p><code>IE5 mode</code> 编译内容如同<code>IE7</code>的<code>quirks mode</code>之显示状况，和<code>IE5</code>中显示的非常类似。</p>
+</li>
+<li><p><code>IE7 mode</code>编译内容如同<code>IE7</code>的<code>standards mode</code>之显示状况，无论网页是否含有<code>&lt;!DOCTYPE&gt;</code>指令。</p>
+</li>
+<li><p><code>IE8 mode</code>提供对业界标准的最高支持，包含 <code>W3C Cascading Style Sheets Level 2.1 Specification</code>和<code>W3C Selectors API</code>，并有限的支持 <code>W3C Cascading Style Sheets Level 3 Specification (Working Draft)</code>。<code>Edge mode</code>指示<code>IE</code>以目前可用的最高模式显示内容。当使用<code>IE8</code>时其等同于<code>IE8 mode</code>。若(假定)未来放出支持更高兼容性模式的<code>IE</code>，使用<code>Edge mode</code>的页面会使用该版本能支持的最高模式来显示内容。同样的那些页面在使用<code>IE8</code>浏览时仍会照常显示。</p>
+</li>
+</ul>
+<p>由于<code>edge mode</code>使用该<code>IE</code>版本所能支持的最高模式来显示所浏览的网页内容，建议仅使用于测试页及其他非商用页面。<br>指定文件兼容性模式:<br>要为你的网页指定文件模式，需要在你的网页中使用<code>meta</code>元素放入<code>X-UA-Compatible http-equiv</code> 标头。以下是指定为<code>Emulate IE7 mode</code>兼容性之范例。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- Mimic Internet Explorer 7 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=EmulateIE7"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">title</span>&gt;</span>My Web Page<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span>&gt;</span>Content goes here.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>其内容随著指定的页面模式而更改，当要模拟<code>IE7</code>时，指定<code>IE=EmulateIE7</code>，指定<code>IE=5</code>, <code>IE=7</code>, 或<code>IE=8</code>来选择其中一种兼容性模式。你也可以指定<code>IE=edge</code>来指示<code>IE8</code>使用它支持的最高模式。<br><code>X-UA-compatible</code>标头没有大小写之分。然而除了<code>title</code>元素及其他的<code>meta</code>元素之外，它必须出现在网页<code>header</code>节其它元素之前的位置。<br>设定网站服务器以指定预设兼容性模式:<br>网站管理员可籍着为网站定义一个自订标头来为他们的网站预设一个特定的文件兼容性模式。这个特定的方法取决于你的网站服务器。举例来说，下列的<code>web.config</code>文件使<code>Microsoft Internet Information Services (IIS)</code>能定义一个自订标头以自动使用<code>IE7 mode</code>来编译所有网页。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">system.webServer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">httpProtocol</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">customHeaders</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">clear</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">add</span> <span class="attribute">name</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">value</span>=<span class="value">"IE=EmulateIE7"</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="title">customHeaders</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">httpProtocol</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">system.webServer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>若你已于网站服务器指定了一个预设的文件兼容性模式，你可以在个别页面上指定不同的文件兼容性模式来盖过它。在网页中指定的模式优先权高于服务器中所指定的模式。<br>请查阅你的网站服务器关于指定自订标头的资讯，或看更多资料:<br>Implementing the META Switch on Apache<br>Implementing the META Switch on IIS</p>
+<p>判定文件兼容性模式:<br>要判定网页使用<code>IE8</code>浏览时的文件兼容性模式，使用<code>document object(文档对象)</code>的<code>documentMode</code>功能。例如在<code>IE8</code>的网址列输入下列程式码会显示目前页面的文件模式。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:alert(<span class="built_in">document</span>.documentMode);</span><br></pre></td></tr></table></figure></p>
+<p><code>documentMode</code>功能会回传一个数值对应目前页面的文件兼容性模式，举例来说，若网页指定为支持<code>IE8</code>模式，<code>documentMode</code>便会回传值<code>&quot;8&quot;</code>。<br>在<code>IE6</code>引入的<code>compatMode</code>功能不支持在<code>IE8</code>引入的<code>documentMode</code>功能。目前使用<code>compatMode</code>建立的应用程式还能在<code>IE8</code>中作用，但它们必须更新为使用<code>documentMode</code>。<br>若你希望使用<code>JavaScript</code>判定一个文件的兼容性模式，引入下面范例的这段程式码可支持旧版本的<code>IE</code>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">engine = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.navigator.appName == <span class="string">"Microsoft Internet Explorer"</span>)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="comment">// This is an IE browser. What mode is the engine in?</span></span><br><span class="line">   <span class="keyword">if</span> (<span class="built_in">document</span>.documentMode) <span class="comment">// IE8</span></span><br><span class="line">       engine = <span class="built_in">document</span>.documentMode;</span><br><span class="line">   <span class="keyword">else</span> <span class="comment">// IE 5-7</span></span><br><span class="line">    &#123;</span><br><span class="line">       engine = <span class="number">5</span>; <span class="comment">// Assume quirks mode unless proven otherwise</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">document</span>.compatMode)</span><br><span class="line">       &#123;</span><br><span class="line">         <span class="keyword">if</span> (<span class="built_in">document</span>.compatMode == <span class="string">"CSS1Compat"</span>)</span><br><span class="line">             engine = <span class="number">7</span>; <span class="comment">// standards mode</span></span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">   <span class="comment">// the engine variable now contains the document compatibility mode.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>认识内容属性值:<br>内容属性值在接收到异于先前叙述的数值时是具有弹性的。这能使你对于<code>IE</code>如何显示你的网页更有操控性。举例来说，你可以设定内容属性值为<code>IE=7.5</code>。当你这样做的时候，<code>IE</code>尝试将这个值转换为<code>version vector</code>并选择最接近的结果。在这个例子中，<code>IE</code>会将其设定为<code>IE7 mode</code>。下面的范例显示该模式设定为其他值的状况。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=4"</span>&gt;</span>   </span><br><span class="line"><span class="comment">&lt;!-- IE5 mode --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=7.5"</span>&gt;</span> </span><br><span class="line"><span class="comment">&lt;!-- IE7 mode --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=100"</span>&gt;</span> </span><br><span class="line"><span class="comment">&lt;!-- IE8 mode --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=a"</span>&gt;</span>   </span><br><span class="line"><span class="comment">&lt;!-- IE5 mode --&gt;</span> </span><br><span class="line"><span class="comment">&lt;!-- This header mimics Internet Explorer 7 and uses &lt;!DOCTYPE&gt; to determine how to display the Web page --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=EmulateIE7"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>注意: 前面的范例显示单独的内容值。实际上<code>IE</code>只会执行网页中第一个<code>X-UA-Compatible</code>标头。<br>你也可以使用内容属性来指定复数的文件兼容性模式，这能帮助确保你的网页在未来的浏览器版本都能一致的显示。欲设定复数的文件模式，请设定内容属性以判别你想使用的模式。使用分号来分开各个模式。<br>如果一个特定版本的IE支持所要求的兼容性模式多于一种，将採用列于标头内容属性中最高的可用模式。你可以使用这个特性来排除特定的兼容性模式，虽然并不推荐这样做。举例来说，下列标头即会排除<code>IE7 mode</code>。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=5; IE=8"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>结论:<br>兼容性对于网页设计师来说是非常重要的顾虑。虽然最好是可以建立一个完全不需依赖任何网页浏览器特性或功能的网站，有时候这是不可能实现的。文件兼容性模式便能将网页限制在某个特定版本的<code>IE</code>中。<br>使用<code>X-UA-Compatible</code>标头来指定你的页面支持的IE版本。使用<code>document.documentMode</code>判定页面的兼容性模式。<br>选择支持某个特定版本的IE，你可以确保你的页面在未来的浏览器版本中也能有显示的一致性。</p>
+<ol>
+<li><p><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=5&quot; /&gt;</code><br>像是使用了 <code>Windows Internet Explorer 7</code> 的 <code>Quirks</code> 模式，这与 <code>Windows Internet Explorer 5</code> 显示内容的方式很相似。</p>
+</li>
+<li><p><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=7&quot; /&gt;</code><br>无论页面是否包含 <code>&lt;!DOCTYPE&gt;</code> 指令，都像是使用了 <code>Windows Internet Explorer 7</code> 的标准模式。</p>
+</li>
+<li><p><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=8&quot; /&gt;</code></p>
+</li>
+<li><p><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;edge&quot; /&gt;</code><br><code>Edge</code> 模式通知 <code>Windows Internet Explorer</code> 以最高级别的可用模式显示内容，这实际上破坏了<code>“锁定”</code>模式。</p>
+</li>
+<li><p><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=EmulateIE7&quot; /&gt;</code><br><code>EmulateIE7</code> 模式通知 <code>Windows Internet Explorer</code> 使用 <code>&lt;!DOCTYPE&gt;</code> 指令确定如何呈现内容。标准模式指令以<code>Windows Internet Explorer 7</code>标准模式显示，而 <code>Quirks</code> 模式指令以 <code>IE5</code> 模式显示。与 <code>IE7</code> 模式不同，<code>EmulateIE7</code> 模式遵循 <code>&lt;!DOCTYPE&gt;</code> 指令。对于多数网站来说，它是首选的兼容性模式。</p>
+</li>
+</ol>
+<p>用户怎么办？<br>作为一般的用户，在查看某个网站时候，发现当前的页面有了不兼容的情况产生时，可以鼠标轻轻的点击地址栏右边的兼容性视图切换按钮，则可以在兼容性模式下查看当前网页。如果不想这么麻烦，可以直接打开“工具”—“兼容性视图设置”对话框，把本地IE8浏览器设置为“使用兼容模式来查看所有网站”，那么这个时候你访问网站的时候，都可以在兼容模式下显示站点内容了。</p>
+<p>网站提供商怎么办?<br>从网站的角度看来，必需要自身做到兼容，使得那些采用<code>IE8</code>标准模式来查看网站的用户也能够得到正确的显示结果，通过在网站中做一些设置，使得客户查看你的网站时候，能够自动以兼容模式显示。</p>
+<p>第一种办法，是在单个的页面中，添加兼容性标记，示例代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span>     </span><br><span class="line">  <span class="tag">&lt;<span class="title">head</span>&gt;</span>     </span><br><span class="line">    <span class="comment">&lt;!-- Mimic Internet Explorer 7 --&gt;</span>        </span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>我的网页<span class="tag">&lt;/<span class="title">title</span>&gt;</span>        </span><br><span class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=EmulateIE7"</span> /&gt;</span>     </span><br><span class="line">  <span class="tag">&lt;/<span class="title">head</span>&gt;</span>     </span><br><span class="line">  <span class="tag">&lt;<span class="title">body</span>&gt;</span>        </span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>内容在此处。<span class="tag">&lt;/<span class="title">p</span>&gt;</span>    </span><br><span class="line">  <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>在这里添加兼容性标签后，只对当前页面有用，而且必须是在<code>head</code>标签内部，同时也必须是在其他<code>css</code>样式定义或者链接的前面，否则不会产生效果的。</p>
+<p>第二种办法，就是在站点的配置文件中，修改<code>web.config</code>文件，使得该网站能够兼容，示例代码如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">configuration</span>&gt;</span>    </span><br><span class="line">  <span class="tag">&lt;<span class="title">system.webServer</span>&gt;</span>      </span><br><span class="line">    <span class="tag">&lt;<span class="title">httpProtocol</span>&gt;</span>        </span><br><span class="line">      <span class="tag">&lt;<span class="title">customHeaders</span>&gt;</span>          </span><br><span class="line">        <span class="tag">&lt;<span class="title">clear</span> /&gt;</span>          </span><br><span class="line">        <span class="tag">&lt;<span class="title">add</span> <span class="attribute">name</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">value</span>=<span class="value">"IE=EmulateIE7"</span>&gt;</span>        </span><br><span class="line">      <span class="tag">&lt;/<span class="title">customHeaders</span>&gt;</span>      </span><br><span class="line">    <span class="tag">&lt;/<span class="title">httpProtocol</span>&gt;</span>   </span><br><span class="line">  <span class="tag">&lt;<span class="title">system.webServer</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="title">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>第三种办法，就是在服务器级别对当前服务器做设置，使得服务器下面所有的站点都能够与IE8兼容性，这是推荐的做法，通过在服务器的配置花的时间最少，由于是整个服务器起作用，因此能很好的解决潜在的兼容性问题，具体设置可以参考以下资料介绍网站兼容的4个层次：<br>1、IIS，<a href="http://msdn.microsoft.com/zh-cn/library/cc817572.aspx" target="_blank" rel="external">http://msdn.microsoft.com/zh-cn/library/cc817572.aspx</a></p>
+<p>2、Apache，<a href="http://msdn.microsoft.com/zh-cn/library/cc817573.aspx" target="_blank" rel="external">http://msdn.microsoft.com/zh-cn/library/cc817573.aspx</a></p>
+<p>3、其他服务器，在后续的文章中会专门介绍一些主流的服务器中兼容性设置办法<br><code>IIS6</code> 设置<code>web.config</code>  的方法为什么不能行呢？？<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="title">configuration</span>&gt;</span>   </span><br><span class="line">  <span class="tag">&lt;<span class="title">system.webServer</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="title">httpProtocol</span>&gt;</span>       </span><br><span class="line">      <span class="tag">&lt;<span class="title">customHeaders</span>&gt;</span>      </span><br><span class="line">        <span class="tag">&lt;<span class="title">clear</span> /&gt;</span>        </span><br><span class="line">        <span class="tag">&lt;<span class="title">add</span> <span class="attribute">name</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">value</span>=<span class="value">"IE=EmulateIE7"</span>&gt;</span>      </span><br><span class="line">      <span class="tag">&lt;/<span class="title">customHeaders</span>&gt;</span>     </span><br><span class="line">    <span class="tag">&lt;/<span class="title">httpProtocol</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="title">system.webServer</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="title">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>在 页面加可以<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=EmulateIE7"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>可以 。</p>
+<ol>
+<li>配置<code>IIS</code>，添加<code>HTTP Header</code><br><img src="http://images.helloarron.com/web-ie8-1.png" alt="Image"><br><img src="http://images.helloarron.com/web-ie8-2.png" alt="Image"></li>
+</ol>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/IE8/" rel="tag">#IE8</a>
+          
+            <a href="/tags/WebApp/" rel="tag">#WebApp</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/01/19/webapp/web-attr-href/" rel="prev">href=#与href=javascriptvoid(0)的区别</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/01/19/webapp/web-ie8/"
+                   data-title="IE8 自动设置 兼容性 代码" data-url="http://blog.helloarron.com/2015/01/19/webapp/web-ie8/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/7171192?v=3&s=460" alt="Arron.y" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Arron.y</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">志向和热爱是伟大行为的双翼，learning ...</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ArronYR" target="_blank">Github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/arron0718" target="_blank">新浪微博</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.suosikeji.com/" target="_blank">索思科技协会</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://lvwenhan.com/" target="_blank">岁寒</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#IE8_自动设置_兼容性_代码"><span class="nav-number">1.</span> <span class="nav-text">IE8 自动设置 兼容性 代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Arron.y</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+-->
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"arronblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = 0
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
