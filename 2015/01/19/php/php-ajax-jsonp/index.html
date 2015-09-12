@@ -1,0 +1,748 @@
+<!doctype html>
+<html class="theme-next use-motion ">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="志向和热爱是伟大行为的双翼，learning ..." />
+
+
+
+  <meta name="keywords" content="JSONP,PHP," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="AJAX 跨域请求 - JSONP获取JSON数据(PHP版)Asynchronous JavaScript and XML (Ajax ) 是驱动新一代 Web 站点（流行术语为 Web 2.0 站点）的关键技术。Ajax 允许在不干扰 Web应用程序 的显示和行为的情况下在后台进行数据检索。使用 XMLHttpRequest 函数获取数据，它是一种 API，允许客户端 JavaScript 通">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AJAX 跨域请求 - JSONP获取JSON数据(PHP版)">
+<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/php/php-ajax-jsonp/index.html">
+<meta property="og:site_name" content="Arron.y's blog">
+<meta property="og:description" content="AJAX 跨域请求 - JSONP获取JSON数据(PHP版)Asynchronous JavaScript and XML (Ajax ) 是驱动新一代 Web 站点（流行术语为 Web 2.0 站点）的关键技术。Ajax 允许在不干扰 Web应用程序 的显示和行为的情况下在后台进行数据检索。使用 XMLHttpRequest 函数获取数据，它是一种 API，允许客户端 JavaScript 通">
+<meta property="og:updated_time" content="2015-09-12T09:31:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AJAX 跨域请求 - JSONP获取JSON数据(PHP版)">
+<meta name="twitter:description" content="AJAX 跨域请求 - JSONP获取JSON数据(PHP版)Asynchronous JavaScript and XML (Ajax ) 是驱动新一代 Web 站点（流行术语为 Web 2.0 站点）的关键技术。Ajax 允许在不干扰 Web应用程序 的显示和行为的情况下在后台进行数据检索。使用 XMLHttpRequest 函数获取数据，它是一种 API，允许客户端 JavaScript 通">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post'
+  };
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  <title> AJAX 跨域请求 - JSONP获取JSON数据(PHP版) | Arron.y's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Arron.y's blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              AJAX 跨域请求 - JSONP获取JSON数据(PHP版)
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-01-19T01:36:03+08:00" content="2015-01-19">
+            2015-01-19
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/PHP/" itemprop="url" rel="index">
+                  <span itemprop="name">PHP</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/01/19/php/php-ajax-jsonp/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/19/php/php-ajax-jsonp/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h2 id="AJAX_跨域请求_-_JSONP获取JSON数据(PHP版)">AJAX 跨域请求 - JSONP获取JSON数据(PHP版)</h2><p><code>Asynchronous JavaScript and XML (Ajax )</code> 是驱动新一代 <code>Web</code> 站点（流行术语为 <code>Web 2.0</code> 站点）的关键技术。<code>Ajax</code> 允许在不干扰 <code>Web应用程序</code> 的显示和行为的情况下在后台进行数据检索。使用 <code>XMLHttpRequest</code> 函数获取数据，它是一种 <code>API</code>，允许客户端 <code>JavaScript</code> 通过 <code>HTTP</code> 连接到远程服务器。<code>Ajax</code> 也是许多 <code>mashup</code> 的驱动力，它可将来自多个地方的内容集成为单一 <code>Web 应用程序</code>。</p>
+<p>不过，由于受到浏览器的限制，该方法不允许跨域通信。如果尝试从不同的域请求数据，会出现安全错误。如果能控制数 据驻留的远程服务器并且每个请求都前往同一域，就可以避免这些安全错误。</p>
+<h4 id="理解同源策略限制">理解同源策略限制</h4><p>同源策略阻止从一个域上加载的脚本获取或操作另一个域上的文档属性。也就是说，受到请求的 <code>URL</code> 的域必须与当前 <code>Web</code> 页面的域相同。这意味着浏览器隔离来自不同源的内容，以防止它们之间的操作。这个浏览器策略很旧，从 <code>Netscape Navigator 2.0</code> 版本开始就存在。</p>
+<p>克服该限制的一个相对简单的方法是让 <code>Web页面</code>向它源自的 <code>Web 服务器</code>请求数据，并且让 <code>Web 服务器</code>像代理一样将请求转发给真正的第三方服务器。尽管该技术获得了普遍使用，但它是不可伸缩的。另一种方式是使用框架要素在当前 <code>Web 页面</code>中创建新区域，并且使用 <code>GET</code> 请求获取任何第三方资源。不过，获取资源后，框架中的内容会受到同源策略的限制。</p>
+<p>克服该限制更理想方法是在 <code>Web</code> 页面中插入动态脚本元素，该页面源指向其他域中的服务 <code>URL</code>并且在自身脚本中获取数据。脚本加载时它开始执行。该方法是可行的，因为同源策略不阻止动态脚本插入，并且将脚本看作是从提供 Web 页面的域上加载的。但如果该脚本尝试从另一个域上加载文档，就不会成功。幸运的是，通过添加 <code>JavaScript Object Notation (JSON)</code> 可以改进该技术。</p>
+<h4 id="1、什么是JSONP？">1、什么是JSONP？</h4><p>要了解<code>JSONP</code>，不得不提一下<code>JSON</code>，那么什么是<code>JSON</code> ？</p>
+<blockquote>
+<p>JSON is a subset of the object literal notation of JavaScript. Since JSON is a subset of JavaScript, it can be used in the language with no muss or fuss.</p>
+<p>JSONP(JSON with Padding)是一个非官方的协议，它允许在服务器端集成Script tags返回至客户端，通过javascript callback的形式实现跨域访问（这仅仅是JSONP简单的实现形式）。</p>
+</blockquote>
+<h4 id="2、JSONP有什么用？">2、JSONP有什么用？</h4><p>由于同源策略的限制，<code>XmlHttpRequest</code>只允许请求当前源（域名、协议、端口）的资源，为了实现跨域请求，可以通过<code>script</code>标签实现跨域请求，然后在服务端输出<code>JSON数据</code>并执行回调函数，从而解决了<code>跨域</code>的数据请求。</p>
+<h4 id="3、如何使用JSONP？">3、如何使用JSONP？</h4><p>下边这一DEMO实际上是<code>JSONP</code>的简单表现形式，在客户端声明回调函数之后，客户端通过<code>script</code>标签向服务器跨域请求数据，然后服务端返回相应的数据并动态执行回调函数。</p>
+<h6 id="HTML代码_（任一_）：Html代码">HTML代码 （任一 ）：<code>Html</code>代码</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">content</span>=<span class="value">"text/html; charset=utf-8"</span> <span class="attribute">http-equiv</span>=<span class="value">"Content-Type"</span> /&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">  </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jsonpCallback</span>(<span class="params">result</span>) </span>&#123;  </span><br><span class="line">        <span class="comment">//alert(result);  </span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> result) &#123;  </span><br><span class="line">            alert(i+<span class="string">":"</span>+result[i]);<span class="comment">//循环输出a:1,b:2,etc.  </span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">var</span> JSONP=<span class="built_in">document</span>.createElement(<span class="string">"script"</span>);  </span><br><span class="line">    JSONP.type=<span class="string">"text/javascript"</span>;  </span><br><span class="line">    JSONP.src=<span class="string">"http://crossdomain.com/services.php?callback=jsonpCallback"</span>;  </span><br><span class="line">    <span class="built_in">document</span>.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(JSONP);  </span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>或者<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">content</span>=<span class="value">"text/html; charset=utf-8"</span> <span class="attribute">http-equiv</span>=<span class="value">"Content-Type"</span> /&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="actionscript">  </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jsonpCallback</span><span class="params">(result)</span> </span>&#123;  </span><br><span class="line">        alert(result.a);  </span><br><span class="line">        alert(result.b);  </span><br><span class="line">        alert(result.c);  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> result) &#123;  </span><br><span class="line">            alert(i+<span class="string">":"</span>+result[i]);<span class="comment">//循环输出a:1,b:2,etc.  </span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://crossdomain.com/services.php?callback=jsonpCallback"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>JavaScript</code>的链接，必须在<code>function</code>的下面。</li>
+</ul>
+<h6 id="服务端PHP代码_（services-php）：PHP代码">服务端PHP代码 （services.php）：<code>PHP</code>代码</h6><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line">    <span class="comment">//服务端返回JSON数据</span></span><br><span class="line">    <span class="variable">$arr</span>=<span class="keyword">array</span>(<span class="string">'a'</span>=&gt;<span class="number">1</span>,<span class="string">'b'</span>=&gt;<span class="number">2</span>,<span class="string">'c'</span>=&gt;<span class="number">3</span>,<span class="string">'d'</span>=&gt;<span class="number">4</span>,<span class="string">'e'</span>=&gt;<span class="number">5</span>);</span><br><span class="line">    <span class="variable">$result</span>=json_encode(<span class="variable">$arr</span>);</span><br><span class="line">    <span class="comment">//echo $_GET['callback'].'("Hello,World!")';</span></span><br><span class="line">    <span class="comment">//echo $_GET['callback']."($result)";</span></span><br><span class="line">    <span class="comment">//动态执行回调函数</span></span><br><span class="line">    <span class="variable">$callback</span>=<span class="variable">$_GET</span>[<span class="string">'callback'</span>];</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$callback</span>.<span class="string">"($result)"</span>;</span><br><span class="line"><span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果将上述<code>JS</code>客户端代码用<code>jQuery</code>的方法来实现，也非常简单。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.getJSON</span><br><span class="line">$.ajax</span><br><span class="line">$.get</span><br></pre></td></tr></table></figure></p>
+<h6 id="客户端JS代码在jQuery中的实现方式1:">客户端<code>JS</code>代码在<code>jQuery</code>中的实现方式<code>1</code>:</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"jquery.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">  </span><br><span class="line">    $.getJSON(<span class="string">"http://crossdomain.com/services.php?callback=?"</span>,  </span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> result) &#123;  </span><br><span class="line">            alert(i+<span class="string">":"</span>+result[i]);<span class="comment">//循环输出a:1,b:2,etc.  </span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;);  </span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h6 id="客户端JS代码在jQuery中的实现方式2：">客户端<code>JS</code>代码在<code>jQuery</code>中的实现方式<code>2</code>：</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"jquery.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">  </span><br><span class="line">    $.ajax(&#123;  </span><br><span class="line">        url:<span class="string">"http://crossdomain.com/services.php"</span>,  </span><br><span class="line">        dataType:<span class="string">'jsonp'</span>,  </span><br><span class="line">        data:<span class="string">''</span>,  </span><br><span class="line">        jsonp:<span class="string">'callback'</span>,  </span><br><span class="line">        success:<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;  </span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> result) &#123;  </span><br><span class="line">                alert(i+<span class="string">":"</span>+result[i]);<span class="comment">//循环输出a:1,b:2,etc.  </span></span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;,  </span><br><span class="line">        timeout:<span class="number">3000</span>  </span><br><span class="line">    &#125;);  </span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h6 id="客户端JS代码在jQuery中的实现方式3：">客户端JS代码在jQuery中的实现方式3：</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"jquery.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">  </span><br><span class="line">    $.get(<span class="string">'http://crossdomain.com/services.php?callback=?'</span>, &#123;name: <span class="built_in">encodeURIComponent</span>(<span class="string">'tester'</span>)&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">json</span>) </span>&#123; <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> json) alert(i+<span class="string">":"</span>+json[i]); &#125;, <span class="string">'jsonp'</span>);  </span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>其中 <code>jsonCallback</code> 是客户端注册的，获取 跨域服务器 上的<code>json</code>数据后回调的函数。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://crossdomain.com/services.php?callback=jsonpCallback</span><br></pre></td></tr></table></figure></p>
+<p>这个 <code>url</code> 是跨域服务 器取 <code>json</code> 数据的接口，参数为回调函数的名字，返回的格式为:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jsonpCallback(&#123;msg:<span class="string">'this is json data'</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="Jsonp原理：">Jsonp原理：</h4><p>首先在客户端注册一个<code>callback</code>, 然后把<code>callback</code>的名字传给服务器。此时，服务器先生成 <code>json</code> 数据。<br>然后以 <code>javascript</code>语法的方式，生成一个<code>function</code> , <code>function</code> 名字就是传递上来的参数 <code>jsonp</code>.<br>最后将 <code>json</code> 数据直接以入参的方式，放置到 <code>function</code> 中，这样就生成了一段 <code>js</code> 语法的文档，返回给客户端。<br>客户端浏览器，解析<code>script</code>标签，并执行返回的 <code>javascript</code> 文档，此时数据作为参数，传入到了客户端预先定义好的 <code>callback</code> 函数里.（动态执行回调函数）</p>
+<h4 id="使用JSON的优点在于：">使用JSON的优点在于：</h4><p>比<code>XML</code>轻了很多，没有那么多冗余的东西。<code>JSON</code>也是具有很好的可读性的，但是通常返回的都是压缩过后的。不像XML这样的浏览器可以直接显示，浏览器对于<code>JSON</code>的格式化的显示就需要借助一些插件了。<br>在<code>JavaScript</code>中处理<code>JSON</code>很简单。其他语言例如<code>PHP</code>对于<code>JSON</code>的支持也不错。</p>
+<h4 id="JSON也有一些劣势：">JSON也有一些劣势：</h4><p><code>JSON</code>在服务端语言的支持不像<code>XML</code>那么广泛，不过<a href="http://json.org" target="_blank" rel="external">json.org</a>上提供很多语言的库。<br>如果你使用<code>eval()</code>来解析的话，会容易出现安全问题。<br>尽管如此，<code>JSON</code>的优点还是很明显的。他是<code>Ajax</code>数据交互的很理想的数据格式。</p>
+<h4 id="主要提示：">主要提示：</h4><p><code>JSONP</code>是构建<code>mashup</code>的强大技术，但不幸的是，它并不是所有跨域通信需求的万灵药。它有一些缺陷，在提交开发资源之前必须认真考虑它们。</p>
+<ul>
+<li><p>第一，也是最重要的一点，没有关于<code>JSONP</code>调用的错误处理。如果动态脚本插入有效，就执行调用；如果无效，就静默失败。失败是没有任何提示的。例如，不能从服务器捕捉到 <code>404</code> 错误，也不能取消或重新开始请求。不过，等待一段时间还没有响应的话，就不用理它了。（未来的 <code>jQuery</code> 版本可能有终止 <code>JSONP</code> 请求的特性）。</p>
+</li>
+<li><p><code>JSONP</code> 的另一个主要缺陷是被不信任的服务使用时会很危险。因为 <code>JSONP</code> 服务返回打包在函数调用中的 <code>JSON</code> 响应，而函数调用是由浏览器执行的，这使宿主 <code>Web 应用程序</code>更容易受到各类攻击。如果打算使用 <code>JSONP</code> 服务，了解它能造成的威胁非常重要。</p>
+</li>
+</ul>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JSONP/" rel="tag">#JSONP</a>
+          
+            <a href="/tags/PHP/" rel="tag">#PHP</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/01/19/java/java-ajax-jsonp/" rel="prev">AJAX 跨域请求 - JSONP获取JSON数据(JAVA版)</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/01/19/php/php-ajax-jsonp/"
+                   data-title="AJAX 跨域请求 - JSONP获取JSON数据(PHP版)" data-url="http://blog.helloarron.com/2015/01/19/php/php-ajax-jsonp/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/7171192?v=3&s=460" alt="Arron.y" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Arron.y</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">志向和热爱是伟大行为的双翼，learning ...</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">38</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ArronYR" target="_blank">Github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/arron0718" target="_blank">新浪微博</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.suosikeji.com/" target="_blank">索思科技协会</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://lvwenhan.com/" target="_blank">岁寒</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX_跨域请求_-_JSONP获取JSON数据(PHP版)"><span class="nav-number">1.</span> <span class="nav-text">AJAX 跨域请求 - JSONP获取JSON数据(PHP版)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#理解同源策略限制"><span class="nav-number">1.0.1.</span> <span class="nav-text">理解同源策略限制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1、什么是JSONP？"><span class="nav-number">1.0.2.</span> <span class="nav-text">1、什么是JSONP？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、JSONP有什么用？"><span class="nav-number">1.0.3.</span> <span class="nav-text">2、JSONP有什么用？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、如何使用JSONP？"><span class="nav-number">1.0.4.</span> <span class="nav-text">3、如何使用JSONP？</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#HTML代码_（任一_）：Html代码"><span class="nav-number">1.0.4.0.1.</span> <span class="nav-text">HTML代码 （任一 ）：Html代码</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#服务端PHP代码_（services-php）：PHP代码"><span class="nav-number">1.0.4.0.2.</span> <span class="nav-text">服务端PHP代码 （services.php）：PHP代码</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#客户端JS代码在jQuery中的实现方式1:"><span class="nav-number">1.0.4.0.3.</span> <span class="nav-text">客户端JS代码在jQuery中的实现方式1:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#客户端JS代码在jQuery中的实现方式2："><span class="nav-number">1.0.4.0.4.</span> <span class="nav-text">客户端JS代码在jQuery中的实现方式2：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#客户端JS代码在jQuery中的实现方式3："><span class="nav-number">1.0.4.0.5.</span> <span class="nav-text">客户端JS代码在jQuery中的实现方式3：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jsonp原理："><span class="nav-number">1.0.5.</span> <span class="nav-text">Jsonp原理：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用JSON的优点在于："><span class="nav-number">1.0.6.</span> <span class="nav-text">使用JSON的优点在于：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSON也有一些劣势："><span class="nav-number">1.0.7.</span> <span class="nav-text">JSON也有一些劣势：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主要提示："><span class="nav-number">1.0.8.</span> <span class="nav-text">主要提示：</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Arron.y</span>
+</div>
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+-->
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"arronblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = 0
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
