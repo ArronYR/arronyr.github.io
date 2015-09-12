@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Linux,NodeJS," />
+  <meta name="keywords" content="JSONP,Java," />
 
 
 
@@ -37,23 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Linux 下安装 NodeJS以前都是在windows下使用，一般一个.exe 或.msi 文件就搞定了，这还是第一次自己远程Linux服务器配置NodeJS环境。首先干的第一件事就是百度，方法有很多，我最后参照了oschine和csdn上的两篇文章成功安装。下面就来说说我的安装过程。
-
-登录服务器看了一下当前系统信息（我的是 Linux version 2.6.32-220.el6.x86_6">
+<meta name="description" content="AJAX 跨域请求 - JSONP获取JSON数据(Java版)Jsonp(JSON with Padding)是资料格式 json 的一种”使用模式”，可以让网页从别的网域获取资料。关于Jsonp更详细的资料请参考，下面给出例子：
+一.客户端1234567891011121314151617181920212223242526272829303132333435&amp;lt;!DOCTYPE html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 下安装 NodeJS">
-<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/linux/linux-node-setup/index.html">
+<meta property="og:title" content="AJAX 跨域请求 - JSONP获取JSON数据(JAVA版)">
+<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/java/java-ajax-jsonp/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Linux 下安装 NodeJS以前都是在windows下使用，一般一个.exe 或.msi 文件就搞定了，这还是第一次自己远程Linux服务器配置NodeJS环境。首先干的第一件事就是百度，方法有很多，我最后参照了oschine和csdn上的两篇文章成功安装。下面就来说说我的安装过程。
-
-登录服务器看了一下当前系统信息（我的是 Linux version 2.6.32-220.el6.x86_6">
-<meta property="og:image" content="http://images.helloarron.com/linux-node.jpg">
-<meta property="og:updated_time" content="2015-09-08T14:22:58.000Z">
+<meta property="og:description" content="AJAX 跨域请求 - JSONP获取JSON数据(Java版)Jsonp(JSON with Padding)是资料格式 json 的一种”使用模式”，可以让网页从别的网域获取资料。关于Jsonp更详细的资料请参考，下面给出例子：
+一.客户端1234567891011121314151617181920212223242526272829303132333435&amp;lt;!DOCTYPE html">
+<meta property="og:updated_time" content="2015-09-12T09:15:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux 下安装 NodeJS">
-<meta name="twitter:description" content="Linux 下安装 NodeJS以前都是在windows下使用，一般一个.exe 或.msi 文件就搞定了，这还是第一次自己远程Linux服务器配置NodeJS环境。首先干的第一件事就是百度，方法有很多，我最后参照了oschine和csdn上的两篇文章成功安装。下面就来说说我的安装过程。
-
-登录服务器看了一下当前系统信息（我的是 Linux version 2.6.32-220.el6.x86_6">
+<meta name="twitter:title" content="AJAX 跨域请求 - JSONP获取JSON数据(JAVA版)">
+<meta name="twitter:description" content="AJAX 跨域请求 - JSONP获取JSON数据(Java版)Jsonp(JSON with Padding)是资料格式 json 的一种”使用模式”，可以让网页从别的网域获取资料。关于Jsonp更详细的资料请参考，下面给出例子：
+一.客户端1234567891011121314151617181920212223242526272829303132333435&amp;lt;!DOCTYPE html">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -73,7 +69,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> Linux 下安装 NodeJS | Arron.y's blog </title>
+  <title> AJAX 跨域请求 - JSONP获取JSON数据(JAVA版) | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -189,7 +185,7 @@ var _hmt = _hmt || [];
           
           
             
-              Linux 下安装 NodeJS
+              AJAX 跨域请求 - JSONP获取JSON数据(JAVA版)
             
           
         </h1>
@@ -198,8 +194,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-02-02T10:49:47+08:00" content="2015-02-02">
-            2015-02-02
+          <time itemprop="dateCreated" datetime="2015-01-19T01:41:19+08:00" content="2015-01-19">
+            2015-01-19
           </time>
         </span>
 
@@ -208,8 +204,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Linux/" itemprop="url" rel="index">
-                  <span itemprop="name">Linux</span>
+                <a href="/categories/Java/" itemprop="url" rel="index">
+                  <span itemprop="name">Java</span>
                 </a>
               </span>
 
@@ -224,8 +220,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/02/02/linux/linux-node-setup/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/linux/linux-node-setup/" itemprop="commentsCount"></span>
+              <a href="/2015/01/19/java/java-ajax-jsonp/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/19/java/java-ajax-jsonp/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -239,27 +235,9 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Linux_下安装_NodeJS">Linux 下安装 NodeJS</h2><p>以前都是在<code>windows</code>下使用，一般一个<code>.exe</code> 或<code>.msi</code> 文件就搞定了，这还是第一次自己远程<code>Linux</code>服务器配置<code>NodeJS</code>环境。首先干的第一件事就是百度，方法有很多，我最后参照了oschine和csdn上的两篇文章成功安装。下面就来说说我的安装过程。</p>
-<ol>
-<li><p>登录服务器看了一下当前系统信息（我的是 Linux version 2.6.32-220.el6.x86_64  gcc version 4.4.6 20110731）</p>
-</li>
-<li><p>在窗口中输入命令下载<code>node</code>安装包</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># wget http:<span class="comment">//nodejs.org/dist/v0.10.36/node-v0.10.36-linux-x64.tar.gz</span></span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>解压安装包</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># <span class="tag">tar</span> <span class="tag">zxvf</span> <span class="tag">node-v0</span><span class="class">.10</span><span class="class">.36-linux-x64</span><span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装之前看看<code>nodejs</code>的所需要的环境</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># cd node-v0<span class="number">.10</span><span class="number">.36</span>-linux-x64</span></span><br><span class="line"><span class="preprocessor"># vi README.md</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><img src="http://images.helloarron.com/linux-node.jpg" alt="image"><br>从上面的截图中我们可以看出NodeJS需要的环境和linux下安装方法。</p>
-<ol>
-<li>因为上面下载的包是编译好的文件，里面并没有 <code>configure</code>这个东西，我们只需要将<code>bin</code>目录下的<code>node</code>和<code>npm</code>配置到全局即可<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># ln -s /nodejs解压文件所处的路径/bin/node  /usr/local/bin/node</span></span><br><span class="line"><span class="preprocessor"># ln -s /nodejs解压文件所处的路径/bin/npm  /usr/local/bin/npm</span></span><br><span class="line"><span class="preprocessor"># node -v        （查看版本）</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>如果采用的是源码编译安装，就是使用图片中提供的安装方法。</p>
-<p>安装过程中 <code>./configure</code>  步骤如果出错，可能是<code>Python</code>版本过低的问题，我们需要提升版本至 <code>2.6</code>以上：<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># wget http://www.python.org/ftp/python/2.6.5/Python-2.6.5.tar.bz2</span></span><br><span class="line"><span class="preprocessor"># tar jxvf Python-2.6.5.tar.bz2</span></span><br><span class="line"><span class="preprocessor"># cd Python-2.6.5</span></span><br><span class="line"><span class="preprocessor"># ./configure</span></span><br><span class="line"><span class="preprocessor"># make &amp;&amp; make install</span></span><br><span class="line"><span class="preprocessor"># /usr/local/bin/python2.6 -V       （查看Python版本，V大写）</span></span><br><span class="line"><span class="preprocessor"># mv /usr/bin/python /usr/bin/python2.4</span></span><br><span class="line"><span class="preprocessor"># rm -f /usr/bin/python</span></span><br><span class="line"><span class="preprocessor"># ln -s /usr/local/bin/python2.6 /usr/bin/python</span></span><br><span class="line"><span class="preprocessor"># vi /usr/bin/yum    （将原来的/usr/bin/python 改为 /usr/bin/python2.4）</span></span><br><span class="line"><span class="preprocessor"># yum list    （可以使用这个命令看看yum是否可以使用）</span></span><br><span class="line"><span class="preprocessor"># python -V</span></span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h2 id="AJAX_跨域请求_-_JSONP获取JSON数据(Java版)">AJAX 跨域请求 - JSONP获取JSON数据(Java版)</h2><p><code>Jsonp(JSON with Padding)</code>是资料格式 <code>json</code> 的一种”使用模式”，可以让网页从别的网域获取资料。<br>关于<code>Jsonp</code>更详细的资料请<a href="http://baike.baidu.com/view/2131174.htm" target="_blank" rel="external">参考</a>，下面给出例子：</p>
+<h4 id="一-客户端">一.客户端</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"Content-Type"</span> <span class="attribute">content</span>=<span class="value">"text/html; charset=UTF-8"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>Insert title here<span class="tag">&lt;/<span class="title">title</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"resource/js/jquery-1.7.2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">  </span><br><span class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;     </span><br><span class="line">        <span class="comment">/*  </span><br><span class="line">        //简写形式，效果相同  </span><br><span class="line">        $.getJSON("http://app.example.com/base/json.do?sid=1494&amp;busiId=101&amp;jsonpCallback=?",  </span><br><span class="line">                function(data)&#123;  </span><br><span class="line">                    $("#showcontent").text("Result:"+data.result)  </span><br><span class="line">        &#125;);  </span><br><span class="line">        */</span>  </span><br><span class="line">        $.ajax(&#123;  </span><br><span class="line">            type : <span class="string">"get"</span>,  </span><br><span class="line">            <span class="keyword">async</span>:<span class="literal">false</span>,  </span><br><span class="line">            url : <span class="string">"http://app.example.com/base/json.do?sid=1494&amp;busiId=101"</span>,  </span><br><span class="line">            dataType : <span class="string">"jsonp"</span>,<span class="comment">//数据类型为jsonp  </span></span><br><span class="line">            jsonp: <span class="string">"jsonpCallback"</span>,<span class="comment">//服务端用于接收callback调用的function名的参数  </span></span><br><span class="line">            success : <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;  </span><br><span class="line">                $(<span class="string">"#showcontent"</span>).text(<span class="string">"Result:"</span>+data.result)  </span><br><span class="line">            &#125;,  </span><br><span class="line">            error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">                alert(<span class="string">'fail'</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;);   </span><br><span class="line">    &#125;);  </span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="title">body</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"showcontent"</span>&gt;</span>Result:<span class="tag">&lt;/<span class="title">div</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;/<span class="title">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>###二.服务器端 （JAVA）<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.IOException;  </span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;  </span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;  </span><br><span class="line"><span class="keyword">import</span> java.util.Map;  </span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;  </span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;  </span><br><span class="line"><span class="keyword">import</span> net.sf.json.JSONObject;  </span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;  </span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;  </span><br><span class="line">  </span><br><span class="line"><span class="annotation">@Controller</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExchangeJsonController</span> </span>&#123;  </span><br><span class="line">    <span class="annotation">@RequestMapping</span>(<span class="string">"/base/json.do"</span>)  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">exchangeJson</span><span class="params">(HttpServletRequest request,HttpServletResponse response)</span> </span>&#123;  </span><br><span class="line">       <span class="keyword">try</span> &#123;  </span><br><span class="line">        response.setContentType(<span class="string">"text/plain"</span>);  </span><br><span class="line">        response.setHeader(<span class="string">"Pragma"</span>, <span class="string">"No-cache"</span>);  </span><br><span class="line">        response.setHeader(<span class="string">"Cache-Control"</span>, <span class="string">"no-cache"</span>);  </span><br><span class="line">        response.setDateHeader(<span class="string">"Expires"</span>, <span class="number">0</span>);  </span><br><span class="line">        Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;String,String&gt;();   </span><br><span class="line">        map.put(<span class="string">"result"</span>, <span class="string">"content"</span>);  </span><br><span class="line">        PrintWriter out = response.getWriter();       </span><br><span class="line">        JSONObject resultJSON = JSONObject.fromObject(map); <span class="comment">//根据需要拼装json  </span></span><br><span class="line">        String jsonpCallback = request.getParameter(<span class="string">"jsonpCallback"</span>);<span class="comment">//客户端请求参数  </span></span><br><span class="line">        out.println(jsonpCallback+<span class="string">"("</span>+resultJSON.toString(<span class="number">1</span>,<span class="number">1</span>)+<span class="string">")"</span>);<span class="comment">//返回jsonp格式数据  </span></span><br><span class="line">        out.flush();  </span><br><span class="line">        out.close();  </span><br><span class="line">      &#125; <span class="keyword">catch</span> (IOException e) &#123;  </span><br><span class="line">       e.printStackTrace();  </span><br><span class="line">      &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -268,9 +246,9 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag">#Linux</a>
+            <a href="/tags/JSONP/" rel="tag">#JSONP</a>
           
-            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
         </div>
       
@@ -279,13 +257,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/02/02/linux/linux-centos-svn/" rel="prev">Linux（centOS）下搭建 SVN 服务器</a>
+              <a href="/2015/01/19/webapp/css-media/" rel="prev">CSS Media</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/02/02/javascript/javascript-trim/" rel="next">JavaScript 实现trim ltrim rtrim</a>
             
           </div>
         </div>
@@ -333,8 +309,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/02/02/linux/linux-node-setup/"
-                   data-title="Linux 下安装 NodeJS" data-url="http://blog.helloarron.com/2015/02/02/linux/linux-node-setup/">
+              <div class="ds-thread" data-thread-key="2015/01/19/java/java-ajax-jsonp/"
+                   data-title="AJAX 跨域请求 - JSONP获取JSON数据(JAVA版)" data-url="http://blog.helloarron.com/2015/01/19/java/java-ajax-jsonp/">
               </div>
             
           </div>
@@ -437,7 +413,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux_下安装_NodeJS"><span class="nav-number">1.</span> <span class="nav-text">Linux 下安装 NodeJS</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX_跨域请求_-_JSONP获取JSON数据(Java版)"><span class="nav-number">1.</span> <span class="nav-text">AJAX 跨域请求 - JSONP获取JSON数据(Java版)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一-客户端"><span class="nav-number">1.0.1.</span> <span class="nav-text">一.客户端</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
