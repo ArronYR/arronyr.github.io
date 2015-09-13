@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Async,NodeJS," />
+  <meta name="keywords" content="Exports,NodeJS," />
 
 
 
@@ -37,28 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="初识 AsyncAsync 是一个流行的异步编程内裤，提供了直接而强大的JavaScript异步功能。虽然是为node.js设计的，但是也可以直接在浏览器中使用。
-Async 提供了大约20个函数，包括常用的map, reduce, filter, forEach 等等，也有常用的异步流程控制函数，包括parallel, series, waterfall 等等。所有这些函数都是假设你遵循node">
+<meta name="description" content="NodeJS模块中的exports和module.exportsexports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
+但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理解为包含关系。
+所有的 exports">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初识Async">
-<meta property="og:url" content="http://blog.helloarron.com/2015/02/02/javascript/node-async/index.html">
+<meta property="og:title" content="NodeJS模块中的exports和module.exports">
+<meta property="og:url" content="http://blog.helloarron.com/2015/03/06/node/node-module-exports/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="初识 AsyncAsync 是一个流行的异步编程内裤，提供了直接而强大的JavaScript异步功能。虽然是为node.js设计的，但是也可以直接在浏览器中使用。
-Async 提供了大约20个函数，包括常用的map, reduce, filter, forEach 等等，也有常用的异步流程控制函数，包括parallel, series, waterfall 等等。所有这些函数都是假设你遵循node">
-<meta property="og:image" content="http://images.helloarron.com/node-async-1.png">
-<meta property="og:image" content="http://images.helloarron.com/node-async-2.png">
-<meta property="og:image" content="http://images.helloarron.com/node-async-3.png">
-<meta property="og:image" content="http://images.helloarron.com/node-async-4.png">
-<meta property="og:image" content="http://images.helloarron.com/node-async-5.png">
-<meta property="og:image" content="http://images.helloarron.com/node-async-6.png">
-<meta property="og:image" content="http://images.helloarron.com/node-async-7.png">
-<meta property="og:image" content="http://images.helloarron.com/node-async-8.png">
-<meta property="og:image" content="http://images.helloarron.com/node-async-9.png">
-<meta property="og:updated_time" content="2015-09-06T16:25:02.000Z">
+<meta property="og:description" content="NodeJS模块中的exports和module.exportsexports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
+但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理解为包含关系。
+所有的 exports">
+<meta property="og:updated_time" content="2015-09-06T16:11:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初识Async">
-<meta name="twitter:description" content="初识 AsyncAsync 是一个流行的异步编程内裤，提供了直接而强大的JavaScript异步功能。虽然是为node.js设计的，但是也可以直接在浏览器中使用。
-Async 提供了大约20个函数，包括常用的map, reduce, filter, forEach 等等，也有常用的异步流程控制函数，包括parallel, series, waterfall 等等。所有这些函数都是假设你遵循node">
+<meta name="twitter:title" content="NodeJS模块中的exports和module.exports">
+<meta name="twitter:description" content="NodeJS模块中的exports和module.exportsexports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
+但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理解为包含关系。
+所有的 exports">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -78,7 +72,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> 初识Async | Arron.y's blog </title>
+  <title> NodeJS模块中的exports和module.exports | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -194,7 +188,7 @@ var _hmt = _hmt || [];
           
           
             
-              初识Async
+              NodeJS模块中的exports和module.exports
             
           
         </h1>
@@ -203,8 +197,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-02-02T11:10:02+08:00" content="2015-02-02">
-            2015-02-02
+          <time itemprop="dateCreated" datetime="2015-03-06T11:34:35+08:00" content="2015-03-06">
+            2015-03-06
           </time>
         </span>
 
@@ -229,8 +223,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/02/02/javascript/node-async/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/02/javascript/node-async/" itemprop="commentsCount"></span>
+              <a href="/2015/03/06/node/node-module-exports/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/06/node/node-module-exports/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -244,40 +238,14 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="初识_Async">初识 Async</h2><p><code>Async</code> 是一个流行的异步编程内裤，提供了直接而强大的<code>JavaScript</code>异步功能。虽然是为<code>node.js</code>设计的，但是也可以直接在浏览器中使用。</p>
-<p><code>Async</code> 提供了大约<code>20</code>个函数，包括常用的<code>map</code>, <code>reduce</code>, <code>filter</code>, <code>forEach</code> 等等，也有常用的异步流程控制函数，包括<code>parallel</code>, <code>series</code>, <code>waterfall</code> 等等。所有这些函数都是假设你遵循<code>node.js</code>的约定：在一步函数的最后提供一个回调函数作为参数。</p>
-<p><code>Async</code> 包括三部分：</p>
-<ul>
-<li>流程控制：简化始终常见流程的控制</li>
-<li>集合处理：如何使用异步操作处理集合中的数据</li>
-<li>工具类：几个常用的工具类</li>
-</ul>
-<p>下面我们使用 <code>async.waterfall</code> 作为例子：</p>
-<ol>
-<li>新建一个目录作为测试目录，新建脚本文件 <code>async.js</code> （文件名随意）</li>
-<li>进入命令行，切换到项目目录，执 <code>npm init</code></li>
-</ol>
-<p><img src="http://images.helloarron.com/node-async-1.png" alt="image"></p>
-<p>按照提示步骤完成初始化</p>
-<p>执行完成之后会在项目目录下多出 <code>package.json</code> 文件，打开文件，在里面添加对 <code>Async</code> 的依赖：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"async"</span> :  <span class="string">"*"</span></span><br></pre></td></tr></table></figure></p>
-<p>整个 <code>package.json</code>  如下：</p>
-<p><img src="http://images.helloarron.com/node-async-2.png" alt="image"></p>
-<p>在命令行执行 <code>npm install</code> 安装 <code>Async</code> 模块：</p>
-<p><img src="http://images.helloarron.com/node-async-3.png" alt="image"></p>
-<p>此时我们会发现并没有安装成功，打开 <code>package.json</code> 并添加<code>author</code>，然后再执行 <code>npm install</code></p>
-<p><img src="http://images.helloarron.com/node-async-4.png" alt="image"></p>
-<p>已成功安装 <code>Async</code> ，在项目目录下会出现 <code>node_modules</code> 文件夹</p>
-<p><img src="http://images.helloarron.com/node-async-5.png" alt="image"></p>
-<p><code>node_modules</code> 下就是我们安装的 <code>Async</code> 模块。</p>
-<p><img src="http://images.helloarron.com/node-async-6.png" alt="image"></p>
-<p>打开 <code>async.js</code> 文件添加如下测试代码：</p>
-<p><img src="http://images.helloarron.com/node-async-7.png" alt="image"></p>
-<p>打开命令行，切换到项目目录，执行 <code>node async.js</code></p>
-<p><img src="http://images.helloarron.com/node-async-8.png" alt="image"></p>
-<p>将 <code>callback( null, &#39;three&#39; )</code>; 修改为：<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">callback</span>( <span class="string">'error occurred !'</span>, <span class="string">'three'</span> );</span><br></pre></td></tr></table></figure></p>
-<p>再运行，运行结果如下：<br><img src="http://images.helloarron.com/node-async-9.png" alt="image"></p>
-<p>由此我们可以看出 <code>async.waterfall</code> 的基本用法。</p>
-<p><code>waterfall( tasks, [callback] )</code>：多个函数依次执行，且前一个的输出为后一个的输入，即每一个函数产生的值，都将传给下一个函数。如果中途出错，后面的函数将不会被执行。错误信息以及之前产生的结果，将传给 <code>waterfall</code> 最终的 <code>callback</code>，一个简单的例子。</p>
+        <span itemprop="articleBody"><h2 id="NodeJS模块中的exports和module-exports">NodeJS模块中的<code>exports</code>和<code>module.exports</code></h2><p><code>exports</code> 和 <code>module.exports</code> 的作用都是讲文件模块的方法和属性暴露给 <code>require</code> 返回的对象进行调用。</p>
+<p>但是二者之间存在本质的区别，<code>exports</code>的属性和方法都可以被<code>module.exports</code> 替代，但是<code>exports</code> 不能替代<code>module.exports</code> 方法，可以理解为包含关系。</p>
+<p>所有的 <code>exports</code> 对象最终都可以通过<code>module.exports</code> 传递执行，可以准确地说，<code>exports</code> 是给<code>module.exports</code>添加属性和方法。</p>
+<p><code>module.exports</code> 方法可以单独返回一个数据类型，而exports 只能返回一个 object 对象。当我们需要返回一个数组、字符串、数字等类型时，就必须使用 module.exports。如：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">module</span>.<span class="title">exports</span> =</span> [<span class="string">"Arron.y"</span>, <span class="string">"is"</span>, <span class="string">"my"</span>, <span class="string">"name"</span>];</span><br></pre></td></tr></table></figure></p>
+<p>当使用了<code>module.exports</code> 关键词以后，该模块中所有 <code>exports</code> 对象执行的属性和方法都将被忽略。如：</p>
+<p><code>test_ignore.js</code>：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">module</span>.<span class="title">exports</span> =</span> 'test <span class="keyword">for</span> <span class="function"><span class="keyword">module</span>.<span class="title">exorts</span> <span class="title">ignore</span>!';  </span><br><span class="line"><span class="title">exports</span>.<span class="title">name</span> =</span> 'Arron.y';</span><br><span class="line">exports.showName = <span class="function"><span class="keyword">function</span><span class="params">()</span> &#123;</span>  </span><br><span class="line">    console.<span class="built_in">log</span><span class="params">('My name is Arron.y')</span>;  </span><br><span class="line">&#125;;</span><br><span class="line">console.<span class="built_in">log</span><span class="params">(module.exports )</span>;</span><br></pre></td></tr></table></figure></p>
+<p><code>index.js</code>：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var Test = require<span class="params">('./ignore_exports.js')</span>;</span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Test )</span>;</span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Test .name)</span>;</span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Test .showName<span class="params">()</span>)</span>;</span><br></pre></td></tr></table></figure></p>
+<p>执行结果将是 :<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Test</span>.name --&gt; undefined，</span><br><span class="line"><span class="type">Test</span>.showName() --&gt; <span class="type">Object</span> test <span class="keyword">for</span> module.exorts ignore! has no <span class="keyword">method</span> 'showName'</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -286,7 +254,7 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/Async/" rel="tag">#Async</a>
+            <a href="/tags/Exports/" rel="tag">#Exports</a>
           
             <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
           
@@ -297,13 +265,13 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/03/03/javascript/node-watch-filechange/" rel="prev">使用Node监视文件或目录变化</a>
+              <a href="/2015/03/06/javascript/javascript-setTimeout-function/" rel="prev">实现与 setTimeout 功能类似的函数</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/02/02/mongodb/mongodb-cdsu/" rel="next">MongoDB 增删查改介绍</a>
+              <a href="/2015/03/03/node/node-watch-filechange/" rel="next">使用Node监视文件或目录变化</a>
             
           </div>
         </div>
@@ -351,8 +319,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/02/02/javascript/node-async/"
-                   data-title="初识Async" data-url="http://blog.helloarron.com/2015/02/02/javascript/node-async/">
+              <div class="ds-thread" data-thread-key="2015/03/06/node/node-module-exports/"
+                   data-title="NodeJS模块中的exports和module.exports" data-url="http://blog.helloarron.com/2015/03/06/node/node-module-exports/">
               </div>
             
           </div>
@@ -455,7 +423,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初识_Async"><span class="nav-number">1.</span> <span class="nav-text">初识 Async</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJS模块中的exports和module-exports"><span class="nav-number">1.</span> <span class="nav-text">NodeJS模块中的exports和module.exports</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
