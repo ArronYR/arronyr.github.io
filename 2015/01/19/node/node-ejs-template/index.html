@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="CSS,WebApp," />
+  <meta name="keywords" content="NodeJS,ejs," />
 
 
 
@@ -37,16 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="CSS控制文本超出指定宽度后用省略号代替，CSS控制文本不换行。一般的文字截断（适用于内联与块）：12345678.text-overflow &amp;#123;     display:block;          /*内联对象需加*/     width:31em;     word-break:keep-all;    /* 不换行 */     white-space:nowrap;">
+<meta name="description" content="ejs模板引擎ejs 的标签系统非常简单，它只有以下三种标签：123&amp;lt;% code %&amp;gt;：JavaScript 代码。&amp;lt;%= code %&amp;gt;：显示替换过 HTML 特殊字符的内容。&amp;lt;%- code %&amp;gt;：显示原始 HTML 内容。
+
+注意： &amp;lt;%= code %&amp;gt; 和 &amp;lt;%- code %&amp;gt; 的区别，当变量 code 为普通字符串时，两者">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS控制文本超出,控制文本不换行">
-<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/webapp/webapp-css-textoverflow/index.html">
+<meta property="og:title" content="ejs模板引擎">
+<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/node/node-ejs-template/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="CSS控制文本超出指定宽度后用省略号代替，CSS控制文本不换行。一般的文字截断（适用于内联与块）：12345678.text-overflow &amp;#123;     display:block;          /*内联对象需加*/     width:31em;     word-break:keep-all;    /* 不换行 */     white-space:nowrap;">
-<meta property="og:updated_time" content="2015-09-10T13:06:45.000Z">
+<meta property="og:description" content="ejs模板引擎ejs 的标签系统非常简单，它只有以下三种标签：123&amp;lt;% code %&amp;gt;：JavaScript 代码。&amp;lt;%= code %&amp;gt;：显示替换过 HTML 特殊字符的内容。&amp;lt;%- code %&amp;gt;：显示原始 HTML 内容。
+
+注意： &amp;lt;%= code %&amp;gt; 和 &amp;lt;%- code %&amp;gt; 的区别，当变量 code 为普通字符串时，两者">
+<meta property="og:updated_time" content="2015-09-13T09:33:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS控制文本超出,控制文本不换行">
-<meta name="twitter:description" content="CSS控制文本超出指定宽度后用省略号代替，CSS控制文本不换行。一般的文字截断（适用于内联与块）：12345678.text-overflow &amp;#123;     display:block;          /*内联对象需加*/     width:31em;     word-break:keep-all;    /* 不换行 */     white-space:nowrap;">
+<meta name="twitter:title" content="ejs模板引擎">
+<meta name="twitter:description" content="ejs模板引擎ejs 的标签系统非常简单，它只有以下三种标签：123&amp;lt;% code %&amp;gt;：JavaScript 代码。&amp;lt;%= code %&amp;gt;：显示替换过 HTML 特殊字符的内容。&amp;lt;%- code %&amp;gt;：显示原始 HTML 内容。
+
+注意： &amp;lt;%= code %&amp;gt; 和 &amp;lt;%- code %&amp;gt; 的区别，当变量 code 为普通字符串时，两者">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -66,7 +72,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> CSS控制文本超出,控制文本不换行 | Arron.y's blog </title>
+  <title> ejs模板引擎 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -182,7 +188,7 @@ var _hmt = _hmt || [];
           
           
             
-              CSS控制文本超出,控制文本不换行
+              ejs模板引擎
             
           
         </h1>
@@ -191,7 +197,7 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-01-19T02:01:26+08:00" content="2015-01-19">
+          <time itemprop="dateCreated" datetime="2015-01-19T01:25:11+08:00" content="2015-01-19">
             2015-01-19
           </time>
         </span>
@@ -201,8 +207,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/WebApp/" itemprop="url" rel="index">
-                  <span itemprop="name">WebApp</span>
+                <a href="/categories/NodeJS/" itemprop="url" rel="index">
+                  <span itemprop="name">NodeJS</span>
                 </a>
               </span>
 
@@ -217,8 +223,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/01/19/webapp/webapp-css-textoverflow/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/19/webapp/webapp-css-textoverflow/" itemprop="commentsCount"></span>
+              <a href="/2015/01/19/node/node-ejs-template/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/19/node/node-ejs-template/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -232,9 +238,15 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="CSS控制文本超出指定宽度后用省略号代替，CSS控制文本不换行。">CSS控制文本超出指定宽度后用省略号代替，CSS控制文本不换行。</h2><p>一般的文字截断（适用于内联与块）：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.text-overflow</span> <span class="rules">&#123;</span><br><span class="line">     <span class="rule"><span class="attribute">display</span>:<span class="value">block</span></span>;          <span class="comment">/*内联对象需加*/</span></span><br><span class="line">     <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">31em</span></span></span>;</span><br><span class="line">     <span class="rule"><span class="attribute">word-break</span>:<span class="value">keep-all</span></span>;    <span class="comment">/* 不换行 */</span></span><br><span class="line">     <span class="rule"><span class="attribute">white-space</span>:<span class="value">nowrap</span></span>;     <span class="comment">/* 不换行 */</span></span><br><span class="line">     <span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden</span></span>;        <span class="comment">/* 内容超出宽度时隐藏超出部分的内容 */</span></span><br><span class="line">     <span class="rule"><span class="attribute">text-overflow</span>:<span class="value">ellipsis</span></span>; <span class="comment">/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/</span></span><br><span class="line"> &#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>对于表格文字溢出的定义：对于表格超出范围显示省略号<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span><span class="rules">&#123;</span><br><span class="line">     <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">30em</span></span></span>;</span><br><span class="line">     <span class="rule"><span class="attribute">table-layout</span>:<span class="value">fixed</span></span>;      <span class="comment">/* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */</span></span><br><span class="line"> &#125;</span></span><br><span class="line"><span class="tag">td</span><span class="rules">&#123;</span><br><span class="line">     <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100%</span></span></span>;</span><br><span class="line">     <span class="rule"><span class="attribute">word-break</span>:<span class="value">keep-all</span></span>;    <span class="comment">/* 不换行 */</span></span><br><span class="line">     <span class="rule"><span class="attribute">white-space</span>:<span class="value">nowrap</span></span>;     <span class="comment">/* 不换行 */</span></span><br><span class="line">     <span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden</span></span>;        <span class="comment">/* 内容超出宽度时隐藏超出部分的内容 */</span></span><br><span class="line">     <span class="rule"><span class="attribute">text-overflow</span>:<span class="value">ellipsis</span></span>; <span class="comment">/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/</span></span><br><span class="line"> &#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>需要你注意的是，这个<code>CSS</code>样式只对单行的文字的效，如果你想把它用在多行上，也只有第一行有作用的。 这个写法只有<code>IE</code>会有<code>“...”</code>，<br>其它的浏览器文本超出指定宽度时会隐藏。</p>
+        <span itemprop="articleBody"><h2 id="ejs模板引擎">ejs模板引擎</h2><p><code>ejs</code> 的标签系统非常简单，它只有以下三种标签：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% code %&gt;：JavaScript 代码。</span><br><span class="line">&lt;%= code %&gt;：显示替换过 HTML 特殊字符的内容。</span><br><span class="line">&lt;%- code %&gt;：显示原始 HTML 内容。</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>注意： <code>&lt;%= code %&gt;</code> 和 <code>&lt;%- code %&gt;</code> 的区别，当变量 <code>code</code> 为普通字符串时，两者没有区别。当 <code>code</code> 比如为 <code>&lt;h1&gt;hello&lt;/h1&gt;</code> 这种字符串时，<code>&lt;%= code %&gt;</code> 会原样输出<code>&lt;h1&gt;hello&lt;/h1&gt;</code>，而 <code>&lt;%- code %&gt;</code> 则会显示 <code>H1</code> 大的 <code>hello</code>字符串。<br>我们可以在 <code>&lt;% %&gt;</code> 内使用 <code>JavaScript</code> 代码。</li>
+</ul>
+<p>下面是 ejs 的官方示例：</p>
+<h6 id="The_Data">The Data</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">supplies: [<span class="string">'mop'</span>, <span class="string">'broom'</span>, <span class="string">'duster'</span>]</span><br></pre></td></tr></table></figure>
+<h6 id="The_Template">The Template</h6><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;% for(var i=0; i&lt;supplies.length; i++) &#123;%&gt;</span><br><span class="line">   &lt;li&gt;&lt;%= supplies[i] %&gt;&lt;/li&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="The_Result">The Result</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>mop<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>broom<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>duster<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>我们可以用上述三种标签实现页面模板系统能实现的任何内容。</p>
 </span>
       
     </div>
@@ -243,9 +255,9 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/CSS/" rel="tag">#CSS</a>
+            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
           
-            <a href="/tags/WebApp/" rel="tag">#WebApp</a>
+            <a href="/tags/ejs/" rel="tag">#ejs</a>
           
         </div>
       
@@ -254,13 +266,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/01/19/webapp/web-ie8/" rel="prev">IE8 自动设置 兼容性 代码</a>
+              <a href="/2015/01/19/javascript/javascript-weixin-share/" rel="prev">微信分享网页的缩略图-链接-标题和摘要</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/01/19/webapp/webapp-icon/" rel="next">网站图标favicon.ico显示不了或无法刷新更新的原因</a>
             
           </div>
         </div>
@@ -308,8 +318,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/01/19/webapp/webapp-css-textoverflow/"
-                   data-title="CSS控制文本超出,控制文本不换行" data-url="http://blog.helloarron.com/2015/01/19/webapp/webapp-css-textoverflow/">
+              <div class="ds-thread" data-thread-key="2015/01/19/node/node-ejs-template/"
+                   data-title="ejs模板引擎" data-url="http://blog.helloarron.com/2015/01/19/node/node-ejs-template/">
               </div>
             
           </div>
@@ -412,7 +422,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS控制文本超出指定宽度后用省略号代替，CSS控制文本不换行。"><span class="nav-number">1.</span> <span class="nav-text">CSS控制文本超出指定宽度后用省略号代替，CSS控制文本不换行。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ejs模板引擎"><span class="nav-number">1.</span> <span class="nav-text">ejs模板引擎</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#The_Data"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">The Data</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#The_Template"><span class="nav-number">1.0.0.0.2.</span> <span class="nav-text">The Template</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#The_Result"><span class="nav-number">1.0.0.0.3.</span> <span class="nav-text">The Result</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
