@@ -48,7 +48,7 @@
 在上一节中我们在浏览器打开了我们的案例，并输入网址点击查询得到对应的 IP ：
 但是当我们点击重置时我们会发现只是输入框中的数据清空了，但是下面的 IP 地址并没有消失，所以我们要进行一些修改。打开 index.html ，在提交表单的JavaScript代码下面添加：123$(&apos;button[type=reset]&apos;).clic">
 <meta property="og:image" content="http://segmentfault.com/img/bVlVhW">
-<meta property="og:updated_time" content="2015-09-06T15:54:18.000Z">
+<meta property="og:updated_time" content="2015-09-19T12:19:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Node.js学习小案例】DNS域名解析 <四>">
 <meta name="twitter:description" content="##【Node.js学习小案例】DNS域名解析 &amp;lt;四&amp;gt;
@@ -247,7 +247,7 @@ var _hmt = _hmt || [];
 <p>大家可能还会遇到一个问题，当输入的是如 <code>blog.helloarron.com</code>、<code>www.helloarron.com</code> 这样的网址时才会查询到 <code>IP</code> ，如果输入的是如 <code>http://blog.helloarron.com/</code>、<code>http://blog.helloarron.com/node/46.html</code> 就没法查询到了，所以我们还要修改我们服务器端的代码，主要的问题就是要对提交的网址进行解析。</p>
 <p>修改 <code>parse_dns.js</code> 中的 <code>getDns()</code> 方法如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDns</span>(<span class="params">postData,callback</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> domain = <span class="string">''</span>,</span><br><span class="line">		url_get = url.parse(postData.search_dns);</span><br><span class="line">	<span class="keyword">if</span> ( url_get.host ) &#123;</span><br><span class="line">		domain = url_get.host;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		url_get = url.parse( <span class="string">'http://'</span> + postData.search_dns);</span><br><span class="line">		domain = url_get.host;</span><br><span class="line">	&#125;</span><br><span class="line">	dns.resolve(domain, <span class="function"><span class="keyword">function</span>(<span class="params">err, addresses</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!addresses)&#123;</span><br><span class="line">			addresses=[<span class="string">'Not Exist !'</span>]</span><br><span class="line">		&#125;</span><br><span class="line">		callback(domain, addresses);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>到这里我们的案例就算完成了。</p>
-<p>我已经将案例代码共享到了 <code>GitHub</code> 上（<a href="https://github.com/ArronYR/node_dns" target="_blank" rel="external">地址</a>）。也可直接到 <a href="http://dns.helloarron.com/" target="_blank" rel="external">http://dns.helloarron.com/</a> 演示。</p>
+<p>我已经将案例代码共享到了 <code>GitHub</code> 上（<a href="https://github.com/ArronYR/node_dns" target="_blank" rel="external">地址</a>）。</p>
 <p>希望大家多多评论，我还在学习中，有什么错误的地方请大家一定要指正。<br>谢谢大家的支持。</p>
 </span>
       
