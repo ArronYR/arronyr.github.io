@@ -47,7 +47,7 @@
 <meta property="og:description" content="Go抓取网页数据并存入MySQL和返回json数据&amp;lt;一&amp;gt;前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
 大四了，课程一下子少了很多，于是决定用它从网上抓一些图片数据，然后提供接口，为后面学习iOS提供一些网络数据。
 有关GO的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。">
-<meta property="og:updated_time" content="2015-09-19T12:00:31.000Z">
+<meta property="og:updated_time" content="2015-09-19T12:16:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go抓取网页数据并存入MySQL和返回json数据<一>">
 <meta name="twitter:description" content="Go抓取网页数据并存入MySQL和返回json数据&amp;lt;一&amp;gt;前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
@@ -248,7 +248,12 @@ var _hmt = _hmt || [];
 <li>提供一个简单的<code>json</code>接口使得自己能通过某链接获取<code>json</code>数据。</li>
 </ul>
 <h4 id="准备工作">准备工作</h4><h6 id="安装GO并配置环境">安装GO并配置环境</h6><p>因为我自己使用的时<code>OS X</code>，也写了一个mac安装GO的<a href="http://blog.helloarron.com/2015/08/29/mac-install-go/">文章</a>,如果使用mac的话可以参考一下。windows下百度也会很好解决。</p>
-<h6 id="分析小程序">分析小程序</h6></span>
+<h6 id="分析小程序">分析小程序</h6><p>在<code>$GOPATH/src</code>下的创建一个项目文件夹<code>indiepic</code>作为这次小程序的整个。GO的每一个项目有且仅有一个<code>package main</code>，在项目文件夹下新建一个GO文件<code>indiepic.go</code>作为主文件：<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> main () &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Hello World"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>因为后面会启动该文件，然后提供<code>HTTP</code>接口提供数据，所以为了可读性将抓取数据并存入数据库等操作放入该项目的一个<code>包</code>中，而且抓取数据的操作会很少被操作，不需要在每次启动都执行，所以将其组织到一个<code>package</code>中是不错的方法，这样只需在需要抓取的时候在<code>main</code>函数中调用接口。</p>
+<p>因此，在项目文件夹中新建一个<code>crawldata</code>文件夹，该文件就是我们需要的<code>package</code>。下面需要的抓取数据和将数据存入数据库以及从数据库中获取数据都写为该包下的一个函数。</p>
+<p>在<code>crawldata</code>文件夹下新建<code>crawldata.go</code>和<code>database.go</code>文件。一个与抓取数据有关，一个与数据库存取数据有关。</p>
+<p>下一步就开始实现数据抓取部分的功能。</p>
+</span>
       
     </div>
 
