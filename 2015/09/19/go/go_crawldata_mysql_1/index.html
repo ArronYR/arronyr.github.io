@@ -47,7 +47,7 @@
 <meta property="og:description" content="Go抓取网页数据并存入MySQL和返回json数据&amp;lt;一&amp;gt;前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
 大四了，课程一下子少了很多，于是决定用它从网上抓一些图片数据，然后提供接口，为后面学习iOS提供一些网络数据。
 有关GO的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。">
-<meta property="og:updated_time" content="2015-09-24T06:04:48.000Z">
+<meta property="og:updated_time" content="2015-09-24T06:14:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go抓取网页数据并存入MySQL和返回json数据<一>">
 <meta name="twitter:description" content="Go抓取网页数据并存入MySQL和返回json数据&amp;lt;一&amp;gt;前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
@@ -252,7 +252,7 @@ var _hmt = _hmt || [];
 <p>因为后面会启动该文件，然后提供<code>HTTP</code>接口提供数据，所以为了可读性将抓取数据并存入数据库等操作放入该项目的一个<code>包</code>中，而且抓取数据的操作会很少被操作，不需要在每次启动都执行，所以将其组织到一个<code>package</code>中是不错的方法，这样只需在需要抓取的时候在<code>main</code>函数中调用接口。</p>
 <p>因此，在项目文件夹中新建一个<code>crawldata</code>文件夹，该文件就是我们需要的<code>package</code>。下面需要的抓取数据和将数据存入数据库以及从数据库中获取数据都写为该包下的一个函数。</p>
 <p>在<code>crawldata</code>文件夹下新建<code>crawldata.go</code>和<code>database.go</code>文件。一个与抓取数据有关，一个与数据库存取数据有关。<br>文件夹结构如下：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">indiepic</span><br><span class="line">├── README<span class="class">.md</span></span><br><span class="line">├── crawldata</span><br><span class="line">│   ├── crawldata<span class="class">.go</span></span><br><span class="line">│   └── database<span class="class">.go</span></span><br><span class="line">└── indiepic.go</span><br></pre></td></tr></table></figure></p>
-<p>下一步就开始实现数据抓取部分的功能。</p>
+<p>下一步就开始实现数据抓取部分的功能。主要抓取图片网站 <a href="http://www.gratisography.com/" target="_blank" rel="external">http://www.gratisography.com/</a></p>
 </span>
       
     </div>
