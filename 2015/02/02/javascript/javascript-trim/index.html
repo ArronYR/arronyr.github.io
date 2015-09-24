@@ -37,16 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="JavaScript 实现trim ltrim rtrim在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数">
+<meta name="description" content="在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数式的方法；
+
+类的形式：12345678910111213">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 实现trim ltrim rtrim">
 <meta property="og:url" content="http://blog.helloarron.com/2015/02/02/javascript/javascript-trim/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="JavaScript 实现trim ltrim rtrim在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数">
-<meta property="og:updated_time" content="2015-09-08T14:26:24.000Z">
+<meta property="og:description" content="在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数式的方法；
+
+类的形式：12345678910111213">
+<meta property="og:updated_time" content="2015-09-24T07:16:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 实现trim ltrim rtrim">
-<meta name="twitter:description" content="JavaScript 实现trim ltrim rtrim在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数">
+<meta name="twitter:description" content="在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数式的方法；
+
+类的形式：12345678910111213">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -232,7 +238,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="JavaScript_实现trim_ltrim_rtrim">JavaScript 实现trim ltrim rtrim</h2><p>在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用<code>php</code>的，使用一般遇到这种情况都是直接使用<code>trim ltrim rtrim</code> 函数即可，但是查了一下<code>JavaScript</code>的<code>string</code>处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数式的方法；</p>
+        <span itemprop="articleBody"><p>在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用<code>php</code>的，使用一般遇到这种情况都是直接使用<code>trim ltrim rtrim</code> 函数即可，但是查了一下<code>JavaScript</code>的<code>string</code>处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数式的方法；</p>
 <ol>
 <li>类的形式：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* trim 函数 */</span></span><br><span class="line"><span class="built_in">String</span>.prototype.trim = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>,<span class="string">""</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ltrim 函数 */</span></span><br><span class="line"><span class="built_in">String</span>.prototype.ltrim = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/(^\s*)/g</span>,<span class="string">""</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* rtrim 函数 */</span></span><br><span class="line"><span class="built_in">String</span>.prototype.rtrim = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/(\s*$)/g</span>,<span class="string">""</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -426,7 +432,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript_实现trim_ltrim_rtrim"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 实现trim ltrim rtrim</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

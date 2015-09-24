@@ -238,10 +238,10 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            【Node.js学习小案例】DNS域名解析 &lt;一&gt;Node.js 百度百科：
+            Node.js 百度百科：
 
 Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台， 用来方便地搭建快速的易于扩展的网络应用· Node.js 借助事件驱动， 非阻塞I/O 模型变得轻量和高效， 非常适合 运行在分布式设备 的数据密集型 的实时应用。
-V8引擎执行Ja
+V8引擎执行Javascript的速度非常快，性能非常好。Node.js对一些
             ...
           </span>
           <div class="post-more-link text-center">
@@ -333,7 +333,7 @@ V8引擎执行Ja
         
           <span itemprop="articleBody">
             
-            AngularJS 初体验之过滤器前段时间使用Monacan开发web app时，前端使用的是AngularJS，那是我正式开始学习AngularJS，接触之后发现确实很强大，对于用惯了jQuery的我来说，有很地方都转不过来。AngularJS自带了一些过滤器，比如number、uppercase等，下面是自己在项目中用到的一个将时间戳转为普通时间格式的过
+            前段时间使用Monacan开发web app时，前端使用的是AngularJS，那是我正式开始学习AngularJS，接触之后发现确实很强大，对于用惯了jQuery的我来说，有很地方都转不过来。AngularJS自带了一些过滤器，比如number、uppercase等，下面是自己在项目中用到的一个将时间戳转为普通时间格式的过滤器，服务器端接口返回的格式如下：
             ...
           </span>
           <div class="post-more-link text-center">
@@ -425,8 +425,9 @@ V8引擎执行Ja
         
           <span itemprop="articleBody">
             
-            Cordova WebApp应用中的手机按键事件使用cordova开发的App应用可以使用cordova提供的接口监听手机的按键事件：
-返回键：1234document.addEventListener("backbutton", function (e) &#123;    e.preventDefault();    alert("返回键");&#125
+            使用cordova开发的App应用可以使用cordova提供的接口监听手机的按键事件：
+返回键：1234document.addEventListener("backbutton", function (e) &#123;    e.preventDefault();    alert("返回键");&#125;, false);
+菜单键：1234docum
             ...
           </span>
           <div class="post-more-link text-center">
@@ -518,8 +519,9 @@ V8引擎执行Ja
         
           <span itemprop="articleBody">
             
-            Yii 里面直接执行sql语句Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
-Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，但有些时候还需要自己写一些 sql 语句去查询等。在 Yii 里面可以通过以下方
+            Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
+Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，但有些时候还需要自己写一些 sql 语句去查询等。在 Yii 里面可以通过以下方式直接执行 sql 语句:
+在
             ...
           </span>
           <div class="post-more-link text-center">
@@ -611,8 +613,8 @@ Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，�
         
           <span itemprop="articleBody">
             
-            Yii 多表关联在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
-下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:1234
+            在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
+下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:123456public
             ...
           </span>
           <div class="post-more-link text-center">
@@ -704,9 +706,9 @@ Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，�
         
           <span itemprop="articleBody">
             
-            Yii AR的使用因为刚开始学习php 框架的时候使用的是 CI，后来开始接触 Yii 的时候各种不熟悉，只能是各种百度，因为自己英语很弱，花了不少时间。
+            因为刚开始学习php 框架的时候使用的是 CI，后来开始接触 Yii 的时候各种不熟悉，只能是各种百度，因为自己英语很弱，花了不少时间。
 如果英文不错，可以直接看原文地址 http://www.yiiframework.com/doc/guide/1.1/en/database.ar
-一、对于一个 Model News 有如下的很多种中查询
+一、对于一个 Model News 有如下的很多种中查询方法，如下返回对象
             ...
           </span>
           <div class="post-more-link text-center">
@@ -798,9 +800,9 @@ Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，�
         
           <span itemprop="articleBody">
             
-            使用 NodeJS 从js文件中导入数组数据到 MySQL 数据库今天从早上就一直在给一个朋友写一些从新浪教育模块抓取高校高考信息的接口，在高考分数线的环节有一个根据地区自动在下一栏加载该地区的高校
+            今天从早上就一直在给一个朋友写一些从新浪教育模块抓取高校高考信息的接口，在高考分数线的环节有一个根据地区自动在下一栏加载该地区的高校
 
-审查元素发现是加载在本地的一个js文件，里面存储的就是高校的id123456789101112var school_select_key = new Obje
+审查元素发现是加载在本地的一个js文件，里面存储的就是高校的id123456789101112var school_select_key = new Object();var school_option_key = new 
             ...
           </span>
           <div class="post-more-link text-center">

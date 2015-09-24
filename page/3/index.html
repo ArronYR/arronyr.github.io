@@ -238,7 +238,7 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            Yii 常用路径获取Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&gt;request-&gt;userHostAddress;        // Yii获取ip地址Yii::app()-&gt;request-&gt;isPostRequest;          // Yii判断提交方式Yii::ap
+            Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&gt;request-&gt;userHostAddress;        // Yii获取ip地址Yii::app()-&gt;request-&gt;isPostRequest;          // Yii判断提交方式Yii::app()-&gt;re
             ...
           </span>
           <div class="post-more-link text-center">
@@ -330,7 +330,7 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            实现与setTimeout功能类似的函数123456789function setTimeout_1 (fn, time) &#123;    var pus = 0,        currentDate = new Date();    while (pus &lt; time) &#123;        var now = new Date();  
+            123456789function setTimeout_1 (fn, time) &#123;    var pus = 0,        currentDate = new Date();    while (pus &lt; time) &#123;        var now = new Date();        pus = now - cu
             ...
           </span>
           <div class="post-more-link text-center">
@@ -422,8 +422,9 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            NodeJS模块中的exports和module.exportsexports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
-但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理
+            exports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
+但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理解为包含关系。
+所有的 exports 对象最终都可以通过mod
             ...
           </span>
           <div class="post-more-link text-center">
@@ -515,10 +516,10 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            使用Node监视文件或目录变化Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
+            Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
 下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。
 在当前目录下新建一些文件：
-我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：12
+我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112va
             ...
           </span>
           <div class="post-more-link text-center">
@@ -610,8 +611,8 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            初识 AsyncAsync 是一个流行的异步编程内裤，提供了直接而强大的JavaScript异步功能。虽然是为node.js设计的，但是也可以直接在浏览器中使用。
-Async 提供了大约20个函数，包括常用的map, reduce, filter, forEach 等等，也有常用的异步流程控制函数，包括parallel, series, waterfall 
+            Async 是一个流行的异步编程内裤，提供了直接而强大的JavaScript异步功能。虽然是为node.js设计的，但是也可以直接在浏览器中使用。
+Async 提供了大约20个函数，包括常用的map, reduce, filter, forEach 等等，也有常用的异步流程控制函数，包括parallel, series, waterfall 等等。所有这些函
             ...
           </span>
           <div class="post-more-link text-center">
@@ -703,9 +704,10 @@ Async 提供了大约20个函数，包括常用的map, reduce, filter, forEach �
         
           <span itemprop="articleBody">
             
-            MongoDB增删查改介绍在数据库中，数据插入是最基本的操作，在MongoDB使用db.collection.insert(document)语句来插入文档，如下图：
+            在数据库中，数据插入是最基本的操作，在MongoDB使用db.collection.insert(document)语句来插入文档，如下图：
 document是文档数据，collection是存放文档数据的集合。
-例如：所有用户的信息存放在users集合中，每个用户的信息为一个user文档，插入数据:1db.users.insert
+例如：所有用户的信息存放在users集合中，每个用户的信息为一个user文档，插入数据:1db.users.insert(user);
+如果col
             ...
           </span>
           <div class="post-more-link text-center">
@@ -797,9 +799,10 @@ document是文档数据，collection是存放文档数据的集合。
         
           <span itemprop="articleBody">
             
-            MongoDB条件查询相等条件是最简单常用的的查询操作，查询条件是{ field:value }格式的BSON对象。
+            相等条件是最简单常用的的查询操作，查询条件是{ field:value }格式的BSON对象。
 语法：1&#123; field: value &#125;
-示例：查询”inventory集合中所有type字段为snacks的文档”;1db.inventory.find(&#123; type: &#34;snacks&#34; &#1
+示例：查询”inventory集合中所有type字段为snacks的文档”;1db.inventory.find(&#123; type: &#34;snacks&#34; &#125;)
+比较条件也是
             ...
           </span>
           <div class="post-more-link text-center">

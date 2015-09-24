@@ -238,7 +238,7 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            Go抓取网页数据并存入MySQL和返回json数据&lt;二&gt;首先在入口文件中引入项目下的包crawldata,然后调用其中抓取数据的函数，暂时取名为Crawl:123456789101112package mainimport (	"fmt"	"indiepic/crawldata")func main () &#123;	// 使用crawldat
+            首先在入口文件中引入项目下的包crawldata,然后调用其中抓取数据的函数，暂时取名为Crawl:123456789101112package mainimport (	"fmt"	"indiepic/crawldata")func main () &#123;	// 使用crawldata包里面的Crawl()抓取需要的数据存到数据库	crawldata
             ...
           </span>
           <div class="post-more-link text-center">
@@ -330,9 +330,10 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            Go抓取网页数据并存入MySQL和返回json数据&lt;一&gt;前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
+            前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
 大四了，课程一下子少了很多，于是决定用它从网上抓一些图片数据，然后提供接口，为后面学习iOS提供一些网络数据。
-有关GO的介绍我就不在这里说了，对于我这种初学
+有关GO的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。
+我要实现的功能主要有如下几
             ...
           </span>
           <div class="post-more-link text-center">
@@ -424,8 +425,9 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
-方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercuria
+            网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
+方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
+1234bre
             ...
           </span>
           <div class="post-more-link text-center">
@@ -517,7 +519,7 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            【Laravel学习篇 · 一】Windows下起步就遇麻烦很早前 phphub 出来的时候我就去注册了一个账号，而且它的源码是放在 github 上开源的，当时就想自己搭建着玩，它是基于 laravel 的，但是我以前都接触的是 CI 和 Yii ，不会 laravel，于是在 http://laravel-china.org/docs/5.0 开始学着配
+            很早前 phphub 出来的时候我就去注册了一个账号，而且它的源码是放在 github 上开源的，当时就想自己搭建着玩，它是基于 laravel 的，但是我以前都接触的是 CI 和 Yii ，不会 laravel，于是在 http://laravel-china.org/docs/5.0 开始学着配置环境，当时安装 composer 就将我困住了（Windo
             ...
           </span>
           <div class="post-more-link text-center">
@@ -609,9 +611,8 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            ##【Node.js学习小案例】DNS域名解析 &lt;四&gt;
-在上一节中我们在浏览器打开了我们的案例，并输入网址点击查询得到对应的 IP ：
-但是当我们点击重置时我们会发现只是输入框中的数据清空了，但是下面的 IP 地址并没有消失，所以我们要进行一些修改。打开 index.html ，在提交表单的JavaScript代码下面添加：123$('butto
+            在上一节中我们在浏览器打开了我们的案例，并输入网址点击查询得到对应的 IP ：
+但是当我们点击重置时我们会发现只是输入框中的数据清空了，但是下面的 IP 地址并没有消失，所以我们要进行一些修改。打开 index.html ，在提交表单的JavaScript代码下面添加：123$('button[type=reset]').click(function() &
             ...
           </span>
           <div class="post-more-link text-center">
@@ -703,12 +704,11 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            ##【Node.js学习小案例】DNS域名解析 &lt;三&gt;
-上一节我们已经完成了静态页面 index.html 的布局，这节我们开始服务器的编写。
+            上一节我们已经完成了静态页面 index.html 的布局，这节我们开始服务器的编写。
 如同 php 那样脚本文件以 .php 为文件扩展名，NodeJS的脚本文件扩展名为 .js 。
 在这个例子中我们需要以下原生模块：
 
-http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当
+http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当前 DNS 域名，返回 DNS 服务器 IP 地址fs 模块负责对文
             ...
           </span>
           <div class="post-more-link text-center">
@@ -800,9 +800,9 @@ http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当
         
           <span itemprop="articleBody">
             
-            【Node.js学习小案例】DNS域名解析 &lt;二&gt;上一节我们对 NodeJS 的安装和模块做了介绍，这一节我们就正式开始编码，实现我们的小案例。
+            上一节我们对 NodeJS 的安装和模块做了介绍，这一节我们就正式开始编码，实现我们的小案例。
 首先，我们在喜欢的地方新建一个目录用来存放这个案例的代码，如 E:\node_workspace\code 注意路径中不要出现中文，免得各种问题。
-我们首先来完成页面的布局：index.html1234
+我们首先来完成页面的布局：index.html12345678910111213141516171819202122
             ...
           </span>
           <div class="post-more-link text-center">

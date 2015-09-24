@@ -37,19 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Yii 多表关联在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
-下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:123456public function re">
+<meta name="description" content="在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
+下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:123456public function relations(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Yii 多表关联">
 <meta property="og:url" content="http://blog.helloarron.com/2015/04/22/php/yii-model-tablerelation/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Yii 多表关联在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
-下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:123456public function re">
-<meta property="og:updated_time" content="2015-09-05T14:45:35.000Z">
+<meta property="og:description" content="在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
+下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:123456public function relations(">
+<meta property="og:updated_time" content="2015-09-24T07:15:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yii 多表关联">
-<meta name="twitter:description" content="Yii 多表关联在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
-下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:123456public function re">
+<meta name="twitter:description" content="在 Yii 里面对数据库操作有一个很方便的功能就是多表关联，通过在 model 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 sql 语句。
+下面我们拿 user 表和 news 表举例。（一个用户发表了多篇文章）首先，我们需要在我们需要的 model 里面的配置 relation ：User Model:123456public function relations(">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -235,7 +235,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Yii_多表关联">Yii 多表关联</h2><p>在 <a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> 里面对数据库操作有一个很方便的功能就是多表关联，通过在 <code>model</code> 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 <code>sql</code> 语句。</p>
+        <span itemprop="articleBody"><p>在 <a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> 里面对数据库操作有一个很方便的功能就是多表关联，通过在 <code>model</code> 里面指定对某个表的关联，这样就可以很快得到相关信息而不需要自己去写复杂的 <code>sql</code> 语句。</p>
 <p>下面我们拿 <code>user</code> 表和 <code>news</code> 表举例。（一个用户发表了多篇文章）<br>首先，我们需要在我们需要的 <code>model</code> 里面的配置 <code>relation</code> ：<br><code>User Model</code>:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">relations</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">array</span>(</span><br><span class="line">     <span class="string">'news'</span> =&gt; <span class="keyword">array</span>(<span class="keyword">self</span>::HAS_MANY, <span class="string">'News'</span>, <span class="string">'uid'</span>, <span class="string">'order'</span>=&gt;<span class="string">'nid DESC'</span>),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>在 <code>news</code> 表中我们有一个 <code>uid</code> 字段对应着 <code>user</code> 表的 <code>primary key</code> （<code>uid</code>），因为 <code>uid</code> 是 <code>user</code> 表的索引，所以这里只用指定 <code>news</code> 表中的字段即可。</p>
 <p>当我们需要指定其他的字段时可以这样写：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'news'</span> =&gt; <span class="keyword">array</span>(<span class="keyword">self</span>::HAS_MANY, <span class="string">'News'</span>, <span class="keyword">array</span>(<span class="string">'uid'</span>=&gt;<span class="string">'user_id'</span>) ),</span><br><span class="line"><span class="comment">//这样就是news 表中字段uid与user表中user_id对应</span></span><br></pre></td></tr></table></figure></p>
@@ -429,7 +429,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Yii_多表关联"><span class="nav-number">1.</span> <span class="nav-text">Yii 多表关联</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

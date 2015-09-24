@@ -37,22 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Yii 里面直接执行sql语句Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
+<meta name="description" content="Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
 Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，但有些时候还需要自己写一些 sql 语句去查询等。在 Yii 里面可以通过以下方式直接执行 sql 语句:
-在此之前需要">
+在此之前需要在 config/main.p">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Yii 里面直接执行sql语句">
 <meta property="og:url" content="http://blog.helloarron.com/2015/04/28/php/yii-sql/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Yii 里面直接执行sql语句Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
+<meta property="og:description" content="Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
 Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，但有些时候还需要自己写一些 sql 语句去查询等。在 Yii 里面可以通过以下方式直接执行 sql 语句:
-在此之前需要">
-<meta property="og:updated_time" content="2015-09-05T14:44:25.000Z">
+在此之前需要在 config/main.p">
+<meta property="og:updated_time" content="2015-09-24T07:15:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yii 里面直接执行sql语句">
-<meta name="twitter:description" content="Yii 里面直接执行sql语句Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
+<meta name="twitter:description" content="Yii 自带了丰富的功能 ，包括 MVC，DAO/ActiveRecord，I18N/L10N，缓存，身份验证和基于角色的访问控制，脚手架，测试等，可显著缩短开发时间。
 Yii里面的 DAO/ActiveRecord 已经很方便我们进行数据库的操作，但有些时候还需要自己写一些 sql 语句去查询等。在 Yii 里面可以通过以下方式直接执行 sql 语句:
-在此之前需要">
+在此之前需要在 config/main.p">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -238,7 +238,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Yii_里面直接执行sql语句">Yii 里面直接执行sql语句</h2><p><a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> 自带了丰富的功能 ，包括 <code>MVC</code>，<code>DAO/ActiveRecord</code>，<code>I18N/L10N</code>，<code>缓存</code>，<code>身份验证</code>和<code>基于角色的访问控制</code>，<code>脚手架</code>，<code>测试</code>等，可显著缩短开发时间。</p>
+        <span itemprop="articleBody"><p><a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> 自带了丰富的功能 ，包括 <code>MVC</code>，<code>DAO/ActiveRecord</code>，<code>I18N/L10N</code>，<code>缓存</code>，<code>身份验证</code>和<code>基于角色的访问控制</code>，<code>脚手架</code>，<code>测试</code>等，可显著缩短开发时间。</p>
 <p><a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a>里面的 <code>DAO/ActiveRecord</code> 已经很方便我们进行数据库的操作，但有些时候还需要自己写一些 <code>sql</code> 语句去查询等。在 <a href="http://www.yiichina.com/" target="_blank" rel="external">Yii</a> 里面可以通过以下方式直接执行 <code>sql</code> 语句:</p>
 <p>在此之前需要在 <code>config/main.php</code> 里面配置数据相关信息:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'db'</span>=&gt;<span class="keyword">array</span>(</span><br><span class="line">   <span class="string">'class'</span> =&gt; <span class="string">'CDbConnection'</span>,</span><br><span class="line">   <span class="string">'connectionString'</span> =&gt; <span class="string">'mysql:host=127.0.0.1;port=3607;dbname=dbname'</span>,</span><br><span class="line">   <span class="string">'emulatePrepare'</span> =&gt; <span class="keyword">true</span>,</span><br><span class="line">   <span class="string">'username'</span> =&gt; <span class="string">'root'</span>,</span><br><span class="line">   <span class="string">'password'</span> =&gt; <span class="string">'mysql'</span>,</span><br><span class="line">   <span class="string">'charset'</span> =&gt; <span class="string">'utf8'</span>,</span><br><span class="line">   <span class="string">'tablePrefix'</span>=&gt;<span class="string">'pf_'</span>,</span><br><span class="line">  ),</span><br></pre></td></tr></table></figure></p>
 <p>然后再通过 <code>Yii::app()-&gt;db</code> 进行调用。</p>
@@ -428,7 +428,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Yii_里面直接执行sql语句"><span class="nav-number">1.</span> <span class="nav-text">Yii 里面直接执行sql语句</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

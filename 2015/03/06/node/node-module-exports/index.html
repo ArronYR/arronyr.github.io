@@ -37,22 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="NodeJS模块中的exports和module.exportsexports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
+<meta name="description" content="exports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
 但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理解为包含关系。
-所有的 exports">
+所有的 exports 对象最终都可以通过module.exports 传递执行，可以准">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NodeJS模块中的exports和module.exports">
 <meta property="og:url" content="http://blog.helloarron.com/2015/03/06/node/node-module-exports/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="NodeJS模块中的exports和module.exportsexports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
+<meta property="og:description" content="exports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
 但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理解为包含关系。
-所有的 exports">
-<meta property="og:updated_time" content="2015-09-06T16:11:41.000Z">
+所有的 exports 对象最终都可以通过module.exports 传递执行，可以准">
+<meta property="og:updated_time" content="2015-09-24T07:16:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NodeJS模块中的exports和module.exports">
-<meta name="twitter:description" content="NodeJS模块中的exports和module.exportsexports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
+<meta name="twitter:description" content="exports 和 module.exports 的作用都是讲文件模块的方法和属性暴露给 require 返回的对象进行调用。
 但是二者之间存在本质的区别，exports的属性和方法都可以被module.exports 替代，但是exports 不能替代module.exports 方法，可以理解为包含关系。
-所有的 exports">
+所有的 exports 对象最终都可以通过module.exports 传递执行，可以准">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -238,7 +238,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="NodeJS模块中的exports和module-exports">NodeJS模块中的<code>exports</code>和<code>module.exports</code></h2><p><code>exports</code> 和 <code>module.exports</code> 的作用都是讲文件模块的方法和属性暴露给 <code>require</code> 返回的对象进行调用。</p>
+        <span itemprop="articleBody"><p><code>exports</code> 和 <code>module.exports</code> 的作用都是讲文件模块的方法和属性暴露给 <code>require</code> 返回的对象进行调用。</p>
 <p>但是二者之间存在本质的区别，<code>exports</code>的属性和方法都可以被<code>module.exports</code> 替代，但是<code>exports</code> 不能替代<code>module.exports</code> 方法，可以理解为包含关系。</p>
 <p>所有的 <code>exports</code> 对象最终都可以通过<code>module.exports</code> 传递执行，可以准确地说，<code>exports</code> 是给<code>module.exports</code>添加属性和方法。</p>
 <p><code>module.exports</code> 方法可以单独返回一个数据类型，而exports 只能返回一个 object 对象。当我们需要返回一个数组、字符串、数字等类型时，就必须使用 module.exports。如：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">module</span>.<span class="title">exports</span> =</span> [<span class="string">"Arron.y"</span>, <span class="string">"is"</span>, <span class="string">"my"</span>, <span class="string">"name"</span>];</span><br></pre></td></tr></table></figure></p>
@@ -427,7 +427,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJS模块中的exports和module-exports"><span class="nav-number">1.</span> <span class="nav-text">NodeJS模块中的exports和module.exports</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

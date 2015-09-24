@@ -37,22 +37,31 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Go抓取网页数据并存入MySQL和返回json数据&amp;lt;一&amp;gt;前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
+<meta name="description" content="前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
 大四了，课程一下子少了很多，于是决定用它从网上抓一些图片数据，然后提供接口，为后面学习iOS提供一些网络数据。
-有关GO的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。">
+有关GO的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。
+我要实现的功能主要有如下几点：
+
+从精美图片网站抓取图片链接等数据">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Go抓取网页数据并存入MySQL和返回json数据<一>">
 <meta property="og:url" content="http://blog.helloarron.com/2015/09/19/go/go_crawldata_mysql_1/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Go抓取网页数据并存入MySQL和返回json数据&amp;lt;一&amp;gt;前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
+<meta property="og:description" content="前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
 大四了，课程一下子少了很多，于是决定用它从网上抓一些图片数据，然后提供接口，为后面学习iOS提供一些网络数据。
-有关GO的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。">
-<meta property="og:updated_time" content="2015-09-24T06:57:05.000Z">
+有关GO的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。
+我要实现的功能主要有如下几点：
+
+从精美图片网站抓取图片链接等数据">
+<meta property="og:updated_time" content="2015-09-24T07:16:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go抓取网页数据并存入MySQL和返回json数据<一>">
-<meta name="twitter:description" content="Go抓取网页数据并存入MySQL和返回json数据&amp;lt;一&amp;gt;前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
+<meta name="twitter:description" content="前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
 大四了，课程一下子少了很多，于是决定用它从网上抓一些图片数据，然后提供接口，为后面学习iOS提供一些网络数据。
-有关GO的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。">
+有关GO的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。
+我要实现的功能主要有如下几点：
+
+从精美图片网站抓取图片链接等数据">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -238,7 +247,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Go抓取网页数据并存入MySQL和返回json数据&lt;一&gt;">Go抓取网页数据并存入MySQL和返回json数据&lt;一&gt;</h2><h4 id="前言">前言</h4><p>很久前就想学习<code>GO</code>，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。</p>
+        <span itemprop="articleBody"><h4 id="前言">前言</h4><p>很久前就想学习<code>GO</code>，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。</p>
 <p>大四了，课程一下子少了很多，于是决定用它从网上抓一些图片数据，然后提供接口，为后面学习<code>iOS</code>提供一些网络数据。</p>
 <p>有关<code>GO</code>的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。</p>
 <p>我要实现的功能主要有如下几点：</p>
@@ -434,7 +443,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Go抓取网页数据并存入MySQL和返回json数据<一>"><span class="nav-number">1.</span> <span class="nav-text">Go抓取网页数据并存入MySQL和返回json数据<一></span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.0.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#准备工作"><span class="nav-number">1.0.2.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#安装GO并配置环境"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">安装GO并配置环境</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#分析小程序"><span class="nav-number">1.0.2.0.2.</span> <span class="nav-text">分析小程序</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#安装GO并配置环境"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装GO并配置环境</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#分析小程序"><span class="nav-number">2.0.2.</span> <span class="nav-text">分析小程序</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

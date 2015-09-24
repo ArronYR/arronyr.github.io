@@ -37,22 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
+<meta name="description" content="网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
 方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
+1234brew update &amp;amp;&amp;amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac下安装Go和配置相应环境">
 <meta property="og:url" content="http://blog.helloarron.com/2015/08/29/go/mac-install-go/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
+<meta property="og:description" content="网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
 方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
-<meta property="og:updated_time" content="2015-09-05T15:01:28.000Z">
+1234brew update &amp;amp;&amp;amp;">
+<meta property="og:updated_time" content="2015-09-24T07:16:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac下安装Go和配置相应环境">
-<meta name="twitter:description" content="Mac下安装Go和配置相应环境网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
+<meta name="twitter:description" content="网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：
 方法一：homebrewhomebrew是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 git mercurial 也安装上：
-1234brew upd">
+1234brew update &amp;amp;&amp;amp;">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -238,7 +238,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Mac下安装Go和配置相应环境">Mac下安装Go和配置相应环境</h2><p>网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：</p>
+        <span itemprop="articleBody"><p>网上的教程很多，但是并不完整，使得我在安装的过程中遇到了各种问题。后来综合几个教程给配置好了。我采用了两种方法，后来去掉了其中的一种。下面是我的安装步骤：</p>
 <h3 id="方法一：homebrew">方法一：homebrew</h3><p><code>homebrew</code>是Mac系统下面目前使用最多的管理软件的工具，目前已支持Go，可以通过命令直接安装Go，为了以后方便，应该把 <code>git</code> <code>mercurial</code> 也安装上：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew <span class="operator"><span class="keyword">update</span> &amp;&amp; brew <span class="keyword">upgrade</span></span><br><span class="line">brew <span class="keyword">install</span> git</span><br><span class="line">brew <span class="keyword">install</span> mercurial</span><br><span class="line">brew <span class="keyword">install</span> <span class="keyword">go</span></span></span><br></pre></td></tr></table></figure>
 <p>这样安装之后通过命令行输入<code>go</code>就可以看到相关的信息。输入<code>go env</code>查看环境信息：</p>
@@ -440,7 +440,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac下安装Go和配置相应环境"><span class="nav-number">1.</span> <span class="nav-text">Mac下安装Go和配置相应环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：homebrew"><span class="nav-number">1.1.</span> <span class="nav-text">方法一：homebrew</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：pkg包安装"><span class="nav-number">1.2.</span> <span class="nav-text">方法二：pkg包安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量配置"><span class="nav-number">1.3.</span> <span class="nav-text">环境变量配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题："><span class="nav-number">1.4.</span> <span class="nav-text">问题：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：homebrew"><span class="nav-number">1.</span> <span class="nav-text">方法一：homebrew</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：pkg包安装"><span class="nav-number">2.</span> <span class="nav-text">方法二：pkg包安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量配置"><span class="nav-number">3.</span> <span class="nav-text">环境变量配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题："><span class="nav-number">4.</span> <span class="nav-text">问题：</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

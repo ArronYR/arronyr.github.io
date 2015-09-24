@@ -37,16 +37,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Yii 常用路径获取Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;">
+<meta name="description" content="Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;hostInfo;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Yii 常用路径获取">
 <meta property="og:url" content="http://blog.helloarron.com/2015/03/09/php/yii-router-method/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Yii 常用路径获取Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;">
-<meta property="og:updated_time" content="2015-09-05T14:43:42.000Z">
+<meta property="og:description" content="Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;hostInfo;">
+<meta property="og:updated_time" content="2015-09-24T07:15:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yii 常用路径获取">
-<meta name="twitter:description" content="Yii 常用路径获取Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;">
+<meta name="twitter:description" content="Yii 内置了很多获取路径、访问者IP等方法，如下：12345678910Yii::app()-&amp;gt;request-&amp;gt;userHostAddress;        // Yii获取ip地址Yii::app()-&amp;gt;request-&amp;gt;isPostRequest;          // Yii判断提交方式Yii::app()-&amp;gt;request-&amp;gt;hostInfo;">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -232,7 +232,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="Yii_常用路径获取">Yii 常用路径获取</h2><p><code>Yii</code> 内置了很多获取路径、访问者<code>IP</code>等方法，如下：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;request-&gt;userHostAddress;        <span class="comment">// Yii获取ip地址</span></span><br><span class="line">Yii::app()-&gt;request-&gt;isPostRequest;          <span class="comment">// Yii判断提交方式</span></span><br><span class="line">Yii::app()-&gt;request-&gt;hostInfo;               <span class="comment">// 得到当前域名</span></span><br><span class="line">Yii::app()-&gt;basePath;                        <span class="comment">// 得到proteced目录的物理路径</span></span><br><span class="line">Yii::app()-&gt;request-&gt;urlReferrer;            <span class="comment">// 获得上一页的url以返回</span></span><br><span class="line">Yii::app()-&gt;request-&gt;url;                    <span class="comment">// 得到当前url</span></span><br><span class="line">Yii::app()-&gt;homeUrl;                         <span class="comment">// 得到当前home url</span></span><br><span class="line">Yii::app()-&gt;user-&gt;returnUrl;                 <span class="comment">// 得到当前return url</span></span><br><span class="line">dirname(Yii::app()-&gt;BasePath);               <span class="comment">// 项目路径</span></span><br><span class="line">Yii::getFrameworkPath();                     <span class="comment">// 取得当前的完整路径</span></span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><p><code>Yii</code> 内置了很多获取路径、访问者<code>IP</code>等方法，如下：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Yii::app()-&gt;request-&gt;userHostAddress;        <span class="comment">// Yii获取ip地址</span></span><br><span class="line">Yii::app()-&gt;request-&gt;isPostRequest;          <span class="comment">// Yii判断提交方式</span></span><br><span class="line">Yii::app()-&gt;request-&gt;hostInfo;               <span class="comment">// 得到当前域名</span></span><br><span class="line">Yii::app()-&gt;basePath;                        <span class="comment">// 得到proteced目录的物理路径</span></span><br><span class="line">Yii::app()-&gt;request-&gt;urlReferrer;            <span class="comment">// 获得上一页的url以返回</span></span><br><span class="line">Yii::app()-&gt;request-&gt;url;                    <span class="comment">// 得到当前url</span></span><br><span class="line">Yii::app()-&gt;homeUrl;                         <span class="comment">// 得到当前home url</span></span><br><span class="line">Yii::app()-&gt;user-&gt;returnUrl;                 <span class="comment">// 得到当前return url</span></span><br><span class="line">dirname(Yii::app()-&gt;BasePath);               <span class="comment">// 项目路径</span></span><br><span class="line">Yii::getFrameworkPath();                     <span class="comment">// 取得当前的完整路径</span></span><br></pre></td></tr></table></figure></p>
 <p>Yii framework 已经定义的命名空间常量：</p>
 <blockquote>
 <p><code>system</code>: 指向<code>Yii</code>框架目录;  <code>Yii\framework</code></p>
@@ -429,7 +429,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Yii_常用路径获取"><span class="nav-number">1.</span> <span class="nav-text">Yii 常用路径获取</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

@@ -238,8 +238,8 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            IE8 自动设置 兼容性 代码前言为了帮助确保你的网页在所有未来的IE版本都有一致的外观，IE8引入了文件兼容性。在IE6中引入一个增设的兼容性模式，文件兼容性使你能够在IE呈现你的网页时选择特定编译模式。
-新的IE为了确保网页在未来的版本中都有一支的外观，IE8引入了文件兼容性。当你引入一个增设的兼容性模式，此文章说明文件兼容性的必要性，列出现有版本IE能
+            前言为了帮助确保你的网页在所有未来的IE版本都有一致的外观，IE8引入了文件兼容性。在IE6中引入一个增设的兼容性模式，文件兼容性使你能够在IE呈现你的网页时选择特定编译模式。
+新的IE为了确保网页在未来的版本中都有一支的外观，IE8引入了文件兼容性。当你引入一个增设的兼容性模式，此文章说明文件兼容性的必要性，列出现有版本IE能使用的文件兼容性模式并示范如何
             ...
           </span>
           <div class="post-more-link text-center">
@@ -331,7 +331,7 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            CSS控制文本超出指定宽度后用省略号代替，CSS控制文本不换行。一般的文字截断（适用于内联与块）：12345678.text-overflow &#123;     display:block;          /*内联对象需加*/     width:31em;     word-break:keep-all;    /* 不换行 */     whit
+            一般的文字截断（适用于内联与块）：12345678.text-overflow &#123;     display:block;          /*内联对象需加*/     width:31em;     word-break:keep-all;    /* 不换行 */     white-space:nowrap;     /* 不换行 */   
             ...
           </span>
           <div class="post-more-link text-center">
@@ -423,11 +423,11 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            网站图标favicon.ico显示不了或无法刷新更新的原因现在人们都喜欢在自己的网站上放上自己的favicon.ico，不仅可以标识网站的身份，自己看着也赏心悦目。但有很多原因会导致favicon.ico显示不出来，我总结了下，有以下几个原因：
+            现在人们都喜欢在自己的网站上放上自己的favicon.ico，不仅可以标识网站的身份，自己看着也赏心悦目。但有很多原因会导致favicon.ico显示不出来，我总结了下，有以下几个原因：
 
 图标的链接地址或者HTML代码出错了
 
-这是个低级错误，但也不是不可能发生的，首先要看看图标的链接地址和HTML
+这是个低级错误，但也不是不可能发生的，首先要看看图标的链接地址和HTML代码对不对。一般如果直接把favicon.ico图标放在网
             ...
           </span>
           <div class="post-more-link text-center">
@@ -519,7 +519,7 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            PHP解析URL并得到URL中的参数12345678910111213141516171819202122232425262728293031323334353637383940414243&lt;?php	//例举一个URL格式的字符串:	$str = 'http://test.com/testdir/index.php?param1=10&amp;par
+            12345678910111213141516171819202122232425262728293031323334353637383940414243&lt;?php	//例举一个URL格式的字符串:	$str = 'http://test.com/testdir/index.php?param1=10&amp;param2=20&amp;param3=
             ...
           </span>
           <div class="post-more-link text-center">
@@ -611,7 +611,7 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            PHP 获得ip地址方法一：123456789101112131415&lt;?phpfunction GetIP()&#123;  if(!empty($_SERVER["HTTP_CLIENT_IP"]))&#123;    $cip = $_SERVER["HTTP_CLIENT_IP"];  &#125;elseif(!empty($_SERVER[
+            方法一：123456789101112131415&lt;?phpfunction GetIP()&#123;  if(!empty($_SERVER["HTTP_CLIENT_IP"]))&#123;    $cip = $_SERVER["HTTP_CLIENT_IP"];  &#125;elseif(!empty($_SERVER["HTTP_X_FO
             ...
           </span>
           <div class="post-more-link text-center">
@@ -703,9 +703,9 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            simple_html_dom 使用简单范例
+            简单范例
 DOM的方法12$html = file_get_html('http://www.google.com/');        //$html 所拥有的方法如下表所示$html-&gt;clear() ;                                        //调用方法
-DOM meth
+DOM methods &amp; properti
             ...
           </span>
           <div class="post-more-link text-center">
@@ -797,7 +797,7 @@ DOM meth
         
           <span itemprop="articleBody">
             
-            PHP判断是否为手机移动终端现在移动设备很常见，很多时候人们都是用手机浏览网页。有的项目对一个网站做了响应式的处理，使得浏览者无论是通过电脑还是手机都会有良好的体验。但有的项目会单独将电脑访问的版本和移动端的分开，然后通过判断设备去请求不同的网站资源。下面的函数是php中判断是否为手机移动终端的函数，该函数返回值为 true 或 false 所以只需在 if
+            现在移动设备很常见，很多时候人们都是用手机浏览网页。有的项目对一个网站做了响应式的处理，使得浏览者无论是通过电脑还是手机都会有良好的体验。但有的项目会单独将电脑访问的版本和移动端的分开，然后通过判断设备去请求不同的网站资源。下面的函数是php中判断是否为手机移动终端的函数，该函数返回值为 true 或 false 所以只需在 if 语句中调用即可。函数如下：
             ...
           </span>
           <div class="post-more-link text-center">

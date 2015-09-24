@@ -37,22 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="ejs模板引擎ejs 的标签系统非常简单，它只有以下三种标签：123&amp;lt;% code %&amp;gt;：JavaScript 代码。&amp;lt;%= code %&amp;gt;：显示替换过 HTML 特殊字符的内容。&amp;lt;%- code %&amp;gt;：显示原始 HTML 内容。
+<meta name="description" content="ejs 的标签系统非常简单，它只有以下三种标签：123&amp;lt;% code %&amp;gt;：JavaScript 代码。&amp;lt;%= code %&amp;gt;：显示替换过 HTML 特殊字符的内容。&amp;lt;%- code %&amp;gt;：显示原始 HTML 内容。
 
-注意： &amp;lt;%= code %&amp;gt; 和 &amp;lt;%- code %&amp;gt; 的区别，当变量 code 为普通字符串时，两者">
+注意： &amp;lt;%= code %&amp;gt; 和 &amp;lt;%- code %&amp;gt; 的区别，当变量 code 为普通字符串时，两者没有区别。当">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ejs模板引擎">
 <meta property="og:url" content="http://blog.helloarron.com/2015/01/19/node/node-ejs-template/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="ejs模板引擎ejs 的标签系统非常简单，它只有以下三种标签：123&amp;lt;% code %&amp;gt;：JavaScript 代码。&amp;lt;%= code %&amp;gt;：显示替换过 HTML 特殊字符的内容。&amp;lt;%- code %&amp;gt;：显示原始 HTML 内容。
+<meta property="og:description" content="ejs 的标签系统非常简单，它只有以下三种标签：123&amp;lt;% code %&amp;gt;：JavaScript 代码。&amp;lt;%= code %&amp;gt;：显示替换过 HTML 特殊字符的内容。&amp;lt;%- code %&amp;gt;：显示原始 HTML 内容。
 
-注意： &amp;lt;%= code %&amp;gt; 和 &amp;lt;%- code %&amp;gt; 的区别，当变量 code 为普通字符串时，两者">
-<meta property="og:updated_time" content="2015-09-13T09:33:57.000Z">
+注意： &amp;lt;%= code %&amp;gt; 和 &amp;lt;%- code %&amp;gt; 的区别，当变量 code 为普通字符串时，两者没有区别。当">
+<meta property="og:updated_time" content="2015-09-24T07:15:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ejs模板引擎">
-<meta name="twitter:description" content="ejs模板引擎ejs 的标签系统非常简单，它只有以下三种标签：123&amp;lt;% code %&amp;gt;：JavaScript 代码。&amp;lt;%= code %&amp;gt;：显示替换过 HTML 特殊字符的内容。&amp;lt;%- code %&amp;gt;：显示原始 HTML 内容。
+<meta name="twitter:description" content="ejs 的标签系统非常简单，它只有以下三种标签：123&amp;lt;% code %&amp;gt;：JavaScript 代码。&amp;lt;%= code %&amp;gt;：显示替换过 HTML 特殊字符的内容。&amp;lt;%- code %&amp;gt;：显示原始 HTML 内容。
 
-注意： &amp;lt;%= code %&amp;gt; 和 &amp;lt;%- code %&amp;gt; 的区别，当变量 code 为普通字符串时，两者">
+注意： &amp;lt;%= code %&amp;gt; 和 &amp;lt;%- code %&amp;gt; 的区别，当变量 code 为普通字符串时，两者没有区别。当">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -238,7 +238,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="ejs模板引擎">ejs模板引擎</h2><p><code>ejs</code> 的标签系统非常简单，它只有以下三种标签：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% code %&gt;：JavaScript 代码。</span><br><span class="line">&lt;%= code %&gt;：显示替换过 HTML 特殊字符的内容。</span><br><span class="line">&lt;%- code %&gt;：显示原始 HTML 内容。</span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><p><code>ejs</code> 的标签系统非常简单，它只有以下三种标签：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% code %&gt;：JavaScript 代码。</span><br><span class="line">&lt;%= code %&gt;：显示替换过 HTML 特殊字符的内容。</span><br><span class="line">&lt;%- code %&gt;：显示原始 HTML 内容。</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>注意： <code>&lt;%= code %&gt;</code> 和 <code>&lt;%- code %&gt;</code> 的区别，当变量 <code>code</code> 为普通字符串时，两者没有区别。当 <code>code</code> 比如为 <code>&lt;h1&gt;hello&lt;/h1&gt;</code> 这种字符串时，<code>&lt;%= code %&gt;</code> 会原样输出<code>&lt;h1&gt;hello&lt;/h1&gt;</code>，而 <code>&lt;%- code %&gt;</code> 则会显示 <code>H1</code> 大的 <code>hello</code>字符串。<br>我们可以在 <code>&lt;% %&gt;</code> 内使用 <code>JavaScript</code> 代码。</li>
 </ul>
@@ -428,7 +428,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ejs模板引擎"><span class="nav-number">1.</span> <span class="nav-text">ejs模板引擎</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#The_Data"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">The Data</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#The_Template"><span class="nav-number">1.0.0.0.2.</span> <span class="nav-text">The Template</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#The_Result"><span class="nav-number">1.0.0.0.3.</span> <span class="nav-text">The Result</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#The_Data"><span class="nav-number">1.</span> <span class="nav-text">The Data</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#The_Template"><span class="nav-number">2.</span> <span class="nav-text">The Template</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#The_Result"><span class="nav-number">3.</span> <span class="nav-text">The Result</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

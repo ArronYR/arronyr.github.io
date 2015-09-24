@@ -37,37 +37,31 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="MongoDB 游标与结果集
-
-什么是游标(cursor)？
+<meta name="description" content="什么是游标(cursor)？
 
 find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
 
 想要获取数据，我们可以使用next方法来遍历游标，如下：
-1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
+1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext() ? myCursor.nex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MongoDB 游标与结果集">
 <meta property="og:url" content="http://blog.helloarron.com/2015/02/02/mongodb/mongodb-cursor/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="MongoDB 游标与结果集
-
-什么是游标(cursor)？
+<meta property="og:description" content="什么是游标(cursor)？
 
 find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
 
 想要获取数据，我们可以使用next方法来遍历游标，如下：
-1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
-<meta property="og:updated_time" content="2015-09-07T14:47:47.000Z">
+1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext() ? myCursor.nex">
+<meta property="og:updated_time" content="2015-09-24T07:16:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB 游标与结果集">
-<meta name="twitter:description" content="MongoDB 游标与结果集
-
-什么是游标(cursor)？
+<meta name="twitter:description" content="什么是游标(cursor)？
 
 find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
 
 想要获取数据，我们可以使用next方法来遍历游标，如下：
-1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext(">
+1234567var myCursor = db.inventory.find( &amp;#123; type: &quot;food&quot; &amp;#125; );var myDocument = myCursor.hasNext() ? myCursor.nex">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -253,8 +247,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><p>MongoDB 游标与结果集</p>
-<ol>
+        <span itemprop="articleBody"><ol>
 <li>什么是游标(<code>cursor</code>)？</li>
 </ol>
 <p><code>find</code>命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。</p>

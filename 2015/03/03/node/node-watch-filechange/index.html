@@ -37,27 +37,27 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="使用Node监视文件或目录变化Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
+<meta name="description" content="Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
 下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。
 在当前目录下新建一些文件：
-我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs">
+我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs = require(&apos;fs&apos;)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Node监视文件或目录变化">
 <meta property="og:url" content="http://blog.helloarron.com/2015/03/03/node/node-watch-filechange/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="使用Node监视文件或目录变化Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
+<meta property="og:description" content="Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
 下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。
 在当前目录下新建一些文件：
-我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs">
+我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs = require(&apos;fs&apos;)">
 <meta property="og:image" content="http://images.helloarron.com/node-watch-file-1.png">
 <meta property="og:image" content="http://images.helloarron.com/node-watch-file-2.png">
-<meta property="og:updated_time" content="2015-09-06T16:12:01.000Z">
+<meta property="og:updated_time" content="2015-09-24T07:16:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Node监视文件或目录变化">
-<meta name="twitter:description" content="使用Node监视文件或目录变化Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
+<meta name="twitter:description" content="Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。
 下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。
 在当前目录下新建一些文件：
-我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs">
+我们主要逻辑写在 watch.js 里面，一旦某文件发送更改，就将该文件名输出到控制台：123456789101112var fs = require(&apos;fs&apos;)">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -243,7 +243,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="使用Node监视文件或目录变化">使用Node监视文件或目录变化</h2><p>Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。</p>
+        <span itemprop="articleBody"><p>Node 允许监视文件或目录是否发生变化。监视意味着当文件系统中的文件（或目录）发生变化=时，会分发一个事件，然后触发指定的回调函数。</p>
 <p>下面我们来做一个例子：监视当前工作目录下所有的后缀包含js的文件的变化。</p>
 <p>在当前目录下新建一些文件：<br><img src="http://images.helloarron.com/node-watch-file-1.png" alt="image"></p>
 <p>我们主要逻辑写在 <code>watch.js</code> 里面，一旦某文件发送更改，就将该文件名输出到控制台：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取当前工作目录的所有文件</span></span><br><span class="line"><span class="keyword">var</span> files = fs.readdirSync(process.cwd());</span><br><span class="line">files.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">file</span>) </span>&#123;</span><br><span class="line">	<span class="comment">// 监听 ".js .json" 等后缀含有js两个字母的文件</span></span><br><span class="line">	<span class="keyword">if</span> ( <span class="regexp">/\.js/</span>.test(file) ) &#123;</span><br><span class="line">		fs.watchFile(process.cwd() + <span class="string">'/'</span> + file, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">' - '</span> + file + <span class="string">'  changed!'</span>);</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
@@ -435,7 +435,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Node监视文件或目录变化"><span class="nav-number">1.</span> <span class="nav-text">使用Node监视文件或目录变化</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

@@ -238,14 +238,13 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            MongoDB 游标与结果集
-
+            
 什么是游标(cursor)？
 
 find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
 
 想要获取数据，我们可以使用next方法来遍历游标，如下：
-1234567var myCursor = db.inventory.find( &#123; type: "food" &#125; );var myDocument
+1234567var myCursor = db.inventory.find( &#123; type: "food" &#125; );var myDocument = myCursor.has
             ...
           </span>
           <div class="post-more-link text-center">
@@ -337,13 +336,15 @@ find命令并不直接返回结果，而是返回一个结果集的迭代器，�
         
           <span itemprop="articleBody">
             
-            Linux（centOS）下搭建 SVN 服务器昨天上午搭建完node环境之后本想把SVN服务器的也搭建好，结果客户端那边急需修改几个接口就拖到了晚上。SVN服务器的搭建方法很简单，下面是我的搭建步骤：
+            昨天上午搭建完node环境之后本想把SVN服务器的也搭建好，结果客户端那边急需修改几个接口就拖到了晚上。SVN服务器的搭建方法很简单，下面是我的搭建步骤：
 
 在命令行输入 yum install subversion 安装软件包
 
 安装之后可以输入 svn --help 查看svn的使用方法
 
-创建svn版本库
+创建svn版本库目录
+1# mkdir -p /var/svn
+
             ...
           </span>
           <div class="post-more-link text-center">
@@ -435,9 +436,9 @@ find命令并不直接返回结果，而是返回一个结果集的迭代器，�
         
           <span itemprop="articleBody">
             
-            Linux 下安装 NodeJS以前都是在windows下使用，一般一个.exe 或.msi 文件就搞定了，这还是第一次自己远程Linux服务器配置NodeJS环境。首先干的第一件事就是百度，方法有很多，我最后参照了oschine和csdn上的两篇文章成功安装。下面就来说说我的安装过程。
+            以前都是在windows下使用，一般一个.exe 或.msi 文件就搞定了，这还是第一次自己远程Linux服务器配置NodeJS环境。首先干的第一件事就是百度，方法有很多，我最后参照了oschine和csdn上的两篇文章成功安装。下面就来说说我的安装过程。
 
-登录服务器看了一下当前系统信息（我的是 Linux version 
+登录服务器看了一下当前系统信息（我的是 Linux version 2.6.32-220.el6.x
             ...
           </span>
           <div class="post-more-link text-center">
@@ -529,7 +530,9 @@ find命令并不直接返回结果，而是返回一个结果集的迭代器，�
         
           <span itemprop="articleBody">
             
-            JavaScript 实现trim ltrim rtrim在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用Strin
+            在做一个数据统计的网站时涉及到一个填写数据的表单，想在提交前在前端判断是否为空，因为后台使用php的，使用一般遇到这种情况都是直接使用trim ltrim rtrim 函数即可，但是查了一下JavaScript的string处理函数发现并没有这三个，于是决定自己写一个。有两种方法，一种是采用String对象的原型继承，另一种就是直接采用函数式的方法；
+
+类的
             ...
           </span>
           <div class="post-more-link text-center">
@@ -621,8 +624,9 @@ find命令并不直接返回结果，而是返回一个结果集的迭代器，�
         
           <span itemprop="articleBody">
             
-            正则表达式简单的匹配模式正则表达式是一种特殊的字符串模式，用于匹配一组字符串。他最早出现于20世纪40年代，当时用来描述正则语言，而到了20世纪70年代才真正出现在程序设计领域。正则表达式后来成为ed、sed、vim编辑器、grep等Unix操作系统衍生出的工具集的组成部分。
+            正则表达式是一种特殊的字符串模式，用于匹配一组字符串。他最早出现于20世纪40年代，当时用来描述正则语言，而到了20世纪70年代才真正出现在程序设计领域。正则表达式后来成为ed、sed、vim编辑器、grep等Unix操作系统衍生出的工具集的组成部分。
 在线正则表达式验证工具 RegExr ：http://regexr.com/v1/
+匹配数字：1\d   
             ...
           </span>
           <div class="post-more-link text-center">
@@ -714,7 +718,8 @@ find命令并不直接返回结果，而是返回一个结果集的迭代器，�
         
           <span itemprop="articleBody">
             
-            input 提交表单按钮 背景图片的完美设置html的代码：12&lt;input type="submit" id="submit_btn" src="submit_btn_bg_img.jpg" value="loginer" /&gt;&lt;input type="submit" id="submit_btn" name="submit_btn"  
+            html的代码：12&lt;input type="submit" id="submit_btn" src="submit_btn_bg_img.jpg" value="loginer" /&gt;&lt;input type="submit" id="submit_btn" name="submit_btn"  value="loginer" /&gt;
+
             ...
           </span>
           <div class="post-more-link text-center">
@@ -806,7 +811,7 @@ find命令并不直接返回结果，而是返回一个结果集的迭代器，�
         
           <span itemprop="articleBody">
             
-            href=#与href=javascriptvoid(0)的区别&quot;＃&quot;包含了一个位置信息默认的锚点是＃top也就是网页的上端而javascript:void(0) 仅仅表示一个死链接这就是为什么有的时候页面很长浏览链接明明是＃可是跳动到了顶部而javascript:void(0) 则不是如此所以调用脚本的时候最好用void(0) 或者&l
+            &quot;＃&quot;包含了一个位置信息默认的锚点是＃top也就是网页的上端而javascript:void(0) 仅仅表示一个死链接这就是为什么有的时候页面很长浏览链接明明是＃可是跳动到了顶部而javascript:void(0) 则不是如此所以调用脚本的时候最好用void(0) 或者&lt;input onclick&gt; &lt;div oncl
             ...
           </span>
           <div class="post-more-link text-center">
