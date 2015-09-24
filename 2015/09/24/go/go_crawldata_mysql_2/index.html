@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://blog.helloarron.com/2015/09/24/go/go_crawldata_mysql_2/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
 <meta property="og:description" content="Go抓取网页数据并存入MySQL和返回json数据&amp;lt;二&amp;gt;首先在入口文件中引入项目下的包crawldata,然后调用其中抓取数据的函数，暂时取名为Crawl:123456789101112package mainimport (	&quot;fmt&quot;	&quot;indiepic/crawldata&quot;)func main () &amp;#123;	// 使用crawldata包里面的Crawl()抓取需要的数据存">
-<meta property="og:updated_time" content="2015-09-24T06:45:04.000Z">
+<meta property="og:updated_time" content="2015-09-24T06:59:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go抓取网页数据并存入MySQL和返回json数据<二>">
 <meta name="twitter:description" content="Go抓取网页数据并存入MySQL和返回json数据&amp;lt;二&amp;gt;首先在入口文件中引入项目下的包crawldata,然后调用其中抓取数据的函数，暂时取名为Crawl:123456789101112package mainimport (	&quot;fmt&quot;	&quot;indiepic/crawldata&quot;)func main () &amp;#123;	// 使用crawldata包里面的Crawl()抓取需要的数据存">
@@ -241,6 +241,7 @@ var _hmt = _hmt || [];
 <p><code>goquery</code>的用法和<code>jQuery</code>很类似，直接通过网页中的一些标签、class、id等获取，更多的使用方法可以查看文档。</p>
 <p>这里还使用了<code>strconv</code>中的函数转换类型，使用<code>strings</code>处理字符串。这两个都是GO的内置包，不需要其他运行命令获取。</p>
 <p>在<code>Crawl</code>函数中可以使用<code>for</code>输出看获取到的数据，如：<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> Crawl() &#123;</span><br><span class="line">	<span class="comment">// 定义一个切片存储所有数据</span></span><br><span class="line">	<span class="keyword">var</span> datas ImageDatas</span><br><span class="line">	<span class="comment">// 抓取数据</span></span><br><span class="line">	imageDatas := CrawlData(&amp;datas)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>(imageDatas); i++ &#123;</span><br><span class="line">		fmt.Println(imageDatas[i].Src, imageDatas[i].Title, imageDatas[i].Tp, imageDatas[i].Height, imageDatas[i].Width)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 或者</span></span><br><span class="line">	<span class="keyword">for</span> _, imageData := <span class="keyword">range</span> imageDatas &#123;</span><br><span class="line">		fmt.Println(imageData.Src, imageData.Title, imageData.Tp, imageData.Height, imageData.Width)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下一步实现将获取的数据插入数据库。</p>
 </span>
       
     </div>
