@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,NodeJS," />
+  <meta name="keywords" content="Go,MysQL," />
 
 
 
@@ -37,29 +37,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="上一节我们已经完成了静态页面 index.html 的布局，这节我们开始服务器的编写。
-如同 php 那样脚本文件以 .php 为文件扩展名，NodeJS的脚本文件扩展名为 .js 。
-在这个例子中我们需要以下原生模块：
-
-http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当前 DNS 域名，返回 DNS 服务器 IP 地址fs 模块负责对文件的操作url 模块处理 urlquer">
+<meta name="description" content="上一节主要实现了使用 goquery 从图片网站 http://www.gratisography.com/ 抓取数据。主要抓取图片的data-original、width、height、alt、type 五项数据。因此需要先创建数据库和相应的表，在mac上我使用 Sequel Pro 数据库管理软件，连接之后创建新的数据库indiepic,然后创建表gratisography:123456789">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Node.js学习小案例】DNS域名解析 <三>">
-<meta property="og:url" content="http://blog.helloarron.com/2015/05/28/node/node-dns-3/index.html">
+<meta property="og:title" content="Go抓取网页数据并存入MySQL和返回json数据<三>">
+<meta property="og:url" content="http://blog.helloarron.com/2015/09/25/go/go_crawldata_mysql_3/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="上一节我们已经完成了静态页面 index.html 的布局，这节我们开始服务器的编写。
-如同 php 那样脚本文件以 .php 为文件扩展名，NodeJS的脚本文件扩展名为 .js 。
-在这个例子中我们需要以下原生模块：
-
-http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当前 DNS 域名，返回 DNS 服务器 IP 地址fs 模块负责对文件的操作url 模块处理 urlquer">
-<meta property="og:image" content="http://segmentfault.com/img/bVlVhW">
-<meta property="og:updated_time" content="2015-09-24T07:15:42.000Z">
+<meta property="og:description" content="上一节主要实现了使用 goquery 从图片网站 http://www.gratisography.com/ 抓取数据。主要抓取图片的data-original、width、height、alt、type 五项数据。因此需要先创建数据库和相应的表，在mac上我使用 Sequel Pro 数据库管理软件，连接之后创建新的数据库indiepic,然后创建表gratisography:123456789">
+<meta property="og:updated_time" content="2015-09-25T03:18:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Node.js学习小案例】DNS域名解析 <三>">
-<meta name="twitter:description" content="上一节我们已经完成了静态页面 index.html 的布局，这节我们开始服务器的编写。
-如同 php 那样脚本文件以 .php 为文件扩展名，NodeJS的脚本文件扩展名为 .js 。
-在这个例子中我们需要以下原生模块：
-
-http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当前 DNS 域名，返回 DNS 服务器 IP 地址fs 模块负责对文件的操作url 模块处理 urlquer">
+<meta name="twitter:title" content="Go抓取网页数据并存入MySQL和返回json数据<三>">
+<meta name="twitter:description" content="上一节主要实现了使用 goquery 从图片网站 http://www.gratisography.com/ 抓取数据。主要抓取图片的data-original、width、height、alt、type 五项数据。因此需要先创建数据库和相应的表，在mac上我使用 Sequel Pro 数据库管理软件，连接之后创建新的数据库indiepic,然后创建表gratisography:123456789">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -79,7 +66,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> 【Node.js学习小案例】DNS域名解析 <三> | Arron.y's blog </title>
+  <title> Go抓取网页数据并存入MySQL和返回json数据<三> | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -195,7 +182,7 @@ var _hmt = _hmt || [];
           
           
             
-              【Node.js学习小案例】DNS域名解析 <三>
+              Go抓取网页数据并存入MySQL和返回json数据<三>
             
           
         </h1>
@@ -204,8 +191,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-05-28T14:06:20+08:00" content="2015-05-28">
-            2015-05-28
+          <time itemprop="dateCreated" datetime="2015-09-25T10:48:29+08:00" content="2015-09-25">
+            2015-09-25
           </time>
         </span>
 
@@ -214,8 +201,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/NodeJS/" itemprop="url" rel="index">
-                  <span itemprop="name">NodeJS</span>
+                <a href="/categories/Go/" itemprop="url" rel="index">
+                  <span itemprop="name">Go</span>
                 </a>
               </span>
 
@@ -230,8 +217,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/05/28/node/node-dns-3/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/28/node/node-dns-3/" itemprop="commentsCount"></span>
+              <a href="/2015/09/25/go/go_crawldata_mysql_3/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/25/go/go_crawldata_mysql_3/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -245,31 +232,15 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><p>上一节我们已经完成了静态页面 <code>index.html</code> 的布局，这节我们开始服务器的编写。</p>
-<p>如同 <code>php</code> 那样脚本文件以 <code>.php</code> 为文件扩展名，<code>NodeJS</code>的脚本文件扩展名为 <code>.js</code> 。</p>
-<p>在这个例子中我们需要以下原生模块：</p>
-<blockquote>
-<p><code>http</code> 模块负责 <code>HTTP</code> 服务器的创建<br><code>dns</code> 模块主要负责解析当前 <code>DNS</code> 域名，返回 <code>DNS</code> 服务器 <code>IP</code> 地址<br><code>fs</code> 模块负责对文件的操作<br><code>url</code> 模块处理 <code>url</code><br><code>querystring</code> 模块处理当前前端传来的字符串并解析</p>
-</blockquote>
-<p>进入我们的项目所在目录 <code>E:\node_workspace\code</code> ，新建 <code>index.js</code> 文件，在这个入口问价中我们需要创建服务器并设置路由，添加如下内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 首先require 加载两个模块 */</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>),</span><br><span class="line">	url  = <span class="built_in">require</span>(<span class="string">'url'</span>) ;</span><br><span class="line"><span class="comment">/* 查看官网API我们可以看到http模块提供创建http的方法，dns提供解析dns的方法 */</span></span><br><span class="line"><span class="comment">/* 加载文件模块 */</span></span><br><span class="line"><span class="keyword">var</span> Router   = <span class="built_in">require</span>(<span class="string">'./router.js'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 创建http服务器 */</span></span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">	<span class="comment">/* 写http head 返回html，因此Content-Type为html*/</span></span><br><span class="line">	<span class="keyword">var</span> pathname = url.parse(req.url).pathname;</span><br><span class="line">	req.setEncoding(<span class="string">"utf8"</span>);</span><br><span class="line">	res.writeHead(<span class="number">200</span>);</span><br><span class="line">	Router.router(res, req, pathname);</span><br><span class="line">&#125;).listen(<span class="number">3000</span>, <span class="string">"127.0.0.1"</span>);</span><br><span class="line"><span class="comment">/* 打印运行log */</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Server running at http://127.0.0.1:3000/'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>在第一节我们就说了<code>NodeJS</code> 的模块，其中除了原生模块之外还有文件模块，关于模块中的 <code>exports</code> 和<code>module.exports</code> 请移步（<a href="http://blog.helloarron.com/2015/03/06/javascript/node-module-exports/">参考</a>）。</p>
-<p>这里使用了 <code>router.js</code> 文件，这个文件是对网站前端发来的各个路由的处理，添加如下内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 路由模块处理 */</span></span><br><span class="line"><span class="keyword">var</span> ParseDns = <span class="built_in">require</span>(<span class="string">'./parse_dns.js'</span>),</span><br><span class="line">	MainIndex = <span class="built_in">require</span>(<span class="string">'./main_index.js'</span>);</span><br><span class="line">exports.router = <span class="function"><span class="keyword">function</span>(<span class="params">res, req, pathname</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">switch</span> (pathname)&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">"/parse"</span>:</span><br><span class="line">			ParseDns.parseDns(res, req)</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			MainIndex.goIndex(res, req)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在这个文件中我们主要有两个路由：<code>&#39;/&#39;</code> 和 <code>&#39;/parse&#39;</code> ，对应着不同的处理方式，所以这里对这两个路由又引入了另外两个文件模块来处理：<code>parse_dns.js</code> 和 <code>main_index.js</code> 。</p>
-<p>新建 <code>parse_dns.js</code> ，添加如下内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* dns解析模块 */</span></span><br><span class="line"><span class="keyword">var</span> querystring = <span class="built_in">require</span>(<span class="string">"querystring"</span>),</span><br><span class="line">	url = <span class="built_in">require</span>(<span class="string">"url"</span>),</span><br><span class="line">	dns = <span class="built_in">require</span>(<span class="string">'dns'</span>);</span><br><span class="line">exports.parseDns = <span class="function"><span class="keyword">function</span>(<span class="params">res, req</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> postData = <span class="string">""</span>;</span><br><span class="line">    postData = querystring.parse(url.parse(req.url).query);</span><br><span class="line">	getDns(postData,<span class="function"><span class="keyword">function</span>(<span class="params">domain,addresses</span>)</span>&#123;</span><br><span class="line">		res.writeHead(<span class="number">200</span>, &#123; <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span> &#125;);</span><br><span class="line">		res.end(<span class="built_in">JSON</span>.stringify(&#123;  </span><br><span class="line">	        domain: domain,</span><br><span class="line">	        addresses: addresses.join(<span class="string">','</span>)</span><br><span class="line">	    &#125;));</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDns</span>(<span class="params">postData,callback</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> domain = postData.search_dns;</span><br><span class="line">	dns.resolve(domain, <span class="function"><span class="keyword">function</span>(<span class="params">err, addresses</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!addresses)&#123;</span><br><span class="line">			addresses=[<span class="string">'Not Exist !'</span>]</span><br><span class="line">		&#125;</span><br><span class="line">		callback(domain, addresses);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这里引入了 <code>querystring</code> 、<code>url</code> 、<code>dns</code> 三个原生模块，</p>
-<blockquote>
-<p><code>url.parse(req.url).query</code> 获取到请求的路由中的 <code>query</code> 值，由 <code>‘=’</code> 连接的字符串<br><code>querystring.parse()</code> 将 <code>query</code> 值转换为对象<br><code>JSON.stringify({domain:domain,addresses: addresses.join(&#39;,&#39;)})</code> 从一个对象解析出字符串</p>
-</blockquote>
-<p>新建 <code>main_index.js</code> ，添加如下内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 处理首页逻辑信息 */</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>),</span><br><span class="line">	url = <span class="built_in">require</span>(<span class="string">'url'</span>);</span><br><span class="line">exports.goIndex = <span class="function"><span class="keyword">function</span>(<span class="params">res, req</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> readPath = __dirname + <span class="string">'/'</span> +url.parse(<span class="string">'index.html'</span>).pathname;</span><br><span class="line">	<span class="keyword">var</span> indexPage = fs.readFileSync(readPath);</span><br><span class="line">	<span class="comment">/* 返回 */</span></span><br><span class="line">	res.end(indexPage);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p><code>__dirname + &#39;/&#39; +url.parse(&#39;index.html&#39;).pathname</code> 获取 <code>index.html</code> 文件<br><code>fs.readFileSync(readPath)</code> 读取文件内容<br><code>res.end(indexPage)</code> 通过 <code>response.end()</code> 输出内容</p>
-</blockquote>
-<p>到这里我们的项目就差不多完成了。</p>
-<p>打开 <code>cmd</code> ，切换到 <code>E:\node_workspace\code</code> 项目目录，执行以下命令：<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node <span class="keyword">index</span>.js</span><br></pre></td></tr></table></figure></p>
-<p>我们会看到在下面会输出日志：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Server running at <span class="string">http:</span><span class="comment">//127.0.0.1:3000/</span></span><br></pre></td></tr></table></figure></p>
-<p>打开浏览器，在地址栏输入 <code>http://127.0.0.1:3000</code> 即可看到如下界面：<br><img src="http://segmentfault.com/img/bVlVhW" alt="799bad5a3b514f096e69bbc4a7896cd920150311110625247391499.jpg"></p>
-<p>输入一个网址，点击查询即可在下面看到对应的 <code>IP</code> 地址。</p>
-<p>下一节我们就一些体验进行改善。</p>
+        <span itemprop="articleBody"><p>上一节主要实现了使用 <a href="https://github.com/PuerkitoBio/goquery" target="_blank" rel="external">goquery</a> 从图片网站 <a href="http://www.gratisography.com/" target="_blank" rel="external">http://www.gratisography.com/</a> 抓取数据。主要抓取图片的<code>data-original</code>、<code>width</code>、<code>height</code>、<code>alt</code>、<code>type</code> 五项数据。因此需要先创建数据库和相应的表，在mac上我使用 <code>Sequel Pro</code> 数据库管理软件，连接之后创建新的数据库<code>indiepic</code>,然后创建表<code>gratisography</code>:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`gratisography`</span> (</span><br><span class="line">  <span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">unsigned</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  <span class="string">`img_url`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`type_name`</span> <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`title`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`width`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`height`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`create_time`</span> <span class="keyword">timestamp</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> AUTO_INCREMENT=<span class="number">388</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span></span><br></pre></td></tr></table></figure></p>
+<p>创建完数据库之后，就开始使用GO来实现连接数据库等操作了。在GO中使用<a href="https://github.com/Go-SQL-Driver/MySQL" target="_blank" rel="external">Go-MySQL-Driver</a> is a lightweight and fast MySQL-Driver for Go’s (golang) database/sql package</p>
+<p>文档：<a href="http://godoc.org/github.com/go-sql-driver/mysql" target="_blank" rel="external">http://godoc.org/github.com/go-sql-driver/mysql</a></p>
+<p>在使用之前需要先使用以下命令获取该包：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> <span class="built_in">get</span> github.<span class="keyword">com</span>/<span class="keyword">go</span>-sql-driver/mysql</span><br></pre></td></tr></table></figure></p>
+<p>然后在<code>database.go</code>中引入：<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> crawldata</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"database/sql"</span></span><br><span class="line">	_ <span class="string">"github.com/go-sql-driver/mysql"</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<p>然后写一个打开数据库的方法<code>OpenDatabase</code>:<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> crawldata</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"database/sql"</span></span><br><span class="line">	_ <span class="string">"github.com/go-sql-driver/mysql"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> OpenDatabase() (*sql.DB, error) &#123;</span><br><span class="line">	<span class="comment">// 连接数据库</span></span><br><span class="line">	db, err := sql.Open(<span class="string">"mysql"</span>, <span class="string">"root:mysql@tcp(xxx.xx.xx.xxx:3306)/databaseName?charset=utf8"</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="constant">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="constant">nil</span>, err</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> db, <span class="constant">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上一节已在<code>crawldata.go</code>中写了<code>InsertData(&amp;imageDatas)</code>方法，但是是注释的，先在就需要在该文件中实现该方法。<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> crawldata</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"database/sql"</span></span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	_ <span class="string">"github.com/go-sql-driver/mysql"</span></span><br><span class="line">	<span class="string">"strconv"</span></span><br><span class="line">	s <span class="string">"strings"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> OpenDatabase() (*sql.DB, error) &#123;</span><br><span class="line">	<span class="comment">// 连接数据库</span></span><br><span class="line">	db, err := sql.Open(<span class="string">"mysql"</span>, <span class="string">"root:mysql@tcp(xxx.xx.xx.xxx:3306)/databaseName?charset=utf8"</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="constant">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="constant">nil</span>, err</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> db, <span class="constant">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line">   该函数将获取的数据存储到数据库</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">func</span> InsertData(datas *ImageDatas) &#123;</span><br><span class="line">	imageDatas := *datas</span><br><span class="line">	<span class="comment">// 连接数据库</span></span><br><span class="line">	db, err := OpenDatabase()</span><br><span class="line">	<span class="keyword">if</span> err != <span class="constant">nil</span> &#123;</span><br><span class="line">		fmt.Printf(s.Join([]<span class="typename">string</span>&#123;<span class="string">"连接数据库失败"</span>, err.Error()&#125;, <span class="string">"--&gt;"</span>))</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> db.Close()</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>(imageDatas); i++ &#123;</span><br><span class="line">		imageData := imageDatas[i]</span><br><span class="line">		<span class="comment">// Prepare statement for inserting data</span></span><br><span class="line">		imgIns, err := db.Prepare(<span class="string">"INSERT INTO gratisography (img_url, type_name, title, width, height) VALUES( ?, ?, ?, ?, ? )"</span>) <span class="comment">// ? = placeholder</span></span><br><span class="line">		<span class="keyword">if</span> err != <span class="constant">nil</span> &#123;</span><br><span class="line">			fmt.Println(s.Join([]<span class="typename">string</span>&#123;<span class="string">"拼装数据格式"</span>, err.Error()&#125;, <span class="string">"--&gt;"</span>))</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">defer</span> imgIns.Close() <span class="comment">// Close the statement when we leave main()</span></span><br><span class="line"></span><br><span class="line">		img, err := imgIns.Exec(s.Join([]<span class="typename">string</span>&#123;<span class="string">"http://www.gratisography.com"</span>, imageData.Src&#125;, <span class="string">"/"</span>), imageData.Tp, imageData.Title, imageData.Width, imageData.Height)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="constant">nil</span> &#123;</span><br><span class="line">			fmt.Println(s.Join([]<span class="typename">string</span>&#123;<span class="string">"插入数据失败"</span>, err.Error()&#125;, <span class="string">"--&gt;"</span>))</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			success, _ := img.LastInsertId()</span><br><span class="line">			<span class="comment">// 数字变成字符串,success是int64型的值，需要转为int，网上说的Itoa64()在strconv包里不存在</span></span><br><span class="line">			insertId := strconv.Itoa(<span class="typename">int</span>(success))</span><br><span class="line">			fmt.Println(s.Join([]<span class="typename">string</span>&#123;<span class="string">"成功插入数据："</span>, insertId&#125;, <span class="string">"\t--&gt;\t"</span>))</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>到此已经完成了数据抓取并存入数据库，在命令行中切换到<code>$GOPATH/src/indiepic</code>目录下，然后运行：<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> run indiepic.<span class="keyword">go</span></span><br></pre></td></tr></table></figure></p>
+<p>随后就可以看到数据被存入数据库了。<br>到这里只实现了数据的获取，但是需要使用GO向外部提供<code>json</code>接口，下一节完成数据的获取和使用web框架返回json数据。</p>
 </span>
       
     </div>
@@ -278,9 +249,9 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+            <a href="/tags/Go/" rel="tag">#Go</a>
           
-            <a href="/tags/NodeJS/" rel="tag">#NodeJS</a>
+            <a href="/tags/MysQL/" rel="tag">#MysQL</a>
           
         </div>
       
@@ -289,13 +260,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/28/node/node-dns-4/" rel="prev">【Node.js学习小案例】DNS域名解析 <四></a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/05/28/node/node-dns-2/" rel="next">【Node.js学习小案例】DNS域名解析 <二></a>
+              <a href="/2015/09/24/go/go_crawldata_mysql_2/" rel="next">Go抓取网页数据并存入MySQL和返回json数据<二></a>
             
           </div>
         </div>
@@ -343,8 +312,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/05/28/node/node-dns-3/"
-                   data-title="【Node.js学习小案例】DNS域名解析 <三>" data-url="http://blog.helloarron.com/2015/05/28/node/node-dns-3/">
+              <div class="ds-thread" data-thread-key="2015/09/25/go/go_crawldata_mysql_3/"
+                   data-title="Go抓取网页数据并存入MySQL和返回json数据<三>" data-url="http://blog.helloarron.com/2015/09/25/go/go_crawldata_mysql_3/">
               </div>
             
           </div>
