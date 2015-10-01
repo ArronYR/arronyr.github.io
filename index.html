@@ -183,6 +183,99 @@ var _hmt = _hmt || [];
           
           
             
+              <a class="post-title-link" href="/2015/09/30/go/go_crawldata_mysql_4/" itemprop="url">
+                Go抓取网页数据并存入MySQL和返回json数据<四>
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-30T11:17:29+08:00" content="2015-09-30">
+            2015-09-30
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Go/" itemprop="url" rel="index">
+                  <span itemprop="name">Go</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/09/30/go/go_crawldata_mysql_4/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/30/go/go_crawldata_mysql_4/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+            上一节已将将需要的数据从网站http://www.gratisography.com/ 抓取并存入数据库【使用crawldata.go中的InsertData(&amp;imageDatas)函数】，现在需要将数据从数据库indiepic的表gratisography中取出并然会json格式的数据。
+项目文件夹结构如下：123456indiepic├── R
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/30/go/go_crawldata_mysql_4/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/25/go/go_crawldata_mysql_3/" itemprop="url">
                 Go抓取网页数据并存入MySQL和返回json数据<三>
               </a>
@@ -330,7 +423,7 @@ var _hmt = _hmt || [];
         
           <span itemprop="articleBody">
             
-            首先在入口文件中引入项目下的包crawldata,然后调用其中抓取数据的函数，暂时取名为Crawl:123456789101112package mainimport (	"fmt"	"indiepic/crawldata")func main () &#123;	// 使用crawldata包里面的Crawl()抓取需要的数据存到数据库	crawldata
+            上一节已经说明了要做什么，以及整个小程序的目录结构，接下来就开始编码部分。首先在入口文件中引入项目下的包crawldata,然后调用其中抓取数据的函数，暂时取名为Crawl:123456789101112package mainimport (	"fmt"	"indiepic/crawldata")func main () &#123;	// 使用crawl
             ...
           </span>
           <div class="post-more-link text-center">
@@ -424,8 +517,8 @@ var _hmt = _hmt || [];
             
             前言很久前就想学习GO，但是由于准备读研和要实习就一直耽搁没动手，只是偶尔看一下相关的基本语法，并没有将其具体地运用到实际的编码中。
 大四了，课程一下子少了很多，于是决定用它从网上抓一些图片数据，然后提供接口，为后面学习iOS提供一些网络数据。
-有关GO的介绍我就不在这里说了，对于我这种初学者本来说得就不清不楚，多给自己落下话柄。
-我要实现的功能主要有如下几
+有关GO的介绍我就不在这里说了，我这种初学者本来说得就不清不楚，多给自己落下话柄。
+我要实现的功能主要有如下几点：
             ...
           </span>
           <div class="post-more-link text-center">
@@ -730,102 +823,6 @@ var _hmt = _hmt || [];
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/05/28/node/node-dns-3/" itemprop="url">
-                【Node.js学习小案例】DNS域名解析 <三>
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-05-28T14:06:20+08:00" content="2015-05-28">
-            2015-05-28
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/NodeJS/" itemprop="url" rel="index">
-                  <span itemprop="name">NodeJS</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/05/28/node/node-dns-3/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/28/node/node-dns-3/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-            上一节我们已经完成了静态页面 index.html 的布局，这节我们开始服务器的编写。
-如同 php 那样脚本文件以 .php 为文件扩展名，NodeJS的脚本文件扩展名为 .js 。
-在这个例子中我们需要以下原生模块：
-
-http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当前 DNS 域名，返回 DNS 服务器 IP 地址fs 模块负责对文
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/05/28/node/node-dns-3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -864,7 +861,7 @@ http 模块负责 HTTP 服务器的创建dns 模块主要负责解析当前 DNS 
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">48</span>
+              <span class="site-state-item-count">49</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
