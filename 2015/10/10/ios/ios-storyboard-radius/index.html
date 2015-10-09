@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,Window," />
+  <meta name="keywords" content="Swift,iOS," />
 
 
 
@@ -37,37 +37,24 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Window对象的方法：
-alert()  弹出一个警告对话框  window.alert( message );
+<meta name="description" content="通过storyboard的 运行时属性runtime attribute,可以对Button设置圆角或者边框
 
-confirm()  弹出一个选择对话框  window.confirm( message );  return true || false
-
-prompt()  弹出一个供用户输入信息的对话框  window.prompt( message, defaultvalue );
-
-b">
+很多人都知道,通常设置一个 Button后者其他的UIView子类的圆角,需要使用如下的语句:123&amp;lt;span style=&quot;font-size:18px;&quot;&amp;gt;    self.button.layer.cornerRadius=10;  //即可&amp;lt;/span&amp;gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript Window 对象">
-<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/javascript/javascript-window/index.html">
+<meta property="og:title" content="使用Xcode Storyboard设置按钮圆角方法">
+<meta property="og:url" content="http://blog.helloarron.com/2015/10/10/ios/ios-storyboard-radius/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Window对象的方法：
-alert()  弹出一个警告对话框  window.alert( message );
+<meta property="og:description" content="通过storyboard的 运行时属性runtime attribute,可以对Button设置圆角或者边框
 
-confirm()  弹出一个选择对话框  window.confirm( message );  return true || false
-
-prompt()  弹出一个供用户输入信息的对话框  window.prompt( message, defaultvalue );
-
-b">
-<meta property="og:updated_time" content="2015-09-24T07:16:44.000Z">
+很多人都知道,通常设置一个 Button后者其他的UIView子类的圆角,需要使用如下的语句:123&amp;lt;span style=&quot;font-size:18px;&quot;&amp;gt;    self.button.layer.cornerRadius=10;  //即可&amp;lt;/span&amp;gt;">
+<meta property="og:image" content="http://img.blog.csdn.net/20150119231223651?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZ2JpbmdiaW5nYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:image" content="http://img.blog.csdn.net/20150119231629414?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZ2JpbmdiaW5nYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:updated_time" content="2015-10-09T14:14:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript Window 对象">
-<meta name="twitter:description" content="Window对象的方法：
-alert()  弹出一个警告对话框  window.alert( message );
+<meta name="twitter:title" content="使用Xcode Storyboard设置按钮圆角方法">
+<meta name="twitter:description" content="通过storyboard的 运行时属性runtime attribute,可以对Button设置圆角或者边框
 
-confirm()  弹出一个选择对话框  window.confirm( message );  return true || false
-
-prompt()  弹出一个供用户输入信息的对话框  window.prompt( message, defaultvalue );
-
-b">
+很多人都知道,通常设置一个 Button后者其他的UIView子类的圆角,需要使用如下的语句:123&amp;lt;span style=&quot;font-size:18px;&quot;&amp;gt;    self.button.layer.cornerRadius=10;  //即可&amp;lt;/span&amp;gt;">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -87,7 +74,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> JavaScript Window 对象 | Arron.y's blog </title>
+  <title> 使用Xcode Storyboard设置按钮圆角方法 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -203,7 +190,7 @@ var _hmt = _hmt || [];
           
           
             
-              JavaScript Window 对象
+              使用Xcode Storyboard设置按钮圆角方法
             
           
         </h1>
@@ -212,8 +199,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-01-19T01:34:22+08:00" content="2015-01-19">
-            2015-01-19
+          <time itemprop="dateCreated" datetime="2015-10-10T22:13:29+08:00" content="2015-10-10">
+            2015-10-10
           </time>
         </span>
 
@@ -222,8 +209,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                  <span itemprop="name">JavaScript</span>
+                <a href="/categories/iOS/" itemprop="url" rel="index">
+                  <span itemprop="name">iOS</span>
                 </a>
               </span>
 
@@ -238,8 +225,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/01/19/javascript/javascript-window/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/19/javascript/javascript-window/" itemprop="commentsCount"></span>
+              <a href="/2015/10/10/ios/ios-storyboard-radius/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/10/ios/ios-storyboard-radius/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -253,58 +240,24 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h4 id="Window对象的方法：">Window对象的方法：</h4><ul>
-<li><p>alert()<br>  弹出一个警告对话框<br>  window.alert( message );</p>
-</li>
-<li><p>confirm()<br>  弹出一个选择对话框<br>  window.confirm( message );<br>  return true || false</p>
-</li>
-<li><p>prompt()<br>  弹出一个供用户输入信息的对话框<br>  window.prompt( message, defaultvalue );</p>
-</li>
-<li><p>blur()<br>  是window 失去焦点<br>  window.blur();</p>
-</li>
-<li><p>focus()<br>  是窗口获得焦点，调用该方法后window 窗口将成为当前窗口<br>  window.focus();</p>
-</li>
-<li><p>setInterval()<br>  指定每隔多长时间执行指定代码一次<br>  window.setInterval( expression, msec[arg1, arg2, …]  );<br>  以毫秒为单位指定十佳间隔</p>
-</li>
-<li><p>clearInterval();</p>
-</li>
-<li><p>setTimeout()<br>  指定多长时间之后执行指定的代码<br>  window.setTimeout( expression, msec[arg1, arg2, …]  );<br>  以毫秒为单位指定十佳间隔</p>
-</li>
-<li><p>clearTimeout();</p>
-</li>
-<li><p>close()<br>  关闭window 窗口（系统会弹出一个提示框询问是否关门窗口）<br>  如果想要直接官迷窗口，而不出现询问对话框，可以在 close 方法之前先设置 window 对象的 opener 属性为 null<br>  ( window.opener = null )<br>  window.close();</p>
-</li>
-<li><p>open()<br>  打开一个新的窗口<br>  window.open( [sUrl], [sName], [sFeatures]  );</p>
+        <span itemprop="articleBody"><p>通过<code>storyboard</code>的 运行时属性<code>runtime attribute</code>,可以对<code>Button</code>设置<code>圆角</code>或者<code>边框</code></p>
 <ol>
-<li>sUrl  可选项，字符表达式，用于指定在新的窗口中显示的内容，如果没有指定测在窗口中显示的内容为空。</li>
-<li>sName  可选项，字符表达式，可以指定窗口的名称，另外该项与 HTML 的标签<target> 具有相同的作用，可以指定窗口的打开位置和类型<br>  _blank     指定的内容将被显示在一个新的、没有名字的窗口中<br>  _media    指定的内容将被显示在 HTML 文档的媒体工具中    &gt; IE 6.0<br>  _parent    指定的内容将被显示在当前框架的父框架中，如果没有父框架则该选型作用于_self 相同<br>  _search    指定的内容将被显示在 IE 的搜索面板中    &gt; 5.0<br>  _self         指定的内容将被显示在当前窗口中<br>  _top         指定的内容将被取代任何将被加载的框架集，如果当前页面没有定义任何框架则该选型作用与 _self 相同 </target></li>
-<li>sFeatures  可选项，用于指定新窗口的属性<br>  fullscreen    指定窗口是否全屏显示                 yes || no<br>  height        高度<br>  width         宽度<br>  left             指定距离屏幕左边的距离<br>  top             指定距离屏幕上方的距离<br>  location      指定窗口中是否显示地址栏         yes || no<br>  resizable     指定窗口是否可改变大小             yes || no<br>  scrollbars    指定是否在窗口中显示滚动条       yes || no<br>  status         指定窗口中显示状态栏                yes || no<br>  titlebar       指定是否在窗口中显示标题栏       yes || no<br>  toolbar       指定在窗口中是否显示工具栏        yes || no</li>
+<li>很多人都知道,通常设置一个 <code>Button</code>后者其他的<code>UIView</code>子类的圆角,需要使用如下的语句:<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"font-size:18px;"</span>&gt;</span></span><br><span class="line">    self.button.layer.cornerRadius=10;  //即可</span><br><span class="line"><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-</li>
-<li><p>moveBy()<br>  通过指定偏移量来移动窗口<br>  window.moveBy( ix, iy );</p>
-</li>
-<li><p>moveTo()<br>  移动窗口到指定坐标<br>  window.moveTo( xp, yp );</p>
-</li>
-<li><p>navigate()<br>  在当前窗口中加载指定页面<br>  window.navigate( sUrl );</p>
-</li>
-<li><p>resizeBy()<br>  通过指定窗口右下角坐标的偏移量来缩放窗口<br>  window.resizeBy( ix, iy );</p>
-</li>
-<li><p>resizeTo()<br>  通过指定窗口右下角的新坐标来改变窗口的大小<br>  window.resizeTo( ix, iy );</p>
-</li>
-<li><p>scrollBy()<br>  按给定的偏移量来滚动窗口中的内容<br>  window.scrollBy( ix, iy );</p>
-</li>
-<li><p>scrollTo()<br>  滚动窗口中内容到新的位置<br>  window.scrollTo( ix, iy );</p>
-</li>
-<li><p>showModalDialog()<br>  打开一个模式对话框以显示指定内容<br>  window.showModalDialog( sUrl, [vArguments], [sFeatures] );</p>
-<ol>
-<li>sUrl  必选项，用于指定在打开的模式对话框中显示的内容</li>
-<li>vArguments  可选项，任意类型的数据，这些数据将被传递到打开的对话框中，在对话框中可以使用 dialogArguments 属性来获取传递给对话框的数据</li>
-<li>sFeatures  可选项，字符串表达式，用于指定打开的对话框的属性<br>  dialogHeight    整型或者浮点型，用于指定打开的模式对话框的高度<br>  dialogWidth     整型或者浮点型，用于指定打开的模式对话框的宽度<br>  dialogLeft        整型或者浮点型，用于指定打开的模式对话框的距离屏幕左边的距离<br>  dialogTop        整型或者浮点型，用于指定打开的模式对话框的距离屏幕上边的距离<br>  center              用于指定对话框是否显示在屏幕中间，默认居中<br>  edge                用于指定对话框的边框的类型，可用值有两个 sunken || raised 默认为 raised<br>  help                 用于指定是否在对话框中显示与上下文相关的帮助图标，默认显示<br>  resizable           用于指定窗口大小是否可调，默认不可调<br>  scroll                用于指定是否在窗口中显示滚动条，默认显示<br>  status               用于指定是否在窗口中显示状态栏</li>
-</ol>
-</li>
-<li><p>showModallessDialog()<br>  打开一个非模式对话框以显示指定内容<br>  window.showModallessDialog( sUrl, [vArguments], [sFeatures] );</p>
-</li>
+<ul>
+<li>说明:这会用到<code>layer</code>图层的属性来实现,原因是在一个 <code>UIView</code>子类中</li>
 </ul>
+<p><code>UIView</code>本身只是用来监听事件,而真正显示内容的是<code>layer</code>图层,这当然也包含动画的实现,比如我们对一个<code>view</code>做动画，实际上也是对<code>layer</code>做的动画。</p>
+<ol>
+<li>总有一些有好奇心的人想知道如何通过,<code>storyboard/xib</code> 设置 一个<code>button</code>或者<code>UIView</code>的圆角，可以设置<code>storybord</code>无法添加的属性,比如圆角,或者边框，这个方法就是<code>runtime Attribute</code>运行时属性,也就是在 运行时你设置的这个属性才会起作用,这样体现了<code>oc</code>语言的动态特性和运行时<code>(runtime)</code>的强大。</li>
+</ol>
+<h3 id="Use">Use</h3><p>创建一个<code>button</code>然后,设置好约束(以免Button”消失”),如下图,然后选中<code>button</code> 选择右边的<code>inspector</code>:</p>
+<p><img src="http://img.blog.csdn.net/20150119231223651?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZ2JpbmdiaW5nYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="enter image description here"></p>
+<p>如上图,点击<code>+</code>号即可添加  一个<code>Button</code>相关的属性,这个属性,可以是在<code>storyboard</code>上没有的属性,此方法类似于代码的效果,每一个属性都有与之对应的值(对象),</p>
+<p>如数字对应的值类型是  <code>NSNumber</code>,如下图,填入到<code>runtime attrite</code>中的属性名不要写错,否则运行时会崩溃。</p>
+<p><img src="http://img.blog.csdn.net/20150119231629414?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZ2JpbmdiaW5nYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="enter image description here"></p>
+<p>最终在模拟器上可以看到你想要的圆角啦。类似的你可以添加button的其他属性。</p>
 </span>
       
     </div>
@@ -313,9 +266,9 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+            <a href="/tags/Swift/" rel="tag">#Swift</a>
           
-            <a href="/tags/Window/" rel="tag">#Window</a>
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
         </div>
       
@@ -324,13 +277,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/01/19/javascript/javascript-window-sub/" rel="prev">JavaScript Window 对象的子对象</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/01/19/javascript/javascript-weixin-share/" rel="next">微信分享网页的缩略图-链接-标题和摘要</a>
+              <a href="/2015/10/10/ios/ios-notification-alert/" rel="next">系统Alert提示</a>
             
           </div>
         </div>
@@ -378,8 +329,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/01/19/javascript/javascript-window/"
-                   data-title="JavaScript Window 对象" data-url="http://blog.helloarron.com/2015/01/19/javascript/javascript-window/">
+              <div class="ds-thread" data-thread-key="2015/10/10/ios/ios-storyboard-radius/"
+                   data-title="使用Xcode Storyboard设置按钮圆角方法" data-url="http://blog.helloarron.com/2015/10/10/ios/ios-storyboard-radius/">
               </div>
             
           </div>
@@ -486,7 +437,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Window对象的方法："><span class="nav-number">1.</span> <span class="nav-text">Window对象的方法：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use"><span class="nav-number">1.</span> <span class="nav-text">Use</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
