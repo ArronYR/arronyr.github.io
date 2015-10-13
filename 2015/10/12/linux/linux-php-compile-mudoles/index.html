@@ -45,7 +45,7 @@
 <meta property="og:site_name" content="Arron.y's blog">
 <meta property="og:description" content="在Ubuntu服务器上使用源码编译安装php5.5.6之后，运行时发现缺少pdo_mysql扩展。搜索了很多最终尝试着搞定了。
 首先下载源码解压，目录如：/var/www/php-5.5.6,安装时执行：1# ./configure --prefix=/usr/local/php-5.5.6 --with-apxs2=/usr/bin/apxs2 --with-libxml-dir=/usr/in">
-<meta property="og:updated_time" content="2015-10-13T08:08:34.000Z">
+<meta property="og:updated_time" content="2015-10-13T11:02:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu安装php5.5.6编译扩展模块">
 <meta name="twitter:description" content="在Ubuntu服务器上使用源码编译安装php5.5.6之后，运行时发现缺少pdo_mysql扩展。搜索了很多最终尝试着搞定了。
@@ -289,7 +289,8 @@ var _hmt = _hmt || [];
 <li>同样的道理编译<code>mysqli</code>,不同的是<code>.configure</code>配置的时候不一样：<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># .<span class="regexp">/configure --with-php-config=/u</span>sr<span class="regexp">/local/</span>php<span class="regexp">/bin/</span>php-config --with-mysqli=<span class="regexp">/usr/</span>bin<span class="regexp">/mysql_config</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h1 id="最后都是要重启Apache的。">最后都是要重启<code>Apache</code>的。</h1><p>错误解决：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># make: *** [pdo_mysql.lo] Error <span class="number">1</span></span></span><br></pre></td></tr></table></figure></p>
+<p>最后都是要重启<code>Apache</code>的。</p>
+<p>===<br>错误解决：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># make: *** [pdo_mysql.lo] Error <span class="number">1</span></span></span><br></pre></td></tr></table></figure></p>
 <p>这是因为这是因为在编译时需要<code>MySQL</code>的头的文件。而它按默认搜索找不到头文件的位置，所以才出现这个问题。通过软连接把<code>MySQL</code>头文件对应到<code>/usr/local/include/</code>下就好<br>比如你的MySQL安装文件位于<code>/usr/local/mysql</code>，那么就执行以下命令：<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># ln -s /usr/local/mysql/<span class="keyword">include</span>/* /usr/local/<span class="keyword">include</span>/</span></span><br></pre></td></tr></table></figure></p>
 </span>
       
@@ -470,7 +471,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最后都是要重启Apache的。"><span class="nav-number">1.</span> <span class="nav-text">最后都是要重启Apache的。</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
