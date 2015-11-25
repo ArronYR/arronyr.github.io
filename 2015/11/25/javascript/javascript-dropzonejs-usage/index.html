@@ -1,0 +1,767 @@
+<!doctype html>
+<html class="theme-next use-motion ">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="志向和热爱是伟大行为的双翼，learning ..." />
+
+
+
+  <meta name="keywords" content="DropzoneJS,JavaScript," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="官方文档：http://www.dropzonejs.com/Github: https://github.com/enyo/dropzone
+
+DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews.
+It’s lightweight, doesn’t depe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DropzoneJS 使用指南">
+<meta property="og:url" content="http://blog.helloarron.com/2015/11/25/javascript/javascript-dropzonejs-usage/index.html">
+<meta property="og:site_name" content="Arron.y's blog">
+<meta property="og:description" content="官方文档：http://www.dropzonejs.com/Github: https://github.com/enyo/dropzone
+
+DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews.
+It’s lightweight, doesn’t depe">
+<meta property="og:updated_time" content="2015-11-25T04:19:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DropzoneJS 使用指南">
+<meta name="twitter:description" content="官方文档：http://www.dropzonejs.com/Github: https://github.com/enyo/dropzone
+
+DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews.
+It’s lightweight, doesn’t depe">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post'
+  };
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  <title> DropzoneJS 使用指南 | Arron.y's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Arron.y's blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              DropzoneJS 使用指南
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-25T10:41:13+08:00" content="2015-11-25">
+            2015-11-25
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                  <span itemprop="name">JavaScript</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/25/javascript/javascript-dropzonejs-usage/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/25/javascript/javascript-dropzonejs-usage/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>官方文档：<a href="http://www.dropzonejs.com/" target="_blank" rel="external">http://www.dropzonejs.com/</a><br>Github: <a href="https://github.com/enyo/dropzone" target="_blank" rel="external">https://github.com/enyo/dropzone</a></p>
+<blockquote>
+<p>DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews.</p>
+<p>It’s lightweight, doesn’t depend on any other library (like jQuery) and is highly customizable.</p>
+</blockquote>
+<h2 id="Installation">Installation</h2><h2 id="Usage">Usage</h2><h2 id="Configuration">Configuration</h2><h2 id="Events">Events</h2><h2 id="Tips">Tips</h2><p>如果你不想要默认消息提示(拖拽文件上传(或单击)),您可以在你<code>dropzone</code>元素内添加一个元素包含类<code>dz-message</code>，这样<code>dropzone</code>就不会为您创建的消息。</p>
+<hr>
+<p>Dropzone 或提交你设置的<code>form</code>内的所有隐藏的表单域信息。所以当你是使用<code>form</code>元素的形式的话，这是一个简单的方法来提交额外的数据，至于是<code>get</code>还是<code>post</code>取决于你<code>form</code>的<code>method</code>。当然也可以在js配置中添加其他的参数。</p>
+<hr>
+<p>当事件绑定完成之后，Dropzone 会添加数据到<code>file</code>对象。如果是<code>image</code>的话，你可以通过<code>file.width</code> 和 <code>file.height</code>访问到图片的宽度和高度。而且<code>file.upload</code>对象会包含如下信息：<code>progress</code> (0-100), <code>total</code> (总字节) and <code>bytesSent</code>（已上传字节）。这样你可以通过这写信息自定义上传进度条等。</p>
+<hr>
+<p>如果你想给上传的文件添加额外（多个文件时会具体到每个文件）,您可以注册发送事件：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">myDropzone.on(<span class="string">"sending"</span>, function(<span class="keyword">file</span>, xhr, formData) &#123;</span><br><span class="line">  <span class="comment">// Will send the filesize along with the file as POST data.</span></span><br><span class="line">  formData.<span class="keyword">append</span>(<span class="string">"filesize"</span>, <span class="keyword">file</span>.<span class="keyword">size</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>文件上传之后，可以通过<code>file.previewElement</code>访问上传后文件的预览html。例如：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">myDropzone.<span class="keyword">on</span>(<span class="string">"addedfile"</span>, <span class="function"><span class="keyword">function</span><span class="params">(file)</span> &#123;</span></span><br><span class="line">  <span class="keyword">file</span>.previewElement.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> &#123;</span></span><br><span class="line">    myDropzone.removeFile(<span class="keyword">file</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>如果你想整个的<code>body</code>都是一个<code>Dropzone</code>实例而且在某个地方显示文件预览，那你可以简单地为<code>body</code>实例化一个Dropzone对象，提示定义<code>previewsContainer</code> 选项。这个<code>previewsContainer</code>可以是<code>dropzone-previews</code>或<code>dropzone</code>类，以便正确显示文件预览：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">new</span> <span class="tag">Dropzone</span>(document.body, &#123;</span><br><span class="line">  <span class="attribute">previewsContainer</span>: <span class="string">".dropzone-previews"</span>,</span><br><span class="line">  <span class="comment">// You probably don't want the whole body</span></span><br><span class="line">  <span class="comment">// to be clickable to select files</span></span><br><span class="line">  <span class="attribute">clickable</span>: false</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>可以在<a href="https://github.com/enyo/dropzone/wiki" target="_blank" rel="external">github wiki</a>寻找更多的例子。</p>
+<h2 id="兼容性">兼容性</h2><p>本节描述Dropzone兼容浏览器和旧版本。</p>
+<h4 id="浏览器支持:">浏览器支持:</h4><ul>
+<li>Chrome 7+</li>
+<li>Firefox 4+</li>
+<li>IE 10+</li>
+<li>Opera 12+ (MacOS V12版本无法使用，因为它的API有问题)</li>
+<li>Safari 6+</li>
+</ul>
+<p>对于所有其他浏览器,dropzone提供一个版的文件输入回退。<br>在老式浏览器中<code>拖放</code>是没有解决方案，毕竟它不支持嘛~~,其次dropzone的图片预览也是同样的道理。<br>但是，用户使用老式浏览器还是可以上传文件滴，只是看起来和感觉起来都不是很棒。<br>哎,年代已经不属于它们了。</p>
+<h4 id="Version_4-0">Version 4.0</h4><p><small><i>这不是一个更新日志。只列出兼容性问题。</i></small></p>
+<ul>
+<li>改变默认<a href="#config-previewTemplate">previewTemplate</a>。布局做了新调整<a href="#layout">layout sectin</a>.</li>
+<li>使用SVG代替PNG spritemap(CSS文件现在唯一需要包括的附加文件)</li>
+</ul>
+<h4 id="Version_3-0">Version 3.0</h4><p><small><i>这不是一个更新日志。只列出兼容性问题。</i></small></p>
+<h4 id="Version_2-0">Version 2.0</h4><p><small><i>这不是一个更新日志。只列出兼容性问题。</i></small></p>
+<p>从2.0版本开始,Dropzone不再依赖jQuery,如果使用了jQuery，Dropzone 通过jQuery模块的形式加载自身。<br>这意味着创建Dropzones这样仍能工作：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$(</span><span class="string">"#my-dropzone"</span>).dropzone(&#123; <span class="regexp">/* options */</span> &#125;);</span><br></pre></td></tr></table></figure></p>
+<p>如果你通过普通构造函数的形式创建Dropzones,你必须通过原始HTMLElement,或者一个选择器字符串选择相应的元素，这样该版本才能运行：<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// With jQuery</span></span><br><span class="line"><span class="keyword">new</span> Dropzone($(<span class="string">"#my-dropzone"</span>).<span class="literal">get</span>(<span class="number">0</span>));</span><br><span class="line"><span class="comment">// Without jQuery</span></span><br><span class="line"><span class="keyword">new</span> Dropzone(<span class="string">"#my-dropzone"</span>);</span><br><span class="line"><span class="keyword">new</span> Dropzone(<span class="built_in">document</span>.<span class="built_in">querySelector</span>(<span class="string">"#my-dropzone"</span>));</span><br></pre></td></tr></table></figure></p>
+<p>另外一个改变就是，Dropzone不再存储实例内部元素的数据属性。为了得到一个dropzone元素这样做了：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DEPRECATED, do not use:</span></span><br><span class="line">$<span class="params">(<span class="string">"#my-dropzone"</span>)</span>.data<span class="params">(<span class="string">"dropzone"</span>)</span>; <span class="comment">// won't work anymore</span></span><br><span class="line"><span class="comment">// Do this now:</span></span><br><span class="line">Dropzone.forElement<span class="params">(element)</span>; <span class="comment">// Providing a raw HTMLElement</span></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">Dropzone.forElement<span class="params">(<span class="string">"#my-dropzone"</span>)</span>; <span class="comment">// Providing a selector string.</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="About_me">About me</h2><p>博客: <a href="http://blog.helloarron.com">http://blog.helloarron.com</a><br>Github: <a href="https://github.com/ArronYR" target="_blank" rel="external">https://github.com/ArronYR</a><br>Email: yangyun4814@gmail.com</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DropzoneJS/" rel="tag">#DropzoneJS</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/25/javascript/javascript-dropzonejs-usage/" rel="prev"></a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/28/javascript/jquery-checkbox-prop/" rel="next">jQuery 1.6+ 解决 checkbox 属性判断</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/11/25/javascript/javascript-dropzonejs-usage/"
+                   data-title="DropzoneJS 使用指南" data-url="http://blog.helloarron.com/2015/11/25/javascript/javascript-dropzonejs-usage/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/7171192?v=3&s=460" alt="Arron.y" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Arron.y</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">志向和热爱是伟大行为的双翼，learning ...</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">56</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">42</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://helloarron.com/" target="_blank">主页</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ArronYR" target="_blank">Github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/arron0718" target="_blank">新浪微博</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.suosikeji.com/" target="_blank">索思科技协会</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://lvwenhan.com/" target="_blank">岁寒</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation"><span class="nav-number">1.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Usage"><span class="nav-number">2.</span> <span class="nav-text">Usage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configuration"><span class="nav-number">3.</span> <span class="nav-text">Configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Events"><span class="nav-number">4.</span> <span class="nav-text">Events</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tips"><span class="nav-number">5.</span> <span class="nav-text">Tips</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兼容性"><span class="nav-number">6.</span> <span class="nav-text">兼容性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器支持:"><span class="nav-number">6.0.1.</span> <span class="nav-text">浏览器支持:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Version_4-0"><span class="nav-number">6.0.2.</span> <span class="nav-text">Version 4.0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Version_3-0"><span class="nav-number">6.0.3.</span> <span class="nav-text">Version 3.0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Version_2-0"><span class="nav-number">6.0.4.</span> <span class="nav-text">Version 2.0</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About_me"><span class="nav-number">7.</span> <span class="nav-text">About me</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Arron.y</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"arronblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = 0
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
