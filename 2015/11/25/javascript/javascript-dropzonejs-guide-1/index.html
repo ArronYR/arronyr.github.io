@@ -1,0 +1,815 @@
+<!doctype html>
+<html class="theme-next use-motion ">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="志向和热爱是伟大行为的双翼，learning ..." />
+
+
+
+  <meta name="keywords" content="DropzoneJS,JavaScript," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="官方文档：http://www.dropzonejs.com/Github: https://github.com/enyo/dropzone
+
+DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews.
+It’s lightweight, doesn’t depe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DropzoneJS 使用指南<一>">
+<meta property="og:url" content="http://blog.helloarron.com/2015/11/25/javascript/javascript-dropzonejs-guide-1/index.html">
+<meta property="og:site_name" content="Arron.y's blog">
+<meta property="og:description" content="官方文档：http://www.dropzonejs.com/Github: https://github.com/enyo/dropzone
+
+DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews.
+It’s lightweight, doesn’t depe">
+<meta property="og:updated_time" content="2015-11-25T12:00:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DropzoneJS 使用指南<一>">
+<meta name="twitter:description" content="官方文档：http://www.dropzonejs.com/Github: https://github.com/enyo/dropzone
+
+DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews.
+It’s lightweight, doesn’t depe">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post'
+  };
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  <title> DropzoneJS 使用指南<一> | Arron.y's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Arron.y's blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              DropzoneJS 使用指南<一>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-25T10:41:13+08:00" content="2015-11-25">
+            2015-11-25
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                  <span itemprop="name">JavaScript</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/25/javascript/javascript-dropzonejs-guide-1/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/25/javascript/javascript-dropzonejs-guide-1/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>官方文档：<a href="http://www.dropzonejs.com/" target="_blank" rel="external">http://www.dropzonejs.com/</a><br>Github: <a href="https://github.com/enyo/dropzone" target="_blank" rel="external">https://github.com/enyo/dropzone</a></p>
+<blockquote>
+<p>DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews.</p>
+<p>It’s lightweight, doesn’t depend on any other library (like jQuery) and is highly customizable.</p>
+</blockquote>
+<h2 id="安装">安装</h2><p>你可能只需要看看简单的<a href="http://www.dropzonejs.com/examples/simple.html" target="_blank" rel="external">例子</a>( <a href="https://github.com/enyo/dropzone/blob/gh-pages/examples/simple.html" target="_blank" rel="external">源代码</a> )就能开始了。然后继续阅读下面的一步步的指示和不同的安装方法。</p>
+<p>下载独立的<a href="https://raw.github.com/enyo/dropzone/master/dist/dropzone.js" target="_blank" rel="external">dropzone.js</a>文件。然后这样引入到html中：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./path/to/dropzone.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>Dropzone 现在激活和可用,通过<code>window.Dropzone</code>就可以使用了。</p>
+<blockquote>
+<p>Dropzone不处理你的文件上传在服务器上。你必须自己实现代码接收和存储文件。有关更多信息,请参见部分<a href="#服务器端实现">服务器端实现</a>。</p>
+</blockquote>
+<p>完成上面的操作就可以使用 Dropzone ，但是如果你想让它你上传的样式看起来像<a href="http://www.dropzonejs.com/" target="_blank" rel="external">官方</a>页面那样,你需要将下载的dropzones里面的cs发到你的文件夹中并引入。</p>
+<h4 id="With_component">With component</h4><p>如果你使用<a href="https://github.com/component/component" target="_blank" rel="external">component</a>,你只需添加dropzone依赖：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"enyo/dropzone"</span>: <span class="string">"*"</span></span><br></pre></td></tr></table></figure></p>
+<p>然后这样引入：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Dropzone = <span class="built_in">require</span>(<span class="string">"dropzone"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>现在它已激活，并可以在页面中使用。<br>基本的CSS样式也包含在组件中，如果你想让它你上传的样式看起来像<a href="http://www.dropzonejs.com/" target="_blank" rel="external">官方</a>页面那样,你需要将下载的dropzones里面的cs发到你的文件夹中并引入。</p>
+<h4 id="With_RequireJS">With RequireJS</h4><p>Dropzone 同样为<a href="http://requirejs.org/" target="_blank" rel="external">RequireJS</a>提供了<a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank" rel="external">AMD</a>模块。</p>
+<p>你可以在下载的文件夹中找到<a href="https://raw.github.com/enyo/dropzone/master/dist/dropzone-amd-module.js" target="_blank" rel="external">dropzone-amd-module</a>。</p>
+<h2 id="使用">使用</h2><p>使用 dropzone 的典型的方式是通过创建一个表单包含与<code>class=&quot;dropzone&quot;</code>:<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">form</span> action=<span class="string">"/file-upload"</span> <span class="keyword">class</span>=<span class="string">"dropzone"</span> id=<span class="string">"my-awesome-dropzone"</span>&gt;</span><br><span class="line">    &lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"file"</span> name=<span class="string">"file"</span> /&gt;</span><br><span class="line">&lt;/<span class="keyword">form</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>就像这样。dropzone 会通过<code>class</code>为<code>dropzone</code>找到所有的表单元素，并自动将这些元素初始化，然后点击<code>input</code>选择文件(或拖拽)之后会根据<code>action</code>指定的地址上传文件。(其实就和普通的文件上传没什么区别，只不过多了个拖拽)</p>
+<p>如果你想在后端接受文件的时候用其他的<code>name</code>而不是上面指定的<code>file</code>，您可以配置dropzone的<a href="#配置选项">paramName</a>的选项。</p>
+<p>如果你是使用<code>component</code>形式，别忘了<code>require(&quot;dropzone&quot;);</code>,否则是不会生效的。</p>
+<p>如果是使用form表单，完成上面的设置之后，就已经可以拖拽上传了，所以如果你不想在写一些js去控制上传中的其他东西，比如进度条、预览区域等，可以在form内加一个包含<code>fallback</code>类的标签，dropzone 会自己处理<code>fallback</code>类的标签区域，当然这是需要浏览器支持。如果浏览器不支持，那么那就将其作为普通的文件上传。<br>这通常是这样的：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">"/file-upload"</span> <span class="class"><span class="keyword">class</span>=</span><span class="string">"dropzone"</span>&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span>=</span><span class="string">"fallback"</span>&gt;</span><br><span class="line">    &lt;input name=<span class="string">"file"</span> <span class="class"><span class="keyword">type</span>=</span><span class="string">"file"</span> multiple /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="手动创建dropzones">手动创建dropzones</h4><p>除了直接在form表单中添加<code>class</code>为<code>dropzone</code>让其自动创建外，还可以在非表单元素上面通过实例化Dropzone类实现。<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> id=<span class="string">"myId"</span> style=<span class="string">"width: 800px; height: 300px;"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line"><span class="comment">// Dropzone class:</span></span><br><span class="line">var myDropzone = <span class="keyword">new</span> Dropzone(<span class="string">"div#myId"</span>, &#123; url: <span class="string">"/file/post"</span>&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>或如果您使用jQuery,您可以使用jQuery插件Dropzone形式：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jQuery</span></span><br><span class="line">$<span class="params">(<span class="string">"div#myId"</span>)</span>.dropzone<span class="params">(&#123; url: <span class="string">"/file/post"</span> &#125;)</span>;</span><br></pre></td></tr></table></figure></p>
+<p><strong> <span style="color: red">注意：如果你不是使用一个表单元素,别忘了指定一个url选项,因为Dropzone不知道上传到那里。</span> </strong></p>
+<h4 id="服务器端实现">服务器端实现</h4><p>Dropzone 不提供的服务器端文件处理的代码,但是文件上传的方式是和简单的表单文件上传是相同的。比如普通的表单上传是这样：<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">""</span> <span class="keyword">method</span>=<span class="string">"post"</span> enctype=<span class="string">"multipart/form-data"</span>&gt;</span><br><span class="line">  &lt;input <span class="keyword">type</span>=<span class="string">"file"</span> name=<span class="string">"file"</span> /&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></p>
+<p>掌握基本的服务器上的文件上传,请查看各种语言相应的文档。这里有一些基本的实现文件：</p>
+<ul>
+<li><a href="http://www.cantangosolutions.com/blog/Easy-File-Upload-Using-DropzoneJS-AngularJs-And-Spring" target="_blank" rel="external">AngularJS and Spring</a></li>
+<li><a href="http://howtonode.org/really-simple-file-uploads" target="_blank" rel="external">NodeJS with express</a></li>
+<li><a href="http://guides.rubyonrails.org/form_helpers.html#uploading-files" target="_blank" rel="external">Ruby on rails</a></li>
+<li><a href="http://www.startutorial.com/articles/view/how-to-build-a-file-upload-form-using-dropzonejs-and-php" target="_blank" rel="external">Complete PHP</a> tutorial by startutorial.com</li>
+<li><a href="http://www.php.net/manual/en/features.file-upload.post-method.php#example-354" target="_blank" rel="external">Basic PHP file upload</a></li>
+<li><a href="http://maxoffsky.com/code-blog/howto-ajax-multiple-file-upload-in-laravel/" target="_blank" rel="external">Tutorial for Dropzone and Lavarel (PHP)</a> written by Maksim Surguy</li>
+<li><a href="http://www.jesuisundev.fr/upload-drag-drop-via-dropzonejs-symfony2-on-cloud-amazon-s3/" target="_blank" rel="external">Symfony2 and Amazon S3</a></li>
+<li><a href="http://venkatbaggu.com/file-upload-in-asp-net-mvc-using-dropzone-js-and-html5/" target="_blank" rel="external">File upload in ASP.NET MVC using Dropzone JS and HTML5</a></li>
+</ul>
+<p>付费的文档：</p>
+<ul>
+<li><a href="http://www.startutorial.com/homes/dropzonejs_php_the_complete_guide?utm_source=dzj&amp;utm_medium=banner&amp;utm_campaign=dropzonejs" target="_blank" rel="external">eBook for Dropzone with PHP</a> by startutorial.com.</li>
+</ul>
+<p>如果你需要更多的信息,请看看<a href="https://github.com/enyo/dropzone/wiki/FAQ" target="_blank" rel="external">Dropzone FAQ</a>。</p>
+<h2 id="配置">配置</h2><p>有两种方式配置 dropzone：</p>
+<h6 id="方法一：">方法一：</h6><p>在html元素上添加<code>dropzone</code> 样式类，然后就不需要手动使用js去实例化了，但是你的一些配置<code>Dropzone.options</code>对象去配置：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// "myAwesomeDropzone" 是那个 HTML 元素的 ID</span></span><br><span class="line"><span class="comment">// 这里的id不是驼峰格式，是以`-`为分隔，如 id="my-awesome-dropzone"</span></span><br><span class="line">Dropzone.options.myAwesomeDropzone = &#123;</span><br><span class="line">  paramName: <span class="string">"file"</span>, <span class="comment">// The name that will be used to transfer the file</span></span><br><span class="line">  maxFilesize: <span class="number">2</span>, <span class="comment">// MB</span></span><br><span class="line">  accept: <span class="function"><span class="keyword">function</span><span class="params">(file, done)</span> &#123;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="params">(file.name == <span class="string">"justinbieber.jpg"</span>)</span> &#123;</span><br><span class="line">      done<span class="params">(<span class="string">"Naha, you don't."</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123; done<span class="params">()</span>; &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h6 id="方法二：">方法二：</h6><p>最明显的方式是通过一个选择对象时实例化一个dropzone，以前面<a href="#手动创建dropzones">手动创建dropzones</a>的方式。</p>
+<h6 id="常用方法：">常用方法：</h6><p>因为我们需要使用dropzone提供的一些样式，比如预览时图片样式等，这样就算手动创建，但也需要使用到<code>dropzone</code> 样式类，那这样就会导致初始化两次，在控制台就会报错，这时候就需要在手动初始化之前设置如下代码：<br><figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Prevent Dropzone from auto discovering this element:</span></span><br><span class="line"><span class="constant">Dropzone.options.myAwesomeDropzone</span> = <span class="literal">false</span>;</span><br><span class="line"><span class="comment">// This is useful when you want to create the</span></span><br><span class="line"><span class="comment">// Dropzone programmatically later</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Disable auto discover for all elements:</span></span><br><span class="line"><span class="constant">Dropzone.autoDiscover</span> = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure></p>
+<p>例子：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dropzone"</span> <span class="attribute">id</span>=<span class="value">"myDropzone"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"am-text-success dz-message"</span>&gt;</span></span><br><span class="line">        将文件拖拽到此处<span class="tag">&lt;<span class="title">br</span>&gt;</span>或点此打开文件管理器选择文件</span><br><span class="line">    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    Dropzone.autoDiscover = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">var</span> myDropzone = <span class="keyword">new</span> Dropzone(<span class="string">"#myDropzone"</span>, &#123;</span><br><span class="line">        url: <span class="string">"/file/upload"</span>,</span><br><span class="line">        addRemoveLinks: <span class="literal">true</span>,</span><br><span class="line">        method: <span class="string">'post'</span>,</span><br><span class="line">        filesizeBase: <span class="number">1024</span>,</span><br><span class="line">        sending: <span class="function"><span class="keyword">function</span>(<span class="params">file, xhr, formData</span>) </span>&#123;</span><br><span class="line">            formData.append(<span class="string">"filesize"</span>, file.size);</span><br><span class="line">        &#125;,</span><br><span class="line">        success: <span class="function"><span class="keyword">function</span> (<span class="params">file, response, e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> res = <span class="built_in">JSON</span>.parse(response);</span><br><span class="line">            <span class="keyword">if</span> (res.error) &#123;</span><br><span class="line">                $(file.previewTemplate).children(<span class="string">'.dz-error-mark'</span>).css(<span class="string">'opacity'</span>, <span class="string">'1'</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>像上面这样，既能使用 dropzone 的样式，也能自己手动初始化上传。</p>
+<h4 id="配置选项">配置选项</h4><table><tr><th>参数</th><th>描述</th></tr><tr><td id="config-url">url</td><td>除了form元素以外的其他元素必须指定该参数(或当form元素没有操作属性)。您还可以提供一个函数,参数为<code>files</code>以及必须返回url(since v3.12.0)</td></tr><tr><td id="config-method">method</td><td>默认为”post”,必要的时候你也可以设置为”put”。 您还可以提供一个函数,参数为<code>files</code>以及必须返回这个method(since v3.12.0)</td></tr><tr><td id="config-parallelUploads">parallelUploads</td><td>同时上传多少个文件。(更多信息参见队列文件上传部分)</td></tr><tr><td id="config-maxFilesize">maxFilesize</td><td>单位 MB</td></tr><tr><td id="config-filesizeBase">filesizeBase</td><td>默认1000。这个定义的基础是否应该使用1000或1024来计算文件大小。1000是有效的,因为1000个字节等于1千字节,1024字节= 1 Kibibyte。你可以改变为1024，如果你不在乎的有效性。</td></tr><tr><td id="config-paramName">paramName</td><td>文件上传后端接收的参数名。默认<code>file</code>。注意:如果你设置uploadMultiple为true,那么Dropzone会将[]附加到这个名字，也就是后端接收的是一个file[]数组。</td></tr><tr><td id="config-uploadMultiple">uploadMultiple</td><td>Dropzone是否在一个请求中发送多个文件。如果它设置为true,然后<code>fallback</code>部分的<code>input</code>元素须有<code>multiple</code>属性。这个选项也会触发其他事件(如<code>processingmultiple</code>)。有关更多信息,请参见事件部分。</td></tr><tr><td id="config-headers">headers</td><td>一个向服务器发送附加头的对象。如:<code>headers: { &quot;My-Awesome-Header&quot;: &quot;header value&quot; }</code></td></tr><tr><td id="config-addRemoveLinks">addRemoveLinks</td><td>这将添加一个链接到每个文件，删除或取消预览文件(如果已经上传)。<code>dictCancelUpload</code>, <code>dictCancelUploadConfirmation</code> and <code>dictRemoveFile</code>三个参数可选。</td></tr><tr><td id="config-previewsContainer">previewsContainer</td><td>定义文件预览显示。如果为<code>null</code>就使用 Dropzone 默认的。可以使用一段普通的html元素或css选择器。被选择的html元素必须包含<code>dropzone-previews</code>样式类确保预览显示正常。</td></tr><tr><td id="config-clickable">clickable</td><td>如果为<code>true</code>,dropzone元素本身将是可点击的,如果<code>false</code>将不可被点击。此外，还可以是一段普通的html或者css选择器，表示点击该元素触发资源管理器。</td></tr><tr><td id="config-createImageThumbnails">createImageThumbnails</td><td></td></tr><tr><td id="config-maxThumbnailFilesize">maxThumbnailFilesize</td><td>单位 MB。文件名超过这个极限时,缩略图将不会生成。</td></tr><tr><td id="config-thumbnailWidth">thumbnailWidth</td><td>如果为<code>null</code>,将使用图像的比例来计算它。</td></tr><tr><td id="config-thumbnailHeight">thumbnailHeight</td><td>与<code>thumbnailWidth</code>一样。如果两者都是null,图像将不会调整。</td></tr><tr><td id="config-maxFiles">maxFiles</td><td>如果不为<code>null</code>,定义多少个文件将被处理。如果超过,事件<code>maxfilesexceeded</code>将被调用。相应地dropzone元素得到了类<code>dz-max—files-reached</code>，因此你可以提供视觉反馈。</td></tr><tr><td id="config-resize">resize</td><td>创建调整信息时被调用的函数。<code>file</code>作为函数第一个参数，同时必须返回一个对象包含<code>srcX</code>, <code>srcY</code>, <code>srcWidth</code> 、<code>srcHeight</code> 和相同的 <code>trg*</code>。这些值将被用于<code>ctx.drawImage()</code>函数。</td></tr><tr><td id="config-init">init</td><td>Dropzone初始化时调用的函数。你能在这个函数中设置事件侦听器。</td></tr><tr><td id="config-acceptedFiles">acceptedFiles</td><td><code>accept</code>函数默认的实现函数，用于检查文件的mime类型或扩展。这是一个逗号分隔的mime类型和文件扩展名的数组。如。<code>image/*,application/pdf,.psd</code>。如果Dropzone是<code>clickable</code>,此选项将被用作<code>accept</code>函数的参数输入。</td></tr><tr><td id="config-accept">accept</td><td>一个接收<code>file</code>和<code>done</code>函数作为参数输入的函数。如果<code>done</code>函数调用无参数,文件会被处理。如果你在<code>done</code>函数中传入了参数(比如错误信息)文件将不会被上传。如果文件太大或不匹配的mime类型这个函数不会调用。</td></tr><tr><td id="config-autoProcessQueue">autoProcessQueue</td><td>当设置为false,你必须自身调用<code>myDropzone.processQueue()</code>上传文件。有关更多信息,请参见下面有关处理队列。</td></tr><tr><td id="config-previewTemplate">previewTemplate</td><td>一个字符串,其中包含模板用于每一个图像。改变它满足你的需求,但确保正确地提供所有元素。你可以在页面中建立这样一个容器:<code>id=&quot;preview-template&quot;</code>(设置style=”display: none;”),然后这样设置：<code>previewTemplate: document.querySelector(&#39;preview-template&#39;).innerHTML</code>。</td></tr><tr><td id="config-forceFallback">forceFallback</td><td>默认值为false。如果为true,<code>fallback</code>将被强行使用。这是非常有用的测试服务器实现首要方式,确保一切如预期所想，并测试你的<code>fallback</code>显示如何。</td></tr><tr><td id="config-fallback">fallback</td><td>当浏览器不支持时调用的函数。默认实现显示了<code>fallback</code>内的<code>input</code>域并添加一个文本。</td></tr><tr><td colspan="2">为自定义的 dropzone,你也可以使用如下这些选项</td></tr><tr><td id="config-dictDefaultMessage">dictDefaultMessage</td><td>任何文件被拖拽进区域之前显示的信息。这通常是被一个图像,但默认为“Drop files here to upload”。</td></tr><tr><td id="config-dictFallbackMessage">dictFallbackMessage</td><td>如果浏览器不支持,默认消息将被替换为这个文本。默认为“Your browser does not support drag’n’drop file uploads.”。</td></tr><tr><td id="config-dictFallbackText">dictFallbackText</td><td>这将被添加在<code>input file</code>之前。如果你提供一个<code>fallback</code>元素,或者该选项为空该选项将被忽略。默认为“Please use the fallback form below to upload your files like in the olden days.”。</td></tr><tr><td id="config-dictInvalidFileType">dictInvalidFileType</td><td>如果文件类型不匹配时显示的错误消息。</td></tr><tr><td id="config-dictFileTooBig">dictFileTooBig</td><td>当文件太大时显示。<code>`` 和</code><code>将被替换。&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td id=&quot;config-dictResponseError&quot;&gt;dictResponseError&lt;/td&gt;&lt;td&gt;如果服务器响应是无效的时显示的错误消息。`</code> 将被替换为服务器端返回的状态码。</td></tr><tr><td id="config-dictCancelUpload">dictCancelUpload</td><td>如果<code>addRemoveLinks</code>为true,文本用于取消上传链接的文字。</td></tr><tr><td id="config-dictCancelUploadConfirmation">dictCancelUploadConfirmation</td><td>如果<code>addRemoveLinks</code>为true,文本用于取消上传的文字。</td></tr><tr><td id="config-dictRemoveFile">dictRemoveFile</td><td>如果<code>addRemoveLinks</code>为true,用于删除一个文件的文本。</td></tr><tr><td id="config-dictMaxFilesExceeded">dictMaxFilesExceeded</td><td>如果设置了<code>maxFiles</code>,这将是超过了设置的时候的错误消息。</td></tr></table>
+
+
+<p>你也可以覆盖所有违约事件动作选项。如果你提供的<code>drop</code>选项可以覆盖默认的事件处理程序。你应该熟悉代码,因为您可以轻松掌握这样的上传。如果你只是想做额外修改,比如添加一些过滤什么的，可以<a href="#事件">监听事件</a>。</p>
+<h4 id="文件上传队列">文件上传队列</h4><p>当一个文件被添加到dropzone,其<code>status</code>被设置到<code>Dropzone.QUEUED</code>(<code>accept</code>函数检查通过后)，这意味着该文件现在在队列中。</p>
+<p>如果你可以选择<code>autoProcessQueue</code>设置为<code>true</code>,那么队列是立即处理,文件被删除或一个上传完成后,通过调用<code>.processQueue()</code>,检查有多少文件正在上传,如果它少于<code>option.parallelUploads</code>,<code>.processFile</code>将被调用。</p>
+<p>如果你<code>autoProcessQueue</code>设置为<code>false</code>,那么<code>.processQueue()</code>不会被隐式地调用。这意味着当你想上传目前队列中所有文件时你必须自己调用它。</p>
+<h4 id="布局">布局</h4><p>为每个文件生成预览HTML，设置dropzone定义的选项<code>previewTemplate</code>,默认为：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dz-preview dz-file-preview"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dz-details"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dz-filename"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">data-dz-name</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dz-size"</span> <span class="attribute">data-dz-size</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">data-dz-thumbnail</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dz-progress"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"dz-upload"</span> <span class="attribute">data-dz-uploadprogress</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dz-success-mark"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>✔<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dz-error-mark"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>✘<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"dz-error-message"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">data-dz-errormessage</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>当文件在上传过程中的时候，<code>dz-preview</code>中的<code>dz-processing</code>将被显示；当文件上传之后<code>dz-success</code>将被显示；如果文件上传错误或没网<code>dz-error</code>将被显示，此时<code>data-dz-errormessage</code>的内容将是服务器端返回的信息。</p>
+<p>重写默认的模板，就可以使用配置中的<code>previewTemplate</code>选项。</p>
+<p>您可以通过<code>file.previewElement</code>访问文件的HTML预览,并且设置任何事件。如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">success: <span class="function"><span class="keyword">function</span> (<span class="params">file, response, e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> res = <span class="built_in">JSON</span>.parse(response);</span><br><span class="line">    <span class="keyword">if</span> (res.error) &#123;</span><br><span class="line">        $(file.previewTemplate).children(<span class="string">'.dz-error-mark'</span>).css(<span class="string">'opacity'</span>, <span class="string">'1'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果你想打破常规重写<code>previewElement</code>,可以在你想要的元素上添加<code>data-dz-*</code>属性：</p>
+<ul>
+<li>data-dz-name</li>
+<li>data-dz-size</li>
+<li>data-dz-thumbnail (这个必须是 <code>&lt;img /&gt;</code> 元素，然后该元素的 <code>alt</code> 和 <code>src</code> 属性会被 Dropzone 自动改变为相应的值)</li>
+<li>data-dz-uploadprogress (当文件处于上传过程中的时候Dropzone 将改变此元素的 <code>style.width</code> 的值，从 0% 到 100%)</li>
+<li>data-dz-errormessage<br>Dropzone将寻找这些元素，并改变默认选项和更新它的内容。</li>
+</ul>
+<p>如果你想要一些特定链接删除一个文件(而不是建于<a href="#config-addRemoveLinks">addRemoveLinks</a>配置),您可以简单地插入元素的模板data-dz-remove属性。<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">"removebutton.png"</span> alt=<span class="string">"Click me to remove the file."</span> <span class="typedef"><span class="keyword">data</span>-dz-remove /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>你也不用被这些使用惯例所强迫。如果你完全覆盖所有默认事件监听器可以从头开始重建你的布局。</p>
+<p>如果你想让你的dropzone看起来像<a href="http://www.dropzonejs.com/" target="_blank" rel="external">官方</a>页面那样，使用安装部分提供的添加样式表和spritemaps即可。</p>
+<p>看到<a href="#主题">主题</a>部分,看看如何改变Dropzone 的UI。</p>
+<p>官方创建了一个例子,配置几行代码，让Dropzone看起来和感觉完全和jQuery文件上传差不多。<a href="http://www.dropzonejs.com/bootstrap.html" target="_blank" rel="external">Check it out!</a></p>
+<h4 id="Dropzone方法">Dropzone方法</h4><p>如果你想删除已添加的文件,你可以调用<code>.removeFile(file)</code>。这种方法也触发<code>removedfile</code>事件。</p>
+<p>下面是一个示例,文件上传完成后将自动删除：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">myDropzone.<span class="keyword">on</span>(<span class="string">"complete"</span>, <span class="function"><span class="keyword">function</span><span class="params">(file)</span> &#123;</span></span><br><span class="line">  myDropzone.removeFile(<span class="keyword">file</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>如果你想删除所以的文件，简单地使用<code>.removeAllFiles()</code>。正在上传中的文件不会被删除。如果你想取消正在上传的文件，调用<code>.removeAllFiles(true)</code>将取消上传。</p>
+<p>如果你设置了<code>autoProcessQueue</code>为<code>false</code>,你必须调用.processQueue()实现上传。</p>
+<p>访问dropzone中的所有文件,使用<code>myDropzone.files</code>。</p>
+<ul>
+<li>所有可接受的文件：<code>.getAcceptedFiles()</code></li>
+<li>所以被拒绝的文件：<code>.getRejectedFiles()</code></li>
+<li>队列中的所有文件：<code>.getQueuedFiles()</code></li>
+<li>上传中的所有文件：<code>.getUploadingFiles()</code><br>如果不在需要一个dropzone,使用当前示例调用<code>.disable()</code>，这将移除该元素上的事件、文件。重新激活使用<code>.enable()</code>。`</li>
+</ul>
+<p>如果你不喜欢浏览器默认的<code>confirm</code>,您可以通过覆盖<code>Dropzone.confirm</code>处理它们:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Dropzone.confirm = function(question, accepted, rejected) &#123;</span><br><span class="line">  // Ask the question, and <span class="operator"><span class="keyword">call</span> accepted() <span class="keyword">or</span> rejected() accordingly.</span><br><span class="line">  // CAREFUL: rejected might <span class="keyword">not</span> be defined. <span class="keyword">Do</span> <span class="keyword">nothing</span> <span class="keyword">in</span> that <span class="keyword">case</span>.</span><br><span class="line">&#125;;</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="About_me">About me</h2><p>博客: <a href="http://blog.helloarron.com">http://blog.helloarron.com</a><br>Github: <a href="https://github.com/ArronYR" target="_blank" rel="external">https://github.com/ArronYR</a><br>Email: yangyun4814@gmail.com</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DropzoneJS/" rel="tag">#DropzoneJS</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/25/javascript/javascript-dropzonejs-guide-2/" rel="prev">DropzoneJS 使用指南<二></a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/28/javascript/jquery-checkbox-prop/" rel="next">jQuery 1.6+ 解决 checkbox 属性判断</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/11/25/javascript/javascript-dropzonejs-guide-1/"
+                   data-title="DropzoneJS 使用指南<一>" data-url="http://blog.helloarron.com/2015/11/25/javascript/javascript-dropzonejs-guide-1/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/7171192?v=3&s=460" alt="Arron.y" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Arron.y</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">志向和热爱是伟大行为的双翼，learning ...</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">56</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">42</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://helloarron.com/" target="_blank">主页</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ArronYR" target="_blank">Github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/arron0718" target="_blank">新浪微博</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.suosikeji.com/" target="_blank">索思科技协会</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://lvwenhan.com/" target="_blank">岁寒</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#With_component"><span class="nav-number">1.0.1.</span> <span class="nav-text">With component</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#With_RequireJS"><span class="nav-number">1.0.2.</span> <span class="nav-text">With RequireJS</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">2.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#手动创建dropzones"><span class="nav-number">2.0.1.</span> <span class="nav-text">手动创建dropzones</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#服务器端实现"><span class="nav-number">2.0.2.</span> <span class="nav-text">服务器端实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#方法一："><span class="nav-number">3.0.0.0.1.</span> <span class="nav-text">方法一：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法二："><span class="nav-number">3.0.0.0.2.</span> <span class="nav-text">方法二：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#常用方法："><span class="nav-number">3.0.0.0.3.</span> <span class="nav-text">常用方法：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置选项"><span class="nav-number">3.0.1.</span> <span class="nav-text">配置选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件上传队列"><span class="nav-number">3.0.2.</span> <span class="nav-text">文件上传队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#布局"><span class="nav-number">3.0.3.</span> <span class="nav-text">布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dropzone方法"><span class="nav-number">3.0.4.</span> <span class="nav-text">Dropzone方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About_me"><span class="nav-number">4.</span> <span class="nav-text">About me</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Arron.y</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"arronblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = 0
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
