@@ -1,0 +1,770 @@
+<!doctype html>
+<html class="theme-next use-motion ">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="志向和热爱是伟大行为的双翼，learning ..." />
+
+
+
+  <meta name="keywords" content="DropzoneJS,JavaScript,PHP,Yii," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="前端时间写了两篇DropzoneJS的使用指南：
+
+DropzoneJS 使用指南&amp;lt;一&amp;gt;
+DropzoneJS 使用指南&amp;lt;二&amp;gt;因为自己经常使用Yii 1，而且也正在学习Yii 2，所以这里结合两者写一个简单的文件上传的例子(上传到七牛)，大概就是这样子的：
+
+css 样式因为主要是php和javascript，所以这里就不管css怎么写了，直接贴出来主要的样式site.cs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Yii AR的使用">
+<meta property="og:url" content="http://blog.helloarron.com/2015/12/21/php/yii-dropzonejs-1/index.html">
+<meta property="og:site_name" content="Arron.y's blog">
+<meta property="og:description" content="前端时间写了两篇DropzoneJS的使用指南：
+
+DropzoneJS 使用指南&amp;lt;一&amp;gt;
+DropzoneJS 使用指南&amp;lt;二&amp;gt;因为自己经常使用Yii 1，而且也正在学习Yii 2，所以这里结合两者写一个简单的文件上传的例子(上传到七牛)，大概就是这样子的：
+
+css 样式因为主要是php和javascript，所以这里就不管css怎么写了，直接贴出来主要的样式site.cs">
+<meta property="og:image" content="http://images.helloarron.com/yii-dropzone-1.png">
+<meta property="og:image" content="http://images.helloarron.com/yii-dropzone-2.png">
+<meta property="og:updated_time" content="2015-12-21T11:25:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Yii AR的使用">
+<meta name="twitter:description" content="前端时间写了两篇DropzoneJS的使用指南：
+
+DropzoneJS 使用指南&amp;lt;一&amp;gt;
+DropzoneJS 使用指南&amp;lt;二&amp;gt;因为自己经常使用Yii 1，而且也正在学习Yii 2，所以这里结合两者写一个简单的文件上传的例子(上传到七牛)，大概就是这样子的：
+
+css 样式因为主要是php和javascript，所以这里就不管css怎么写了，直接贴出来主要的样式site.cs">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post'
+  };
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  <title> Yii AR的使用 | Arron.y's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?98dde0a4dbe6c8607aba08de0361d51b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Arron.y's blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Yii AR的使用
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-12-21T18:38:20+08:00" content="2015-12-21">
+            2015-12-21
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/PHP/" itemprop="url" rel="index">
+                  <span itemprop="name">PHP</span>
+                </a>
+              </span>
+
+              
+              
+                ， 
+              
+
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/PHP/JavaScript/" itemprop="url" rel="index">
+                  <span itemprop="name">JavaScript</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/12/21/php/yii-dropzonejs-1/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/21/php/yii-dropzonejs-1/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>前端时间写了两篇<a href="http://www.dropzonejs.com/" target="_blank" rel="external">DropzoneJS</a>的使用指南：</p>
+<ol>
+<li><a href="http://blog.helloarron.com/2015/11/25/javascript/javascript-dropzonejs-guide-1/">DropzoneJS 使用指南&lt;一&gt;</a></li>
+<li><a href="http://blog.helloarron.com/2015/11/25/javascript/javascript-dropzonejs-guide-2/">DropzoneJS 使用指南&lt;二&gt;</a><br>因为自己经常使用Yii 1，而且也正在学习Yii 2，所以这里结合两者写一个简单的文件上传的例子(上传到七牛)，大概就是这样子的：<br><img src="http://images.helloarron.com/yii-dropzone-1.png" alt="图片"></li>
+</ol>
+<h2 id="css_样式">css 样式</h2><p>因为主要是<code>php</code>和<code>javascript</code>，所以这里就不管<code>css</code>怎么写了，直接贴出来主要的样式<code>site.css</code>：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.files-box</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.files-box</span> <span class="class">.dropzone</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">2px</span> dashed <span class="hexcolor">#FE7877</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">min-height</span>:<span class="value"> <span class="number">300px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">4px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="function">rgba</span>(<span class="number">253</span>, <span class="number">181</span>, <span class="number">64</span>, <span class="number">0.1</span>)</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">20px</span> <span class="number">20px</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.dropzone</span> <span class="class">.dz-message</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">70px</span> <span class="number">0</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="页面结构">页面结构</h2><p>为了方便我使用了<a href="http://amazeui.org/" target="_blank" rel="external">AmazeUI</a>，<code>layouts</code>文件夹下写一个<code>main.pnp</code>作为主要的<code>layout</code>：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">/* @var $this \yii\web\View */</span><br><span class="line">/* @var $content string */</span><br><span class="line"></span><br><span class="line">use yii\helpers\Html;</span><br><span class="line">use backend\assets\AppAsset;</span><br><span class="line">use yii\web\AssetBundle;</span><br><span class="line"></span><br><span class="line">AppAsset::register($this);</span><br><span class="line">?&gt;</span><br><span class="line">&lt;?php $this-&gt;beginPage() ?&gt;</span><br><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang="&lt;?= Yii::$app-&gt;language ?&gt;" class="no-js fixed-layout"&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset="&lt;?= Yii::$app-&gt;charset ?&gt;"&gt;</span><br><span class="line">    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</span><br><span class="line">    &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"&gt;</span><br><span class="line">    &lt;meta name="renderer" content="webkit"&gt;</span><br><span class="line">    &lt;meta http-equiv="Cache-Control" content="no-siteapp" /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;?= Html::csrfMetaTags() ?&gt;</span><br><span class="line">    &lt;title&gt;&lt;?= Html::encode($this-&gt;title) ?&gt;&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.4.2/css/amazeui.flat.min.css"/&gt;</span><br><span class="line">    &lt;link rel="stylesheet" type="text/css" href="&lt;?php echo $baseUrl.'/tools/dropzone/dropzone.css';?&gt;"&gt;</span><br><span class="line">    &lt;link rel="stylesheet" href="&lt;?php echo $baseUrl;?&gt;/css/site.css"&gt;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;?php $this-&gt;beginBody() ?&gt;</span><br><span class="line">    &lt;!--[if lte IE 9]&gt;</span><br><span class="line">    &lt;p class="browsehappy"&gt;你正在使用&lt;strong&gt;过时&lt;/strong&gt;的浏览器，本网站暂不支持。 请 &lt;a href="http://browsehappy.com/" target="_blank"&gt;升级浏览器&lt;/a&gt;</span><br><span class="line">    以获得更好的体验！&lt;/p&gt;</span><br><span class="line">    &lt;![endif]--&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div class="admin-content"&gt;</span><br><span class="line">        &lt;div class="am-cf am-padding"&gt;</span><br><span class="line">            &lt;?= $content ?&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!--[if lt IE 9]&gt;</span><br><span class="line">    &lt;script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src="http://cdn.amazeui.org/amazeui/2.4.2/js/polyfill/rem.min.js"&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src="http://cdn.amazeui.org/amazeui/2.4.2/js/polyfill/respond.min.js"&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src="http://cdn.amazeui.org/amazeui/2.4.2/js/amazeui.legacy.js"&gt;&lt;/script&gt;</span><br><span class="line">    &lt;![endif]--&gt;</span><br><span class="line">    &lt;!--[if lt IE 9]&gt;</span><br><span class="line">    &lt;script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;</span><br><span class="line">    &lt;![endif]--&gt;</span><br><span class="line">    &lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;</span><br><span class="line">    &lt;script src="&lt;?php echo $baseUrl;?&gt;/js/jquery-1.7.2.min.js"&gt;&lt;/script&gt;</span><br><span class="line">    &lt;!--&lt;![endif]--&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;</span><br><span class="line">    &lt;script src="http://cdn.amazeui.org/amazeui/2.4.2/js/amazeui.min.js"&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type="text/javascript" src="&lt;?php echo $baseUrl.'/tools/dropzone/dropzone.js';?&gt;"&gt;&lt;/script&gt;</span><br><span class="line">    &lt;!--&lt;![endif]--&gt;</span><br><span class="line">&lt;?php $this-&gt;endBody() ?&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">&lt;?php $this-&gt;endPage() ?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>接下来就是上传部分的<code>html</code>，写在<code>files</code>文件夹下的<code>index.php</code>中:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">/* @var $this yii\web\View */</span><br><span class="line">use Yii;</span><br><span class="line">use yii\web\AssetBundle;</span><br><span class="line"></span><br><span class="line">$this-&gt;title = Yii::t('app', 'Files');</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class="am-padding-bottom"&gt;</span><br><span class="line">    &lt;strong class="am-text-primary am-text-lg"&gt;&lt;?php echo Yii::t('app', 'Files');?&gt;&lt;/strong&gt; /</span><br><span class="line">    &lt;small&gt;Files&lt;/small&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class="files-box"&gt;</span><br><span class="line">    &lt;div class="dropzone" id="myDropzone"&gt;</span><br><span class="line">        &lt;div class="am-text-success dz-message"&gt;将文件拖拽到此处&lt;br&gt;或点此打开文件管理器选择文件&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="php部分">php部分</h2><p>在<code>app/controllers</code>中新建<code>FilesController.php</code>:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">backend</span>\<span class="title">controllers</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Yii</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">filters</span>\<span class="title">AccessControl</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">web</span>\<span class="title">Controller</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">backend</span>\<span class="title">models</span>\<span class="title">File</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">filters</span>\<span class="title">VerbFilter</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line">* 文件管理</span><br><span class="line">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FilesController</span> <span class="keyword">extends</span> <span class="title">Controller</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="comment">// YII2的防止csrf攻击，不能多次提交相同的表单</span></span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$enableCsrfValidation</span> = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">behaviors</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> [</span><br><span class="line">            <span class="string">'access'</span> =&gt; [</span><br><span class="line">                <span class="string">'class'</span> =&gt; AccessControl::className(),</span><br><span class="line">                <span class="string">'rules'</span> =&gt; [</span><br><span class="line">                    [</span><br><span class="line">                        <span class="string">'actions'</span> =&gt; [<span class="string">'index'</span>],</span><br><span class="line">                        <span class="string">'allow'</span> =&gt; <span class="keyword">true</span>,</span><br><span class="line">                        <span class="string">'roles'</span> =&gt; [<span class="string">'@'</span>],</span><br><span class="line">                    ],</span><br><span class="line">                ],</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">'verbs'</span> =&gt; [</span><br><span class="line">                <span class="string">'class'</span> =&gt; VerbFilter::className(),</span><br><span class="line">                <span class="string">'actions'</span> =&gt; [</span><br><span class="line">                    <span class="string">'index'</span> =&gt; [<span class="string">'get'</span>]</span><br><span class="line">                ],</span><br><span class="line">            ],</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">actionIndex</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$this</span>-&gt;render(<span class="string">'index'</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>文件提交上传是使用<code>Ajax</code>,我将<code>Ajax</code>作为项目的一个<code>module</code>，可以在<code>app</code>文件夹下新建一个<code>modules</code>文件夹，在<code>modules</code>下新建<code>ajax</code>无文件夹，并在里面新建一个<code>Module.php</code>：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">backend</span>\<span class="title">modules</span>\<span class="title">ajax</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">base</span>\<span class="title">Module</span> <span class="title">as</span> <span class="title">BaseModule</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">helpers</span>\<span class="title">BaseJson</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line">* Ajax 模块</span><br><span class="line">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Module</span> <span class="keyword">extends</span> <span class="title">BaseModule</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$controllerNamespace</span> = <span class="string">'backend\modules\ajax\controllers'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">init</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">parent</span>::init();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">beforeAction</span><span class="params">(<span class="variable">$action</span>)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">parent</span>::beforeAction(<span class="variable">$action</span>)) &#123;</span><br><span class="line">            <span class="comment">// 只能是Ajax请求才能进入该模块</span></span><br><span class="line">            <span class="keyword">if</span> (Yii::<span class="variable">$app</span>-&gt;request-&gt;isAjax) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="variable">$result</span>[<span class="string">'error'</span>] = <span class="number">1</span>;</span><br><span class="line">                <span class="variable">$result</span>[<span class="string">'msg'</span>] = <span class="string">"请求方式错误"</span>;</span><br><span class="line">                <span class="keyword">echo</span> BaseJson::encode(<span class="variable">$result</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>在<code>ajax</code>文件夹下新建一个<code>controllers</code>文件夹，在里面新建一个<code>FilesController.php</code>:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">backend</span>\<span class="title">modules</span>\<span class="title">ajax</span>\<span class="title">controllers</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Yii</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">base</span>\<span class="title">Controller</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">filters</span>\<span class="title">AccessControl</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">filters</span>\<span class="title">VerbFilter</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">helpers</span>\<span class="title">BaseJson</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">Ramsey</span>\<span class="title">Uuid</span>\<span class="title">Uuid</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">crazyfd</span>\<span class="title">qiniu</span>\<span class="title">Qiniu</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">yii</span>\<span class="title">web</span>\<span class="title">UploadedFile</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">backend</span>\<span class="title">models</span>\<span class="title">File</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">backend</span>\<span class="title">models</span>\<span class="title">UploadForm</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line">* 文件</span><br><span class="line">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FilesController</span> <span class="keyword">extends</span> <span class="title">Controller</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">behaviors</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> [</span><br><span class="line">            <span class="string">'access'</span> =&gt; [</span><br><span class="line">                <span class="string">'class'</span> =&gt; AccessControl::className(),</span><br><span class="line">                <span class="string">'rules'</span> =&gt; [</span><br><span class="line">                    [</span><br><span class="line">                        <span class="string">'actions'</span> =&gt; [<span class="string">'index'</span>, <span class="string">'upload'</span>],</span><br><span class="line">                        <span class="string">'allow'</span> =&gt; <span class="keyword">true</span>,</span><br><span class="line">                        <span class="string">'roles'</span> =&gt; [<span class="string">'@'</span>]</span><br><span class="line">                    ]</span><br><span class="line">                ]</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">'verbs'</span> =&gt; [</span><br><span class="line">                <span class="string">'class'</span> =&gt; VerbFilter::className(),</span><br><span class="line">                <span class="string">'actions'</span> =&gt; [</span><br><span class="line">                    <span class="string">'index'</span> =&gt; [<span class="string">'get'</span>],</span><br><span class="line">                    <span class="string">'update'</span> =&gt; [<span class="string">'post'</span>]</span><br><span class="line">                ]</span><br><span class="line">            ]</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">actionIndex</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span>[<span class="string">'error'</span>] = <span class="number">110</span>;</span><br><span class="line">        <span class="variable">$result</span>[<span class="string">'msg'</span>] = <span class="string">"Hi,Boy,This request is error.Please check it!"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> BaseJson::encode(<span class="variable">$result</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">actionUpload</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="variable">$model</span> = <span class="keyword">new</span> UploadForm();</span><br><span class="line">        <span class="variable">$qiniu</span> = <span class="keyword">new</span> Qiniu(Yii::<span class="variable">$app</span>-&gt;params[<span class="string">'Qiniu'</span>][<span class="string">'sk'</span>], Yii::<span class="variable">$app</span>-&gt;params[<span class="string">'Qiniu'</span>][<span class="string">'ak'</span>], Yii::<span class="variable">$app</span>-&gt;params[<span class="string">'Qiniu'</span>][<span class="string">'domain'</span>], Yii::<span class="variable">$app</span>-&gt;params[<span class="string">'Qiniu'</span>][<span class="string">'bucket'</span>]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (Yii::<span class="variable">$app</span>-&gt;request-&gt;isPost) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="variable">$model</span>-&gt;file = UploadedFile::getInstanceByName(<span class="string">'file'</span>);</span><br><span class="line">            <span class="keyword">if</span> (<span class="variable">$model</span>-&gt;file &amp;&amp; <span class="variable">$model</span>-&gt;validate()) &#123;</span><br><span class="line">                <span class="variable">$fileName</span> = <span class="variable">$model</span>-&gt;file-&gt;baseName.<span class="string">'.'</span>.<span class="variable">$model</span>-&gt;file-&gt;extension;</span><br><span class="line">                <span class="variable">$qiniu</span>-&gt;uploadFile(<span class="variable">$model</span>-&gt;file-&gt;tempName, <span class="variable">$fileName</span>);</span><br><span class="line">                <span class="variable">$url</span> = <span class="variable">$qiniu</span>-&gt;getLink(<span class="variable">$fileName</span>);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 保存文件数据到数据库</span></span><br><span class="line">                <span class="variable">$file</span> = <span class="keyword">new</span> File([<span class="string">'scenario'</span> =&gt; <span class="string">'upload'</span>]);</span><br><span class="line">                <span class="variable">$file</span>-&gt;setAttributes([</span><br><span class="line">                    <span class="string">'uid'</span>       =&gt; Yii::<span class="variable">$app</span>-&gt;user-&gt;id,</span><br><span class="line">                    <span class="string">'key'</span>       =&gt; Uuid::uuid4()-&gt;toString(),</span><br><span class="line">                    <span class="string">'name'</span>      =&gt; <span class="variable">$model</span>-&gt;file-&gt;baseName,</span><br><span class="line">                    <span class="string">'filesize'</span>  =&gt; <span class="variable">$model</span>-&gt;file-&gt;size,</span><br><span class="line">                    <span class="string">'filetype'</span>  =&gt; <span class="variable">$model</span>-&gt;file-&gt;extension,</span><br><span class="line">                    <span class="string">'url'</span>       =&gt; <span class="variable">$url</span>,</span><br><span class="line">                    <span class="string">'urltype'</span>   =&gt; <span class="number">1</span>,</span><br><span class="line">                ]);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (<span class="variable">$file</span>-&gt;save()) &#123;</span><br><span class="line">                    <span class="variable">$result</span>[<span class="string">'msg'</span>] = <span class="string">'存储到数据库成功！'</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="variable">$result</span>[<span class="string">'msg'</span>] = <span class="string">'存储到数据库失败！'</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="variable">$result</span>[<span class="string">'error'</span>] = <span class="number">0</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="variable">$result</span>[<span class="string">'error'</span>] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="variable">$result</span>[<span class="string">'file'</span>] = <span class="variable">$model</span>-&gt;file;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> BaseJson::encode(<span class="variable">$result</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>到这里基本<code>php</code>端的代码就算完了，真的注意的是需要使用<code>composer</code>安装<code>uuid</code>、<code>qiniu</code>相关的文件。<br>剩下就是页面上的<code>javascript</code>代码了。</p>
+<h2 id="Javascript部分">Javascript部分</h2><p>在<code>index.php</code>中底部加入<code>javascript</code>代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"></span><br><span class="line">    Dropzone.autoDiscover = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">var</span> myDropzone = <span class="keyword">new</span> Dropzone(<span class="string">"#myDropzone"</span>, &#123;</span><br><span class="line">        url: <span class="string">"/ajax/files/upload"</span>,</span><br><span class="line">        addRemoveLinks: <span class="literal">true</span>,</span><br><span class="line">        method: <span class="string">'post'</span>,</span><br><span class="line">        filesizeBase: <span class="number">1024</span>,</span><br><span class="line">        sending: <span class="function"><span class="keyword">function</span>(<span class="params">file, xhr, formData</span>) </span>&#123;</span><br><span class="line">            <span class="comment">// Yii::$app-&gt;request-&gt;post('filesize');</span></span><br><span class="line">            formData.append(<span class="string">"filesize"</span>, file.size);</span><br><span class="line">        &#125;,</span><br><span class="line">        success: <span class="function"><span class="keyword">function</span> (<span class="params">file, response, e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> res = <span class="built_in">JSON</span>.parse(response);</span><br><span class="line">            <span class="keyword">if</span> (res.error) &#123;</span><br><span class="line">                $(file.previewTemplate).children(<span class="string">'.dz-error-mark'</span>).css(<span class="string">'opacity'</span>, <span class="string">'1'</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>到这里就结束了，完成了文件的上传功能。<br><img src="http://images.helloarron.com/yii-dropzone-2.png" alt="图片"></p>
+<h2 id="参考">参考</h2><p>关于<code>Dropzone</code>的具体参数使用请参考以下文章：</p>
+<ol>
+<li><a href="http://blog.helloarron.com/2015/11/25/javascript/javascript-dropzonejs-guide-1/">DropzoneJS 使用指南&lt;一&gt;</a></li>
+<li><a href="http://blog.helloarron.com/2015/11/25/javascript/javascript-dropzonejs-guide-2/">DropzoneJS 使用指南&lt;二&gt;</a></li>
+</ol>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DropzoneJS/" rel="tag">#DropzoneJS</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+            <a href="/tags/PHP/" rel="tag">#PHP</a>
+          
+            <a href="/tags/Yii/" rel="tag">#Yii</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/26/php/laravel-learn-page-2/" rel="next">【Laravel学习篇 · 二】在Laravel中借鉴Yii的params使用方法</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/12/21/php/yii-dropzonejs-1/"
+                   data-title="Yii AR的使用" data-url="http://blog.helloarron.com/2015/12/21/php/yii-dropzonejs-1/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/7171192?v=3&s=460" alt="Arron.y" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Arron.y</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">志向和热爱是伟大行为的双翼，learning ...</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">58</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">42</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://helloarron.com/" target="_blank">主页</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ArronYR" target="_blank">Github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/arron0718" target="_blank">新浪微博</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.suosikeji.com/" target="_blank">索思科技协会</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://lvwenhan.com/" target="_blank">岁寒</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#css_样式"><span class="nav-number">1.</span> <span class="nav-text">css 样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面结构"><span class="nav-number">2.</span> <span class="nav-text">页面结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php部分"><span class="nav-number">3.</span> <span class="nav-text">php部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript部分"><span class="nav-number">4.</span> <span class="nav-text">Javascript部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Arron.y</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"arronblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = 0
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
