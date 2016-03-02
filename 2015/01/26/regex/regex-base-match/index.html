@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Media,WebApp," />
+  <meta name="keywords" content="RegEx," />
 
 
 
@@ -37,19 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="概述通过媒体查询为不同的设备和大小配置不同的样式。
-代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @media scre">
+<meta name="description" content="正则表达式是一种特殊的字符串模式，用于匹配一组字符串。他最早出现于20世纪40年代，当时用来描述正则语言，而到了20世纪70年代才真正出现在程序设计领域。正则表达式后来成为ed、sed、vim编辑器、grep等Unix操作系统衍生出的工具集的组成部分。
+在线正则表达式验证工具 RegExr ：http://regexr.com/v1/
+匹配数字：1\d        =&amp;gt;        [0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS Media">
-<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/webapp/css-media/index.html">
+<meta property="og:title" content="正则表达式简单的匹配模式">
+<meta property="og:url" content="http://blog.helloarron.com/2015/01/26/regex/regex-base-match/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="概述通过媒体查询为不同的设备和大小配置不同的样式。
-代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @media scre">
-<meta property="og:updated_time" content="2015-09-24T07:14:01.000Z">
+<meta property="og:description" content="正则表达式是一种特殊的字符串模式，用于匹配一组字符串。他最早出现于20世纪40年代，当时用来描述正则语言，而到了20世纪70年代才真正出现在程序设计领域。正则表达式后来成为ed、sed、vim编辑器、grep等Unix操作系统衍生出的工具集的组成部分。
+在线正则表达式验证工具 RegExr ：http://regexr.com/v1/
+匹配数字：1\d        =&amp;gt;        [0">
+<meta property="og:updated_time" content="2015-09-24T07:13:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS Media">
-<meta name="twitter:description" content="概述通过媒体查询为不同的设备和大小配置不同的样式。
-代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @media scre">
+<meta name="twitter:title" content="正则表达式简单的匹配模式">
+<meta name="twitter:description" content="正则表达式是一种特殊的字符串模式，用于匹配一组字符串。他最早出现于20世纪40年代，当时用来描述正则语言，而到了20世纪70年代才真正出现在程序设计领域。正则表达式后来成为ed、sed、vim编辑器、grep等Unix操作系统衍生出的工具集的组成部分。
+在线正则表达式验证工具 RegExr ：http://regexr.com/v1/
+匹配数字：1\d        =&amp;gt;        [0">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -69,7 +72,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> CSS Media | Arron.y's blog </title>
+  <title> 正则表达式简单的匹配模式 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -185,7 +188,7 @@ var _hmt = _hmt || [];
           
           
             
-              CSS Media
+              正则表达式简单的匹配模式
             
           
         </h1>
@@ -194,8 +197,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-01-19T01:43:43+08:00" content="2015-01-19">
-            2015-01-19
+          <time itemprop="dateCreated" datetime="2015-01-26T13:40:34+08:00" content="2015-01-26">
+            2015-01-26
           </time>
         </span>
 
@@ -204,8 +207,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/WebApp/" itemprop="url" rel="index">
-                  <span itemprop="name">WebApp</span>
+                <a href="/categories/Regex/" itemprop="url" rel="index">
+                  <span itemprop="name">Regex</span>
                 </a>
               </span>
 
@@ -220,8 +223,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/01/19/webapp/css-media/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/19/webapp/css-media/" itemprop="commentsCount"></span>
+              <a href="/2015/01/26/regex/regex-base-match/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/26/regex/regex-base-match/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -235,8 +238,18 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h4 id="概述">概述</h4><p>通过媒体查询为不同的设备和大小配置不同的样式。</p>
-<h4 id="代码展示">代码展示</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* media */</span> </span><br><span class="line"><span class="comment">/* 横屏 */</span>    </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (orientation:landscape)</span>&#123;  </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 竖屏 */</span>    </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (orientation:portrait)</span>&#123;   </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;960,设计宽度=768 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">959px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;768,设计宽度=640 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">767px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;640,设计宽度=480 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">639px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;480,设计宽度=320 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">479px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* windows UI 贴靠 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (-ms-view-state:snapped)</span>&#123; </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 打印 */</span>    </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> print</span>&#123;   </span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><p>正则表达式是一种特殊的字符串模式，用于匹配一组字符串。他最早出现于20世纪40年代，当时用来描述正则语言，而到了20世纪70年代才真正出现在程序设计领域。正则表达式后来成为ed、sed、vim编辑器、grep等Unix操作系统衍生出的工具集的组成部分。</p>
+<p>在线正则表达式验证工具 RegExr ：<a href="http://regexr.com/v1/" target="_blank" rel="external">http://regexr.com/v1/</a></p>
+<p>匹配数字：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d        =&gt;        [<span class="number">0</span>-<span class="number">9</span>]</span><br></pre></td></tr></table></figure></p>
+<p>匹配非数字：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\D        =&gt;        [^<span class="number">0</span>-<span class="number">9</span>]        =&gt;        [^\d]</span><br></pre></td></tr></table></figure></p>
+<p>匹配单词（字母、数字、下划线）：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\w        =&gt;        [_a-zA-Z0-<span class="number">9</span>]</span><br></pre></td></tr></table></figure></p>
+<p>匹配非数字：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\W        =&gt;        [^_a-zA-Z0-<span class="number">9</span>]        =&gt;        [^\w]</span><br></pre></td></tr></table></figure></p>
+<p><code>\D</code> 与 <code>\w</code> 的区别：<code>\D</code> 会匹配空格、标点符号（引号、连字符、反斜杠、方括号）等字符，而 <code>\w</code> 不会，他只匹配字母、数字和下划线。</p>
+<p>字符简写式：<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">字符简写式	描述	</span><br><span class="line"><span class="string">\a</span>			报警符</span><br><span class="line">[<span class="string">\b]</span>		退格字符	</span><br><span class="line"><span class="string">\c</span> x		控制字符</span><br><span class="line"><span class="string">\d</span>			数字符号</span><br><span class="line"><span class="string">\D</span>			非数字字符	</span><br><span class="line"><span class="string">\w</span>			单词字符	</span><br><span class="line"><span class="string">\W</span>			非单词字符	</span><br><span class="line"><span class="string">\o</span> xxx		字符的八进制值	</span><br><span class="line"><span class="string">\0</span>			空字符	</span><br><span class="line"><span class="string">\x</span> xx		字符的十六进制值	</span><br><span class="line"><span class="string">\u</span> xxx		字符的 Unicode 值</span><br></pre></td></tr></table></figure></p>
+<p>匹配空白符（空格、制表符、换行符、回车符）：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\s        =&gt;        [ \t\n\r]</span><br></pre></td></tr></table></figure></p>
+<p>匹配非空白字符：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\S        =&gt;        [^ \t\n\r]        =&gt;         [^\s]</span><br></pre></td></tr></table></figure></p>
+<p>匹配各种空白符的简写式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">字符简写式	描述	</span><br><span class="line">\f			换页符</span><br><span class="line">\h			水平空白符	</span><br><span class="line">\H			非水平空白符	</span><br><span class="line">\n			换行符	</span><br><span class="line">\r			回车符	</span><br><span class="line">\s			空白符	</span><br><span class="line">\S			非空白符	</span><br><span class="line">\t			水平制表符	</span><br><span class="line">\v			垂直制表符	</span><br><span class="line">\V			非垂直制表符</span><br></pre></td></tr></table></figure></p>
+<p>用正则表达式匹配任意字符的一种方法是使用点号<code>(U+002E)</code>。点号可以匹配除行结束符之外的所有字符，个别情况除外。</p>
 </span>
       
     </div>
@@ -245,9 +258,7 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/Media/" rel="tag">#Media</a>
-          
-            <a href="/tags/WebApp/" rel="tag">#WebApp</a>
+            <a href="/tags/RegEx/" rel="tag">#RegEx</a>
           
         </div>
       
@@ -256,13 +267,13 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/01/19/webapp/css3-nth-child/" rel="prev">CSS3 :nth-child()伪类选择器</a>
+              <a href="/2015/02/02/javascript/javascript-trim/" rel="prev">JavaScript 实现trim ltrim rtrim</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/01/19/java/java-ajax-jsonp/" rel="next">AJAX 跨域请求 - JSONP获取JSON数据(JAVA版)</a>
+              <a href="/2015/01/19/css/web-input-background/" rel="next">input 提交表单按钮 背景图片的完美设置</a>
             
           </div>
         </div>
@@ -310,8 +321,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/01/19/webapp/css-media/"
-                   data-title="CSS Media" data-url="http://blog.helloarron.com/2015/01/19/webapp/css-media/">
+              <div class="ds-thread" data-thread-key="2015/01/26/regex/regex-base-match/"
+                   data-title="正则表达式简单的匹配模式" data-url="http://blog.helloarron.com/2015/01/26/regex/regex-base-match/">
               </div>
             
           </div>
@@ -351,21 +362,21 @@ var _hmt = _hmt || [];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">64</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">48</span>
+              <span class="site-state-item-count">49</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -418,7 +429,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码展示"><span class="nav-number">2.</span> <span class="nav-text">代码展示</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

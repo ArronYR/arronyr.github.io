@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Bootstrap,WebApp," />
+  <meta name="keywords" content="Media,css," />
 
 
 
@@ -37,22 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Bootstrap3中的图标，是用字体的形式表示的。即你去看glyphicon glyphicon-xxx的css定义，会找到类似content:&amp;quot;\xxx&amp;quot;的定义，而找不到img的标签。
-所以，当你需要更改你的图标的大小的时候就很方便了，只需要设置它的font-size就行了。而且这样的好处是，不管你设多大或者多小，它都能正常展示。而不像图片会拉伸或者压缩。
-今天也了解到fo">
+<meta name="description" content="概述通过媒体查询为不同的设备和大小配置不同的样式。
+代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @media scre">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bootstrap 调整Glyphicons图标大小">
-<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/webapp/bootstrap-icon-size/index.html">
+<meta property="og:title" content="CSS Media">
+<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/css/css-media/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="Bootstrap3中的图标，是用字体的形式表示的。即你去看glyphicon glyphicon-xxx的css定义，会找到类似content:&amp;quot;\xxx&amp;quot;的定义，而找不到img的标签。
-所以，当你需要更改你的图标的大小的时候就很方便了，只需要设置它的font-size就行了。而且这样的好处是，不管你设多大或者多小，它都能正常展示。而不像图片会拉伸或者压缩。
-今天也了解到fo">
-<meta property="og:updated_time" content="2015-09-24T07:13:54.000Z">
+<meta property="og:description" content="概述通过媒体查询为不同的设备和大小配置不同的样式。
+代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @media scre">
+<meta property="og:updated_time" content="2016-03-02T04:27:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bootstrap 调整Glyphicons图标大小">
-<meta name="twitter:description" content="Bootstrap3中的图标，是用字体的形式表示的。即你去看glyphicon glyphicon-xxx的css定义，会找到类似content:&amp;quot;\xxx&amp;quot;的定义，而找不到img的标签。
-所以，当你需要更改你的图标的大小的时候就很方便了，只需要设置它的font-size就行了。而且这样的好处是，不管你设多大或者多小，它都能正常展示。而不像图片会拉伸或者压缩。
-今天也了解到fo">
+<meta name="twitter:title" content="CSS Media">
+<meta name="twitter:description" content="概述通过媒体查询为不同的设备和大小配置不同的样式。
+代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @media scre">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -72,7 +69,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> Bootstrap 调整Glyphicons图标大小 | Arron.y's blog </title>
+  <title> CSS Media | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -188,7 +185,7 @@ var _hmt = _hmt || [];
           
           
             
-              Bootstrap 调整Glyphicons图标大小
+              CSS Media
             
           
         </h1>
@@ -197,7 +194,7 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-01-19T01:45:31+08:00" content="2015-01-19">
+          <time itemprop="dateCreated" datetime="2015-01-19T01:43:43+08:00" content="2015-01-19">
             2015-01-19
           </time>
         </span>
@@ -207,8 +204,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/WebApp/" itemprop="url" rel="index">
-                  <span itemprop="name">WebApp</span>
+                <a href="/categories/css/" itemprop="url" rel="index">
+                  <span itemprop="name">css</span>
                 </a>
               </span>
 
@@ -223,8 +220,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/01/19/webapp/bootstrap-icon-size/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/19/webapp/bootstrap-icon-size/" itemprop="commentsCount"></span>
+              <a href="/2015/01/19/css/css-media/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/19/css/css-media/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -238,9 +235,8 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><p><code>Bootstrap3</code>中的图标，是用字体的形式表示的。即你去看<code>glyphicon glyphicon-xxx</code>的<code>css</code>定义，会找到类似<code>content:&quot;\xxx&quot;</code>的定义，而找不到<code>img</code>的标签。</p>
-<p>所以，当你需要更改你的图标的大小的时候就很方便了，只需要设置它的<code>font-size</code>就行了。而且这样的好处是，不管你设多大或者多小，它都能正常展示。而不像图片会拉伸或者压缩。</p>
-<p>今天也了解到<code>font awesome</code>也是这么做的。并且把图标做成字体然后再使用也将成为一大趋势。</p>
+        <span itemprop="articleBody"><h4 id="概述">概述</h4><p>通过媒体查询为不同的设备和大小配置不同的样式。</p>
+<h4 id="代码展示">代码展示</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* media */</span> </span><br><span class="line"><span class="comment">/* 横屏 */</span>    </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (orientation:landscape)</span>&#123;  </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 竖屏 */</span>    </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (orientation:portrait)</span>&#123;   </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;960,设计宽度=768 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">959px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;768,设计宽度=640 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">767px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;640,设计宽度=480 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">639px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;480,设计宽度=320 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">479px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* windows UI 贴靠 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (-ms-view-state:snapped)</span>&#123; </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 打印 */</span>    </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> print</span>&#123;   </span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -249,9 +245,9 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/Bootstrap/" rel="tag">#Bootstrap</a>
+            <a href="/tags/Media/" rel="tag">#Media</a>
           
-            <a href="/tags/WebApp/" rel="tag">#WebApp</a>
+            <a href="/tags/css/" rel="tag">#css</a>
           
         </div>
       
@@ -260,13 +256,13 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/01/19/php/php-mobile-agents/" rel="prev">PHP判断是否为手机移动终端</a>
+              <a href="/2015/01/19/css/css3-nth-child/" rel="prev">CSS3 :nth-child()伪类选择器</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/01/19/webapp/css3-nth-child/" rel="next">CSS3 :nth-child()伪类选择器</a>
+              <a href="/2015/01/19/java/java-ajax-jsonp/" rel="next">AJAX 跨域请求 - JSONP获取JSON数据(JAVA版)</a>
             
           </div>
         </div>
@@ -314,8 +310,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/01/19/webapp/bootstrap-icon-size/"
-                   data-title="Bootstrap 调整Glyphicons图标大小" data-url="http://blog.helloarron.com/2015/01/19/webapp/bootstrap-icon-size/">
+              <div class="ds-thread" data-thread-key="2015/01/19/css/css-media/"
+                   data-title="CSS Media" data-url="http://blog.helloarron.com/2015/01/19/css/css-media/">
               </div>
             
           </div>
@@ -355,21 +351,21 @@ var _hmt = _hmt || [];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">63</span>
+              <span class="site-state-item-count">64</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">48</span>
+              <span class="site-state-item-count">49</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -422,7 +418,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码展示"><span class="nav-number">2.</span> <span class="nav-text">代码展示</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
