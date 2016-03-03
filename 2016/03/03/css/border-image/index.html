@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,WeiXin," />
+  <meta name="keywords" content="css," />
 
 
 
@@ -37,16 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="在做项目的时候遇到微信网页分享的问题，这是在微信还没有JS-SDK之前的例子，目前直接看官方的JS-SDK就能很快分享到各个提供的平台。下面是几个例子，以及回调函数。下面是js代码，插入到页面即可。12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455">
+<meta name="description" content="前言border-image 是 CSS3 的一个属性，将图片规定为包围元素的边框，就像border定义边框那样，border只能简单的设置一些纯色或几种简单的线型（如solid,dotted,double,dashed等）,而border-image使用图片来丰富包围的元素,给边框设置不同的图片效果。因为它是css3中的属性，所以在浏览器兼容方面我就不多说了，可以去 http://caniuse">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信分享网页的缩略图-链接-标题和摘要">
-<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/javascript/javascript-weixin-share/index.html">
+<meta property="og:title" content="CSS 属性 border-image 的使用">
+<meta property="og:url" content="http://blog.helloarron.com/2016/03/03/css/border-image/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="在做项目的时候遇到微信网页分享的问题，这是在微信还没有JS-SDK之前的例子，目前直接看官方的JS-SDK就能很快分享到各个提供的平台。下面是几个例子，以及回调函数。下面是js代码，插入到页面即可。12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455">
-<meta property="og:updated_time" content="2015-09-24T07:28:57.000Z">
+<meta property="og:description" content="前言border-image 是 CSS3 的一个属性，将图片规定为包围元素的边框，就像border定义边框那样，border只能简单的设置一些纯色或几种简单的线型（如solid,dotted,double,dashed等）,而border-image使用图片来丰富包围的元素,给边框设置不同的图片效果。因为它是css3中的属性，所以在浏览器兼容方面我就不多说了，可以去 http://caniuse">
+<meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice.png">
+<meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-top.png">
+<meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-right.png">
+<meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-bottom.png">
+<meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-left.png">
+<meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-gif.gif">
+<meta property="og:updated_time" content="2016-03-03T07:22:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信分享网页的缩略图-链接-标题和摘要">
-<meta name="twitter:description" content="在做项目的时候遇到微信网页分享的问题，这是在微信还没有JS-SDK之前的例子，目前直接看官方的JS-SDK就能很快分享到各个提供的平台。下面是几个例子，以及回调函数。下面是js代码，插入到页面即可。12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455">
+<meta name="twitter:title" content="CSS 属性 border-image 的使用">
+<meta name="twitter:description" content="前言border-image 是 CSS3 的一个属性，将图片规定为包围元素的边框，就像border定义边框那样，border只能简单的设置一些纯色或几种简单的线型（如solid,dotted,double,dashed等）,而border-image使用图片来丰富包围的元素,给边框设置不同的图片效果。因为它是css3中的属性，所以在浏览器兼容方面我就不多说了，可以去 http://caniuse">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -66,7 +72,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> 微信分享网页的缩略图-链接-标题和摘要 | Arron.y's blog </title>
+  <title> CSS 属性 border-image 的使用 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -182,7 +188,7 @@ var _hmt = _hmt || [];
           
           
             
-              微信分享网页的缩略图-链接-标题和摘要
+              CSS 属性 border-image 的使用
             
           
         </h1>
@@ -191,8 +197,8 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-01-19T01:26:31+08:00" content="2015-01-19">
-            2015-01-19
+          <time itemprop="dateCreated" datetime="2016-03-03T14:14:31+08:00" content="2016-03-03">
+            2016-03-03
           </time>
         </span>
 
@@ -201,8 +207,8 @@ var _hmt = _hmt || [];
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                  <span itemprop="name">JavaScript</span>
+                <a href="/categories/css/" itemprop="url" rel="index">
+                  <span itemprop="name">css</span>
                 </a>
               </span>
 
@@ -217,8 +223,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/01/19/javascript/javascript-weixin-share/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/19/javascript/javascript-weixin-share/" itemprop="commentsCount"></span>
+              <a href="/2016/03/03/css/border-image/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/css/border-image/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -232,7 +238,46 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><p>在做项目的时候遇到微信网页分享的问题，这是在微信还没有<code>JS-SDK</code>之前的例子，目前直接看官方的<code>JS-SDK</code>就能很快分享到各个提供的平台。下面是几个例子，以及回调函数。<br>下面是js代码，插入到页面即可。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> imgUrl = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">var</span> lineLink = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">var</span> descContent = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">var</span> shareTitle = <span class="string">"#赏金猎人#"</span>;</span><br><span class="line">    <span class="keyword">var</span> appid = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">shareFriend</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        WeixinJSBridge.invoke(<span class="string">'sendAppMessage'</span>,&#123;</span><br><span class="line">            <span class="string">"appid"</span>: appid, </span><br><span class="line">            <span class="string">"img_url"</span>: imgUrl, </span><br><span class="line">            <span class="string">"img_width"</span>: <span class="string">"200"</span>, </span><br><span class="line">            <span class="string">"img_height"</span>: <span class="string">"200"</span>, </span><br><span class="line">            <span class="string">"link"</span>: lineLink, </span><br><span class="line">            <span class="string">"desc"</span>: descContent, </span><br><span class="line">            <span class="string">"title"</span>: shareTitle </span><br><span class="line">        &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123; </span><br><span class="line">            <span class="comment">//_report('send_msg', res.err_msg);   //必须注释掉回调函数，不然可能会黑屏不知道是什么原因</span></span><br><span class="line">        &#125;) </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">shareTimeline</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">        WeixinJSBridge.invoke(<span class="string">'shareTimeline'</span>,&#123; </span><br><span class="line">            <span class="string">"img_url"</span>: imgUrl, </span><br><span class="line">            <span class="string">"img_width"</span>: <span class="string">"200"</span>, </span><br><span class="line">            <span class="string">"img_height"</span>: <span class="string">"200"</span>, </span><br><span class="line">            <span class="string">"link"</span>: lineLink, </span><br><span class="line">            <span class="string">"desc"</span>: descContent, </span><br><span class="line">            <span class="string">"title"</span>: shareTitle </span><br><span class="line">        &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123; </span><br><span class="line">            <span class="comment">//_report('timeline', res.err_msg); </span></span><br><span class="line">        &#125;); </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">shareWeibo</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">        WeixinJSBridge.invoke(<span class="string">'shareWeibo'</span>,&#123; </span><br><span class="line">            <span class="string">"content"</span>: descContent, </span><br><span class="line">            <span class="string">"url"</span>: lineLink, </span><br><span class="line">        &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123; </span><br><span class="line">            <span class="comment">//_report('weibo', res.err_msg); </span></span><br><span class="line">        &#125;); </span><br><span class="line">    &#125; </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。 </span></span><br><span class="line">    <span class="built_in">document</span>.addEventListener(<span class="string">'WeixinJSBridgeReady'</span>, <span class="function"><span class="keyword">function</span> <span class="title">onBridgeReady</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">        <span class="comment">// 发送给好友 </span></span><br><span class="line">        WeixinJSBridge.on(<span class="string">'menu:share:appmessage'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">argv</span>)</span>&#123; </span><br><span class="line">            shareFriend(); </span><br><span class="line">        &#125;); </span><br><span class="line">        <span class="comment">// 分享到朋友圈 </span></span><br><span class="line">        WeixinJSBridge.on(<span class="string">'menu:share:timeline'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">argv</span>)</span>&#123; </span><br><span class="line">            shareTimeline(); </span><br><span class="line">        &#125;); </span><br><span class="line">        <span class="comment">// 分享到微博 </span></span><br><span class="line">        WeixinJSBridge.on(<span class="string">'menu:share:weibo'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">argv</span>)</span>&#123; </span><br><span class="line">            shareWeibo(); </span><br><span class="line">        &#125;); </span><br><span class="line">    &#125;, <span class="literal">false</span>); </span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h2 id="前言">前言</h2><p><code>border-image</code> 是 CSS3 的一个属性，将图片规定为包围元素的边框，就像<code>border</code>定义边框那样，<code>border</code>只能简单的设置一些纯色或几种简单的线型（如<code>solid</code>,<code>dotted</code>,<code>double</code>,<code>dashed</code>等）,而<code>border-image</code>使用图片来丰富包围的元素,给边框设置不同的图片效果。因为它是css3中的属性，所以在浏览器兼容方面我就不多说了，可以去 <a href="http://caniuse.com/" target="_blank" rel="external">http://caniuse.com/</a>输入对应属性查看具体兼容情况。</p>
+<h2 id="语法">语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-image ： none | &lt;image&gt; [ &lt;number&gt; | &lt;percentage&gt;]&#123;1,4&#125; [ / &lt;border-width&gt;&#123;1,4&#125; ]? [ stretch | repeat | round ]&#123;0,2&#125;</span><br></pre></td></tr></table></figure>
+<p><code>border-image</code> 属性是一个简写属性，用于设置以下属性：</p>
+<ul>
+<li>border-image-source  —— 用在边框的图片的路径</li>
+<li>border-image-slice   —— 图片边框向内偏移。</li>
+<li>border-image-width   —— 图片边框的宽度。</li>
+<li>border-image-outset  —— 边框图像区域超出边框的量。</li>
+<li>border-image-repeat  —— 图像边框是否应平铺(repeated)、铺满(rounded)或拉伸(stretched)。</li>
+</ul>
+<p>简单的来介绍一下border-image的参数:</p>
+<ol>
+<li><code>none</code>: 是<code>border-image</code>的默认值，如果取值为<code>none</code>时，表示边框无背景图片；</li>
+<li><code>&lt;image&gt;</code>：设置<code>border-image</code>的背景图片，这个跟<code>background-image</code>一样，使用绝对或相对的<code>url</code>地址，来指定背景图片；</li>
+<li><code>&lt;number&gt;</code>：<code>number</code>是一个数值，用来设置边框的宽度，其单位是<code>px</code>，其实就像<code>border-width</code>一样取值，可以使用<code>1~4</code>个值，其具体表示四个方位的值，大家可以参考<code>border-width</code>的设置方式；</li>
+<li><code>&lt;percntage&gt;</code>：<code>percntage</code>也是用来设置边框的宽度，跟<code>number</code>不同之处是，其使用的是百分比值来设置边框宽度；</li>
+<li><code>stretch</code>,<code>repeat</code>,<code>round</code>: 用来设置边框背景图片的铺放方式，类似于<code>background-position</code>，其中<code>stretch</code>是拉伸，<code>repeat</code>是重复，<code>round</code>是平铺，<code>stretch</code>为默认值。</li>
+</ol>
+<h4 id="border-image-source">border-image-source</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">border-image-source</span>:<span class="value"><span class="function">url</span>(image url)</span></span>;<span class="comment">/*image url可以是相对地址也可以是绝对地址*/</span></span><br></pre></td></tr></table></figure>
+<p><code>border-image-source</code>跟<code>background-image</code>属性相似，也是通过<code>url()</code>调用背景图片，图片的路径可以是相对地址也可以是绝对地址，当然你不想使用背景图片你也可以把值设置为<code>none</code>，即：<code>border-image:none；</code>其默认值就是<code>none</code>。</p>
+<h4 id="border-image-slice">border-image-slice</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">border-image-slice</span>:<span class="value"> [ &lt;number&gt; | &lt;percentage&gt;]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;&amp;&amp; fill?</span></span></span><br></pre></td></tr></table></figure>
+<p><code>border-image-slice</code>是用来分解引入进来的背景图片，这个参数相对来说比较复杂和特别。四个参数类似于<code>margin</code>,<code>padding</code>那样遵从【top,right,bottom,left】的规则。</p>
+<p>如：一个81px的正方形位图,9个菱形图案,每个菱形图案为27*27px。假如给定这个属性值:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice.png" alt="图片"><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-image-slice:<span class="number">27</span> <span class="number">27</span> <span class="number">27</span> <span class="number">27</span>;</span><br></pre></td></tr></table></figure></p>
+<p>它代表的意思是距离顶部内偏移区域27px处横切一刀:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-top.png" alt="图片"></p>
+<p>接着距离右侧内偏移区域27px竖切一刀:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-right.png" alt="图片"></p>
+<p>接着距离底部内偏移区域27px竖切一刀:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-bottom.png" alt="图片"></p>
+<p>接着距离左侧内偏移区域27px竖切一刀:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-left.png" alt="图片"></p>
+<p>那么给定图像切片<code>border-image-slice:27 27 27 27;</code>完整动态图如下:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-gif.gif" alt="图片"></p>
+<p>*值得注意的是，按照上面的四个值切除之后，图片中间部分默认情况下是为空的。如果需要中间部分按照图片原本中间部分填充的话，需要在第4个值后面再加上<code>fill</code>值。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">border-image-slice</span>:<span class="value"><span class="number">27</span> <span class="number">27</span> <span class="number">27</span> <span class="number">27</span> fill</span></span>;</span><br></pre></td></tr></table></figure></p>
+<iframe height="268" scrolling="no" src="//codepen.io/ArronYR/embed/QNbrMq/?height=268&theme-id=0&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/ArronYR/pen/QNbrMq/" target="_blank" rel="external">border-image-demo-1</a> by Arron.y (<a href="http://codepen.io/ArronYR" target="_blank" rel="external">@ArronYR</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<iframe height="268" scrolling="no" src="//codepen.io/ArronYR/embed/YqXLay/?height=268&theme-id=0&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/ArronYR/pen/YqXLay/" target="_blank" rel="external">border-image-demo-2</a> by Arron.y (<a href="http://codepen.io/ArronYR" target="_blank" rel="external">@ArronYR</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="border-image-width">border-image-width</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">border-image-width</span>:<span class="value"> [ &lt;length&gt; | &lt;percentage&gt; | &lt;number&gt; | auto ]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;</span></span></span><br></pre></td></tr></table></figure>
+<p><code>border-image-width</code>就是<code>border-width</code>，用来设置边框的宽度。</p>
+<h4 id="border-image-repeat">border-image-repeat</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">border-image-repeat</span>:<span class="value"> [ stretch | repeat | round ]&#123;<span class="number">1</span>,<span class="number">2</span>&#125;</span></span></span><br></pre></td></tr></table></figure>
+<p><code>border-image-repeat</code>是用来指定<code>border-image</code>的排列方式，这个属性设置参数和其他的不一样，<code>border-image-repeat</code>不遵循【top,right,bottom,left】的方位原则，他只接受两个（或一个）参数值，第一个表示水平方向，第二个表示垂直方向；当取值为一个值时，表示水平和垂直方向的排列方式相同。同时其默认值是<code>stretch</code>，如果你省略不取值时，那么水平和垂直方向都是以<code>stretc</code>排列。</p>
+<h4 id="border-image-outset">border-image-outset</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">border-image-outset</span>:<span class="value"> [ &lt;length&gt; | &lt;number&gt; | none ]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;</span></span></span><br></pre></td></tr></table></figure>
+<p><code>border-image-width</code>用来设置边框图片向外延伸。遵循【top,right,bottom,left】的方位原则。</p>
+<h2 id="其他">其他</h2><p>关于更多的用法例子可自行搜索。如该文章有误，请在评论里提出，谢谢！</p>
 </span>
       
     </div>
@@ -241,9 +286,7 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
-          
-            <a href="/tags/WeiXin/" rel="tag">#WeiXin</a>
+            <a href="/tags/css/" rel="tag">#css</a>
           
         </div>
       
@@ -252,13 +295,11 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/01/19/javascript/javascript-window/" rel="prev">JavaScript Window 对象</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/01/19/node/node-ejs-template/" rel="next">ejs模板引擎</a>
+              <a href="/2016/03/02/css/css-animation-spin/" rel="next">CSS-Animation-Spin CSS加载动画</a>
             
           </div>
         </div>
@@ -306,8 +347,8 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/01/19/javascript/javascript-weixin-share/"
-                   data-title="微信分享网页的缩略图-链接-标题和摘要" data-url="http://blog.helloarron.com/2015/01/19/javascript/javascript-weixin-share/">
+              <div class="ds-thread" data-thread-key="2016/03/03/css/border-image/"
+                   data-title="CSS 属性 border-image 的使用" data-url="http://blog.helloarron.com/2016/03/03/css/border-image/">
               </div>
             
           </div>
@@ -414,7 +455,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">2.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#border-image-source"><span class="nav-number">2.0.1.</span> <span class="nav-text">border-image-source</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#border-image-slice"><span class="nav-number">2.0.2.</span> <span class="nav-text">border-image-slice</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#border-image-width"><span class="nav-number">2.0.3.</span> <span class="nav-text">border-image-width</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#border-image-repeat"><span class="nav-number">2.0.4.</span> <span class="nav-text">border-image-repeat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#border-image-outset"><span class="nav-number">2.0.5.</span> <span class="nav-text">border-image-outset</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">3.</span> <span class="nav-text">其他</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
