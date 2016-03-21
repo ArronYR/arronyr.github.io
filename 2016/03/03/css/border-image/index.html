@@ -49,7 +49,7 @@
 <meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-bottom.png">
 <meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-left.png">
 <meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-gif.gif">
-<meta property="og:updated_time" content="2016-03-03T08:30:04.000Z">
+<meta property="og:updated_time" content="2016-03-21T10:46:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 属性 border-image 的使用">
 <meta name="twitter:description" content="前言border-image 是 CSS3 的一个属性，将图片规定为包围元素的边框，就像border定义边框那样，border只能简单的设置一些纯色或几种简单的线型（如solid,dotted,double,dashed等）,而border-image使用图片来丰富包围的元素,给边框设置不同的图片效果。因为它是css3中的属性，所以在浏览器兼容方面我就不多说了，可以去 http://caniuse">
@@ -260,7 +260,7 @@ var _hmt = _hmt || [];
 <p><code>border-image-source</code>跟<code>background-image</code>属性相似，也是通过<code>url()</code>调用背景图片，图片的路径可以是相对地址也可以是绝对地址，当然你不想使用背景图片你也可以把值设置为<code>none</code>，即：<code>border-image:none；</code>其默认值就是<code>none</code>。</p>
 <h4 id="border-image-slice">border-image-slice</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">border-image-slice</span>:<span class="value"> [ &lt;number&gt; | &lt;percentage&gt;]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;&amp;&amp; fill?</span></span></span><br></pre></td></tr></table></figure>
 <p><code>border-image-slice</code>是用来分解引入进来的背景图片，这个参数相对来说比较复杂和特别。四个参数类似于<code>margin</code>,<code>padding</code>那样遵从【top,right,bottom,left】的规则。</p>
-<p>如：一个81px的正方形位图,9个菱形图案,每个菱形图案为27*27px。假如给定这个属性值:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice.png" alt="图片"><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-image-slice:<span class="number">27</span> <span class="number">27</span> <span class="number">27</span> <span class="number">27</span>;</span><br></pre></td></tr></table></figure></p>
+<p>如：一个81px的正方形位图,9个菱形图案,每个菱形图案为27*27px。假如给定这个属性值:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice.png" alt="图片"><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">border-image-slice</span>:<span class="value"><span class="number">27</span> <span class="number">27</span> <span class="number">27</span> <span class="number">27</span></span></span>;</span><br></pre></td></tr></table></figure></p>
 <p>它代表的意思是距离顶部内偏移区域27px处横切一刀:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-top.png" alt="图片"></p>
 <p>接着距离右侧内偏移区域27px竖切一刀:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-right.png" alt="图片"></p>
 <p>接着距离底部内偏移区域27px竖切一刀:<br><img src="http://7xrgqs.com1.z0.glb.clouddn.com/border-image-slice-bottom.png" alt="图片"></p>
