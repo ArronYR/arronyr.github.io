@@ -47,9 +47,9 @@
 <meta property="og:description" content="通过storyboard的 运行时属性runtime attribute,可以对Button设置圆角或者边框
 
 很多人都知道,通常设置一个 Button后者其他的UIView子类的圆角,需要使用如下的语句:123&amp;lt;span style=&quot;font-size:18px;&quot;&amp;gt;    self.button.layer.cornerRadius=10;  //即可&amp;lt;/span&amp;gt;">
-<meta property="og:image" content="http://img.blog.csdn.net/20150119231223651?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZ2JpbmdiaW5nYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:image" content="http://img.blog.csdn.net/20150119231629414?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZ2JpbmdiaW5nYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:updated_time" content="2015-10-09T14:14:52.000Z">
+<meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/xcode-border-raduis.jpeg">
+<meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/xcode-border-raduis.jpeg">
+<meta property="og:updated_time" content="2016-04-11T14:19:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Xcode Storyboard设置按钮圆角方法">
 <meta name="twitter:description" content="通过storyboard的 运行时属性runtime attribute,可以对Button设置圆角或者边框
@@ -253,10 +253,10 @@ var _hmt = _hmt || [];
 <li>总有一些有好奇心的人想知道如何通过,<code>storyboard/xib</code> 设置 一个<code>button</code>或者<code>UIView</code>的圆角，可以设置<code>storybord</code>无法添加的属性,比如圆角,或者边框，这个方法就是<code>runtime Attribute</code>运行时属性,也就是在 运行时你设置的这个属性才会起作用,这样体现了<code>oc</code>语言的动态特性和运行时<code>(runtime)</code>的强大。</li>
 </ol>
 <h3 id="Use">Use</h3><p>创建一个<code>button</code>然后,设置好约束(以免Button”消失”),如下图,然后选中<code>button</code> 选择右边的<code>inspector</code>:</p>
-<p><img src="http://img.blog.csdn.net/20150119231223651?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZ2JpbmdiaW5nYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="enter image description here"></p>
+<p><img src="http://7xrgqs.com1.z0.glb.clouddn.com/xcode-border-raduis.jpeg" alt="enter image description here"></p>
 <p>如上图,点击<code>+</code>号即可添加  一个<code>Button</code>相关的属性,这个属性,可以是在<code>storyboard</code>上没有的属性,此方法类似于代码的效果,每一个属性都有与之对应的值(对象),</p>
 <p>如数字对应的值类型是  <code>NSNumber</code>,如下图,填入到<code>runtime attrite</code>中的属性名不要写错,否则运行时会崩溃。</p>
-<p><img src="http://img.blog.csdn.net/20150119231629414?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWFuZ2JpbmdiaW5nYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="enter image description here"></p>
+<p><img src="http://7xrgqs.com1.z0.glb.clouddn.com/xcode-border-raduis.jpeg" alt="enter image description here"></p>
 <p>最终在模拟器上可以看到你想要的圆角啦。类似的你可以添加button的其他属性。</p>
 </span>
       
