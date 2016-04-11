@@ -49,7 +49,7 @@
 
 事件Dropzone触发事件在处理文件时,你可以通过当前实例调用.on(eventName, callbackFunction)监听事件。
 因为听事件只能是Dropzone实例,设置你的事件侦听器,最好的地方是在init函数。12345Dropzone.options.myAwesomeDropzone = &amp;#123;  init: fu">
-<meta property="og:updated_time" content="2015-11-25T12:02:23.000Z">
+<meta property="og:updated_time" content="2016-04-11T14:11:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DropzoneJS 使用指南<二>">
 <meta name="twitter:description" content="上篇：DropzoneJS 使用指南&amp;lt;一&amp;gt;
@@ -241,7 +241,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><p>上篇：<a href="http://blog.helloarron.com/2015/11/25/javascript/javascript-dropzonejs-guide-2/">DropzoneJS 使用指南&lt;一&gt;</a></p>
+        <span itemprop="articleBody"><p>上篇：<a href="http://blog.helloarron.com/2015/11/25/javascript/javascript-dropzonejs-guide-1/">DropzoneJS 使用指南&lt;一&gt;</a></p>
 <hr>
 <h2 id="事件">事件</h2><p>Dropzone触发事件在处理文件时,你可以通过当前实例调用<code>.on(eventName, callbackFunction)</code>监听事件。</p>
 <p>因为听事件只能是Dropzone实例,设置你的事件侦听器,最好的地方是在init函数。<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Dropzone.options.myAwesomeDropzone = &#123;</span><br><span class="line">  init: <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.on(<span class="string">"addedfile"</span>, <span class="function"><span class="keyword">function</span><span class="params">(file)</span> </span>&#123; alert(<span class="string">"Added file."</span>); &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
