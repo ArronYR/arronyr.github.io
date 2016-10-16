@@ -47,7 +47,7 @@
 <meta property="og:description" content="在Linux中经常遇到需要后台执行的程序，比如nodejs等，想要在Linux中后台运行某一条命令，有以下两种模式：
 ================================在当前terminal会话中：1node app.js 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
 前面是需要后台运行的命令，0表示标准输入，1表示标准输出，2表示标准错误，上面没有标准输入，将标">
-<meta property="og:updated_time" content="2016-10-14T10:28:57.000Z">
+<meta property="og:updated_time" content="2016-10-16T06:21:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 后台运行">
 <meta name="twitter:description" content="在Linux中经常遇到需要后台执行的程序，比如nodejs等，想要在Linux中后台运行某一条命令，有以下两种模式：
@@ -241,12 +241,12 @@ var _hmt = _hmt || [];
         <span itemprop="articleBody"><p>在<code>Linux</code>中经常遇到需要后台执行的程序，比如<code>nodejs</code>等，想要在<code>Linux</code>中后台运行某一条命令，有以下两种模式：</p>
 <p>================================<br>在当前<code>terminal</code>会话中：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js <span class="number">1</span>&gt;/dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br></pre></td></tr></table></figure></p>
 <p>前面是需要后台运行的命令，<code>0</code>表示<code>标准输入</code>，<code>1</code>表示<code>标准输出</code>，<code>2</code>表示<code>标准错误</code>，上面没有标准输入，将标准输出输出到<code>/dev/null</code>中，标准错误与标准输出一致，最后的<code>&amp;</code>表示<code>后台运行</code>。</p>
-<p>以上命令执行之后就会后台运行，这时候会出现该后台的id号，所以也可以使用以下命令进入该后台：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fg</span><span class="sqbracket"> [id]</span></span><br></pre></td></tr></table></figure></p>
+<p>以上命令执行之后就会后台运行，这时候会出现该后台的<code>id</code>号，如<code>1[3126]</code>，那个<code>1</code>就是<code>id</code>。所以也可以使用以下命令进入该后台：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fg</span><span class="sqbracket"> [id]</span></span><br></pre></td></tr></table></figure></p>
 <p>如果进入之后想退出让其继续后台运行，执行：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ctrl</span> + z</span><br><span class="line"><span class="keyword">bg</span><span class="sqbracket"> [id]</span></span><br></pre></td></tr></table></figure></p>
 <p>如果想关闭该后台，直接在进入后台之后执行：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">ctrl</span> + c</span><br></pre></td></tr></table></figure></p>
 <p>以上这种方法在一旦关闭<code>terminal</code>窗口的时候，就会全部退出，因为以上的后台命令的父进程是该<code>terminal</code>窗口。</p>
 <p>===================================<br>永久进入后台：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup node app.js <span class="number">1</span>&gt;/dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br></pre></td></tr></table></figure></p>
-<p>该方法与以上的方式差不多一致，只不过该父进程为1，关闭的时候需要回去该<code>进程id</code>，然后<code>kill</code>掉：<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | <span class="keyword">grep</span> xxx</span><br><span class="line"><span class="keyword">kill</span> id</span><br></pre></td></tr></table></figure></p>
+<p>该方法与以上的方式差不多一致，只不过该父进程为1，关闭的时候需要回去该<code>进程id</code>，然后<code>kill</code>掉：<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | <span class="keyword">grep</span> node</span><br><span class="line"><span class="keyword">kill</span> id</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
