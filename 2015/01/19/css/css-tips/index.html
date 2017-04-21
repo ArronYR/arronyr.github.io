@@ -28,28 +28,30 @@
 
 
 
-  <meta name="keywords" content="Media,css," />
+  <meta name="keywords" content="css," />
 
 
+
+  <link rel="alternate" href="/atom.xml" title="Arron.y's blog" type="application/atom+xml" />
 
 
 
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="概述通过媒体查询为不同的设备和大小配置不同的样式。
-代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @media scre">
+<meta name="description" content="CSS Media概述通过媒体查询为不同的设备和大小配置不同的样式。
+代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS Media">
-<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/css/css-media/index.html">
+<meta property="og:title" content="CSS 小技巧">
+<meta property="og:url" content="http://blog.helloarron.com/2015/01/19/css/css-tips/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="概述通过媒体查询为不同的设备和大小配置不同的样式。
-代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @media scre">
-<meta property="og:updated_time" content="2016-03-02T04:27:36.000Z">
+<meta property="og:description" content="CSS Media概述通过媒体查询为不同的设备和大小配置不同的样式。
+代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @m">
+<meta property="og:updated_time" content="2017-04-21T06:27:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS Media">
-<meta name="twitter:description" content="概述通过媒体查询为不同的设备和大小配置不同的样式。
-代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @media scre">
+<meta name="twitter:title" content="CSS 小技巧">
+<meta name="twitter:description" content="CSS Media概述通过媒体查询为不同的设备和大小配置不同的样式。
+代码展示123456789101112131415161718192021222324252627282930313233/* media */ /* 横屏 */    @media screen and (orientation:landscape)&amp;#123;          &amp;#125;   /* 竖屏 */    @m">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -69,7 +71,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> CSS Media | Arron.y's blog </title>
+  <title> CSS 小技巧 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -185,7 +187,7 @@ var _hmt = _hmt || [];
           
           
             
-              CSS Media
+              CSS 小技巧
             
           
         </h1>
@@ -194,7 +196,7 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-01-19T01:43:43+08:00" content="2015-01-19">
+          <time itemprop="dateCreated" datetime="2015-01-19T01:45:31+08:00" content="2015-01-19">
             2015-01-19
           </time>
         </span>
@@ -218,6 +220,13 @@ var _hmt = _hmt || [];
 
         
           
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/01/19/css/css-tips/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/01/19/css/css-tips/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
         
       </div>
     </header>
@@ -228,8 +237,13 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h4 id="概述">概述</h4><p>通过媒体查询为不同的设备和大小配置不同的样式。</p>
+        <span itemprop="articleBody"><h1 id="CSS_Media">CSS Media</h1><h4 id="概述">概述</h4><p>通过媒体查询为不同的设备和大小配置不同的样式。</p>
 <h4 id="代码展示">代码展示</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* media */</span> </span><br><span class="line"><span class="comment">/* 横屏 */</span>    </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (orientation:landscape)</span>&#123;  </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 竖屏 */</span>    </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (orientation:portrait)</span>&#123;   </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;960,设计宽度=768 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">959px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;768,设计宽度=640 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">767px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;640,设计宽度=480 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">639px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 窗口宽度&lt;480,设计宽度=320 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">479px</span>)</span>&#123;    </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* windows UI 贴靠 */</span> </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (-ms-view-state:snapped)</span>&#123; </span><br><span class="line">        </span><br><span class="line">&#125;   </span><br><span class="line"><span class="comment">/* 打印 */</span>    </span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> print</span>&#123;   </span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="input_提交表单按钮_背景图片的完美设置"><code>input</code> 提交表单按钮 背景图片的完美设置</h1><p><code>html</code>的代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">id</span>=<span class="value">"submit_btn"</span> <span class="attribute">src</span>=<span class="value">"submit_btn_bg_img.jpg"</span> <span class="attribute">value</span>=<span class="value">"loginer"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">id</span>=<span class="value">"submit_btn"</span> <span class="attribute">name</span>=<span class="value">"submit_btn"</span>  <span class="attribute">value</span>=<span class="value">"loginer"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><code>CSS</code>部分：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#submit_btn</span><span class="rules">&#123;           </span><br><span class="line">	<span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">33px</span></span></span>;            </span><br><span class="line">	<span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">16px</span></span></span>;            </span><br><span class="line">	<span class="rule"><span class="attribute">background</span>:<span class="value"><span class="function">url</span>(goto/image/path.jpg) no-repeat center</span></span>;            </span><br><span class="line">	<span class="rule"><span class="attribute">cursor</span>:<span class="value">pointer</span></span>;   <span class="comment">/* 上面的代码是常规设置， 即：引入一个图片背景，设置在中心位置，大小和按钮的大小一致，以及鼠标指针为手型 */</span>              </span><br><span class="line">	<span class="rule"><span class="attribute">display</span>:<span class="value">block</span></span>;             </span><br><span class="line">	<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">0</span></span></span>;             </span><br><span class="line">	<span class="rule"><span class="attribute">line-height</span>:<span class="value"><span class="number">0</span></span></span>;             </span><br><span class="line">	<span class="rule"><span class="attribute">text-indent</span>:<span class="value">-<span class="number">9999px</span></span></span>;   <span class="comment">/* </span><br><span class="line">	上面的不用多问，四句一起拷贝就可以了，大概意思就是把value值设置为0像素，也就是肉眼无法看到，但却又是存在的（用$_POST['submit_btn'] 可以证明）*/</span>  </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="Bootstrap_调整Glyphicons图标大小"><code>Bootstrap</code> 调整<code>Glyphicons</code>图标大小</h1><p><code>Bootstrap3</code>中的图标，是用字体的形式表示的。即你去看<code>glyphicon glyphicon-xxx</code>的<code>css</code>定义，会找到类似<code>content:&quot;\xxx&quot;</code>的定义，而找不到<code>img</code>的标签。</p>
+<p>所以，当你需要更改你的图标的大小的时候就很方便了，只需要设置它的<code>font-size</code>就行了。而且这样的好处是，不管你设多大或者多小，它都能正常展示。而不像图片会拉伸或者压缩。</p>
+<p>今天也了解到<code>font awesome</code>也是这么做的。并且把图标做成字体然后再使用也将成为一大趋势。</p>
 </span>
       
     </div>
@@ -237,8 +251,6 @@ var _hmt = _hmt || [];
     <footer class="post-footer">
       
         <div class="post-tags">
-          
-            <a href="/tags/Media/" rel="tag">#Media</a>
           
             <a href="/tags/css/" rel="tag">#css</a>
           
@@ -249,13 +261,13 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/01/19/css/css3-nth-child/" rel="prev">CSS3 :nth-child()伪类选择器</a>
+              <a href="/2015/01/19/php/php-mobile-agents/" rel="prev">PHP判断是否为手机移动终端</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/01/19/java/java-ajax-jsonp/" rel="next">AJAX 跨域请求 - JSONP获取JSON数据(JAVA版)</a>
+              <a href="/2015/01/19/css/css3-nth-child/" rel="next">CSS3 :nth-child()伪类选择器</a>
             
           </div>
         </div>
@@ -303,6 +315,10 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
+              <div id="disqus_thread">
+                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+              </div>
+            
           </div>
         
       </div>
@@ -340,7 +356,7 @@ var _hmt = _hmt || [];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">67</span>
+              <span class="site-state-item-count">65</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -361,6 +377,13 @@ var _hmt = _hmt || [];
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -403,7 +426,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码展示"><span class="nav-number">2.</span> <span class="nav-text">代码展示</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS_Media"><span class="nav-number">1.</span> <span class="nav-text">CSS Media</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概述"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码展示"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">代码展示</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#input_提交表单按钮_背景图片的完美设置"><span class="nav-number">2.</span> <span class="nav-text">input 提交表单按钮 背景图片的完美设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bootstrap_调整Glyphicons图标大小"><span class="nav-number">3.</span> <span class="nav-text">Bootstrap 调整Glyphicons图标大小</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -459,6 +482,27 @@ var _hmt = _hmt || [];
     
     
 
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'arron-yr';
+      var disqus_identifier = '2015/01/19/css/css-tips/';
+      var disqus_title = 'CSS 小技巧';
+      var disqus_url = 'http://blog.helloarron.com/2015/01/19/css/css-tips/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
   
 
 
