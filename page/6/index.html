@@ -185,199 +185,6 @@ var _hmt = _hmt || [];
           
           
             
-              <a class="post-title-link" href="/2015/02/02/mongodb/mongodb-find/" itemprop="url">
-                MongoDB 条件查询
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-02-02T10:57:14+08:00" content="2015-02-02">
-            2015-02-02
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/MongoDB/" itemprop="url" rel="index">
-                  <span itemprop="name">MongoDB</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/02/02/mongodb/mongodb-find/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/02/02/mongodb/mongodb-find/" itemprop="commentsCount"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-            相等条件是最简单常用的的查询操作，查询条件是{ field:value }格式的BSON对象。
-语法：1&#123; field: value &#125;
-示例：查询”inventory集合中所有type字段为snacks的文档”;1db.inventory.find(&#123; type: &#34;snacks&#34; &#125;)
-比较条件也是
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/02/02/mongodb/mongodb-find/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/02/02/mongodb/mongodb-cursor/" itemprop="url">
-                MongoDB 游标与结果集
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-02-02T10:55:00+08:00" content="2015-02-02">
-            2015-02-02
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/MongoDB/" itemprop="url" rel="index">
-                  <span itemprop="name">MongoDB</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/02/02/mongodb/mongodb-cursor/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/02/02/mongodb/mongodb-cursor/" itemprop="commentsCount"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-            
-什么是游标(cursor)？
-
-find命令并不直接返回结果，而是返回一个结果集的迭代器，即游标。
-
-想要获取数据，我们可以使用next方法来遍历游标，如下：
-1234567var myCursor = db.inventory.find( &#123; type: "food" &#125; );var myDocument = myCursor.has
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/02/02/mongodb/mongodb-cursor/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
               <a class="post-title-link" href="/2015/02/02/linux/linux-centos-svn/" itemprop="url">
                 Linux（centOS）下搭建 SVN 服务器
               </a>
@@ -934,11 +741,199 @@ find命令并不直接返回结果，而是返回一个结果集的迭代器，�
 
 
     
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/01/19/webapp/webapp-css-textoverflow/" itemprop="url">
+                CSS控制文本超出,控制文本不换行
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-01-19T02:01:26+08:00" content="2015-01-19">
+            2015-01-19
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/WebApp/" itemprop="url" rel="index">
+                  <span itemprop="name">WebApp</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/01/19/webapp/webapp-css-textoverflow/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/01/19/webapp/webapp-css-textoverflow/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+            一般的文字截断（适用于内联与块）：12345678.text-overflow &#123;     display:block;          /*内联对象需加*/     width:31em;     word-break:keep-all;    /* 不换行 */     white-space:nowrap;     /* 不换行 */   
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/01/19/webapp/webapp-css-textoverflow/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/01/19/webapp/webapp-icon/" itemprop="url">
+                网站图标favicon.ico显示不了或无法刷新更新的原因
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-01-19T01:59:04+08:00" content="2015-01-19">
+            2015-01-19
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/WebApp/" itemprop="url" rel="index">
+                  <span itemprop="name">WebApp</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/01/19/webapp/webapp-icon/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/01/19/webapp/webapp-icon/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+            现在人们都喜欢在自己的网站上放上自己的favicon.ico，不仅可以标识网站的身份，自己看着也赏心悦目。但有很多原因会导致favicon.ico显示不出来，我总结了下，有以下几个原因：
+
+图标的链接地址或者HTML代码出错了
+
+这是个低级错误，但也不是不可能发生的，首先要看看图标的链接地址和HTML代码对不对。一般如果直接把favicon.ico图标放在网
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/01/19/webapp/webapp-icon/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/5/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/">&raquo;</a>
   </nav>
 
  </div>
@@ -972,7 +967,7 @@ find命令并不直接返回结果，而是返回一个结果集的迭代器，�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">65</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

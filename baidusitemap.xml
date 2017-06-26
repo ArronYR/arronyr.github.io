@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://blog.helloarron.com/2015/10/10/ios/ios-some-tips/</loc>
+    <lastmod>2017-06-26T08:59:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS中键盘隐藏</title>
+        <pubTime>2015-10-10T02:28:29.000Z</pubTime>
+        
+        <tag>Swift</tag>
+         
+        <tag>iOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://blog.helloarron.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.helloarron.com/2015/01/19/css/css-tips/</loc>
     <lastmod>2017-04-21T06:32:09.000Z</lastmod>
     <data>
@@ -60,72 +82,6 @@
            
              
               <breadCrumb title="css" url="http://blog.helloarron.com/categories/css/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.helloarron.com/2015/10/10/ios/ios-hide-keyboard/</loc>
-    <lastmod>2016-04-11T14:21:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS中键盘隐藏</title>
-        <pubTime>2015-10-10T02:28:29.000Z</pubTime>
-        
-        <tag>Swift</tag>
-         
-        <tag>iOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="iOS" url="http://blog.helloarron.com/categories/iOS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.helloarron.com/2015/10/10/ios/ios-notification-alert/</loc>
-    <lastmod>2016-04-11T14:20:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS中系统Alert提示</title>
-        <pubTime>2015-10-10T12:23:29.000Z</pubTime>
-        
-        <tag>Swift</tag>
-         
-        <tag>iOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="iOS" url="http://blog.helloarron.com/categories/iOS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.helloarron.com/2015/10/10/ios/ios-storyboard-radius/</loc>
-    <lastmod>2016-04-11T14:19:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用Xcode Storyboard设置按钮圆角方法</title>
-        <pubTime>2015-10-10T14:13:29.000Z</pubTime>
-        
-        <tag>Swift</tag>
-         
-        <tag>iOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="iOS" url="http://blog.helloarron.com/categories/iOS/"/>
           
         </display>
     </data>

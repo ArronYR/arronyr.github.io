@@ -39,24 +39,18 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="通过storyboard的 运行时属性runtime attribute,可以对Button设置圆角或者边框
-
-很多人都知道,通常设置一个 Button后者其他的UIView子类的圆角,需要使用如下的语句:123&amp;lt;span style=&quot;font-size:18px;&quot;&amp;gt;    self.button.layer.cornerRadius=10;  //即可&amp;lt;/span&amp;gt;">
+<meta name="description" content="提示相关普通的Alert12345678// 系统Alert提示func alertAction(title: String, msg: String)&amp;#123;    let alertController = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Xcode Storyboard设置按钮圆角方法">
-<meta property="og:url" content="http://blog.helloarron.com/2015/10/10/ios/ios-storyboard-radius/index.html">
+<meta property="og:title" content="iOS中键盘隐藏">
+<meta property="og:url" content="http://blog.helloarron.com/2015/10/10/ios/ios-some-tips/index.html">
 <meta property="og:site_name" content="Arron.y's blog">
-<meta property="og:description" content="通过storyboard的 运行时属性runtime attribute,可以对Button设置圆角或者边框
-
-很多人都知道,通常设置一个 Button后者其他的UIView子类的圆角,需要使用如下的语句:123&amp;lt;span style=&quot;font-size:18px;&quot;&amp;gt;    self.button.layer.cornerRadius=10;  //即可&amp;lt;/span&amp;gt;">
+<meta property="og:description" content="提示相关普通的Alert12345678// 系统Alert提示func alertAction(title: String, msg: String)&amp;#123;    let alertController = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)">
 <meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/xcode-border-raduis.jpeg">
 <meta property="og:image" content="http://7xrgqs.com1.z0.glb.clouddn.com/xcode-border-raduis.jpeg">
-<meta property="og:updated_time" content="2016-04-11T14:19:25.000Z">
+<meta property="og:updated_time" content="2017-06-26T08:59:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Xcode Storyboard设置按钮圆角方法">
-<meta name="twitter:description" content="通过storyboard的 运行时属性runtime attribute,可以对Button设置圆角或者边框
-
-很多人都知道,通常设置一个 Button后者其他的UIView子类的圆角,需要使用如下的语句:123&amp;lt;span style=&quot;font-size:18px;&quot;&amp;gt;    self.button.layer.cornerRadius=10;  //即可&amp;lt;/span&amp;gt;">
+<meta name="twitter:title" content="iOS中键盘隐藏">
+<meta name="twitter:description" content="提示相关普通的Alert12345678// 系统Alert提示func alertAction(title: String, msg: String)&amp;#123;    let alertController = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -76,7 +70,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-  <title> 使用Xcode Storyboard设置按钮圆角方法 | Arron.y's blog </title>
+  <title> iOS中键盘隐藏 | Arron.y's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -192,7 +186,7 @@ var _hmt = _hmt || [];
           
           
             
-              使用Xcode Storyboard设置按钮圆角方法
+              iOS中键盘隐藏
             
           
         </h1>
@@ -201,7 +195,7 @@ var _hmt = _hmt || [];
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-10T22:13:29+08:00" content="2015-10-10">
+          <time itemprop="dateCreated" datetime="2015-10-10T10:28:29+08:00" content="2015-10-10">
             2015-10-10
           </time>
         </span>
@@ -227,8 +221,8 @@ var _hmt = _hmt || [];
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/10/10/ios/ios-storyboard-radius/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/10/ios/ios-storyboard-radius/" itemprop="commentsCount"></span>
+            <a href="/2015/10/10/ios/ios-some-tips/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/10/ios/ios-some-tips/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -242,7 +236,13 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><p>通过<code>storyboard</code>的 运行时属性<code>runtime attribute</code>,可以对<code>Button</code>设置<code>圆角</code>或者<code>边框</code></p>
+        <span itemprop="articleBody"><h3 id="提示相关">提示相关</h3><h3 id="普通的Alert">普通的Alert</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 系统Alert提示</span></span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">alertAction</span><span class="params">(title: String, msg: String)</span></span>&#123;</span><br><span class="line">    <span class="keyword">let</span> alertController = <span class="type">UIAlertController</span>(title: title, message: msg, preferredStyle: <span class="type">UIAlertControllerStyle</span>.<span class="type">Alert</span>)</span><br><span class="line">    <span class="keyword">let</span> okAction = <span class="type">UIAlertAction</span>(title: <span class="string">"确定"</span>, style: <span class="type">UIAlertActionStyle</span>.<span class="type">Default</span>, handler: <span class="literal">nil</span>)</span><br><span class="line">    alertController.addAction(okAction)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">self</span>.presentViewController(alertController, animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Use">Use</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.alertAction(<span class="string">"错误提示"</span>, msg: <span class="string">"请输入人名"</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="带有回调函数">带有回调函数</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">logoutConfirm</span><span class="params">(title: String, msg: String, okCallback: <span class="params">()</span></span></span>-&gt;<span class="type">Void</span>, cancelCallback: ()-&gt;<span class="type">Void</span>)&#123;</span><br><span class="line">    <span class="keyword">let</span> myAlert = <span class="type">UIAlertController</span>(title: title, message: msg, preferredStyle: <span class="type">UIAlertControllerStyle</span>.<span class="type">Alert</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> okAction = <span class="type">UIAlertAction</span>(title: <span class="string">"确定"</span>, style: .<span class="type">Default</span>, handler: &#123; (action) -&gt; <span class="type">Void</span> <span class="keyword">in</span></span><br><span class="line">        okCallback()</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">let</span> cancelAction = <span class="type">UIAlertAction</span>(title: <span class="string">"取消"</span>, style: .<span class="type">Cancel</span>) &#123; (action) -&gt; <span class="type">Void</span> <span class="keyword">in</span></span><br><span class="line">        cancelCallback()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    myAlert.addAction(okAction)</span><br><span class="line">    myAlert.addAction(cancelAction)</span><br><span class="line">    <span class="keyword">self</span>.presentViewController(myAlert, animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Use-1">Use</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.logoutConfirm(<span class="string">"退出"</span>, msg: <span class="string">"退出 MyParse 应用"</span>, okCallback: &#123; () -&gt; <span class="type">Void</span> <span class="keyword">in</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"点击了确定！"</span>)</span><br><span class="line">    &#125;) &#123; () -&gt; <span class="type">Void</span> <span class="keyword">in</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"点击了取消！"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="键盘相关">键盘相关</h3><h4 id="点击屏幕其他区域隐藏键盘：">点击屏幕其他区域隐藏键盘：</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="func"><span class="keyword">func</span> <span class="title">touchesEnded</span><span class="params">(touches: Set&lt;UITouch&gt;, withEvent event: UIEvent?)</span></span> &#123;</span><br><span class="line">    textField.resignFirstResponder()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="点击键盘的完成或者return按钮隐藏键盘：">点击键盘的<code>完成</code>或者<code>return</code>按钮隐藏键盘：</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// UITextFieldDelegate 点击return按钮使得键盘消失</span></span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">textFieldShouldReturn</span><span class="params">(textField: UITextField)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    textField.resignFirstResponder()</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="StoryBoard">StoryBoard</h3><p>通过<code>storyboard</code>的 运行时属性<code>runtime attribute</code>,可以对<code>Button</code>设置<code>圆角</code>或者<code>边框</code></p>
 <ol>
 <li>很多人都知道,通常设置一个 <code>Button</code>后者其他的<code>UIView</code>子类的圆角,需要使用如下的语句:<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"font-size:18px;"</span>&gt;</span></span><br><span class="line">    self.button.layer.cornerRadius=10;  //即可</span><br><span class="line"><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -254,7 +254,7 @@ var _hmt = _hmt || [];
 <ol>
 <li>总有一些有好奇心的人想知道如何通过,<code>storyboard/xib</code> 设置 一个<code>button</code>或者<code>UIView</code>的圆角，可以设置<code>storybord</code>无法添加的属性,比如圆角,或者边框，这个方法就是<code>runtime Attribute</code>运行时属性,也就是在 运行时你设置的这个属性才会起作用,这样体现了<code>oc</code>语言的动态特性和运行时<code>(runtime)</code>的强大。</li>
 </ol>
-<h3 id="Use">Use</h3><p>创建一个<code>button</code>然后,设置好约束(以免Button”消失”),如下图,然后选中<code>button</code> 选择右边的<code>inspector</code>:</p>
+<h3 id="Use-2">Use</h3><p>创建一个<code>button</code>然后,设置好约束(以免Button”消失”),如下图,然后选中<code>button</code> 选择右边的<code>inspector</code>:</p>
 <p><img src="http://7xrgqs.com1.z0.glb.clouddn.com/xcode-border-raduis.jpeg" alt="enter image description here"></p>
 <p>如上图,点击<code>+</code>号即可添加  一个<code>Button</code>相关的属性,这个属性,可以是在<code>storyboard</code>上没有的属性,此方法类似于代码的效果,每一个属性都有与之对应的值(对象),</p>
 <p>如数字对应的值类型是  <code>NSNumber</code>,如下图,填入到<code>runtime attrite</code>中的属性名不要写错,否则运行时会崩溃。</p>
@@ -285,7 +285,7 @@ var _hmt = _hmt || [];
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/10/ios/ios-notification-alert/" rel="next">iOS中系统Alert提示</a>
+              <a href="/2015/09/30/go/go_crawldata_mysql_4/" rel="next">Go抓取网页数据并存入MySQL和返回json数据<四></a>
             
           </div>
         </div>
@@ -374,7 +374,7 @@ var _hmt = _hmt || [];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">65</span>
+              <span class="site-state-item-count">63</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -444,7 +444,7 @@ var _hmt = _hmt || [];
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use"><span class="nav-number">1.</span> <span class="nav-text">Use</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#提示相关"><span class="nav-number">1.</span> <span class="nav-text">提示相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#普通的Alert"><span class="nav-number">2.</span> <span class="nav-text">普通的Alert</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Use"><span class="nav-number">2.1.</span> <span class="nav-text">Use</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#带有回调函数"><span class="nav-number">2.2.</span> <span class="nav-text">带有回调函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Use-1"><span class="nav-number">2.3.</span> <span class="nav-text">Use</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#键盘相关"><span class="nav-number">3.</span> <span class="nav-text">键盘相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#点击屏幕其他区域隐藏键盘："><span class="nav-number">3.1.</span> <span class="nav-text">点击屏幕其他区域隐藏键盘：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#点击键盘的完成或者return按钮隐藏键盘："><span class="nav-number">3.2.</span> <span class="nav-text">点击键盘的完成或者return按钮隐藏键盘：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StoryBoard"><span class="nav-number">4.</span> <span class="nav-text">StoryBoard</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-2"><span class="nav-number">5.</span> <span class="nav-text">Use</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -504,9 +504,9 @@ var _hmt = _hmt || [];
 
     <script type="text/javascript">
       var disqus_shortname = 'arron-yr';
-      var disqus_identifier = '2015/10/10/ios/ios-storyboard-radius/';
-      var disqus_title = '使用Xcode Storyboard设置按钮圆角方法';
-      var disqus_url = 'http://blog.helloarron.com/2015/10/10/ios/ios-storyboard-radius/';
+      var disqus_identifier = '2015/10/10/ios/ios-some-tips/';
+      var disqus_title = 'iOS中键盘隐藏';
+      var disqus_url = 'http://blog.helloarron.com/2015/10/10/ios/ios-some-tips/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.helloarron.com/2015/10/10/ios/ios-some-tips/</loc>
+    
+    <lastmod>2017-06-26T08:59:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.helloarron.com/2015/01/19/css/css-tips/</loc>
     
     <lastmod>2017-04-21T06:32:09.000Z</lastmod>
@@ -26,27 +33,6 @@
     <loc>http://blog.helloarron.com/2016/03/02/css/css-animation-spin/</loc>
     
     <lastmod>2016-05-13T06:53:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.helloarron.com/2015/10/10/ios/ios-hide-keyboard/</loc>
-    
-    <lastmod>2016-04-11T14:21:25.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.helloarron.com/2015/10/10/ios/ios-notification-alert/</loc>
-    
-    <lastmod>2016-04-11T14:20:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.helloarron.com/2015/10/10/ios/ios-storyboard-radius/</loc>
-    
-    <lastmod>2016-04-11T14:19:25.000Z</lastmod>
     
   </url>
   
