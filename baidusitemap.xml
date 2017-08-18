@@ -5,15 +5,17 @@
     
   <url>
     <loc>http://blog.helloarron.com/2017/08/18/php/thinkphp5-wxpay/</loc>
-    <lastmod>2017-08-18T09:07:17.000Z</lastmod>
+    <lastmod>2017-08-18T09:24:08.000Z</lastmod>
     <data>
         <display>
-        <title>ThinkPHP5 集成微信支付过程</title>
+        <title>微信小程序、ThinkPHP5 集成微信支付过程</title>
         <pubTime>2017-08-18T07:16:20.000Z</pubTime>
         
         <tag>PHP</tag>
          
         <tag>thinkphp5</tag>
+         
+        <tag>微信小程序</tag>
          
         <tag>微信支付</tag>
          

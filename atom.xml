@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.helloarron.com/"/>
-  <updated>2017-08-18T09:07:17.000Z</updated>
+  <updated>2017-08-18T09:24:08.000Z</updated>
   <id>http://blog.helloarron.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ThinkPHP5 集成微信支付过程</title>
+    <title>微信小程序、ThinkPHP5 集成微信支付过程</title>
     <link href="http://blog.helloarron.com/2017/08/18/php/thinkphp5-wxpay/"/>
     <id>http://blog.helloarron.com/2017/08/18/php/thinkphp5-wxpay/</id>
     <published>2017-08-18T07:16:20.000Z</published>
-    <updated>2017-08-18T09:07:17.000Z</updated>
+    <updated>2017-08-18T09:24:08.000Z</updated>
     
     <content type="html"><![CDATA[<p>在微信小程序项目中，需要接入微信支付，用户在小程序中点击【付款】，唤起微信支付的弹窗，输入密码进行支付，虽然支付流程很简单，但真正接入的时候难免会遇到一些问题。</p>
 <h2 id="项目环境">项目环境</h2><p>客户端：微信小程序<br>服务器：<code>CentOS 7</code>、<code>PHP 7.0</code>、<code>Nginx</code>、<code>MySQL 5.6</code><br>后台框架：<code>ThinkPHP 5</code></p>
@@ -62,6 +62,8 @@
       <category term="PHP" scheme="http://blog.helloarron.com/tags/PHP/"/>
     
       <category term="thinkphp5" scheme="http://blog.helloarron.com/tags/thinkphp5/"/>
+    
+      <category term="微信小程序" scheme="http://blog.helloarron.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
       <category term="微信支付" scheme="http://blog.helloarron.com/tags/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98/"/>
     
