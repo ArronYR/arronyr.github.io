@@ -4,11 +4,35 @@
 
     
   <url>
-    <loc>http://blog.helloarron.com/2015/10/10/ios/ios-some-tips/</loc>
-    <lastmod>2017-06-26T09:03:12.000Z</lastmod>
+    <loc>http://blog.helloarron.com/2017/08/18/php/thinkphp5-wxpay/</loc>
+    <lastmod>2017-08-18T08:29:25.000Z</lastmod>
     <data>
         <display>
-        <title>iOS 中的一些小知识</title>
+        <title>ThinkPHP5 集成微信支付踩的坑</title>
+        <pubTime>2017-08-18T07:16:20.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>thinkphp5</tag>
+         
+        <tag>微信支付</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.helloarron.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.helloarron.com/2015/10/10/ios/ios-some-tips/</loc>
+    <lastmod>2017-08-18T07:21:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS 中的一些小集锦</title>
         <pubTime>2015-10-10T02:28:29.000Z</pubTime>
         
         <tag>Swift</tag>
