@@ -223,15 +223,6 @@ var _hmt = _hmt || [];
 
         
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp; 
-              
-                <a href="/2015/03/06/node/node-module-exports/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2015/03/06/node/node-module-exports/" itemprop="commentsCount"></span>
-                </a>
-              
-            </span>
-          
         
       </div>
     </header>
@@ -323,7 +314,7 @@ var _hmt = _hmt || [];
         
           <div class="comments" id="comments">
             
-              <div id="SOHUCS"></div>
+              <div id="firebase"></div>
             
           </div>
         
@@ -492,47 +483,17 @@ var _hmt = _hmt || [];
 
 
     
-  <!--PC和WAP自适应版-->
-  
+    
     <script type="text/javascript">
-    (function(){
-      var appid = "cyteQYGae";
-      var conf = "e30a73010992ed660a28611051144825";
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      if (width < 960) {
-        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
-      } else {
-        var loadJs = function(d,a) {
-          var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
-          var b = document.createElement("script");
-          b.setAttribute("type", "text/javascript");
-          b.setAttribute("charset", "UTF-8");
-          b.setAttribute("src", d);
-          if (typeof a === "function") {
-            if (window.attachEvent) {
-              b.onreadystatechange = function(){
-                var e = b.readyState;
-                if (e === "loaded" || e === "complete") {
-                  b.onreadystatechange = null;
-                  a();
-                }
-              }
-            } else {
-              b.onload = a;
-            }
-          }
-          c.appendChild(b);
-        };
-        loadJs("https://changyan.sohu.com/upload/changyan.js", function() {
-          window.changyan.api.config({
-            appid: appid,
-            conf: conf
-          })
-        });
-      }
-    })();
+    var wildfireConfig = {
+      databaseProvider: wilddog,
+      databaseConfig: wd3458066303ldsbyz,
+      theme: light,
+      locale: zh-CN,
+      defaultAvatarURL: https://avatars2.githubusercontent.com/u/7171192?v=3&s=460
+    }
     </script>
-  
+    <script src="https://unpkg.com/wildfire/dist/wildfire.auto.js"></script>
 
   
   
