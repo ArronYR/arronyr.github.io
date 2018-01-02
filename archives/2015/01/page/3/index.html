@@ -428,7 +428,7 @@ var _hmt = _hmt || [];
       <div class="footer-inner"> <div class="copyright" >
   
   &copy; &nbsp; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
   </span>
@@ -479,15 +479,17 @@ var _hmt = _hmt || [];
     
     
     <script type="text/javascript">
-    var wildfireConfig = {
-      databaseProvider: wilddog,
-      databaseConfig: wd3458066303ldsbyz,
-      theme: light,
-      locale: zh-CN,
-      defaultAvatarURL: https://avatars2.githubusercontent.com/u/7171192?v=3&s=460
-    }
+    var wildfireConfig =() => ({
+      databaseProvider: "wilddog",
+      databaseConfig: {
+        siteId: "wd3458066303ldsbyz"
+      },
+      theme: "light",
+      locale: "zh-CN"
+    })
     </script>
     <script src="https://unpkg.com/wildfire/dist/wildfire.auto.js"></script>
+    <script src="https://unpkg.com/wildfire/dist/wildfire.count.js"></script>
 
   
   
