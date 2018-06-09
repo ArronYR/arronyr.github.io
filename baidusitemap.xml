@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://blog.helloarron.com/2018/06/09/php/php-binary-tree/</loc>
+    <lastmod>2018-06-09T11:57:35.723Z</lastmod>
+    <data>
+        <display>
+        <title>PHP 实现二叉树遍历</title>
+        <pubTime>2018-06-09T09:56:43.000Z</pubTime>
+        
+        <tag>BinaryTree</tag>
+         
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.helloarron.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.helloarron.com/2015/01/19/php/php-color-rgbhex/</loc>
+    <lastmod>2018-06-09T11:50:04.673Z</lastmod>
+    <data>
+        <display>
+        <title>PHP获取图片主要色值，RGB HEX 转换</title>
+        <pubTime>2015-01-18T17:56:43.000Z</pubTime>
+        
+        <tag>Color</tag>
+         
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://blog.helloarron.com/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.helloarron.com/2017/08/18/php/thinkphp5-wxpay/</loc>
     <lastmod>2017-09-21T01:01:23.000Z</lastmod>
     <data>
